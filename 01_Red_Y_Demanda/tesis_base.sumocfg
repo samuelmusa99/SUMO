@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="costanera.net.xml"/>
+        <route-files value="costanera.rou.xml"/>
+        <additional-files value="mapa_fondo.poly.xml,medidores.add.xml,vista.xml,paradas.add.xml"/>
+    </input>
+
+    <gui_only>
+        <gui-settings-file value="vista.xml"/>
+    </gui_only>
+
+    <output>
+        <tripinfo-output value="../02_Resultados_Base/reporte_viajes.xml"/>
+        <queue-output value="../02_Resultados_Base/reporte_colas.xml"/>
+    </output>
+
+    <time>      
+        <begin value="0"/>
+        <end value="3600"/>
+    </time>
+</sumoConfiguration>

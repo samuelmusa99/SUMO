@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-04-01T13:40:08.835247-04:00 by Eclipse SUMO netedit 1.26.0
+-->
+
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <!-- VTypes -->
+<vType id="liviano" length="5.00" minGap="1.50" maxSpeed="22.22" speedFactor="norm(0.90,0.12)" vClass="passenger" guiShape="passenger" impatience="0.50" width="1.85" latAlignment="center" minGapLat="0.50" color="blue" laneChangeModel="LC2013" accel="2.6" decel="4.5" lcStrategic="5.0" lcAssertive="1.5"  lcCooperative="0.1" lcSpeedGain="3.0" lcKeepRight="1.0" jmIgnoreFoeProb="0.1" jmDriveAfterYellowTime="2.0" sigma="0.5"/>
+
+<vType id="moto" vClass="motorcycle" guiShape="motorcycle" length="2.20" width="0.90" minGap="0.50" maxSpeed="25.00" speedFactor="norm(1.10,0.20)" impatience="1.00" color="black" laneChangeModel="LC2013"  lcStrategic="10.0" lcCooperative="0.0" lcSpeedGain="10.0" lcKeepRight="0.1" jmIgnoreFoeProb="0.8"  jmIgnoreKeepClearTime="1.0" accel="4.5" lcLookaheadLeft="2.0" decel="6.0" jmDriveAfterYellowTime="2.0" sigma="0.2"/>
+
+<vType id="pesado" length="12.00" minGap="5.00" maxSpeed="13.89" speedFactor="norm(0.70,0.05)" vClass="bus" guiShape="bus"  impatience="0.20" width="2.50" latAlignment="center" minGapLat="0.60" color="red" laneChangeModel="LC2013" lcStrategic="0.5" lcPushy="0" lcCooperative="0.5" jmIgnoreFoeProb="0.05" tau="1.0" accel="0.4" decel="3.0" jmDriveAfterYellowTime="2.0" sigma="0.7" />
+
+<vType id="carrito" length="5.00" minGap="1.00" maxSpeed="19.44"  speedFactor="norm(1.00,0.15)" vClass="bus" guiShape="passenger" impatience="0.90" width="1.85" latAlignment="center" color="yellow"  laneChangeModel="LC2013" lcStrategic="2.0" lcCooperative="0.8" lcPushy="0.8" lcSpeedGain="5.0" accel="3.0" decel="5.0"  jmIgnoreFoeProb="0.4" jmDriveAfterYellowTime="2.0" sigma="0.8"/>
+    <!-- Vehicles, persons and containers (sorted by depart) -->
+    <flow id="cost_ffaa_L" type="liviano" begin="0.00" end="3600.00" perHour="150.00" from="costanera_salida" to="fuerzas_armadas_entrada"/>
+    <flow id="cost_ffaa_L1" type="liviano" begin="0.00" end="3600.00" perHour="200.00" from="lecheria_salida" to="fuerzas_armadas_entrada"/>
+    <flow id="cost_ffaa_P" type="pesado" begin="0.00" end="3600.00" departLane="0" perHour="35.00" from="costanera_salida" to="fuerzas_armadas_entrada"/>
+    <flow id="cost_lech_L" type="liviano" begin="0.00" end="3600.00" perHour="500" from="costanera_salida" to="lecheria_entrada"/>
+    <flow id="cost_lech_M" type="moto" begin="0.00" end="3600.00" perHour="150.00" from="costanera_salida" to="lecheria_entrada"/>
+    <flow id="ffaa_lech_L" type="liviano" begin="0.00" end="3600.00" perHour="250.00" from="fuerzas_armadas_salida" to="lecheria_entrada"/>
+    <flow id="ffaa_lech_M" type="moto" begin="0.00" end="3600.00" perHour="100.00" from="fuerzas_armadas_salida" to="lecheria_entrada"/>
+    <flow id="ffaa_lech_P" type="pesado" begin="0.00" end="3600.00" departLane="0" perHour="33.00" from="fuerzas_armadas_salida" to="lecheria_entrada"> <stop busStop="bs_0" duration="30.00"/> </flow>
+    <flow id="ffaa_lech_C" type="carrito" begin="0.00" end="3600.00" perHour="33.00" from="fuerzas_armadas_salida" to="lecheria_entrada"> <stop busStop="bs_0" duration="15.00"/> </flow>
+    <flow id="ffaa_madre_L" type="liviano" begin="0.00" end="3600.00" perHour="250.00" from="fuerzas_armadas_salida" to="madre_vieja_entrada"/>
+    <flow id="lech_cost_L" type="liviano" begin="0.00" end="3600.00" perHour="300.00" from="lecheria_salida" to="costanera_entrada"/>
+    <flow id="lech_cost_M" type="moto" begin="0.00" end="3600.00" perHour="100.00" from="lecheria_salida" to="costanera_entrada"/>
+    <flow id="lech_cost_P" type="pesado" begin="0.00" end="3600.00" departLane="0" perHour="40.00" from="lecheria_salida" to="costanera_entrada"> <stop busStop="bs_1" duration="30.00"/> </flow>
+    <flow id="lech_cost_C" type="carrito" begin="0.00" end="3600.00" perHour="40.00" from="lecheria_salida" to="costanera_entrada"> <stop busStop="bs_1" duration="15.00"/> </flow>
+    <flow id="lech_rio_L" type="liviano" begin="0.00" end="3600.00" perHour="250.00" from="lecheria_salida" to="av_rio_entrada"/>
+    <flow id="madre_ffaa_L" type="liviano" begin="0.00" end="3600.00" perHour="250.00" from="madre_vieja_salida" to="fuerzas_armadas_entrada"/>
+    <flow id="madre_ffaa_M" type="moto" begin="0.00" end="3600.00" perHour="80.00" from="madre_vieja_salida" to="fuerzas_armadas_entrada"/>
+    <flow id="res_civo" type="liviano" begin="0.00" end="3600.00" perHour="15.00" from="av_rio_salida" to="civo"/>
+    <flow id="res_puerto" type="liviano" begin="0.00" end="3600.00" perHour="15.00" from="madre_vieja_salida" to="puerto_guaica"/>
+    <flow id="res_puerto1" type="liviano" begin="0.00" end="3600.00" perHour="15.00" from="puerto_guaica" to="costanera_entrada"/>
+    <flow id="res_puerto2" type="liviano" begin="0.00" end="3600.00" perHour="15.00" from="puerto_guaica" to="lecheria_entrada"/>
+    <flow id="res_puerto3" type="moto" begin="0.00" end="3600.00" perHour="10.00" from="madre_vieja_salida" to="puerto_guaica"/>
+    <flow id="rio_cost_L" type="liviano" begin="0.00" end="3600.00" perHour="100.00" from="av_rio_salida" to="costanera_entrada"/>
+    <flow id="rio_cost_L1" type="liviano" begin="0.00" end="3600.00" perHour="100.00" from="av_rio_salida" to="fuerzas_armadas_entrada"/>
+    <flow id="res_bissau" type="liviano" begin="0.00" end="3600.00" perHour="30.00" from="lecheria_salida" to="bissau_entrada"/>
+    <flow id="res_bissau1" type="liviano" begin="0.00" end="3600.00" perHour="30.00" from="av_rio_salida" to="bissau_entrada"/>
+    <flow id="res_bissau3" type="moto" begin="0.00" end="3600.00" perHour="15.00" from="lecheria_salida" to="bissau_entrada"/>
+    <flow id="res_perrokero" type="liviano" begin="0.00" end="3600.00" perHour="20.00" from="res_salida" to="madre_vieja_entrada"/>
+    <flow id="res_perrokero1" type="liviano" begin="0.00" end="3600.00" perHour="20.00" from="res_salida" to="av_rio_entrada"/>
+    <flow id="res_perrokero2" type="moto" begin="0.00" end="3600.00" perHour="10.00" from="res_salida" to="madre_vieja_entrada"/>
+    <flow id="res_perrokero3" type="liviano" begin="0.00" end="3600.00" perHour="20.00" from="res_salida" to="fuerzas_armadas_entrada"/>
+    <flow id="res_perrokero4" type="liviano" begin="0.00" end="3600.00" perHour="20.00" from="fuerzas_armadas_salida" to="res_entrada"/>
+    <flow id="res_perrokero5" type="liviano" begin="0.00" end="3600.00" perHour="100.00" from="fuerzas_armadas_salida" to="costanera_entrada"/>
+</routes>

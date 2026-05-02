@@ -1,0 +1,6 @@
+<polygonTypes>
+<type id="waterway" color="#73a1c1" layer="-4"/>
+<type id="natural" color="#91c497" layer="-5"/>
+<type id="building" color="#cccccc" layer="-1"/>
+<type id="landuse" color="#e6e6e6" layer="-6"/>
+</polygonTypes>
