@@ -16,11 +16,11 @@ pause
 
 echo Convirtiendo resultados a CSV...
 
-cd /d "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS"
+cd /d "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_FINAL"
 
-python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS" reporte_viajes.xml
-python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS" reporte_colas.xml
-python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS" reporte_densidad.xml
+python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_FINAL" reporte_viajes.xml
+python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_FINAL" reporte_colas.xml
+python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_FINAL" reporte_densidad.xml
 
 echo.
 echo ¡Proceso terminado! Abriendo Excel de Análisis...
@@ -28,7 +28,7 @@ echo ¡Proceso terminado! Abriendo Excel de Análisis...
 echo ¡Proceso terminado! Abriendo Excel de Análisis...
 
 :: Abrir maximizado
-start /max excel "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\RESULTADOS SIMULACION.xlsm"
+start /max excel "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_FINAL\RESULTADOS SIMULACION.xlsm"
 
 :: Cerramos la consola de inmediato para que Excel tome el control de la pantalla
 exit
