@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-09-30T12:16:55.882150-04:00 by Eclipse SUMO netedit 1.26.0
+<neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
+
+    <input>
+        <sumo-net-file value="C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\costanera.net.xml"/>
+    </input>
+
+    <processing>
+        <geometry.min-radius.fix.railways value="false"/>
+        <geometry.avoid-overlap value="false"/>
+        <geometry.max-grade.fix value="false"/>
+        <offset.disable-normalization value="true"/>
+        <lefthand value="0"/>
+    </processing>
+
+    <junctions>
+        <no-turnarounds value="true"/>
+        <junctions.corner-detail value="5"/>
+        <junctions.limit-turn-speed value="5.50"/>
+        <rectangular-lane-cut value="0"/>
+    </junctions>
+
+    <pedestrian>
+        <walkingareas value="0"/>
+    </pedestrian>
+
+</neteditConfiguration>
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <tlLogic id="clusterJ18_clusterJ10_J6_J7_J9_#1more" type="static" programID="0" offset="0">
+        <phase duration="30" state="GGGGrrrrrrrrrrr"/>
+        <phase duration="3"  state="yyyyrrrrrrrrrrr"/>
+        <phase duration="30" state="rrrrrrrGGGGrrrr"/>
+        <phase duration="3"  state="rrrrrrryyyyrrrr"/>
+        <phase duration="20" state="rrrrrrrrrrrGGGG"/>
+        <phase duration="3"  state="rrrryyyrrrryyyy"/>
+        <phase duration="20" state="rrrrGGGrrrrrrrr"/>
+        <phase duration="3"  state="rrrryyyrrrrrrrr"/>
+    </tlLogic>
+</additional>

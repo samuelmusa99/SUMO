@@ -4,10 +4,22 @@
     <input>
         <net-file value="costanera.net.xml"/>
         <route-files value="costanera.rou.xml"/>
-        <additional-files value="mapa_fondo.poly.xml,medidores.add.xml,vista.xml,paradas.add.xml"/>
+        <additional-files value="mapa_fondo.poly.xml,medidores.add.xml,vista.xml,paradas.add.xml,distribuidor.add.xml"/>
     </input>
 
+<processing>
+<!-- Poner en -1 desactiva la teleportación por completo -->
+<time-to-teleport value="-1"/>
+</processing>
+
+<!-- Permite que los vehículos recalculen su ruta para no bloquear la luz verde -->
+ <routing>
+<device.rerouting.probability value="1.0"/>
+<device.rerouting.period value="5"/>
+ </routing>
+
     <gui_only>
+
         <gui-settings-file value="vista.xml"/>
     </gui_only>
 
