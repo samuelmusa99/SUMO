@@ -18,9 +18,9 @@ echo Convirtiendo resultados a CSV...
 
 cd /d "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_PEROZO"
 
-python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_PEROZO" reporte_viajes.xml
-python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_PEROZO" reporte_colas.xml
-python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_PEROZO" reporte_densidad.xml
+python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_PEROZO\xml2csv.py" reporte_viajes.xml
+python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_PEROZO\xml2csv.py" reporte_colas.xml
+python "C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_PEROZO\xml2csv.py" reporte_densidad.xml
 
 echo.
 echo ¡Proceso terminado! Abriendo Excel de Análisis...
