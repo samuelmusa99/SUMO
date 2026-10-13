@@ -4,12 +4,87 @@
 -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <!-- VTypes -->
-<vType id="liviano" length="5.00" minGap="1.50" maxSpeed="22.22" speedFactor="norm(0.90,0.12)" vClass="passenger" guiShape="passenger" impatience="0.50" width="1.85" latAlignment="center" minGapLat="0.50" color="blue" laneChangeModel="LC2013" accel="2.6" decel="4.5" lcStrategic="5.0" lcAssertive="1.5"  lcCooperative="0.1" lcSpeedGain="3.0" lcKeepRight="1.0" jmIgnoreFoeProb="0.1" jmDriveAfterYellowTime="2.0" sigma="0.5"/>
+<!-- ================================================================= -->
+<!-- 1. VTYPES OPTIMIZADOS (CAMBIO DE CARRIL ANTICIPADO Y COOPERATIVO) -->
+<!-- ================================================================= -->
 
-<vType id="pesado" length="12.00" minGap="5.00" maxSpeed="13.89" speedFactor="norm(0.70,0.05)" vClass="bus" guiShape="bus"  impatience="0.20" width="2.50" latAlignment="center" minGapLat="0.60" color="red" laneChangeModel="LC2013" lcStrategic="0.5" lcPushy="0" lcCooperative="0.5" jmIgnoreFoeProb="0.05" tau="1.0" accel="0.4" decel="3.0" jmDriveAfterYellowTime="2.0" sigma="0.7" />
+<!-- LIVIANO: Aumentada la anticipación estratégica (10.0) y la cooperación (1.0) -->
+<vType id="liviano"
+length="5.00"
+width="1.85"
+minGap="2.00"
+minGapLat="0.50"
+maxSpeed="22.22"
+speedFactor="norm(0.90,0.12)"
+vClass="passenger"
+guiShape="passenger"
+color="blue"
+latAlignment="center"
+accel="2.6"
+decel="3.0"
+emergencyDecel="7.0"
+tau="1.0"
+sigma="0.5"
+impatience="0.20"
+laneChangeModel="LC2013"
+lcStrategic="10.0"
+lcCooperative="1.0"
+lcAssertive="1.0"
+lcSpeedGain="1.0"
+lcKeepRight="1.0"
+jmIgnoreFoeProb="0.0"
+jmDriveAfterYellowTime="1.0"/>
 
-<vType id="carrito" length="5.00" minGap="1.00" maxSpeed="19.44"  speedFactor="norm(1.00,0.15)" vClass="bus" guiShape="passenger" impatience="0.90" width="1.85" latAlignment="center" color="yellow"  laneChangeModel="LC2013" lcStrategic="2.0" lcCooperative="0.8" lcPushy="0.8" lcSpeedGain="5.0" accel="3.0" decel="5.0"  jmIgnoreFoeProb="0.4" jmDriveAfterYellowTime="2.0" sigma="0.8"/>
+<!-- PESADO: Mayor espacio entre ejes, arranque fluido (accel=1.2) y alta anticipación -->
+<vType id="pesado"
+length="12.00"
+width="2.50"
+minGap="3.50"
+minGapLat="0.60"
+maxSpeed="13.89"
+speedFactor="norm(0.70,0.05)"
+vClass="bus"
+guiShape="bus"
+color="red"
+latAlignment="center"
+accel="1.2"
+decel="3.0"
+emergencyDecel="7.0"
+tau="1.0"
+sigma="0.5"
+impatience="0.10"
+laneChangeModel="LC2013"
+lcStrategic="10.0"
+lcCooperative="1.0"
+lcAssertive="0.8"
+jmIgnoreFoeProb="0.0"
+jmDriveAfterYellowTime="1.0"/>
+
+<!-- CARRITO: Agilidad ligera, cambio de carril no agresivo pero fluido -->
+<vType id="carrito"
+length="5.00"
+width="1.85"
+minGap="1.80"
+maxSpeed="19.44"
+speedFactor="norm(1.00,0.15)"
+vClass="taxi"
+guiShape="passenger"
+color="yellow"
+latAlignment="center"
+accel="2.6"
+decel="3.0"
+emergencyDecel="7.0"
+tau="1.0"
+sigma="0.5"
+impatience="0.30"
+laneChangeModel="LC2013"
+lcStrategic="10.0"
+lcCooperative="1.0"
+lcAssertive="1.1"
+lcSpeedGain="1.5"
+jmIgnoreFoeProb="0.0"
+jmDriveAfterYellowTime="1.0"/>
+
     <!-- Vehicles, persons and containers (sorted by depart) -->
     <flow id="cost_ffaa_L" type="liviano" begin="0.00" end="3600.00" perHour="150.00" from="costanera_salida" to="fuerzas_armadas_entrada"/>
     <flow id="cost_ffaa_L1" type="liviano" begin="0.00" end="3600.00" perHour="200.00" from="lecheria_salida" to="fuerzas_armadas_entrada"/>
