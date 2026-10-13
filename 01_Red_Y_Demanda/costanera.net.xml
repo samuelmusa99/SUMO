@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-10-09T11:52:16.132370-04:00 by Eclipse SUMO netedit 1.26.0
+<!-- generated on 2026-10-13T13:47:15.158673-04:00 by Eclipse SUMO netedit 1.26.0
 <neteditConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/neteditConfiguration.xsd">
 
     <input>
@@ -975,7 +975,7 @@
         <lane id=":1832563875_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.67" length="9.87" width="3.70" shape="918.93,2836.94 920.01,2846.76"/>
     </edge>
     <edge id=":1832563875_4" function="internal">
-        <lane id=":1832563875_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.67" length="9.87" width="3.70" shape="918.93,2836.94 920.02,2846.75"/>
+        <lane id=":1832563875_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="9.87" width="3.70" shape="918.93,2836.94 920.02,2846.75"/>
     </edge>
     <edge id=":1835269248_0" function="internal">
         <lane id=":1835269248_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="9.46" length="12.03" shape="762.70,2136.10 761.51,2134.03 759.48,2132.32 756.62,2130.97 752.94,2129.98"/>
@@ -1027,8 +1027,8 @@
         <lane id=":1835274486_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="15.27" length="6.84" width="3.70" shape="933.32,3061.06 932.91,3054.23"/>
     </edge>
     <edge id=":1835274486_1" function="internal">
-        <lane id=":1835274486_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="18.05" length="6.92" width="3.70" shape="933.32,3061.06 933.31,3059.01 933.68,3057.60 934.05,3056.19 934.03,3054.14"/>
-        <lane id=":1835274486_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="18.05" length="6.92" width="3.70" shape="936.99,3060.58 936.98,3058.58 937.36,3057.21 937.73,3055.84 937.73,3053.85"/>
+        <lane id=":1835274486_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.66" length="6.92" width="3.70" shape="933.32,3061.06 933.31,3059.01 933.68,3057.60 934.05,3056.19 934.03,3054.14"/>
+        <lane id=":1835274486_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.66" length="6.92" width="3.70" shape="936.99,3060.58 936.98,3058.58 937.36,3057.21 937.73,3055.84 937.73,3053.85"/>
     </edge>
     <edge id=":1835291509_0" function="internal">
         <lane id=":1835291509_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.66" length="8.80" width="3.92" shape="1427.25,780.19 1426.36,782.57 1426.55,784.51 1426.74,786.45 1425.83,788.82"/>
@@ -4145,8 +4145,8 @@
         <lane id=":semaforo_camino_real_0_0" index="0" speed="9.37" length="17.44" width="3.70" shape="801.80,1560.90 797.76,1559.12 793.84,1559.03 790.03,1560.65 786.34,1563.96"/>
     </edge>
     <edge id=":semaforo_camino_real_1" function="internal">
-        <lane id=":semaforo_camino_real_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.67" width="3.70" shape="801.80,1560.90 795.43,1557.39 788.97,1554.53 782.53,1551.65 776.18,1548.09"/>
-        <lane id=":semaforo_camino_real_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.67" width="3.70" shape="803.93,1557.61 797.54,1554.13 791.05,1551.33 784.58,1548.52 778.22,1544.99"/>
+        <lane id=":semaforo_camino_real_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="9.72" length="28.67" width="3.70" shape="801.80,1560.90 795.43,1557.39 788.97,1554.53 782.53,1551.65 776.18,1548.09"/>
+        <lane id=":semaforo_camino_real_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="9.72" length="28.67" width="3.70" shape="803.93,1557.61 797.54,1554.13 791.05,1551.33 784.58,1548.52 778.22,1544.99"/>
     </edge>
     <edge id=":semaforo_camino_real_3" function="internal">
         <lane id=":semaforo_camino_real_3_0" index="0" speed="10.47" length="28.21" shape="803.93,1557.61 797.73,1552.31 795.05,1546.65 795.89,1540.64 800.25,1534.27"/>
@@ -4179,15 +4179,15 @@
     </edge>
     <edge id=":semaforo_costanera_0" function="internal">
         <lane id=":semaforo_costanera_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="12.36" length="28.63" width="3.70" shape="899.77,2983.32 894.30,2977.11 891.42,2970.78 891.11,2964.34 893.40,2957.78"/>
-        <lane id=":semaforo_costanera_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.23" length="23.45" width="3.70" shape="902.08,2980.42 897.54,2975.29 895.12,2970.10 894.83,2964.85 896.65,2959.54"/>
+        <lane id=":semaforo_costanera_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="23.45" width="3.70" shape="902.08,2980.42 897.54,2975.29 895.12,2970.10 894.83,2964.85 896.65,2959.54"/>
     </edge>
     <edge id=":semaforo_costanera_2" function="internal">
         <lane id=":semaforo_costanera_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="23.88" width="3.70" shape="905.22,2964.17 891.82,2984.23"/>
-        <lane id=":semaforo_costanera_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.67" length="23.88" width="3.70" shape="901.95,2962.41 888.82,2982.06"/>
+        <lane id=":semaforo_costanera_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="23.88" width="3.70" shape="901.95,2962.41 888.82,2982.06"/>
     </edge>
     <edge id=":semaforo_costanera_4" function="internal">
-        <lane id=":semaforo_costanera_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="15.28" length="22.66" width="3.70" shape="881.62,2976.84 885.13,2971.59 887.81,2967.49 890.33,2963.30 893.40,2957.78"/>
-        <lane id=":semaforo_costanera_4_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="12.50" length="22.66" width="3.70" shape="884.61,2979.01 888.17,2973.70 890.93,2969.46 893.55,2965.12 896.65,2959.54"/>
+        <lane id=":semaforo_costanera_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="22.66" width="3.70" shape="881.62,2976.84 885.13,2971.59 887.81,2967.49 890.33,2963.30 893.40,2957.78"/>
+        <lane id=":semaforo_costanera_4_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="22.66" width="3.70" shape="884.61,2979.01 888.17,2973.70 890.93,2969.46 893.55,2965.12 896.65,2959.54"/>
     </edge>
     <edge id=":semaforo_costanera_6" function="internal">
         <lane id=":semaforo_costanera_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="9.99" length="24.66" width="3.70" shape="884.61,2979.01 889.20,2973.91 894.20,2971.75 899.60,2972.52 905.41,2976.23"/>
@@ -5581,14 +5581,8 @@
         <lane id="E2_0" index="0" speed="13.89" length="28.95" width="3.70" shape="718.25,1642.15 730.56,1617.31"/>
         <lane id="E2_1" index="1" speed="13.89" length="28.95" width="3.70" shape="720.37,1646.20 733.77,1619.17"/>
     </edge>
-    <edge id="E3" from="cluster1832563855_J23_clusterJ4_J5" to="semaforo_camino_real" priority="-1" shape="736.54,1611.06 760.31,1577.97 775.78,1560.43 781.47,1554.07">
-        <lane id="E3_0" index="0" speed="11.11" length="60.04" width="3.70" shape="740.02,1603.05 758.86,1576.82 774.39,1559.20 777.24,1556.03"/>
-    </edge>
     <edge id="E4" from="semaforo_camino_real" to="cluster1832563855_J23_clusterJ4_J5" priority="20" shape="785.40,1562.23 768.97,1581.08 754.03,1600.24 743.65,1614.62">
         <lane id="E4_0" index="0" speed="11.11" length="58.90" width="3.70" shape="786.34,1563.96 770.40,1582.26 755.51,1601.35 749.41,1609.80" changeLeft="custom2"/>
-    </edge>
-    <edge id="E5" from="clusterJ16_clusterJ8_cluster2322602629_J11" to="semaforo_camino_real" priority="-1" shape="822.91,1523.94 803.26,1544.26">
-        <lane id="E5_0" index="0" speed="11.11" length="18.13" width="3.92" shape="820.94,1528.79 808.34,1541.83"/>
     </edge>
     <edge id="E7" from="clusterJ25_cluster12956174525_J15_J19" to="clusterJ16_clusterJ8_cluster2322602629_J11" priority="-1" shape="871.88,1471.25 823.99,1523.94">
         <lane id="E7_0" index="0" speed="13.89" length="56.86" shape="869.42,1476.34 831.17,1518.42"/>
@@ -5617,8 +5611,8 @@
         <lane id="av_proyeccion_entrada_1" index="1" speed="13.89" length="425.37" width="3.92" shape="806.05,1554.31 1163.72,1784.54"/>
     </edge>
     <edge id="av_proyeccion_salida" from="J2" to="semaforo_camino_real" priority="-1" shape="1162.66,1786.19 803.48,1554.99">
-        <lane id="av_proyeccion_salida_0" index="0" speed="13.89" length="425.37" width="3.92" shape="1159.48,1791.13 801.80,1560.90"/>
-        <lane id="av_proyeccion_salida_1" index="1" speed="13.89" length="425.37" width="3.92" shape="1161.60,1787.84 803.93,1557.61"/>
+        <lane id="av_proyeccion_salida_0" index="0" speed="11.11" length="425.37" width="3.92" shape="1159.48,1791.13 801.80,1560.90"/>
+        <lane id="av_proyeccion_salida_1" index="1" speed="11.11" length="425.37" width="3.92" shape="1161.60,1787.84 803.93,1557.61"/>
     </edge>
     <edge id="av_rio_entrada" from="1835630761" to="2998630588" priority="3" type="highway.residential" shape="1490.24,936.44 1507.99,938.49 1671.13,957.40 1724.81,964.09">
         <lane id="av_rio_entrada_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="228.82" width="3.00" shape="1498.11,932.82 1508.51,934.02 1671.67,952.93 1725.37,959.62"/>
@@ -5676,7 +5670,7 @@
     </edge>
     <edge id="costanera_haciamadrevieja" from="1832563875" to="semaforo_costanera" priority="10" type="highway.tertiary" spreadType="center" shape="920.92,2837.97 924.07,2866.62 922.34,2887.97 920.86,2908.26 919.75,2919.65 917.74,2929.01 913.40,2941.01 908.18,2954.76 903.74,2963.05 899.75,2969.23">
         <lane id="costanera_haciamadrevieja_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="120.13" width="3.70" shape="923.70,2846.35 925.93,2866.59 924.18,2888.11 922.70,2908.42 921.58,2919.93 919.52,2929.52 915.13,2941.65 909.87,2955.53 905.34,2963.99 905.22,2964.17"/>
-        <lane id="costanera_haciamadrevieja_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.67" length="120.13" width="3.70" shape="920.02,2846.75 922.21,2866.65 920.50,2887.83 919.02,2908.10 917.92,2919.37 915.96,2928.50 911.67,2940.37 906.49,2953.99 902.14,2962.11 901.95,2962.41"/>
+        <lane id="costanera_haciamadrevieja_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="120.13" width="3.70" shape="920.02,2846.75 922.21,2866.65 920.50,2887.83 919.02,2908.10 917.92,2919.37 915.96,2928.50 911.67,2940.37 906.49,2953.99 902.14,2962.11 901.95,2962.41"/>
     </edge>
     <edge id="costanera_puerto_guaica_haciacaminoreal" from="1835269248" to="interseccion_puerto_guaica" priority="10" type="highway.tertiary" spreadType="center" shape="762.64,2130.25 758.59,2113.92 754.40,2098.76 750.48,2079.80 746.20,2049.16 742.52,2021.44 738.27,1994.59 734.28,1961.90 732.40,1940.01 717.73,1831.74 711.06,1792.07">
         <lane id="costanera_puerto_guaica_haciacaminoreal_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.67" length="322.45" width="3.70" shape="758.62,2121.71 756.80,2114.39 752.60,2099.19 748.66,2080.12 744.37,2049.41 740.69,2021.71 736.44,1994.85 732.44,1962.09 730.56,1940.21 715.90,1832.02 711.00,1802.90"/>
@@ -5750,8 +5744,8 @@
         <lane id="lecheria_entrada_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.67" length="316.19" width="3.70" shape="948.81,3095.41 951.59,3119.55 952.49,3127.35 953.15,3131.49 955.02,3143.14 959.20,3161.73 964.21,3176.67 972.73,3195.90 983.17,3212.88 1007.98,3254.14 1012.77,3261.59 1017.73,3269.35 1022.75,3277.17 1043.33,3306.44 1052.73,3317.89 1061.14,3326.75 1071.00,3333.54 1085.31,3341.50 1108.85,3355.34"/>
     </edge>
     <edge id="lecheria_haciacaminoreal" from="1835274486" to="semaforo_costanera" priority="10" type="highway.tertiary" spreadType="center" shape="936.42,3058.12 934.18,3041.06 932.37,3027.06 930.86,3019.18 926.99,3011.31 920.77,3002.30 912.59,2992.47 895.09,2976.56">
-        <lane id="lecheria_haciacaminoreal_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="83.45" width="3.70" shape="934.03,3054.14 932.35,3041.30 930.54,3027.35 929.09,3019.77 925.39,3012.25 919.29,3003.42 911.25,2993.75 899.77,2983.32"/>
-        <lane id="lecheria_haciacaminoreal_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="83.45" width="3.70" shape="937.73,3053.85 936.01,3040.82 934.20,3026.77 932.63,3018.59 928.59,3010.37 922.25,3001.18 913.93,2991.19 902.08,2980.42"/>
+        <lane id="lecheria_haciacaminoreal_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="83.45" width="3.70" shape="934.03,3054.14 932.35,3041.30 930.54,3027.35 929.09,3019.77 925.39,3012.25 919.29,3003.42 911.25,2993.75 899.77,2983.32"/>
+        <lane id="lecheria_haciacaminoreal_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="83.45" width="3.70" shape="937.73,3053.85 936.01,3040.82 934.20,3026.77 932.63,3018.59 928.59,3010.37 922.25,3001.18 913.93,2991.19 902.08,2980.42"/>
     </edge>
     <edge id="lecheria_salida" from="1832560202" to="7757101141" priority="10" type="highway.tertiary" spreadType="center" shape="1103.54,3359.26 1094.24,3354.15 1072.72,3341.93 1063.43,3335.47 1054.95,3328.80 1047.49,3321.76 1040.16,3312.97 1030.53,3298.79 1019.29,3282.27 1014.53,3274.91 1010.14,3267.77 997.43,3247.63 986.16,3229.58 975.50,3211.82 969.70,3202.08 963.48,3191.01 957.98,3178.34 953.57,3166.53 945.88,3134.49 944.47,3123.66 938.16,3071.42 937.32,3065.00">
         <lane id="lecheria_salida_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="22.22" length="348.60" width="3.70" shape="1102.65,3360.88 1093.34,3355.77 1071.73,3343.50 1062.33,3336.96 1053.74,3330.20 1046.14,3323.03 1038.68,3314.08 1029.00,3299.83 1017.75,3283.29 1012.97,3275.90 1008.57,3268.75 995.86,3248.61 984.58,3230.55 973.91,3212.77 968.10,3203.01 961.82,3191.83 956.26,3179.03 951.80,3167.07 944.06,3134.83 942.63,3123.89 936.32,3071.64 936.01,3069.27"/>
@@ -5766,8 +5760,8 @@
         <lane id="madre_vieja_entrada_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.67" length="821.32" width="3.70" shape="825.36,3040.29 800.40,3056.57 781.92,3069.25 772.81,3075.74 765.48,3081.33 757.19,3087.27 750.73,3093.48 743.41,3099.35 734.25,3108.26 726.01,3117.12 718.96,3125.08 712.47,3133.08 704.15,3144.75 696.34,3155.78 688.17,3170.14 678.25,3184.78 673.69,3192.56 670.66,3196.82 661.34,3213.51 649.18,3231.57 626.35,3276.28 613.97,3298.85 603.03,3321.30 596.58,3335.36 590.24,3353.60 580.93,3386.93 570.10,3426.62 559.89,3471.46 555.64,3492.26 551.76,3511.23 540.34,3556.36 528.98,3601.20 515.68,3653.35 509.13,3674.45 495.02,3711.38 474.53,3759.14"/>
     </edge>
     <edge id="madre_vieja_salida" from="5653040104" to="semaforo_costanera" priority="3" type="highway.residential" spreadType="center" shape="467.63,3756.79 473.48,3744.73 481.55,3729.61 491.80,3707.98 498.98,3689.13 505.42,3671.73 509.60,3655.43 510.62,3651.65 515.22,3634.88 522.14,3608.27 534.28,3555.28 539.09,3534.31 555.50,3469.10 565.27,3425.25 574.51,3391.90 580.55,3367.93 588.06,3343.36 591.24,3332.40 597.34,3318.35 607.36,3296.10 621.19,3270.47 644.88,3225.31 652.91,3211.62 669.82,3184.66 696.66,3143.92 704.54,3133.37 711.55,3124.28 720.02,3114.31 729.67,3104.92 739.89,3094.35 752.18,3083.18 763.90,3074.66 776.48,3065.25 789.95,3054.37 804.89,3044.07 821.58,3031.72 843.37,3017.37 853.50,3010.24 862.87,3002.30 873.10,2991.45 880.96,2981.15 888.06,2970.52">
-        <lane id="madre_vieja_salida_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="911.06" width="3.70" shape="465.97,3755.98 471.83,3743.89 479.90,3728.78 490.10,3707.25 497.25,3688.48 503.65,3671.18 507.81,3654.97 508.84,3651.16 513.43,3634.40 520.34,3607.83 532.48,3554.87 537.29,3533.88 553.70,3468.67 563.47,3424.80 572.72,3391.43 578.77,3367.43 586.29,3342.83 589.50,3331.77 595.65,3317.60 605.70,3295.28 619.56,3269.60 643.26,3224.41 651.33,3210.66 668.26,3183.66 695.15,3142.86 703.07,3132.25 710.11,3123.12 718.67,3113.05 728.36,3103.61 738.60,3093.02 751.01,3081.74 762.80,3073.17 775.34,3063.79 788.84,3052.89 803.81,3042.56 820.52,3030.20 842.33,3015.84 852.37,3008.77 861.59,3000.96 871.69,2990.25 879.45,2980.07 881.62,2976.84"/>
-        <lane id="madre_vieja_salida_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="911.06" width="3.70" shape="469.29,3757.60 475.13,3745.57 483.20,3730.44 493.50,3708.71 500.71,3689.78 507.19,3672.28 511.39,3655.89 512.40,3652.14 517.01,3635.36 523.94,3608.71 536.08,3555.69 540.89,3534.74 557.30,3469.53 567.07,3425.70 576.30,3392.37 582.33,3368.43 589.83,3343.89 592.98,3333.03 599.03,3319.10 609.02,3296.92 622.82,3271.34 646.50,3226.21 654.49,3212.58 671.38,3185.66 698.17,3144.98 706.01,3134.49 712.99,3125.44 721.37,3115.57 730.98,3106.23 741.18,3095.68 753.35,3084.62 765.00,3076.15 777.62,3066.71 791.06,3055.85 805.97,3045.58 822.64,3033.24 844.41,3018.90 854.63,3011.71 864.15,3003.64 874.51,2992.65 882.47,2982.23 884.61,2979.01"/>
+        <lane id="madre_vieja_salida_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="911.06" width="3.70" shape="465.97,3755.98 471.83,3743.89 479.90,3728.78 490.10,3707.25 497.25,3688.48 503.65,3671.18 507.81,3654.97 508.84,3651.16 513.43,3634.40 520.34,3607.83 532.48,3554.87 537.29,3533.88 553.70,3468.67 563.47,3424.80 572.72,3391.43 578.77,3367.43 586.29,3342.83 589.50,3331.77 595.65,3317.60 605.70,3295.28 619.56,3269.60 643.26,3224.41 651.33,3210.66 668.26,3183.66 695.15,3142.86 703.07,3132.25 710.11,3123.12 718.67,3113.05 728.36,3103.61 738.60,3093.02 751.01,3081.74 762.80,3073.17 775.34,3063.79 788.84,3052.89 803.81,3042.56 820.52,3030.20 842.33,3015.84 852.37,3008.77 861.59,3000.96 871.69,2990.25 879.45,2980.07 881.62,2976.84"/>
+        <lane id="madre_vieja_salida_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="911.06" width="3.70" shape="469.29,3757.60 475.13,3745.57 483.20,3730.44 493.50,3708.71 500.71,3689.78 507.19,3672.28 511.39,3655.89 512.40,3652.14 517.01,3635.36 523.94,3608.71 536.08,3555.69 540.89,3534.74 557.30,3469.53 567.07,3425.70 576.30,3392.37 582.33,3368.43 589.83,3343.89 592.98,3333.03 599.03,3319.10 609.02,3296.92 622.82,3271.34 646.50,3226.21 654.49,3212.58 671.38,3185.66 698.17,3144.98 706.01,3134.49 712.99,3125.44 721.37,3115.57 730.98,3106.23 741.18,3095.68 753.35,3084.62 765.00,3076.15 777.62,3066.71 791.06,3055.85 805.97,3045.58 822.64,3033.24 844.41,3018.90 854.63,3011.71 864.15,3003.64 874.51,2992.65 882.47,2982.23 884.61,2979.01"/>
     </edge>
     <edge id="nueva_etruria" from="2322602645" to="clusterJ16_clusterJ8_cluster2322602629_J11" priority="3" type="highway.residential" shape="924.34,1587.17 835.51,1529.23 820.30,1521.05">
         <lane id="nueva_etruria_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.56" length="102.99" shape="917.36,1584.53 834.69,1530.61 830.91,1528.58"/>
@@ -5791,6 +5785,12 @@
     </edge>
     <edge id="salida_bissau_2" from="4618647939" to="interseccion_bissau" priority="3" type="highway.residential" shape="838.18,2253.77 822.67,2254.92">
         <lane id="salida_bissau_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.33" length="0.26" shape="832.02,2255.83 831.76,2255.85"/>
+    </edge>
+    <edge id="semaforo_caminoreal_FA" from="cluster1832563855_J23_clusterJ4_J5" to="semaforo_camino_real" priority="-1" shape="736.54,1611.06 760.31,1577.97 775.78,1560.43 781.47,1554.07">
+        <lane id="semaforo_caminoreal_FA_0" index="0" speed="11.11" length="60.04" width="3.70" shape="740.02,1603.05 758.86,1576.82 774.39,1559.20 777.24,1556.03"/>
+    </edge>
+    <edge id="semaforo_caminoreal_costanera" from="clusterJ16_clusterJ8_cluster2322602629_J11" to="semaforo_camino_real" priority="-1" shape="822.91,1523.94 803.26,1544.26">
+        <lane id="semaforo_caminoreal_costanera_0" index="0" speed="11.11" length="18.13" width="3.92" shape="820.94,1528.79 808.34,1541.83"/>
     </edge>
     <edge id="semaforo_caminoreal_elejercito" from="11350391971" to="semaforo_camino_real" priority="10" type="highway.tertiary" spreadType="center" shape="743.09,1510.39 780.13,1536.18 785.23,1539.39">
         <stopOffset vClasses="all" value="2.00"/>
@@ -7504,7 +7504,7 @@
         <request index="14" response="0000111100001110" foes="0000111110001110" cont="0"/>
         <request index="15" response="0000111001001110" foes="0000111001011110" cont="0"/>
     </junction>
-    <junction id="semaforo_camino_real" type="traffic_light" x="796.50" y="1542.90" incLanes="av_proyeccion_salida_0 av_proyeccion_salida_1 E5_0 semaforo_caminoreal_elejercito_0 semaforo_caminoreal_elejercito_1 semaforo_caminoreal_elejercito_2 E3_0" intLanes=":semaforo_camino_real_0_0 :semaforo_camino_real_1_0 :semaforo_camino_real_1_1 :semaforo_camino_real_3_0 :semaforo_camino_real_4_0 :semaforo_camino_real_5_0 :semaforo_camino_real_6_0 :semaforo_camino_real_7_0 :semaforo_camino_real_8_0 :semaforo_camino_real_8_1 :semaforo_camino_real_10_0 :semaforo_camino_real_11_0 :semaforo_camino_real_11_1 :semaforo_camino_real_13_0" shape="800.74,1562.55 809.23,1549.37 807.80,1547.72 807.68,1546.73 807.98,1545.65 808.67,1544.46 809.77,1543.17 796.74,1530.99 794.96,1532.64 793.16,1533.79 791.36,1534.42 789.56,1534.55 787.74,1534.16 785.92,1533.27 775.17,1549.63 776.73,1551.18 777.01,1552.03 776.95,1552.91 776.57,1553.84 775.84,1554.81 787.74,1565.18 789.81,1563.15 791.91,1561.76 794.06,1561.00 796.25,1560.88 798.48,1561.40">
+    <junction id="semaforo_camino_real" type="traffic_light" x="796.50" y="1542.90" incLanes="av_proyeccion_salida_0 av_proyeccion_salida_1 semaforo_caminoreal_costanera_0 semaforo_caminoreal_elejercito_0 semaforo_caminoreal_elejercito_1 semaforo_caminoreal_elejercito_2 semaforo_caminoreal_FA_0" intLanes=":semaforo_camino_real_0_0 :semaforo_camino_real_1_0 :semaforo_camino_real_1_1 :semaforo_camino_real_3_0 :semaforo_camino_real_4_0 :semaforo_camino_real_5_0 :semaforo_camino_real_6_0 :semaforo_camino_real_7_0 :semaforo_camino_real_8_0 :semaforo_camino_real_8_1 :semaforo_camino_real_10_0 :semaforo_camino_real_11_0 :semaforo_camino_real_11_1 :semaforo_camino_real_13_0" shape="800.74,1562.55 809.23,1549.37 807.80,1547.72 807.68,1546.73 807.98,1545.65 808.67,1544.46 809.77,1543.17 796.74,1530.99 794.96,1532.64 793.16,1533.79 791.36,1534.42 789.56,1534.55 787.74,1534.16 785.92,1533.27 775.17,1549.63 776.73,1551.18 777.01,1552.03 776.95,1552.91 776.57,1553.84 775.84,1554.81 787.74,1565.18 789.81,1563.15 791.91,1561.76 794.06,1561.00 796.25,1560.88 798.48,1561.40">
         <request index="0"  response="00000000000000" foes="00010000100000" cont="0"/>
         <request index="1"  response="00000000000000" foes="11110001100000" cont="0"/>
         <request index="2"  response="00000000000000" foes="11110001100000" cont="0"/>
@@ -8810,18 +8810,12 @@
     <connection from="E12.31" to="E12.58" fromLane="0" toLane="0" via=":J22_0_0" dir="s" state="M"/>
     <connection from="E12.58" to="E12.88" fromLane="0" toLane="0" via=":clusterJ21_J24_0_0" dir="s" state="M"/>
     <connection from="E12.88" to="E12.118" fromLane="0" toLane="0" via=":J26_0_0" dir="s" state="M"/>
-    <connection from="E2" to="E3" fromLane="0" toLane="0" keepClear="0" via=":cluster1832563855_J23_clusterJ4_J5_4_0" dir="s" state="M"/>
+    <connection from="E2" to="semaforo_caminoreal_FA" fromLane="0" toLane="0" keepClear="0" via=":cluster1832563855_J23_clusterJ4_J5_4_0" dir="s" state="M"/>
     <connection from="E2" to="E10" fromLane="1" toLane="0" keepClear="0" via=":cluster1832563855_J23_clusterJ4_J5_5_0" dir="s" state="M"/>
-    <connection from="E3" to="E8" fromLane="0" toLane="0" keepClear="0" via=":semaforo_camino_real_11_0" tl="semaforo_camino_real" linkIndex="12" dir="s" state="o"/>
-    <connection from="E3" to="E8" fromLane="0" toLane="1" keepClear="0" via=":semaforo_camino_real_11_1" tl="semaforo_camino_real" linkIndex="13" dir="s" state="o"/>
-    <connection from="E3" to="av_proyeccion_entrada" fromLane="0" toLane="1" keepClear="0" via=":semaforo_camino_real_13_0" tl="semaforo_camino_real" linkIndex="14" dir="l" state="o"/>
     <connection from="E4" to="1223690884" fromLane="0" toLane="0" keepClear="0" via=":cluster1832563855_J23_clusterJ4_J5_1_0" dir="r" state="M"/>
     <connection from="E4" to="172344969#1" fromLane="0" toLane="0" keepClear="0" via=":cluster1832563855_J23_clusterJ4_J5_2_0" dir="s" state="M"/>
-    <connection from="E5" to="av_proyeccion_entrada" fromLane="0" toLane="0" keepClear="0" via=":semaforo_camino_real_4_0" tl="semaforo_camino_real" linkIndex="4" dir="r" state="o"/>
-    <connection from="E5" to="E4" fromLane="0" toLane="0" keepClear="0" via=":semaforo_camino_real_5_0" tl="semaforo_camino_real" linkIndex="5" dir="s" state="o"/>
-    <connection from="E5" to="172680169#1" fromLane="0" toLane="1" keepClear="0" via=":semaforo_camino_real_6_0" tl="semaforo_camino_real" linkIndex="6" dir="l" state="o"/>
     <connection from="E7" to="1348019583" fromLane="0" toLane="0" via=":clusterJ16_clusterJ8_cluster2322602629_J11_1_0" dir="r" state="M"/>
-    <connection from="E7" to="E5" fromLane="0" toLane="0" via=":clusterJ16_clusterJ8_cluster2322602629_J11_2_0" dir="s" state="m"/>
+    <connection from="E7" to="semaforo_caminoreal_costanera" fromLane="0" toLane="0" via=":clusterJ16_clusterJ8_cluster2322602629_J11_2_0" dir="s" state="m"/>
     <connection from="E8" to="371794626#2" fromLane="0" toLane="0" via=":clusterJ25_cluster12956174525_J15_J19_5_0" dir="s" state="M"/>
     <connection from="E8" to="371794626#2" fromLane="1" toLane="1" via=":clusterJ25_cluster12956174525_J15_J19_5_1" dir="s" state="M"/>
     <connection from="E9" to="E11" fromLane="0" toLane="0" via=":J22_1_0" dir="s" state="M"/>
@@ -8943,7 +8937,7 @@
     <connection from="madre_vieja_salida" to="592256719#1" fromLane="0" toLane="0" via=":semaforo_costanera_4_0" tl="semaforo_costanera" linkIndex="4" dir="s" state="O"/>
     <connection from="madre_vieja_salida" to="592256719#1" fromLane="1" toLane="1" via=":semaforo_costanera_4_1" tl="semaforo_costanera" linkIndex="5" dir="s" state="O"/>
     <connection from="madre_vieja_salida" to="madevieja_hacialecheria" fromLane="1" toLane="1" via=":semaforo_costanera_6_0" tl="semaforo_costanera" linkIndex="6" dir="l" state="o"/>
-    <connection from="nueva_etruria" to="E5" fromLane="0" toLane="0" via=":clusterJ16_clusterJ8_cluster2322602629_J11_0_0" dir="r" state="M"/>
+    <connection from="nueva_etruria" to="semaforo_caminoreal_costanera" fromLane="0" toLane="0" via=":clusterJ16_clusterJ8_cluster2322602629_J11_0_0" dir="r" state="M"/>
     <connection from="puerto_guaica" to="335982660#0" fromLane="0" toLane="0" via=":3430699020_6_0" dir="r" state="M"/>
     <connection from="puerto_guaica" to="1227058160#1" fromLane="0" toLane="0" via=":3430699020_7_0" dir="s" state="m"/>
     <connection from="puerto_guaica" to="-1227058160#0" fromLane="0" toLane="0" via=":3430699020_8_0" dir="t" state="m"/>
@@ -8961,6 +8955,12 @@
     <connection from="salida_bissau_1" to="592256719#4" fromLane="0" toLane="1" via=":interseccion_bissau_7_0" dir="l" state="m"/>
     <connection from="salida_bissau_2" to="172344969#9" fromLane="0" toLane="0" via=":interseccion_bissau_4_0" dir="r" state="m"/>
     <connection from="salida_bissau_2" to="592256719#4" fromLane="0" toLane="1" via=":interseccion_bissau_5_0" dir="L" state="m"/>
+    <connection from="semaforo_caminoreal_FA" to="E8" fromLane="0" toLane="0" keepClear="0" via=":semaforo_camino_real_11_0" tl="semaforo_camino_real" linkIndex="12" dir="s" state="o"/>
+    <connection from="semaforo_caminoreal_FA" to="E8" fromLane="0" toLane="1" keepClear="0" via=":semaforo_camino_real_11_1" tl="semaforo_camino_real" linkIndex="13" dir="s" state="o"/>
+    <connection from="semaforo_caminoreal_FA" to="av_proyeccion_entrada" fromLane="0" toLane="1" keepClear="0" via=":semaforo_camino_real_13_0" tl="semaforo_camino_real" linkIndex="14" dir="l" state="o"/>
+    <connection from="semaforo_caminoreal_costanera" to="av_proyeccion_entrada" fromLane="0" toLane="0" keepClear="0" via=":semaforo_camino_real_4_0" tl="semaforo_camino_real" linkIndex="4" dir="r" state="o"/>
+    <connection from="semaforo_caminoreal_costanera" to="E4" fromLane="0" toLane="0" keepClear="0" via=":semaforo_camino_real_5_0" tl="semaforo_camino_real" linkIndex="5" dir="s" state="o"/>
+    <connection from="semaforo_caminoreal_costanera" to="172680169#1" fromLane="0" toLane="1" keepClear="0" via=":semaforo_camino_real_6_0" tl="semaforo_camino_real" linkIndex="6" dir="l" state="o"/>
     <connection from="semaforo_caminoreal_elejercito" to="E8" fromLane="0" toLane="0" keepClear="0" via=":semaforo_camino_real_7_0" tl="semaforo_camino_real" linkIndex="7" dir="r" state="O"/>
     <connection from="semaforo_caminoreal_elejercito" to="av_proyeccion_entrada" fromLane="0" toLane="0" keepClear="0" via=":semaforo_camino_real_8_0" tl="semaforo_camino_real" linkIndex="8" dir="s" state="O"/>
     <connection from="semaforo_caminoreal_elejercito" to="av_proyeccion_entrada" fromLane="1" toLane="1" keepClear="0" via=":semaforo_camino_real_8_1" tl="semaforo_camino_real" linkIndex="9" dir="s" state="O"/>
@@ -10184,11 +10184,11 @@
     <connection from=":cluster1832563855_J23_clusterJ4_J5_1" to="1223690884" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":cluster1832563855_J23_clusterJ4_J5_2" to="172344969#1" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":cluster1832563855_J23_clusterJ4_J5_3" to="172344969#1" fromLane="0" toLane="1" dir="s" state="M"/>
-    <connection from=":cluster1832563855_J23_clusterJ4_J5_4" to="E3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":cluster1832563855_J23_clusterJ4_J5_4" to="semaforo_caminoreal_FA" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":cluster1832563855_J23_clusterJ4_J5_5" to="E10" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":clusterJ16_clusterJ8_cluster2322602629_J11_0" to="E5" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":clusterJ16_clusterJ8_cluster2322602629_J11_0" to="semaforo_caminoreal_costanera" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":clusterJ16_clusterJ8_cluster2322602629_J11_1" to="1348019583" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":clusterJ16_clusterJ8_cluster2322602629_J11_2" to="E5" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":clusterJ16_clusterJ8_cluster2322602629_J11_2" to="semaforo_caminoreal_costanera" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":clusterJ21_J24_0" to="E12.88" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":clusterJ21_J24_1" to="E9" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":clusterJ25_cluster12956174525_J15_J19_0" to="E7" fromLane="0" toLane="0" dir="r" state="M"/>
