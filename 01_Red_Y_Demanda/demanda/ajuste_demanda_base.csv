@@ -1,0 +1,69 @@
+﻿interseccion;codigo;descripcion;clase;tesis 2021 (veh/h);objetivo 2026 (veh/h);demanda generada (veh/h);GEH
+Camino Real;MF2;Costanera -> FFAA;livianos;377;640;731;3.47
+Camino Real;GD3;Costanera -> El Ejercito (curva);livianos;175;297;303;0.37
+Camino Real;GI4;FFAA -> El Ejercito;livianos;151;256;362;6.03
+Camino Real;MF5;FFAA -> Costanera;livianos;360;611;693;3.22
+Camino Real;GI7;El Ejercito -> Costanera;livianos;409;694;670;0.92
+Camino Real;GD9;El Ejercito -> FFAA;livianos;179;304;388;4.54
+CC Paos;GI10;Lecheria -> Costanera;livianos;602;1022;1019;0.09
+CC Paos;GD12;Lecheria -> Madre Vieja;livianos;160;272;272;0.00
+CC Paos;MF2;Madre Vieja -> Costanera;livianos;161;273;270;0.17
+CC Paos;GI1;Madre Vieja -> Lecheria;livianos;115;195;195;0.00
+CC Paos;MF5;Costanera -> Madre Vieja;livianos;137;233;243;0.70
+CC Paos;GD6;Costanera -> Lecheria;livianos;579;983;993;0.34
+Bissau;MF2;Costanera sentido Camino Real (directo);livianos;735;1247;1259;0.34
+Bissau;MF5;Costanera sentido Lecheria (directo);livianos;710;1205;1227;0.64
+Bissau;GI1;Entrada Bissau desde sentido Camino Real;livianos;16;27;30;0.51
+Bissau;GD6;Entrada Bissau desde sentido Lecheria;livianos;11;19;52;5.57
+Bissau;GI10;Salida Bissau hacia Camino Real;livianos;12;20;30;1.88
+Bissau;GD12;Salida Bissau hacia Lecheria;livianos;12;20;10;2.80
+Puerto Guaica;V2;Costanera sentido Camino Real (directo);livianos;769;1305;1289;0.44
+Puerto Guaica;V5;Costanera sentido Lecheria (directo);livianos;759;1288;1279;0.26
+Puerto Guaica;V1;Entrada Puerto Guaica desde sentido Camino Real;livianos;4;7;0;3.68
+Puerto Guaica;V3;Entrada Fernandez Padilla desde sentido Camino Real;livianos;1;2;0;1.84
+Puerto Guaica;V4;Entrada Fernandez Padilla desde sentido Lecheria;livianos;2;3;27;6.11
+Puerto Guaica;V6;Entrada Puerto Guaica desde sentido Lecheria;livianos;8;14;38;4.74
+Puerto Guaica;V7;Salida Puerto Guaica hacia Camino Real;livianos;2;3;0;2.61
+Puerto Guaica;V9;Salida Puerto Guaica hacia Lecheria;livianos;2;3;0;2.61
+Puerto Guaica;V10;Salida Fernandez Padilla hacia Lecheria;livianos;5;8;0;4.12
+Puerto Guaica;V12;Salida Fernandez Padilla hacia Camino Real;livianos;4;7;1;3.18
+Perrokero;GI1;FFAA sur -> Residencias;livianos;35;59;59;0.00
+Perrokero;MF2;FFAA sur -> Camino Real;livianos;500;849;742;3.76
+Perrokero;GD3;FFAA sur -> Av. Rio;livianos;265;450;449;0.03
+Perrokero;GI4;Camino Real -> Av. Rio;livianos;215;365;280;4.71
+Perrokero;MF5;Camino Real -> FFAA sur;livianos;544;923;839;2.85
+Perrokero;GD6;Camino Real -> Residencias;livianos;27;46;0;9.57
+Perrokero;GI7;Av. Rio -> FFAA sur;livianos;282;479;479;0.00
+Perrokero;MF8;Av. Rio -> Residencias;livianos;30;51;51;0.00
+Perrokero;GD9;Av. Rio -> Camino Real;livianos;247;419;313;5.55
+Perrokero;GI10;Residencias -> Camino Real;livianos;25;42;0;9.21
+Perrokero;MF11;Residencias -> Av. Rio;livianos;30;51;51;0.00
+Perrokero;GD12;Residencias -> FFAA sur;livianos;50;85;85;0.00
+Camino Real;MF2;Costanera -> FFAA;pesados;25;42;30;2.01
+Camino Real;GD3;Costanera -> El Ejercito (curva);pesados;15;25;40;2.54
+Camino Real;GI4;FFAA -> El Ejercito;pesados;9;15;18;0.73
+Camino Real;MF5;FFAA -> Costanera;pesados;25;42;34;1.43
+Camino Real;GI7;El Ejercito -> Costanera;pesados;26;44;33;1.87
+Camino Real;GD9;El Ejercito -> FFAA;pesados;14;24;25;0.24
+CC Paos;GI10;Lecheria -> Costanera;pesados;23;39;47;1.18
+CC Paos;GD12;Lecheria -> Madre Vieja;pesados;9;15;15;0.00
+CC Paos;MF2;Madre Vieja -> Costanera;pesados;10;17;24;1.46
+CC Paos;GI1;Madre Vieja -> Lecheria;pesados;6;10;10;0.00
+CC Paos;MF5;Costanera -> Madre Vieja;pesados;6;10;19;2.39
+CC Paos;GD6;Costanera -> Lecheria;pesados;22;37;47;1.46
+Bissau;MF2;Costanera sentido Camino Real (directo);pesados;39;66;70;0.50
+Bissau;MF5;Costanera sentido Lecheria (directo);pesados;37;63;66;0.42
+Puerto Guaica;V2;Costanera sentido Camino Real (directo);pesados;41;70;70;0.09
+Puerto Guaica;V5;Costanera sentido Lecheria (directo);pesados;40;68;66;0.21
+Perrokero;GI1;FFAA sur -> Residencias;pesados;1;2;2;0.00
+Perrokero;MF2;FFAA sur -> Camino Real;pesados;19;32;33;0.13
+Perrokero;GD3;FFAA sur -> Av. Rio;pesados;10;17;16;0.13
+Perrokero;GI4;Camino Real -> Av. Rio;pesados;10;17;16;0.30
+Perrokero;MF5;Camino Real -> FFAA sur;pesados;24;41;40;0.19
+Perrokero;GD6;Camino Real -> Residencias;pesados;1;2;0;1.84
+Perrokero;GI7;Av. Rio -> FFAA sur;pesados;15;25;25;0.00
+Perrokero;MF8;Av. Rio -> Residencias;pesados;2;3;3;0.00
+Perrokero;GD9;Av. Rio -> Camino Real;pesados;13;22;19;0.71
+Perrokero;GI10;Residencias -> Camino Real;pesados;1;2;0;1.84
+Perrokero;MF11;Residencias -> Av. Rio;pesados;2;3;3;0.00
+Perrokero;GD12;Residencias -> FFAA sur;pesados;3;5;5;0.00

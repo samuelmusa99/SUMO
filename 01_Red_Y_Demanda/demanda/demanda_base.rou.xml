@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generado por herramientas/generar_demanda.py (hora pico 2026 = volumenes de las tesis x 1.697). No editar a mano: modificar demanda/conteos_movimientos.csv y volver a generar. -->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <flow id="L000" type="liviano" begin="0" end="4500" period="exp(0.159635)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    </flow>
+    <flow id="L001" type="liviano" begin="0" end="4500" period="exp(0.132940)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="L002" type="liviano" begin="0" end="4500" period="exp(0.124775)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="L003" type="liviano" begin="0" end="4500" period="exp(0.101661)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="L004" type="liviano" begin="0" end="4500" period="exp(0.099945)" departLane="best" departSpeed="max">
+        <route edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="L005" type="liviano" begin="0" end="4500" period="exp(0.085419)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172680169#1 entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    </flow>
+    <flow id="L006" type="liviano" begin="0" end="4500" period="exp(0.075427)" departLane="best" departSpeed="max">
+        <route edges="lecheria_salida cruce_cc_paos 172642222 592256721#1 madre_vieja_entrada"/>
+    </flow>
+    <flow id="L007" type="liviano" begin="0" end="4500" period="exp(0.072704)" departLane="best" departSpeed="max">
+        <route edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 335982661#0 -335982658#1 -335982664#2 1088915526"/>
+    </flow>
+    <flow id="L008" type="liviano" begin="0" end="4500" period="exp(0.064097)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    </flow>
+    <flow id="L009" type="liviano" begin="0" end="4500" period="exp(0.057342)" departLane="best" departSpeed="max">
+        <route edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="L010" type="liviano" begin="0" end="4500" period="exp(0.054213)" departLane="best" departSpeed="max">
+        <route edges="madre_vieja_salida madevieja_hacialecheria 172641720#0 172641720#1 lecheria_entrada"/>
+    </flow>
+    <flow id="L011" type="liviano" begin="0" end="4500" period="exp(0.042169)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    </flow>
+    <flow id="L012" type="liviano" begin="0" end="4500" period="exp(0.038161)" departLane="best" departSpeed="max">
+        <route edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    </flow>
+    <flow id="L013" type="liviano" begin="0" end="4500" period="exp(0.028427)" departLane="best" departSpeed="max">
+        <route edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="L014" type="liviano" begin="0" end="4500" period="exp(0.028242)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    </flow>
+    <flow id="L015" type="liviano" begin="0" end="4500" period="exp(0.025186)" departLane="best" departSpeed="max">
+        <route edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    </flow>
+    <flow id="L016" type="liviano" begin="0" end="4500" period="exp(0.023571)" departLane="best" departSpeed="max">
+        <route edges="res_salida fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="L017" type="liviano" begin="0" end="4500" period="exp(0.020803)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    </flow>
+    <flow id="L018" type="liviano" begin="0" end="4500" period="exp(0.016781)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    </flow>
+    <flow id="L019" type="liviano" begin="0" end="4500" period="exp(0.016500)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 res_entrada"/>
+    </flow>
+    <flow id="L020" type="liviano" begin="0" end="4500" period="exp(0.015242)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172680169#1 entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    </flow>
+    <flow id="L021" type="liviano" begin="0" end="4500" period="exp(0.014143)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 res_entrada"/>
+    </flow>
+    <flow id="L022" type="liviano" begin="0" end="4500" period="exp(0.014143)" departLane="best" departSpeed="max">
+        <route edges="res_salida avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="L023" type="liviano" begin="0" end="4500" period="exp(0.013440)" departLane="best" departSpeed="max">
+        <route edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="L024" type="liviano" begin="0" end="4500" period="exp(0.010039)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria entrada:bissau:1 bissau_entrada"/>
+    </flow>
+    <flow id="L025" type="liviano" begin="0" end="4500" period="exp(0.006197)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="L026" type="liviano" begin="0" end="4500" period="exp(0.004735)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria entrada_puerto_guaica puerto_guaica"/>
+    </flow>
+    <flow id="L027" type="liviano" begin="0" end="4500" period="exp(0.004541)" departLane="best" departSpeed="max">
+        <route edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal entrada:bissau:1 bissau_entrada"/>
+    </flow>
+    <flow id="L028" type="liviano" begin="0" end="4500" period="exp(0.004472)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria entrada_puerto_guaica puerto_guaica"/>
+    </flow>
+    <flow id="L029" type="liviano" begin="0" end="4500" period="exp(0.004373)" departLane="best" departSpeed="max">
+        <route edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    </flow>
+    <flow id="L030" type="liviano" begin="0" end="4500" period="exp(0.004201)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    </flow>
+    <flow id="L031" type="liviano" begin="0" end="4500" period="exp(0.003859)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria fernandez_padilla 1088915526"/>
+    </flow>
+    <flow id="L032" type="liviano" begin="0" end="4500" period="exp(0.003762)" departLane="best" departSpeed="max">
+        <route edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal entrada:bissau:1 bissau_entrada"/>
+    </flow>
+    <flow id="L033" type="liviano" begin="0" end="4500" period="exp(0.003543)" departLane="best" departSpeed="max">
+        <route edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 335982661#0 -335982658#1 -335982664#2 1088915526"/>
+    </flow>
+    <flow id="L034" type="liviano" begin="0" end="4500" period="exp(0.003001)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria fernandez_padilla 1088915526"/>
+    </flow>
+    <flow id="L035" type="liviano" begin="0" end="4500" period="exp(0.002749)" departLane="best" departSpeed="max">
+        <route edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="L036" type="liviano" begin="0" end="4500" period="exp(0.002275)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria entrada:bissau:1 bissau_entrada"/>
+    </flow>
+    <flow id="L037" type="liviano" begin="0" end="4500" period="exp(0.002060)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria entrada:bissau:1 bissau_entrada"/>
+    </flow>
+    <flow id="L038" type="liviano" begin="0" end="4500" period="exp(0.001764)" departLane="best" departSpeed="max">
+        <route edges="-495730009#2 salida_bissau_1 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    </flow>
+    <flow id="L039" type="liviano" begin="0" end="4500" period="exp(0.001227)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    </flow>
+    <flow id="L040" type="liviano" begin="0" end="4500" period="exp(0.001212)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria entrada_puerto_guaica puerto_guaica"/>
+    </flow>
+    <flow id="L041" type="liviano" begin="0" end="4500" period="exp(0.000889)" departLane="best" departSpeed="max">
+        <route edges="-495730009#2 salida_bissau_1 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    </flow>
+    <flow id="L042" type="liviano" begin="0" end="4500" period="exp(0.000889)" departLane="best" departSpeed="max">
+        <route edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="L043" type="liviano" begin="0" end="4500" period="exp(0.000730)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria fernandez_padilla 1088915526"/>
+    </flow>
+    <flow id="L044" type="liviano" begin="0" end="4500" period="exp(0.000261)" departLane="best" departSpeed="max">
+        <route edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 335982661#0 -335982658#1 -335982664#2 1088915526"/>
+    </flow>
+    <flow id="L045" type="liviano" begin="0" end="4500" period="exp(0.000181)" departLane="best" departSpeed="max">
+        <route edges="-1088915526 -335982664#1 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="P000" type="pesado" begin="0" end="4500" period="exp(0.007071)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="P001" type="pesado" begin="0" end="4500" period="exp(0.006354)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="P002" type="pesado" begin="0" end="4500" period="exp(0.005385)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    </flow>
+    <flow id="P003" type="pesado" begin="0" end="4500" period="exp(0.005069)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172680169#1 entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    </flow>
+    <flow id="P004" type="pesado" begin="0" end="4500" period="exp(0.004562)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="P005" type="pesado" begin="0" end="4500" period="exp(0.004243)" departLane="best" departSpeed="max">
+        <route edges="lecheria_salida cruce_cc_paos 172642222 592256721#1 madre_vieja_entrada"/>
+    </flow>
+    <flow id="P006" type="pesado" begin="0" end="4500" period="exp(0.003660)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    </flow>
+    <flow id="P007" type="pesado" begin="0" end="4500" period="exp(0.003506)" departLane="best" departSpeed="max">
+        <route edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="P008" type="pesado" begin="0" end="4500" period="exp(0.003040)" departLane="best" departSpeed="max">
+        <route edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="P009" type="pesado" begin="0" end="4500" period="exp(0.002829)" departLane="best" departSpeed="max">
+        <route edges="madre_vieja_salida madevieja_hacialecheria 172641720#0 172641720#1 lecheria_entrada"/>
+    </flow>
+    <flow id="P010" type="pesado" begin="0" end="4500" period="exp(0.001414)" departLane="best" departSpeed="max">
+        <route edges="res_salida fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="P011" type="pesado" begin="0" end="4500" period="exp(0.001120)" departLane="best" departSpeed="max">
+        <route edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    </flow>
+    <flow id="P012" type="pesado" begin="0" end="4500" period="exp(0.000943)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 res_entrada"/>
+    </flow>
+    <flow id="P013" type="pesado" begin="0" end="4500" period="exp(0.000943)" departLane="best" departSpeed="max">
+        <route edges="res_salida avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="P014" type="pesado" begin="0" end="4500" period="exp(0.000760)" departLane="best" departSpeed="max">
+        <route edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="P015" type="pesado" begin="0" end="4500" period="exp(0.000580)" departLane="best" departSpeed="max">
+        <route edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    </flow>
+    <flow id="P016" type="pesado" begin="0" end="4500" period="exp(0.000471)" departLane="best" departSpeed="max">
+        <route edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 res_entrada"/>
+    </flow>
+    <flow id="P017" type="pesado" begin="0" end="4500" period="exp(0.000167)" departLane="best" departSpeed="max">
+        <route edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    </flow>
+</routes>

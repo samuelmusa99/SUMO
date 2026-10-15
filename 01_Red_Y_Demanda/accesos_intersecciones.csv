@@ -1,0 +1,19 @@
+﻿interseccion;acceso;tipo;tramo_final;tramos_del_acceso;longitud_m
+Camino Real;Sur (FFAA);principal;semaforo_caminoreal_FA;semaforo_caminoreal_FA -371794626#1 -371794626#2 -371794626#3;300
+Camino Real;Norte (Costanera);principal;semaforo_caminoreal_costanera;semaforo_caminoreal_costanera 592256719#7 592256719#6;158
+Camino Real;Oeste (El Ejercito);principal;semaforo_caminoreal_elejercito;semaforo_caminoreal_elejercito ejercito_3 ejercito_2 ejercito_1 costanera_salida;285
+CC Paos;Sur (Costanera);principal;costanera_haciamadrevieja;costanera_haciamadrevieja 172344969#11;300
+CC Paos;Este (Lecheria);principal;lecheria_haciacaminoreal;lecheria_haciacaminoreal cruce_cc_paos lecheria_salida;300
+CC Paos;Norte (Madre Vieja);principal;madre_vieja_salida;madre_vieja_salida;300
+Perrokero;Sur (FFAA);principal;FA_1;FA_1 bifurcacion_FA_perrokero fuerzas_armadas_salida 172680884;157
+Perrokero;Norte (desde Camino Real);principal;FA_3;FA_3 371794626#12 371794626#11 371794626#10 371794626#9 371794626#8 371794626#6;300
+Perrokero;Este (Av. Rio);secundario;avrio_1;avrio_1 172682268#2 172682268#1 av_rio_salida;300
+Perrokero;Oeste (Residencias);secundario;res_salida;res_salida -830761843#0 -830761843#1 -830761843#2 -830761843#3;300
+Bissau;Costanera sentido Camino Real;principal;costanera_bissau_haciacaminoreal;costanera_bissau_haciacaminoreal;300
+Bissau;Costanera sentido Lecheria;principal;costanera_bissau_hacialecheria;costanera_bissau_hacialecheria 172344969#6 172344969#5 172344969#4;300
+Bissau;Salida Bissau (residencias/CC);secundario;salida_bissau_1;salida_bissau_1 -495730009#2 -1225795048;112
+Bissau;Salida Bissau (galpones);secundario;salida_bissau_2;salida_bissau_2 bissau_salida 1225795049;105
+Puerto Guaica;Salida Fernandez Padilla;secundario;-335982664#1;-335982664#1 -1088915526;140
+Puerto Guaica;Costanera sentido Camino Real;principal;costanera_puerto_guaica_haciacaminoreal;costanera_puerto_guaica_haciacaminoreal;300
+Puerto Guaica;Costanera sentido Lecheria;principal;costanera_puerto_guaica_hacialecheria;costanera_puerto_guaica_hacialecheria 172344969#1 172344969#0;203
+Puerto Guaica;Salida Puerto Guaica;secundario;salida:puerto_guaica;salida:puerto_guaica -1227058160#0 -1227058160#1 -335982654#0;300

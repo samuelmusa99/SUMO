@@ -1,0 +1,77 @@
+escenario;interseccion;codigo;descripcion;desde;hacia;livianos;pesados;fuente
+campo2026;Camino Real;GI7;El Ejercito -> Costanera;semaforo_caminoreal_elejercito;172344969#0;540;60;Campo 07/04/2026 Via 1 (sin motos)
+campo2026;Camino Real;GD3;Costanera -> El Ejercito (curva);curva_caminoreal;;420;30;Campo 07/04/2026 Via 2 (sin motos)
+campo2026;Camino Real;GD9;El Ejercito -> FFAA;semaforo_caminoreal_elejercito;semaforocaminorea_haciaperrokero;270;0;Campo 07/04/2026 Via 3 (sin motos)
+campo2026;Camino Real;MF5;FFAA -> Costanera;semaforo_caminoreal_FA;172344969#0;330;90;Campo 07/04/2026 Via 4 (sin motos)
+campo2026;CC Paos;GI10;Lecheria -> Costanera;lecheria_haciacaminoreal;592256719#1;460;20;Campo 07/04/2026 Mov 1 (sin motos)
+campo2026;CC Paos;MF5;Costanera -> Madre Vieja;costanera_haciamadrevieja;592256721#0;280;20;Campo 07/04/2026 Mov 2 (sin motos)
+campo2026;CC Paos;MF2;Madre Vieja -> Costanera;madre_vieja_salida;592256719#1;260;40;Campo 07/04/2026 Mov 3 (sin motos)
+campo2026;CC Paos;GD12;Lecheria -> Madre Vieja;172642222;;220;0;Campo 07/04/2026 Mov 4 (sin motos)
+campo2026;Bissau;MF5;Costanera sentido Lecheria (directo);costanera_bissau_hacialecheria;172344969#9;540;60;Campo 07/04/2026 Via 1 (sin motos)
+campo2026;Bissau;MF2;Costanera sentido Camino Real (directo);costanera_bissau_haciacaminoreal;592256719#4;420;30;Campo 07/04/2026 Via 2 (sin motos)
+campo2026;Bissau;GD6;Entrada residencias/CC desde sentido Lecheria;costanera_bissau_hacialecheria;entrada:bissau:1;45;0;Campo Vias 3 y 4 (180 entradas+salidas repartidas en 4 movimientos)
+campo2026;Bissau;GI1;Entrada residencias/CC desde sentido Camino Real;costanera_bissau_haciacaminoreal;entrada:bissau:1;45;0;Campo Vias 3 y 4 (supuesto 25 %)
+campo2026;Bissau;GD12;Salida residencias/CC hacia Lecheria;salida_bissau_1;172344969#9;45;0;Campo Vias 3 y 4 (supuesto 25 %)
+campo2026;Bissau;GI10;Salida residencias/CC hacia Camino Real;salida_bissau_1;592256719#4;45;0;Campo Vias 3 y 4 (supuesto 25 %)
+campo2026;Bissau;GAL;Entrada a galpones;entrada_bissau_2;;120;30;Campo 07/04/2026 Via 5 (sin motos)
+campo2026;Puerto Guaica;MF5;Costanera sentido Lecheria (directo);costanera_puerto_guaica_hacialecheria;172344969#4;450;30;Campo 07/04/2026 Via 1 (sin motos)
+campo2026;Puerto Guaica;MF2;Costanera sentido Camino Real (directo);costanera_puerto_guaica_haciacaminoreal;592256719#6;360;60;Campo 07/04/2026 Via 2 (sin motos)
+campo2026;Puerto Guaica;ENT;Entrada a Puerto Guaica;entrada_puerto_guaica;;120;0;Campo 07/04/2026 Via 3 (sin motos)
+campo2026;Puerto Guaica;SAL;Salida de Puerto Guaica;salida:puerto_guaica;;90;0;Campo 07/04/2026 Via 4 (sin motos)
+campo2026;Puerto Guaica;U5;Giro en U (sentido Lecheria -> Camino Real);costanera_puerto_guaica_hacialecheria;592256719#6;120;0;Campo 07/04/2026 Via 1 giros en U (sin clasificar, se asumen livianos)
+campo2026;Puerto Guaica;U2;Giro en U (sentido Camino Real -> Lecheria);costanera_puerto_guaica_haciacaminoreal;172344969#4;60;0;Campo 07/04/2026 Via 2 giros en U (sin clasificar, se asumen livianos)
+campo2026;Perrokero;MF2;FFAA sur -> Camino Real;FA_1;FA_2;240;20;Campo 07/04/2026 Via 1 (sin motos)
+campo2026;Perrokero;MF5;Camino Real -> FFAA sur;FA_3;fuerzas_armadas_entrada;180;0;Campo 07/04/2026 Via 2 (sin motos)
+campo2026;Perrokero;GD9;Av. Rio -> Camino Real;avrio_1;FA_2;100;0;Campo 07/04/2026 Via 3 (sin motos)
+campo2026;Perrokero;GI7;Av. Rio -> FFAA sur;avrio_1;fuerzas_armadas_entrada;80;0;Campo 07/04/2026 Via 4 (sin motos)
+campo2026;Perrokero;GD3;FFAA sur -> Av. Rio;FA_1;avrio_2;60;0;Campo 07/04/2026 Via 5 (sin motos)
+campo2026;Perrokero;GD12;Residencias -> FFAA sur;res_salida;fuerzas_armadas_entrada;40;0;Campo 07/04/2026 Via 6 (sin motos)
+campo2026;Perrokero;GI10;Residencias -> Camino Real;res_salida;FA_2;20;0;Campo 07/04/2026 Via 7 (sin motos)
+campo2026;Perrokero;MF11;Residencias -> Av. Rio;res_salida;avrio_2;20;0;Campo 07/04/2026 Via 8 (sin motos)
+campo2026;Perrokero;GI4;Camino Real -> Av. Rio;FA_3;avrio_2;40;0;Campo 07/04/2026 Via 9 (sin motos)
+tesis2021;Camino Real;MF2;Costanera -> FFAA;semaforo_caminoreal_costanera;semaforocaminorea_haciaperrokero;377;25;Savignani 2021 Tabla 37 (TPD/16 = 402)
+tesis2021;Camino Real;GD3;Costanera -> El Ejercito (curva);curva_caminoreal;;175;15;Savignani 2021 Tabla 37 (190; la Tabla 55 usa 603 por error)
+tesis2021;Camino Real;GI4;FFAA -> El Ejercito;semaforo_caminoreal_FA;172680169#1;151;9;Savignani 2021 Tabla 37 (160)
+tesis2021;Camino Real;MF5;FFAA -> Costanera;semaforo_caminoreal_FA;172344969#0;360;25;Savignani 2021 Tabla 37 (385)
+tesis2021;Camino Real;GI7;El Ejercito -> Costanera;semaforo_caminoreal_elejercito;172344969#0;409;26;Savignani 2021 Tabla 37 (435)
+tesis2021;Camino Real;GD9;El Ejercito -> FFAA;semaforo_caminoreal_elejercito;semaforocaminorea_haciaperrokero;179;14;Savignani 2021 Tabla 37 (193)
+tesis2021;CC Paos;GI10;Lecheria -> Costanera;lecheria_haciacaminoreal;592256719#1;602;23;Savignani 2021 Tabla 38 (625)
+tesis2021;CC Paos;GD12;Lecheria -> Madre Vieja;172642222;;160;9;Savignani 2021 Tabla 38 (169)
+tesis2021;CC Paos;MF2;Madre Vieja -> Costanera;madre_vieja_salida;592256719#1;161;10;Savignani 2021 Tabla 38 (171)
+tesis2021;CC Paos;GI1;Madre Vieja -> Lecheria;madre_vieja_salida;madevieja_hacialecheria;115;6;Savignani 2021 Tabla 38 (121)
+tesis2021;CC Paos;MF5;Costanera -> Madre Vieja;costanera_haciamadrevieja;592256721#0;137;6;Savignani 2021 Tabla 38 (143)
+tesis2021;CC Paos;GD6;Costanera -> Lecheria;costanera_hacialecheria;;579;22;Savignani 2021 Tabla 38 (601)
+tesis2021;Bissau;MF2;Costanera sentido Camino Real (directo);costanera_bissau_haciacaminoreal;592256719#4;735;39;Savignani 2021 Cuadro 21 (774; 5 % pesados supuesto)
+tesis2021;Bissau;MF5;Costanera sentido Lecheria (directo);costanera_bissau_hacialecheria;172344969#9;710;37;Savignani 2021 Cuadro 21 (747; 5 % pesados supuesto)
+tesis2021;Bissau;GI1;Entrada Bissau desde sentido Camino Real;costanera_bissau_haciacaminoreal;entrada:bissau:1;16;0;Savignani 2021 Cuadro 21
+tesis2021;Bissau;GD6;Entrada Bissau desde sentido Lecheria;costanera_bissau_hacialecheria;entrada:bissau:1;11;0;Savignani 2021 Cuadro 21
+tesis2021;Bissau;GI10;Salida Bissau hacia Camino Real;salida_bissau_1;592256719#4;12;0;Savignani 2021 Cuadro 21
+tesis2021;Bissau;GD12;Salida Bissau hacia Lecheria;salida_bissau_1;172344969#9;12;0;Savignani 2021 Cuadro 21
+tesis2021;Puerto Guaica;V2;Costanera sentido Camino Real (directo);costanera_puerto_guaica_haciacaminoreal;592256719#6;769;41;Savignani 2021 Cuadro 23 (810; 5 % pesados supuesto)
+tesis2021;Puerto Guaica;V5;Costanera sentido Lecheria (directo);costanera_puerto_guaica_hacialecheria;172344969#4;759;40;Savignani 2021 Cuadro 23 (799; 5 % pesados supuesto)
+tesis2021;Puerto Guaica;V1;Entrada Puerto Guaica desde sentido Camino Real;costanera_puerto_guaica_haciacaminoreal;entrada_puerto_guaica;4;0;Savignani 2021 Cuadro 23
+tesis2021;Puerto Guaica;V3;Entrada Fernandez Padilla desde sentido Camino Real;costanera_puerto_guaica_haciacaminoreal;fernandez_padilla;1;0;Savignani 2021 Cuadro 23
+tesis2021;Puerto Guaica;V4;Entrada Fernandez Padilla desde sentido Lecheria;costanera_puerto_guaica_hacialecheria;fernandez_padilla;2;0;Savignani 2021 Cuadro 23
+tesis2021;Puerto Guaica;V6;Entrada Puerto Guaica desde sentido Lecheria;costanera_puerto_guaica_hacialecheria;entrada_puerto_guaica;8;0;Savignani 2021 Cuadro 23
+tesis2021;Puerto Guaica;V7;Salida Puerto Guaica hacia Camino Real;salida:puerto_guaica;592256719#6;2;0;Savignani 2021 Cuadro 23
+tesis2021;Puerto Guaica;V9;Salida Puerto Guaica hacia Lecheria;salida:puerto_guaica;172344969#4;2;0;Savignani 2021 Cuadro 23
+tesis2021;Puerto Guaica;V10;Salida Fernandez Padilla hacia Lecheria;-335982664#1;172344969#4;5;0;Savignani 2021 Cuadro 23
+tesis2021;Puerto Guaica;V12;Salida Fernandez Padilla hacia Camino Real;-335982664#1;592256719#6;4;0;Savignani 2021 Cuadro 23
+tesis2021;Perrokero;GI1;FFAA sur -> Residencias;FA_1;res_entrada;35;1;Perozo 2022 Tabla 4.3 (36; 3,75 % pesados acceso Sur)
+tesis2021;Perrokero;MF2;FFAA sur -> Camino Real;FA_1;FA_2;500;19;Perozo 2022 Tabla 4.3 (519)
+tesis2021;Perrokero;GD3;FFAA sur -> Av. Rio;FA_1;avrio_2;265;10;Perozo 2022 Tabla 4.3 (275)
+tesis2021;Perrokero;GI4;Camino Real -> Av. Rio;FA_3;avrio_2;215;10;Perozo 2022 Tabla 4.3 (225; 4,3 % pesados acceso Norte)
+tesis2021;Perrokero;MF5;Camino Real -> FFAA sur;FA_3;fuerzas_armadas_entrada;544;24;Perozo 2022 Tabla 4.3 (568)
+tesis2021;Perrokero;GD6;Camino Real -> Residencias;FA_3;res_entrada;27;1;Perozo 2022 Tabla 4.3 (28)
+tesis2021;Perrokero;GI7;Av. Rio -> FFAA sur;avrio_1;fuerzas_armadas_entrada;282;15;Perozo 2022 Tabla 4.3 (297; 4,9 % pesados acceso Este)
+tesis2021;Perrokero;MF8;Av. Rio -> Residencias;avrio_1;res_entrada;30;2;Perozo 2022 Tabla 4.3 (32)
+tesis2021;Perrokero;GD9;Av. Rio -> Camino Real;avrio_1;FA_2;247;13;Perozo 2022 Tabla 4.3 (260)
+tesis2021;Perrokero;GI10;Residencias -> Camino Real;res_salida;FA_2;25;1;Perozo 2022 Tabla 4.3 (26; 5,3 % pesados acceso Oeste)
+tesis2021;Perrokero;MF11;Residencias -> Av. Rio;res_salida;avrio_2;30;2;Perozo 2022 Tabla 4.3 (32)
+tesis2021;Perrokero;GD12;Residencias -> FFAA sur;res_salida;fuerzas_armadas_entrada;50;3;Perozo 2022 Tabla 4.3 (53)
+campo2026;Bissau;GAL-S;Salida de galpones (no contada);salida_bissau_2;;0;0;No contada en campo: se fija en 0 para que no se use como relleno
+campo2026;Puerto Guaica;FP-E;Entrada a Fernandez Padilla (no contada);fernandez_padilla;;0;0;No contada en campo: se fija en 0 para que no se use como relleno
+campo2026;Puerto Guaica;FP-S;Salida de Fernandez Padilla (no contada);-335982664#1;;0;0;No contada en campo: se fija en 0 para que no se use como relleno
+campo2026;Perrokero;RES-E;Entrada a Residencias (no contada);res_entrada;;0;0;No contada en campo: se fija en 0 para que no se use como relleno
+tesis2021;Bissau;GAL;Entrada a galpones (no estudiada);entrada_bissau_2;;0;0;Savignani 2021 no estudia este acceso: se fija en 0
+tesis2021;Bissau;GAL-S;Salida de galpones (no estudiada);salida_bissau_2;;0;0;Savignani 2021 no estudia este acceso: se fija en 0

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-10-15T14:01:16.843751-04:00 by Eclipse SUMO GUI 1.26.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\costanera.net.xml"/>
+        <route-files value="C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\costanera.rou.xml,C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\demanda/demanda_base.rou.xml"/>
+        <additional-files value="C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\mapa_fondo.poly.xml,C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\medidores.add.xml,C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\vista.xml,C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\paradas.add.xml,C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\detectores_intersecciones.add.xml"/>
+    </input>
+
+    <output>
+        <queue-output value="C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\../02_Resultados_Base/reporte_colas.xml"/>
+        <tripinfo-output value="C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\../02_Resultados_Base/reporte_viajes.xml"/>
+        <statistic-output value="C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\../02_Resultados_Base/estadisticas.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="5400"/>
+    </time>
+
+    <random_number>
+        <random value="true"/>
+    </random_number>
+
+    <gui_only>
+        <gui-settings-file value="C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda\vista.xml"/>
+    </gui_only>
+
+</sumoConfiguration>
+-->
+
+<statistics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/statistic_file.xsd">
+    <performance clockBegin="1394805.10" clockEnd="1395011.37" clockDuration="206.27" traciDuration="27.52" realTimeFactor="26.18" vehicleUpdatesPerSecond="13506.11" personUpdatesPerSecond="0.00" begin="0.00" end="5400.00" duration="5400.00"/>
+    <vehicles loaded="6688" inserted="6066" running="214" waiting="622"/>
+    <teleports total="54" jam="25" yield="29" wrongLane="0"/>
+    <safety collisions="0" emergencyStops="0" emergencyBraking="1"/>
+    <persons loaded="0" running="0" jammed="0"/>
+    <personTeleports total="0" abortWait="0" wrongDest="0"/>
+    <vehicleTripStatistics count="5852" routeLength="1881.87" speed="6.00" duration="456.11" waitingTime="180.25" timeLoss="279.23" departDelay="26.77" departDelayWaiting="-1.00" totalTravelTime="2669179.00" totalDepartDelay="156670.00"/>
+    <pedestrianStatistics number="0" routeLength="0.00" duration="0.00" timeLoss="0.00"/>
+    <rideStatistics number="0"/>
+    <transportStatistics number="0"/>
+</statistics>

@@ -1,0 +1,12 @@
+﻿<edges>
+    <!-- Av. Fuerzas Armadas y Av. Rio en Perrokero: 40 km/h (Perozo 2022, cap. 6: velocidad de 40-50 km/h) -->
+    <edge id="FA_1" speed="11.11"/>
+    <edge id="FA_2" speed="11.11"/>
+    <edge id="FA_3" speed="11.11"/>
+    <edge id="bifurcacion_FA_perrokero" speed="11.11"/>
+    <edge id="fuerzas_armadas_entrada" speed="11.11"/>
+    <edge id="avrio_1" speed="11.11"/>
+    <edge id="avrio_2" speed="11.11"/>
+    <edge id="res_entrada" speed="11.11"/>
+    <edge id="res_salida" speed="11.11"/>
+</edges>
