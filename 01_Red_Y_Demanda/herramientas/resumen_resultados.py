@@ -77,8 +77,11 @@ def main(escenario, carpeta_xml, carpeta_csv):
     volumen_15min = defaultdict(lambda: defaultdict(float))   # interseccion -> intervalo -> vehiculos
     with open(MAPA, encoding='utf-8-sig') as f:
         for r in csv.DictReader(f, delimiter=';'):
-            perdida = sum(tramos[t]['perdida'] for t in r['tramos_del_acceso'].split())
             veh = tramos[r['tramo_final']]['salen']
+            # en tramos compartidos con vehiculos que no van a esta interseccion (p. ej. giros libres que se
+            # separan antes), solo se cuenta la fraccion de la perdida que corresponde a los que si siguen
+            perdida = sum(tramos[t]['perdida'] * min(1.0, veh / tramos[t]['salen']) if tramos[t]['salen'] else 0.0
+                          for t in r['tramos_del_acceso'].split())
             accesos[r['interseccion']].append((r['acceso'], r['tipo'], veh, perdida / veh if veh else 0.0))
             for (tramo, inicio), n in salen_15min.items():
                 if tramo == r['tramo_final']:

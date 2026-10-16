@@ -1,0 +1,4 @@
+﻿<connections>
+    <!-- Perrokero: no se gira a la izquierda desde el carril derecho de FFAA (sentido norte-sur) -->
+    <delete from="FA_3" to="avrio_2" fromLane="0" toLane="0"/>
+</connections>

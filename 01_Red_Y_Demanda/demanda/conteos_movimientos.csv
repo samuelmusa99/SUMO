@@ -24,7 +24,7 @@ campo2026;Perrokero;MF2;FFAA sur -> Camino Real;FA_1;FA_2;240;20;Campo 07/04/202
 campo2026;Perrokero;MF5;Camino Real -> FFAA sur;FA_3;fuerzas_armadas_entrada;180;0;Campo 07/04/2026 Via 2 (sin motos)
 campo2026;Perrokero;GD9;Av. Rio -> Camino Real;avrio_1;FA_2;100;0;Campo 07/04/2026 Via 3 (sin motos)
 campo2026;Perrokero;GI7;Av. Rio -> FFAA sur;avrio_1;fuerzas_armadas_entrada;80;0;Campo 07/04/2026 Via 4 (sin motos)
-campo2026;Perrokero;GD3;FFAA sur -> Av. Rio;FA_1;avrio_2;60;0;Campo 07/04/2026 Via 5 (sin motos)
+campo2026;Perrokero;GD3;FFAA sur -> Av. Rio (carril de giro antes del cruce);172682274;;60;0;Campo 07/04/2026 Via 5 (sin motos)
 campo2026;Perrokero;GD12;Residencias -> FFAA sur;res_salida;fuerzas_armadas_entrada;40;0;Campo 07/04/2026 Via 6 (sin motos)
 campo2026;Perrokero;GI10;Residencias -> Camino Real;res_salida;FA_2;20;0;Campo 07/04/2026 Via 7 (sin motos)
 campo2026;Perrokero;MF11;Residencias -> Av. Rio;res_salida;avrio_2;20;0;Campo 07/04/2026 Via 8 (sin motos)
@@ -59,7 +59,7 @@ tesis2021;Puerto Guaica;V10;Salida Fernandez Padilla hacia Lecheria;-335982664#1
 tesis2021;Puerto Guaica;V12;Salida Fernandez Padilla hacia Camino Real;-335982664#1;592256719#6;4;0;Savignani 2021 Cuadro 23
 tesis2021;Perrokero;GI1;FFAA sur -> Residencias;FA_1;res_entrada;35;1;Perozo 2022 Tabla 4.3 (36; 3,75 % pesados acceso Sur)
 tesis2021;Perrokero;MF2;FFAA sur -> Camino Real;FA_1;FA_2;500;19;Perozo 2022 Tabla 4.3 (519)
-tesis2021;Perrokero;GD3;FFAA sur -> Av. Rio;FA_1;avrio_2;265;10;Perozo 2022 Tabla 4.3 (275)
+tesis2021;Perrokero;GD3;FFAA sur -> Av. Rio (carril de giro antes del cruce);172682274;;265;10;Perozo 2022 Tabla 4.3 (275)
 tesis2021;Perrokero;GI4;Camino Real -> Av. Rio;FA_3;avrio_2;215;10;Perozo 2022 Tabla 4.3 (225; 4,3 % pesados acceso Norte)
 tesis2021;Perrokero;MF5;Camino Real -> FFAA sur;FA_3;fuerzas_armadas_entrada;544;24;Perozo 2022 Tabla 4.3 (568)
 tesis2021;Perrokero;GD6;Camino Real -> Residencias;FA_3;res_entrada;27;1;Perozo 2022 Tabla 4.3 (28)

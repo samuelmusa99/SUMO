@@ -38,6 +38,16 @@ if errorlevel 1 (
 )
 
 echo.
+echo Corriendo 5 réplicas sin ventana para promediar resultados (unos 2 minutos)...
+:: Se corren al final porque sobrescriben los XML; los CSV de la corrida que viste ya están generados.
+python "%RED_DIR%\herramientas\replicas.py" 5 "%RED_DIR%\tesis_base.sumocfg" "%XML_DIR%" "%CSV_DIR%"
+if errorlevel 1 (
+    echo ERROR al correr las réplicas
+    pause
+    exit /b 1
+)
+
+echo.
 echo ¡Proceso terminado! Abriendo Excel de Análisis...
 
 :: Abrir maximizado

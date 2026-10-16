@@ -18,6 +18,11 @@
         <statistic-output value="../02_Resultados_Base/estadisticas.xml"/>
     </output>
 
+    <processing>
+        <!-- sin teletransportes: un vehiculo que espera mucho sigue esperando (como en la realidad), no se saca de la red -->
+        <time-to-teleport value="-1"/>
+    </processing>
+
     <time>
         <begin value="0"/>
         <end value="5400"/>

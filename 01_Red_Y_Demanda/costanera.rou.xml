@@ -6,12 +6,24 @@
      Los volumenes de esta hoja se descuentan automaticamente de los conteos. -->
 
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
-    <!-- VTypes -->
-<vType id="liviano" length="5.00" minGap="1.50" maxSpeed="22.22" speedFactor="norm(0.90,0.12)" vClass="passenger" guiShape="passenger" impatience="0.50" width="1.85" latAlignment="center" minGapLat="0.50" color="blue" laneChangeModel="LC2013" accel="2.6" decel="4.5" lcStrategic="5.0" lcAssertive="1.5"  lcCooperative="0.1" lcSpeedGain="3.0" lcKeepRight="1.0" jmIgnoreFoeProb="0.1" jmDriveAfterYellowTime="2.0" sigma="0.5"/>
+    <!-- Tipos de vehiculo (revisados 2026-10-16 para eliminar choques y comportamientos irreales):
+         - sin jmIgnoreFoeProb: ningun vehiculo ignora al que tiene prioridad (antes se atravesaban en las intersecciones)
+         - pesado: aceleracion 1,0 m/s2 (antes 0,4; SUMO usa 1,2 para buses), prefiere el carril derecho y casi no cambia de carril para adelantar
+         - se mantiene el comportamiento local: impaciencia y paso con amarillo (jmDriveAfterYellowTime) -->
+<vType id="liviano" length="5.00" minGap="1.50" maxSpeed="22.22" speedFactor="norm(0.90,0.12)" vClass="passenger" guiShape="passenger" color="blue" width="1.85"
+       accel="2.6" decel="4.5" emergencyDecel="9.0" sigma="0.5" tau="1.0" impatience="0.50"
+       laneChangeModel="LC2013" lcStrategic="1.0" lcCooperative="0.5" lcSpeedGain="1.5" lcKeepRight="1.0" lcAssertive="1.3"
+       jmDriveAfterYellowTime="2.0"/>
 
-<vType id="pesado" length="12.00" minGap="5.00" maxSpeed="13.89" speedFactor="norm(0.70,0.05)" vClass="bus" guiShape="bus"  impatience="0.20" width="2.50" latAlignment="center" minGapLat="0.60" color="red" laneChangeModel="LC2013" lcStrategic="0.5" lcPushy="0" lcCooperative="0.5" jmIgnoreFoeProb="0.05" tau="1.0" accel="0.4" decel="3.0" jmDriveAfterYellowTime="2.0" sigma="0.7" />
+<vType id="pesado" length="12.00" minGap="2.50" maxSpeed="13.89" speedFactor="norm(0.85,0.05)" vClass="bus" guiShape="bus" color="red" width="2.50"
+       accel="1.0" decel="3.5" emergencyDecel="7.0" sigma="0.5" tau="1.2" impatience="0.10"
+       laneChangeModel="LC2013" lcStrategic="1.0" lcCooperative="1.0" lcSpeedGain="0.1" lcKeepRight="5.0" lcAssertive="0.8"
+       jmDriveAfterYellowTime="1.0"/>
 
-<vType id="carrito" length="5.00" minGap="1.00" maxSpeed="19.44"  speedFactor="norm(1.00,0.15)" vClass="bus" guiShape="passenger" impatience="0.90" width="1.85" latAlignment="center" color="yellow"  laneChangeModel="LC2013" lcStrategic="2.0" lcCooperative="0.8" lcPushy="0.8" lcSpeedGain="5.0" accel="3.0" decel="5.0"  jmIgnoreFoeProb="0.4" jmDriveAfterYellowTime="2.0" sigma="0.8"/>
+<vType id="carrito" length="5.00" minGap="1.00" maxSpeed="19.44" speedFactor="norm(1.00,0.12)" vClass="bus" guiShape="passenger" color="yellow" width="1.85"
+       accel="2.8" decel="4.5" emergencyDecel="9.0" sigma="0.6" tau="1.0" impatience="0.80"
+       laneChangeModel="LC2013" lcStrategic="1.5" lcCooperative="0.5" lcSpeedGain="3.0" lcKeepRight="0.5" lcAssertive="1.5"
+       jmDriveAfterYellowTime="2.0"/>
 
     <!-- Transporte publico con paradas: buses (pesado) y carritos/por puestos (carrito) -->
     <flow id="ffaa_lech_P" type="pesado" begin="0.00" end="4500.00" departLane="0" departSpeed="max" perHour="33.00" from="fuerzas_armadas_salida" to="lecheria_entrada"> <stop busStop="bs_0" duration="30.00"/> </flow>
