@@ -53,6 +53,13 @@ CAMPO_PARA_SECUNDARIAS = {'avrio_1', 'res_salida'}
 # y Perozo 0,83-0,94). Cuarto pico = 1/FHMD = 1,111 veces el promedio; los otros tres = 0,963 (el total horario no cambia).
 FHMD = 0.90
 PERFIL_15MIN = [(0, 900, None), (900, 1800, None), (1800, 2700, 'pico'), (2700, 3600, None), (3600, 4500, None)]
+# Archivos de demanda que se generan con las mismas rutas:
+#   demanda_base       hora pico 2026 (situacion actual)
+#   demanda_2041       horizonte futuro de 15 anos: 2026 x 1,025^15 = 1,448 (INE 2,5 % anual, igual que Perozo)
+HORIZONTES = {
+    'demanda_base': (1.0, 'hora pico 2026 = volumenes de las tesis x factor 2026'),
+    'demanda_2041': (1.025 ** 15, 'horizonte 2041 = demanda 2026 x 1,025^15 = 1,448'),
+}
 
 # Origenes y destinos de la demanda: extremos de las avenidas y puerta de cada acceso residencial.
 # (No se usan las calles internas de las urbanizaciones para no generar recorridos artificiales.)
@@ -287,22 +294,23 @@ def generar(escenario):
             k = clave(r)
             informe.append((r['interseccion'], r['codigo'], r['descripcion'], clase, float(r['original_' + clase]), float(r[clase]), simulado[k]))
 
-    nombre = 'demanda_base'
-    ruta_xml = os.path.join(AQUI, '..', 'demanda', nombre + '.rou.xml')
-    with open(ruta_xml, 'w', encoding='utf-8') as f:
-        f.write(f'<?xml version="1.0" encoding="UTF-8"?>\n<!-- Generado por herramientas/generar_demanda.py (hora pico 2026 = volumenes de las tesis x {FACTOR_2026:.3f}). No editar a mano: modificar demanda/conteos_movimientos.csv y volver a generar. -->\n')
-        f.write('<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">\n')
-        pico = 1.0 / FHMD
-        resto = (4 - pico) / 3
-        for fid, vtype, v, r in salida_rutas:
-            f.write(f'    <route id="r_{fid}" edges="{" ".join(r)}"/>\n')
-        # SUMO exige los flujos ordenados por hora de inicio: primero todos los del cuarto 0, luego los del 1, etc.
-        for q, (ini, fin, tipo) in enumerate(PERFIL_15MIN):
+    # Las mismas rutas se escriben con tres niveles de demanda (ver HORIZONTES)
+    pico = 1.0 / FHMD
+    resto = (4 - pico) / 3
+    for nombre, (multiplicador, descripcion) in HORIZONTES.items():
+        ruta_xml = os.path.join(AQUI, '..', 'demanda', nombre + '.rou.xml')
+        with open(ruta_xml, 'w', encoding='utf-8') as f:
+            f.write(f'<?xml version="1.0" encoding="UTF-8"?>\n<!-- Generado por herramientas/generar_demanda.py: {descripcion}. No editar a mano: modificar demanda/conteos_movimientos.csv y volver a generar. -->\n')
+            f.write('<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">\n')
             for fid, vtype, v, r in salida_rutas:
-                tasa = v * (pico if tipo == 'pico' else resto) / 3600.0
-                f.write(f'    <flow id="{fid}_q{q}" type="{vtype}" route="r_{fid}" begin="{ini}" end="{fin}" period="exp({tasa:.6f})" departLane="best" departSpeed="max"/>\n')
-        f.write('</routes>\n')
-
+                f.write(f'    <route id="r_{fid}" edges="{" ".join(r)}"/>\n')
+            # SUMO exige los flujos ordenados por hora de inicio: primero todos los del cuarto 0, luego los del 1, etc.
+            for q, (ini, fin, tipo) in enumerate(PERFIL_15MIN):
+                for fid, vtype, v, r in salida_rutas:
+                    tasa = v * multiplicador * (pico if tipo == 'pico' else resto) / 3600.0
+                    f.write(f'    <flow id="{fid}_q{q}" type="{vtype}" route="r_{fid}" begin="{ini}" end="{fin}" period="exp({tasa:.6f})" departLane="best" departSpeed="max"/>\n')
+            f.write('</routes>\n')
+        print(f'  -> {os.path.normpath(ruta_xml)}  ({descripcion})')
     ruta_inf = os.path.join(AQUI, '..', 'demanda', 'ajuste_demanda_base.csv')
     with open(ruta_inf, 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.writer(f, delimiter=';')
@@ -317,7 +325,7 @@ def generar(escenario):
             w.writerow([inter, cod, desc, clase, f'{orig:.0f}', f'{obj:.0f}', f'{sim:.0f}', f'{geh:.2f}'])
     total = sum(v for _, _, v, _ in salida_rutas)
     print(f'Demanda base hora pico 2026: {len(salida_rutas)} rutas, {total:.0f} veh/h (sin transporte publico); GEH<5 en {geh_ok} de {n} conteos')
-    print(f'  -> {os.path.normpath(ruta_xml)}\n  -> {os.path.normpath(ruta_inf)}')
+    print(f'  -> {os.path.normpath(ruta_inf)}')
 
 
 if __name__ == '__main__':

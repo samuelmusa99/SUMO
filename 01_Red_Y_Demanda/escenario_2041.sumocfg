@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Horizonte 2041 sin proyecto: misma red y semaforos que la base, demanda 2026 x 1,025^15 = 1,448 (INE 2,5 % anual).
+     Tiempo: 0-900 s calentamiento, 900-4500 s hora de analisis, despues se vacia la red. -->
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="costanera.net.xml"/>
+        <route-files value="costanera.rou.xml,demanda/demanda_2041.rou.xml"/>
+        <additional-files value="mapa_fondo.poly.xml,medidores.add.xml,vista.xml,paradas.add.xml,detectores_intersecciones.add.xml"/>
+    </input>
+
+    <gui_only>
+        <gui-settings-file value="vista.xml"/>
+    </gui_only>
+
+    <output>
+        <tripinfo-output value="../02_Resultados_Base/reporte_viajes.xml"/>
+        <queue-output value="../02_Resultados_Base/reporte_colas.xml"/>
+        <statistic-output value="../02_Resultados_Base/estadisticas.xml"/>
+    </output>
+
+    <processing>
+        <!-- sin teletransportes: un vehiculo que espera mucho sigue esperando (como en la realidad), no se saca de la red -->
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <time>
+        <begin value="0"/>
+        <end value="5400"/>
+    </time>
+</sumoConfiguration>

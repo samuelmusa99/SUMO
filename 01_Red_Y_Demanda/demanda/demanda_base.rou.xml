@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Generado por herramientas/generar_demanda.py (hora pico 2026 = volumenes de las tesis x 1.697). No editar a mano: modificar demanda/conteos_movimientos.csv y volver a generar. -->
+<!-- Generado por herramientas/generar_demanda.py: hora pico 2026 = volumenes de las tesis x factor 2026. No editar a mano: modificar demanda/conteos_movimientos.csv y volver a generar. -->
 <routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
     <route id="r_L000" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
     <route id="r_L001" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero 172682274 -172682268#2 -172682268#1 av_rio_entrada"/>

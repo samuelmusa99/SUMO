@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generado por herramientas/generar_demanda.py: horizonte 2041 = demanda 2026 x 1,025^15 = 1,448. No editar a mano: modificar demanda/conteos_movimientos.csv y volver a generar. -->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <route id="r_L000" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_L001" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero 172682274 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_L002" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    <route id="r_L003" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_L004" edges="lecheria_salida cruce_cc_paos 172642222 592256721#1 madre_vieja_entrada"/>
+    <route id="r_L005" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    <route id="r_L006" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172680169#1 entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_L007" edges="madre_vieja_salida madevieja_hacialecheria 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_L008" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_L009" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_L010" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 335982661#0 -335982658#1 -335982664#2 1088915526"/>
+    <route id="r_L011" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    <route id="r_L012" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_L013" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    <route id="r_L014" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_L015" edges="av_rio_salida 172682268#1 172682268#2 avrio_1 fuerzas_armadas_entrada"/>
+    <route id="r_L016" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    <route id="r_L017" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 res_entrada"/>
+    <route id="r_L018" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_L019" edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    <route id="r_L020" edges="res_salida fuerzas_armadas_entrada"/>
+    <route id="r_L021" edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_L022" edges="res_salida avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_L023" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 res_entrada"/>
+    <route id="r_L024" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal entrada:bissau:1 bissau_entrada"/>
+    <route id="r_L025" edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172680169#1 entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_L026" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal entrada:bissau:1 bissau_entrada"/>
+    <route id="r_L027" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 res_entrada"/>
+    <route id="r_L028" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria entrada:bissau:1 bissau_entrada"/>
+    <route id="r_L029" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria entrada_puerto_guaica puerto_guaica"/>
+    <route id="r_L030" edges="res_salida FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    <route id="r_L031" edges="-495730009#2 salida_bissau_1 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    <route id="r_L032" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 res_entrada"/>
+    <route id="r_L033" edges="res_salida FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_L034" edges="-495730009#2 salida_bissau_1 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_L035" edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_L036" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 335982661#0 -335982658#1 -335982664#2 1088915526"/>
+    <route id="r_L037" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal entrada_puerto_guaica puerto_guaica"/>
+    <route id="r_L038" edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria entrada:bissau:1 bissau_entrada"/>
+    <route id="r_L039" edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    <route id="r_L040" edges="-1088915526 -335982664#1 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria entrada:bissau:1 bissau_entrada"/>
+    <route id="r_L041" edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_L042" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal entrada_puerto_guaica puerto_guaica"/>
+    <route id="r_L043" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria entrada:bissau:1 bissau_entrada"/>
+    <route id="r_L044" edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria entrada_puerto_guaica puerto_guaica"/>
+    <route id="r_L045" edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 res_entrada"/>
+    <route id="r_L046" edges="-1088915526 -335982664#1 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_L047" edges="res_salida FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria entrada_puerto_guaica puerto_guaica"/>
+    <route id="r_L048" edges="-1088915526 -335982664#1 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    <route id="r_L049" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria entrada_puerto_guaica puerto_guaica"/>
+    <route id="r_L050" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria fernandez_padilla 1088915526"/>
+    <route id="r_L051" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal fernandez_padilla 1088915526"/>
+    <route id="r_L052" edges="-1227058160#0 salida:puerto_guaica 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_L053" edges="av_rio_salida 172682268#1 172682268#2 avrio_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria fernandez_padilla 1088915526"/>
+    <route id="r_L054" edges="-1088915526 -335982664#1 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_L055" edges="-1227058160#0 salida:puerto_guaica 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria entrada:bissau:1 bissau_entrada"/>
+    <route id="r_L056" edges="res_salida FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172680169#1 entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_L057" edges="-1088915526 -335982664#1 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 res_entrada"/>
+    <route id="r_L058" edges="res_salida FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria fernandez_padilla 1088915526"/>
+    <route id="r_L059" edges="-1088915526 -335982664#1 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_L060" edges="-1227058160#0 salida:puerto_guaica 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_L061" edges="res_salida FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria entrada:bissau:1 bissau_entrada"/>
+    <route id="r_L062" edges="-1227058160#0 salida:puerto_guaica 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    <route id="r_L063" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal fernandez_padilla 1088915526"/>
+    <route id="r_L064" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria fernandez_padilla 1088915526"/>
+    <route id="r_L065" edges="-1088915526 -335982664#1 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    <route id="r_L066" edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 335982661#0 -335982658#1 -335982664#2 1088915526"/>
+    <route id="r_L067" edges="-1227058160#0 salida:puerto_guaica 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    <route id="r_L068" edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal entrada_puerto_guaica puerto_guaica"/>
+    <route id="r_L069" edges="-1227058160#0 salida:puerto_guaica 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 res_entrada"/>
+    <route id="r_L070" edges="-1227058160#0 salida:puerto_guaica 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_L071" edges="-495730009#2 salida_bissau_1 592256719#4 costanera_puerto_guaica_haciacaminoreal fernandez_padilla 1088915526"/>
+    <route id="r_P000" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    <route id="r_P001" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 costanera_haciamadrevieja 592256721#0 592256721#1 madre_vieja_entrada"/>
+    <route id="r_P002" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero 172682274 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_P003" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    <route id="r_P004" edges="lecheria_salida cruce_cc_paos 172642222 592256721#1 madre_vieja_entrada"/>
+    <route id="r_P005" edges="madre_vieja_salida madevieja_hacialecheria 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_P006" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_P007" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 172344969#4 172344969#5 172344969#6 costanera_bissau_hacialecheria 172344969#9 172344969#10 172344969#11 598218053#0 costanera_hacialecheria 598218053#2 172641720#0 172641720#1 lecheria_entrada"/>
+    <route id="r_P008" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_P009" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 res_entrada 830761837#0 830761837#1 830761838 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172680169#1 entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_P010" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172680169#1 entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_P011" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 fuerzas_armadas_entrada"/>
+    <route id="r_P012" edges="madre_vieja_salida 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 res_entrada"/>
+    <route id="r_P013" edges="fuerzas_armadas_salida bifurcacion_FA_perrokero FA_1 FA_2 -371794626#12 -371794626#11 -371794626#10 -371794626#9 -371794626#8 -371794626#6 -371794626#5 -371794626#3 -371794626#2 -371794626#1 semaforo_caminoreal_FA 172344969#0 172344969#1 costanera_puerto_guaica_hacialecheria 592256719#6 592256719#7 curva_caminoreal entrada_caminoreal ejercito4 ejercito_5 costanera_entrada"/>
+    <route id="r_P014" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 avrio_2 -172682268#2 -172682268#1 av_rio_entrada"/>
+    <route id="r_P015" edges="lecheria_salida cruce_cc_paos lecheria_haciacaminoreal 592256719#1 costanera_bissau_haciacaminoreal 592256719#4 costanera_puerto_guaica_haciacaminoreal 592256719#6 592256719#7 semaforo_caminoreal_costanera semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 res_entrada"/>
+    <route id="r_P016" edges="costanera_salida ejercito_1 ejercito_2 ejercito_3 semaforo_caminoreal_elejercito semaforocaminorea_haciaperrokero 371794626#1 371794626#2 371794626#3 371794626#5 371794626#6 371794626#8 371794626#9 371794626#10 371794626#11 371794626#12 FA_3 res_entrada"/>
+    <flow id="L000_q0" type="liviano" route="r_L000" begin="0" end="900" period="exp(0.225060)" departLane="best" departSpeed="max"/>
+    <flow id="L001_q0" type="liviano" route="r_L001" begin="0" end="900" period="exp(0.174229)" departLane="best" departSpeed="max"/>
+    <flow id="L002_q0" type="liviano" route="r_L002" begin="0" end="900" period="exp(0.166202)" departLane="best" departSpeed="max"/>
+    <flow id="L003_q0" type="liviano" route="r_L003" begin="0" end="900" period="exp(0.138400)" departLane="best" departSpeed="max"/>
+    <flow id="L004_q0" type="liviano" route="r_L004" begin="0" end="900" period="exp(0.105195)" departLane="best" departSpeed="max"/>
+    <flow id="L005_q0" type="liviano" route="r_L005" begin="0" end="900" period="exp(0.102235)" departLane="best" departSpeed="max"/>
+    <flow id="L006_q0" type="liviano" route="r_L006" begin="0" end="900" period="exp(0.101600)" departLane="best" departSpeed="max"/>
+    <flow id="L007_q0" type="liviano" route="r_L007" begin="0" end="900" period="exp(0.075609)" departLane="best" departSpeed="max"/>
+    <flow id="L008_q0" type="liviano" route="r_L008" begin="0" end="900" period="exp(0.068863)" departLane="best" departSpeed="max"/>
+    <flow id="L009_q0" type="liviano" route="r_L009" begin="0" end="900" period="exp(0.062588)" departLane="best" departSpeed="max"/>
+    <flow id="L010_q0" type="liviano" route="r_L010" begin="0" end="900" period="exp(0.061392)" departLane="best" departSpeed="max"/>
+    <flow id="L011_q0" type="liviano" route="r_L011" begin="0" end="900" period="exp(0.044447)" departLane="best" departSpeed="max"/>
+    <flow id="L012_q0" type="liviano" route="r_L012" begin="0" end="900" period="exp(0.040545)" departLane="best" departSpeed="max"/>
+    <flow id="L013_q0" type="liviano" route="r_L013" begin="0" end="900" period="exp(0.032397)" departLane="best" departSpeed="max"/>
+    <flow id="L014_q0" type="liviano" route="r_L014" begin="0" end="900" period="exp(0.031013)" departLane="best" departSpeed="max"/>
+    <flow id="L015_q0" type="liviano" route="r_L015" begin="0" end="900" period="exp(0.030992)" departLane="best" departSpeed="max"/>
+    <flow id="L016_q0" type="liviano" route="r_L016" begin="0" end="900" period="exp(0.027593)" departLane="best" departSpeed="max"/>
+    <flow id="L017_q0" type="liviano" route="r_L017" begin="0" end="900" period="exp(0.023011)" departLane="best" departSpeed="max"/>
+    <flow id="L018_q0" type="liviano" route="r_L018" begin="0" end="900" period="exp(0.018408)" departLane="best" departSpeed="max"/>
+    <flow id="L019_q0" type="liviano" route="r_L019" begin="0" end="900" period="exp(0.015530)" departLane="best" departSpeed="max"/>
+    <flow id="L020_q0" type="liviano" route="r_L020" begin="0" end="900" period="exp(0.015496)" departLane="best" departSpeed="max"/>
+    <flow id="L021_q0" type="liviano" route="r_L021" begin="0" end="900" period="exp(0.012953)" departLane="best" departSpeed="max"/>
+    <flow id="L022_q0" type="liviano" route="r_L022" begin="0" end="900" period="exp(0.007748)" departLane="best" departSpeed="max"/>
+    <flow id="L023_q0" type="liviano" route="r_L023" begin="0" end="900" period="exp(0.007065)" departLane="best" departSpeed="max"/>
+    <flow id="L024_q0" type="liviano" route="r_L024" begin="0" end="900" period="exp(0.006340)" departLane="best" departSpeed="max"/>
+    <flow id="L025_q0" type="liviano" route="r_L025" begin="0" end="900" period="exp(0.004783)" departLane="best" departSpeed="max"/>
+    <flow id="L026_q0" type="liviano" route="r_L026" begin="0" end="900" period="exp(0.004366)" departLane="best" departSpeed="max"/>
+    <flow id="L027_q0" type="liviano" route="r_L027" begin="0" end="900" period="exp(0.004245)" departLane="best" departSpeed="max"/>
+    <flow id="L028_q0" type="liviano" route="r_L028" begin="0" end="900" period="exp(0.003905)" departLane="best" departSpeed="max"/>
+    <flow id="L029_q0" type="liviano" route="r_L029" begin="0" end="900" period="exp(0.003353)" departLane="best" departSpeed="max"/>
+    <flow id="L030_q0" type="liviano" route="r_L030" begin="0" end="900" period="exp(0.003039)" departLane="best" departSpeed="max"/>
+    <flow id="L031_q0" type="liviano" route="r_L031" begin="0" end="900" period="exp(0.002754)" departLane="best" departSpeed="max"/>
+    <flow id="L032_q0" type="liviano" route="r_L032" begin="0" end="900" period="exp(0.002504)" departLane="best" departSpeed="max"/>
+    <flow id="L033_q0" type="liviano" route="r_L033" begin="0" end="900" period="exp(0.002496)" departLane="best" departSpeed="max"/>
+    <flow id="L034_q0" type="liviano" route="r_L034" begin="0" end="900" period="exp(0.002301)" departLane="best" departSpeed="max"/>
+    <flow id="L035_q0" type="liviano" route="r_L035" begin="0" end="900" period="exp(0.001932)" departLane="best" departSpeed="max"/>
+    <flow id="L036_q0" type="liviano" route="r_L036" begin="0" end="900" period="exp(0.001867)" departLane="best" departSpeed="max"/>
+    <flow id="L037_q0" type="liviano" route="r_L037" begin="0" end="900" period="exp(0.001633)" departLane="best" departSpeed="max"/>
+    <flow id="L038_q0" type="liviano" route="r_L038" begin="0" end="900" period="exp(0.001263)" departLane="best" departSpeed="max"/>
+    <flow id="L039_q0" type="liviano" route="r_L039" begin="0" end="900" period="exp(0.001191)" departLane="best" departSpeed="max"/>
+    <flow id="L040_q0" type="liviano" route="r_L040" begin="0" end="900" period="exp(0.001125)" departLane="best" departSpeed="max"/>
+    <flow id="L041_q0" type="liviano" route="r_L041" begin="0" end="900" period="exp(0.000999)" departLane="best" departSpeed="max"/>
+    <flow id="L042_q0" type="liviano" route="r_L042" begin="0" end="900" period="exp(0.000950)" departLane="best" departSpeed="max"/>
+    <flow id="L043_q0" type="liviano" route="r_L043" begin="0" end="900" period="exp(0.000898)" departLane="best" departSpeed="max"/>
+    <flow id="L044_q0" type="liviano" route="r_L044" begin="0" end="900" period="exp(0.000887)" departLane="best" departSpeed="max"/>
+    <flow id="L045_q0" type="liviano" route="r_L045" begin="0" end="900" period="exp(0.000782)" departLane="best" departSpeed="max"/>
+    <flow id="L046_q0" type="liviano" route="r_L046" begin="0" end="900" period="exp(0.000775)" departLane="best" departSpeed="max"/>
+    <flow id="L047_q0" type="liviano" route="r_L047" begin="0" end="900" period="exp(0.000731)" departLane="best" departSpeed="max"/>
+    <flow id="L048_q0" type="liviano" route="r_L048" begin="0" end="900" period="exp(0.000577)" departLane="best" departSpeed="max"/>
+    <flow id="L049_q0" type="liviano" route="r_L049" begin="0" end="900" period="exp(0.000575)" departLane="best" departSpeed="max"/>
+    <flow id="L050_q0" type="liviano" route="r_L050" begin="0" end="900" period="exp(0.000534)" departLane="best" departSpeed="max"/>
+    <flow id="L051_q0" type="liviano" route="r_L051" begin="0" end="900" period="exp(0.000510)" departLane="best" departSpeed="max"/>
+    <flow id="L052_q0" type="liviano" route="r_L052" begin="0" end="900" period="exp(0.000424)" departLane="best" departSpeed="max"/>
+    <flow id="L053_q0" type="liviano" route="r_L053" begin="0" end="900" period="exp(0.000417)" departLane="best" departSpeed="max"/>
+    <flow id="L054_q0" type="liviano" route="r_L054" begin="0" end="900" period="exp(0.000413)" departLane="best" departSpeed="max"/>
+    <flow id="L055_q0" type="liviano" route="r_L055" begin="0" end="900" period="exp(0.000371)" departLane="best" departSpeed="max"/>
+    <flow id="L056_q0" type="liviano" route="r_L056" begin="0" end="900" period="exp(0.000345)" departLane="best" departSpeed="max"/>
+    <flow id="L057_q0" type="liviano" route="r_L057" begin="0" end="900" period="exp(0.000342)" departLane="best" departSpeed="max"/>
+    <flow id="L058_q0" type="liviano" route="r_L058" begin="0" end="900" period="exp(0.000338)" departLane="best" departSpeed="max"/>
+    <flow id="L059_q0" type="liviano" route="r_L059" begin="0" end="900" period="exp(0.000299)" departLane="best" departSpeed="max"/>
+    <flow id="L060_q0" type="liviano" route="r_L060" begin="0" end="900" period="exp(0.000259)" departLane="best" departSpeed="max"/>
+    <flow id="L061_q0" type="liviano" route="r_L061" begin="0" end="900" period="exp(0.000218)" departLane="best" departSpeed="max"/>
+    <flow id="L062_q0" type="liviano" route="r_L062" begin="0" end="900" period="exp(0.000163)" departLane="best" departSpeed="max"/>
+    <flow id="L063_q0" type="liviano" route="r_L063" begin="0" end="900" period="exp(0.000140)" departLane="best" departSpeed="max"/>
+    <flow id="L064_q0" type="liviano" route="r_L064" begin="0" end="900" period="exp(0.000131)" departLane="best" departSpeed="max"/>
+    <flow id="L065_q0" type="liviano" route="r_L065" begin="0" end="900" period="exp(0.000125)" departLane="best" departSpeed="max"/>
+    <flow id="L066_q0" type="liviano" route="r_L066" begin="0" end="900" period="exp(0.000104)" departLane="best" departSpeed="max"/>
+    <flow id="L067_q0" type="liviano" route="r_L067" begin="0" end="900" period="exp(0.000100)" departLane="best" departSpeed="max"/>
+    <flow id="L068_q0" type="liviano" route="r_L068" begin="0" end="900" period="exp(0.000100)" departLane="best" departSpeed="max"/>
+    <flow id="L069_q0" type="liviano" route="r_L069" begin="0" end="900" period="exp(0.000090)" departLane="best" departSpeed="max"/>
+    <flow id="L070_q0" type="liviano" route="r_L070" begin="0" end="900" period="exp(0.000077)" departLane="best" departSpeed="max"/>
+    <flow id="L071_q0" type="liviano" route="r_L071" begin="0" end="900" period="exp(0.000047)" departLane="best" departSpeed="max"/>
+    <flow id="P000_q0" type="pesado" route="r_P000" begin="0" end="900" period="exp(0.007678)" departLane="best" departSpeed="max"/>
+    <flow id="P001_q0" type="pesado" route="r_P001" begin="0" end="900" period="exp(0.006991)" departLane="best" departSpeed="max"/>
+    <flow id="P002_q0" type="pesado" route="r_P002" begin="0" end="900" period="exp(0.006575)" departLane="best" departSpeed="max"/>
+    <flow id="P003_q0" type="pesado" route="r_P003" begin="0" end="900" period="exp(0.006082)" departLane="best" departSpeed="max"/>
+    <flow id="P004_q0" type="pesado" route="r_P004" begin="0" end="900" period="exp(0.005917)" departLane="best" departSpeed="max"/>
+    <flow id="P005_q0" type="pesado" route="r_P005" begin="0" end="900" period="exp(0.003945)" departLane="best" departSpeed="max"/>
+    <flow id="P006_q0" type="pesado" route="r_P006" begin="0" end="900" period="exp(0.003276)" departLane="best" departSpeed="max"/>
+    <flow id="P007_q0" type="pesado" route="r_P007" begin="0" end="900" period="exp(0.003176)" departLane="best" departSpeed="max"/>
+    <flow id="P008_q0" type="pesado" route="r_P008" begin="0" end="900" period="exp(0.002381)" departLane="best" departSpeed="max"/>
+    <flow id="P009_q0" type="pesado" route="r_P009" begin="0" end="900" period="exp(0.001647)" departLane="best" departSpeed="max"/>
+    <flow id="P010_q0" type="pesado" route="r_P010" begin="0" end="900" period="exp(0.000823)" departLane="best" departSpeed="max"/>
+    <flow id="P011_q0" type="pesado" route="r_P011" begin="0" end="900" period="exp(0.000518)" departLane="best" departSpeed="max"/>
+    <flow id="P012_q0" type="pesado" route="r_P012" begin="0" end="900" period="exp(0.000342)" departLane="best" departSpeed="max"/>
+    <flow id="P013_q0" type="pesado" route="r_P013" begin="0" end="900" period="exp(0.000306)" departLane="best" departSpeed="max"/>
+    <flow id="P014_q0" type="pesado" route="r_P014" begin="0" end="900" period="exp(0.000293)" departLane="best" departSpeed="max"/>
+    <flow id="P015_q0" type="pesado" route="r_P015" begin="0" end="900" period="exp(0.000110)" departLane="best" departSpeed="max"/>
+    <flow id="P016_q0" type="pesado" route="r_P016" begin="0" end="900" period="exp(0.000021)" departLane="best" departSpeed="max"/>
+    <flow id="L000_q1" type="liviano" route="r_L000" begin="900" end="1800" period="exp(0.225060)" departLane="best" departSpeed="max"/>
+    <flow id="L001_q1" type="liviano" route="r_L001" begin="900" end="1800" period="exp(0.174229)" departLane="best" departSpeed="max"/>
+    <flow id="L002_q1" type="liviano" route="r_L002" begin="900" end="1800" period="exp(0.166202)" departLane="best" departSpeed="max"/>
+    <flow id="L003_q1" type="liviano" route="r_L003" begin="900" end="1800" period="exp(0.138400)" departLane="best" departSpeed="max"/>
+    <flow id="L004_q1" type="liviano" route="r_L004" begin="900" end="1800" period="exp(0.105195)" departLane="best" departSpeed="max"/>
+    <flow id="L005_q1" type="liviano" route="r_L005" begin="900" end="1800" period="exp(0.102235)" departLane="best" departSpeed="max"/>
+    <flow id="L006_q1" type="liviano" route="r_L006" begin="900" end="1800" period="exp(0.101600)" departLane="best" departSpeed="max"/>
+    <flow id="L007_q1" type="liviano" route="r_L007" begin="900" end="1800" period="exp(0.075609)" departLane="best" departSpeed="max"/>
+    <flow id="L008_q1" type="liviano" route="r_L008" begin="900" end="1800" period="exp(0.068863)" departLane="best" departSpeed="max"/>
+    <flow id="L009_q1" type="liviano" route="r_L009" begin="900" end="1800" period="exp(0.062588)" departLane="best" departSpeed="max"/>
+    <flow id="L010_q1" type="liviano" route="r_L010" begin="900" end="1800" period="exp(0.061392)" departLane="best" departSpeed="max"/>
+    <flow id="L011_q1" type="liviano" route="r_L011" begin="900" end="1800" period="exp(0.044447)" departLane="best" departSpeed="max"/>
+    <flow id="L012_q1" type="liviano" route="r_L012" begin="900" end="1800" period="exp(0.040545)" departLane="best" departSpeed="max"/>
+    <flow id="L013_q1" type="liviano" route="r_L013" begin="900" end="1800" period="exp(0.032397)" departLane="best" departSpeed="max"/>
+    <flow id="L014_q1" type="liviano" route="r_L014" begin="900" end="1800" period="exp(0.031013)" departLane="best" departSpeed="max"/>
+    <flow id="L015_q1" type="liviano" route="r_L015" begin="900" end="1800" period="exp(0.030992)" departLane="best" departSpeed="max"/>
+    <flow id="L016_q1" type="liviano" route="r_L016" begin="900" end="1800" period="exp(0.027593)" departLane="best" departSpeed="max"/>
+    <flow id="L017_q1" type="liviano" route="r_L017" begin="900" end="1800" period="exp(0.023011)" departLane="best" departSpeed="max"/>
+    <flow id="L018_q1" type="liviano" route="r_L018" begin="900" end="1800" period="exp(0.018408)" departLane="best" departSpeed="max"/>
+    <flow id="L019_q1" type="liviano" route="r_L019" begin="900" end="1800" period="exp(0.015530)" departLane="best" departSpeed="max"/>
+    <flow id="L020_q1" type="liviano" route="r_L020" begin="900" end="1800" period="exp(0.015496)" departLane="best" departSpeed="max"/>
+    <flow id="L021_q1" type="liviano" route="r_L021" begin="900" end="1800" period="exp(0.012953)" departLane="best" departSpeed="max"/>
+    <flow id="L022_q1" type="liviano" route="r_L022" begin="900" end="1800" period="exp(0.007748)" departLane="best" departSpeed="max"/>
+    <flow id="L023_q1" type="liviano" route="r_L023" begin="900" end="1800" period="exp(0.007065)" departLane="best" departSpeed="max"/>
+    <flow id="L024_q1" type="liviano" route="r_L024" begin="900" end="1800" period="exp(0.006340)" departLane="best" departSpeed="max"/>
+    <flow id="L025_q1" type="liviano" route="r_L025" begin="900" end="1800" period="exp(0.004783)" departLane="best" departSpeed="max"/>
+    <flow id="L026_q1" type="liviano" route="r_L026" begin="900" end="1800" period="exp(0.004366)" departLane="best" departSpeed="max"/>
+    <flow id="L027_q1" type="liviano" route="r_L027" begin="900" end="1800" period="exp(0.004245)" departLane="best" departSpeed="max"/>
+    <flow id="L028_q1" type="liviano" route="r_L028" begin="900" end="1800" period="exp(0.003905)" departLane="best" departSpeed="max"/>
+    <flow id="L029_q1" type="liviano" route="r_L029" begin="900" end="1800" period="exp(0.003353)" departLane="best" departSpeed="max"/>
+    <flow id="L030_q1" type="liviano" route="r_L030" begin="900" end="1800" period="exp(0.003039)" departLane="best" departSpeed="max"/>
+    <flow id="L031_q1" type="liviano" route="r_L031" begin="900" end="1800" period="exp(0.002754)" departLane="best" departSpeed="max"/>
+    <flow id="L032_q1" type="liviano" route="r_L032" begin="900" end="1800" period="exp(0.002504)" departLane="best" departSpeed="max"/>
+    <flow id="L033_q1" type="liviano" route="r_L033" begin="900" end="1800" period="exp(0.002496)" departLane="best" departSpeed="max"/>
+    <flow id="L034_q1" type="liviano" route="r_L034" begin="900" end="1800" period="exp(0.002301)" departLane="best" departSpeed="max"/>
+    <flow id="L035_q1" type="liviano" route="r_L035" begin="900" end="1800" period="exp(0.001932)" departLane="best" departSpeed="max"/>
+    <flow id="L036_q1" type="liviano" route="r_L036" begin="900" end="1800" period="exp(0.001867)" departLane="best" departSpeed="max"/>
+    <flow id="L037_q1" type="liviano" route="r_L037" begin="900" end="1800" period="exp(0.001633)" departLane="best" departSpeed="max"/>
+    <flow id="L038_q1" type="liviano" route="r_L038" begin="900" end="1800" period="exp(0.001263)" departLane="best" departSpeed="max"/>
+    <flow id="L039_q1" type="liviano" route="r_L039" begin="900" end="1800" period="exp(0.001191)" departLane="best" departSpeed="max"/>
+    <flow id="L040_q1" type="liviano" route="r_L040" begin="900" end="1800" period="exp(0.001125)" departLane="best" departSpeed="max"/>
+    <flow id="L041_q1" type="liviano" route="r_L041" begin="900" end="1800" period="exp(0.000999)" departLane="best" departSpeed="max"/>
+    <flow id="L042_q1" type="liviano" route="r_L042" begin="900" end="1800" period="exp(0.000950)" departLane="best" departSpeed="max"/>
+    <flow id="L043_q1" type="liviano" route="r_L043" begin="900" end="1800" period="exp(0.000898)" departLane="best" departSpeed="max"/>
+    <flow id="L044_q1" type="liviano" route="r_L044" begin="900" end="1800" period="exp(0.000887)" departLane="best" departSpeed="max"/>
+    <flow id="L045_q1" type="liviano" route="r_L045" begin="900" end="1800" period="exp(0.000782)" departLane="best" departSpeed="max"/>
+    <flow id="L046_q1" type="liviano" route="r_L046" begin="900" end="1800" period="exp(0.000775)" departLane="best" departSpeed="max"/>
+    <flow id="L047_q1" type="liviano" route="r_L047" begin="900" end="1800" period="exp(0.000731)" departLane="best" departSpeed="max"/>
+    <flow id="L048_q1" type="liviano" route="r_L048" begin="900" end="1800" period="exp(0.000577)" departLane="best" departSpeed="max"/>
+    <flow id="L049_q1" type="liviano" route="r_L049" begin="900" end="1800" period="exp(0.000575)" departLane="best" departSpeed="max"/>
+    <flow id="L050_q1" type="liviano" route="r_L050" begin="900" end="1800" period="exp(0.000534)" departLane="best" departSpeed="max"/>
+    <flow id="L051_q1" type="liviano" route="r_L051" begin="900" end="1800" period="exp(0.000510)" departLane="best" departSpeed="max"/>
+    <flow id="L052_q1" type="liviano" route="r_L052" begin="900" end="1800" period="exp(0.000424)" departLane="best" departSpeed="max"/>
+    <flow id="L053_q1" type="liviano" route="r_L053" begin="900" end="1800" period="exp(0.000417)" departLane="best" departSpeed="max"/>
+    <flow id="L054_q1" type="liviano" route="r_L054" begin="900" end="1800" period="exp(0.000413)" departLane="best" departSpeed="max"/>
+    <flow id="L055_q1" type="liviano" route="r_L055" begin="900" end="1800" period="exp(0.000371)" departLane="best" departSpeed="max"/>
+    <flow id="L056_q1" type="liviano" route="r_L056" begin="900" end="1800" period="exp(0.000345)" departLane="best" departSpeed="max"/>
+    <flow id="L057_q1" type="liviano" route="r_L057" begin="900" end="1800" period="exp(0.000342)" departLane="best" departSpeed="max"/>
+    <flow id="L058_q1" type="liviano" route="r_L058" begin="900" end="1800" period="exp(0.000338)" departLane="best" departSpeed="max"/>
+    <flow id="L059_q1" type="liviano" route="r_L059" begin="900" end="1800" period="exp(0.000299)" departLane="best" departSpeed="max"/>
+    <flow id="L060_q1" type="liviano" route="r_L060" begin="900" end="1800" period="exp(0.000259)" departLane="best" departSpeed="max"/>
+    <flow id="L061_q1" type="liviano" route="r_L061" begin="900" end="1800" period="exp(0.000218)" departLane="best" departSpeed="max"/>
+    <flow id="L062_q1" type="liviano" route="r_L062" begin="900" end="1800" period="exp(0.000163)" departLane="best" departSpeed="max"/>
+    <flow id="L063_q1" type="liviano" route="r_L063" begin="900" end="1800" period="exp(0.000140)" departLane="best" departSpeed="max"/>
+    <flow id="L064_q1" type="liviano" route="r_L064" begin="900" end="1800" period="exp(0.000131)" departLane="best" departSpeed="max"/>
+    <flow id="L065_q1" type="liviano" route="r_L065" begin="900" end="1800" period="exp(0.000125)" departLane="best" departSpeed="max"/>
+    <flow id="L066_q1" type="liviano" route="r_L066" begin="900" end="1800" period="exp(0.000104)" departLane="best" departSpeed="max"/>
+    <flow id="L067_q1" type="liviano" route="r_L067" begin="900" end="1800" period="exp(0.000100)" departLane="best" departSpeed="max"/>
+    <flow id="L068_q1" type="liviano" route="r_L068" begin="900" end="1800" period="exp(0.000100)" departLane="best" departSpeed="max"/>
+    <flow id="L069_q1" type="liviano" route="r_L069" begin="900" end="1800" period="exp(0.000090)" departLane="best" departSpeed="max"/>
+    <flow id="L070_q1" type="liviano" route="r_L070" begin="900" end="1800" period="exp(0.000077)" departLane="best" departSpeed="max"/>
+    <flow id="L071_q1" type="liviano" route="r_L071" begin="900" end="1800" period="exp(0.000047)" departLane="best" departSpeed="max"/>
+    <flow id="P000_q1" type="pesado" route="r_P000" begin="900" end="1800" period="exp(0.007678)" departLane="best" departSpeed="max"/>
+    <flow id="P001_q1" type="pesado" route="r_P001" begin="900" end="1800" period="exp(0.006991)" departLane="best" departSpeed="max"/>
+    <flow id="P002_q1" type="pesado" route="r_P002" begin="900" end="1800" period="exp(0.006575)" departLane="best" departSpeed="max"/>
+    <flow id="P003_q1" type="pesado" route="r_P003" begin="900" end="1800" period="exp(0.006082)" departLane="best" departSpeed="max"/>
+    <flow id="P004_q1" type="pesado" route="r_P004" begin="900" end="1800" period="exp(0.005917)" departLane="best" departSpeed="max"/>
+    <flow id="P005_q1" type="pesado" route="r_P005" begin="900" end="1800" period="exp(0.003945)" departLane="best" departSpeed="max"/>
+    <flow id="P006_q1" type="pesado" route="r_P006" begin="900" end="1800" period="exp(0.003276)" departLane="best" departSpeed="max"/>
+    <flow id="P007_q1" type="pesado" route="r_P007" begin="900" end="1800" period="exp(0.003176)" departLane="best" departSpeed="max"/>
+    <flow id="P008_q1" type="pesado" route="r_P008" begin="900" end="1800" period="exp(0.002381)" departLane="best" departSpeed="max"/>
+    <flow id="P009_q1" type="pesado" route="r_P009" begin="900" end="1800" period="exp(0.001647)" departLane="best" departSpeed="max"/>
+    <flow id="P010_q1" type="pesado" route="r_P010" begin="900" end="1800" period="exp(0.000823)" departLane="best" departSpeed="max"/>
+    <flow id="P011_q1" type="pesado" route="r_P011" begin="900" end="1800" period="exp(0.000518)" departLane="best" departSpeed="max"/>
+    <flow id="P012_q1" type="pesado" route="r_P012" begin="900" end="1800" period="exp(0.000342)" departLane="best" departSpeed="max"/>
+    <flow id="P013_q1" type="pesado" route="r_P013" begin="900" end="1800" period="exp(0.000306)" departLane="best" departSpeed="max"/>
+    <flow id="P014_q1" type="pesado" route="r_P014" begin="900" end="1800" period="exp(0.000293)" departLane="best" departSpeed="max"/>
+    <flow id="P015_q1" type="pesado" route="r_P015" begin="900" end="1800" period="exp(0.000110)" departLane="best" departSpeed="max"/>
+    <flow id="P016_q1" type="pesado" route="r_P016" begin="900" end="1800" period="exp(0.000021)" departLane="best" departSpeed="max"/>
+    <flow id="L000_q2" type="liviano" route="r_L000" begin="1800" end="2700" period="exp(0.259685)" departLane="best" departSpeed="max"/>
+    <flow id="L001_q2" type="liviano" route="r_L001" begin="1800" end="2700" period="exp(0.201034)" departLane="best" departSpeed="max"/>
+    <flow id="L002_q2" type="liviano" route="r_L002" begin="1800" end="2700" period="exp(0.191772)" departLane="best" departSpeed="max"/>
+    <flow id="L003_q2" type="liviano" route="r_L003" begin="1800" end="2700" period="exp(0.159692)" departLane="best" departSpeed="max"/>
+    <flow id="L004_q2" type="liviano" route="r_L004" begin="1800" end="2700" period="exp(0.121379)" departLane="best" departSpeed="max"/>
+    <flow id="L005_q2" type="liviano" route="r_L005" begin="1800" end="2700" period="exp(0.117963)" departLane="best" departSpeed="max"/>
+    <flow id="L006_q2" type="liviano" route="r_L006" begin="1800" end="2700" period="exp(0.117231)" departLane="best" departSpeed="max"/>
+    <flow id="L007_q2" type="liviano" route="r_L007" begin="1800" end="2700" period="exp(0.087241)" departLane="best" departSpeed="max"/>
+    <flow id="L008_q2" type="liviano" route="r_L008" begin="1800" end="2700" period="exp(0.079457)" departLane="best" departSpeed="max"/>
+    <flow id="L009_q2" type="liviano" route="r_L009" begin="1800" end="2700" period="exp(0.072217)" departLane="best" departSpeed="max"/>
+    <flow id="L010_q2" type="liviano" route="r_L010" begin="1800" end="2700" period="exp(0.070837)" departLane="best" departSpeed="max"/>
+    <flow id="L011_q2" type="liviano" route="r_L011" begin="1800" end="2700" period="exp(0.051285)" departLane="best" departSpeed="max"/>
+    <flow id="L012_q2" type="liviano" route="r_L012" begin="1800" end="2700" period="exp(0.046783)" departLane="best" departSpeed="max"/>
+    <flow id="L013_q2" type="liviano" route="r_L013" begin="1800" end="2700" period="exp(0.037381)" departLane="best" departSpeed="max"/>
+    <flow id="L014_q2" type="liviano" route="r_L014" begin="1800" end="2700" period="exp(0.035784)" departLane="best" departSpeed="max"/>
+    <flow id="L015_q2" type="liviano" route="r_L015" begin="1800" end="2700" period="exp(0.035760)" departLane="best" departSpeed="max"/>
+    <flow id="L016_q2" type="liviano" route="r_L016" begin="1800" end="2700" period="exp(0.031839)" departLane="best" departSpeed="max"/>
+    <flow id="L017_q2" type="liviano" route="r_L017" begin="1800" end="2700" period="exp(0.026552)" departLane="best" departSpeed="max"/>
+    <flow id="L018_q2" type="liviano" route="r_L018" begin="1800" end="2700" period="exp(0.021240)" departLane="best" departSpeed="max"/>
+    <flow id="L019_q2" type="liviano" route="r_L019" begin="1800" end="2700" period="exp(0.017920)" departLane="best" departSpeed="max"/>
+    <flow id="L020_q2" type="liviano" route="r_L020" begin="1800" end="2700" period="exp(0.017880)" departLane="best" departSpeed="max"/>
+    <flow id="L021_q2" type="liviano" route="r_L021" begin="1800" end="2700" period="exp(0.014946)" departLane="best" departSpeed="max"/>
+    <flow id="L022_q2" type="liviano" route="r_L022" begin="1800" end="2700" period="exp(0.008940)" departLane="best" departSpeed="max"/>
+    <flow id="L023_q2" type="liviano" route="r_L023" begin="1800" end="2700" period="exp(0.008152)" departLane="best" departSpeed="max"/>
+    <flow id="L024_q2" type="liviano" route="r_L024" begin="1800" end="2700" period="exp(0.007315)" departLane="best" departSpeed="max"/>
+    <flow id="L025_q2" type="liviano" route="r_L025" begin="1800" end="2700" period="exp(0.005518)" departLane="best" departSpeed="max"/>
+    <flow id="L026_q2" type="liviano" route="r_L026" begin="1800" end="2700" period="exp(0.005038)" departLane="best" departSpeed="max"/>
+    <flow id="L027_q2" type="liviano" route="r_L027" begin="1800" end="2700" period="exp(0.004898)" departLane="best" departSpeed="max"/>
+    <flow id="L028_q2" type="liviano" route="r_L028" begin="1800" end="2700" period="exp(0.004506)" departLane="best" departSpeed="max"/>
+    <flow id="L029_q2" type="liviano" route="r_L029" begin="1800" end="2700" period="exp(0.003869)" departLane="best" departSpeed="max"/>
+    <flow id="L030_q2" type="liviano" route="r_L030" begin="1800" end="2700" period="exp(0.003506)" departLane="best" departSpeed="max"/>
+    <flow id="L031_q2" type="liviano" route="r_L031" begin="1800" end="2700" period="exp(0.003177)" departLane="best" departSpeed="max"/>
+    <flow id="L032_q2" type="liviano" route="r_L032" begin="1800" end="2700" period="exp(0.002889)" departLane="best" departSpeed="max"/>
+    <flow id="L033_q2" type="liviano" route="r_L033" begin="1800" end="2700" period="exp(0.002880)" departLane="best" departSpeed="max"/>
+    <flow id="L034_q2" type="liviano" route="r_L034" begin="1800" end="2700" period="exp(0.002655)" departLane="best" departSpeed="max"/>
+    <flow id="L035_q2" type="liviano" route="r_L035" begin="1800" end="2700" period="exp(0.002230)" departLane="best" departSpeed="max"/>
+    <flow id="L036_q2" type="liviano" route="r_L036" begin="1800" end="2700" period="exp(0.002155)" departLane="best" departSpeed="max"/>
+    <flow id="L037_q2" type="liviano" route="r_L037" begin="1800" end="2700" period="exp(0.001884)" departLane="best" departSpeed="max"/>
+    <flow id="L038_q2" type="liviano" route="r_L038" begin="1800" end="2700" period="exp(0.001457)" departLane="best" departSpeed="max"/>
+    <flow id="L039_q2" type="liviano" route="r_L039" begin="1800" end="2700" period="exp(0.001374)" departLane="best" departSpeed="max"/>
+    <flow id="L040_q2" type="liviano" route="r_L040" begin="1800" end="2700" period="exp(0.001298)" departLane="best" departSpeed="max"/>
+    <flow id="L041_q2" type="liviano" route="r_L041" begin="1800" end="2700" period="exp(0.001153)" departLane="best" departSpeed="max"/>
+    <flow id="L042_q2" type="liviano" route="r_L042" begin="1800" end="2700" period="exp(0.001096)" departLane="best" departSpeed="max"/>
+    <flow id="L043_q2" type="liviano" route="r_L043" begin="1800" end="2700" period="exp(0.001036)" departLane="best" departSpeed="max"/>
+    <flow id="L044_q2" type="liviano" route="r_L044" begin="1800" end="2700" period="exp(0.001024)" departLane="best" departSpeed="max"/>
+    <flow id="L045_q2" type="liviano" route="r_L045" begin="1800" end="2700" period="exp(0.000902)" departLane="best" departSpeed="max"/>
+    <flow id="L046_q2" type="liviano" route="r_L046" begin="1800" end="2700" period="exp(0.000894)" departLane="best" departSpeed="max"/>
+    <flow id="L047_q2" type="liviano" route="r_L047" begin="1800" end="2700" period="exp(0.000843)" departLane="best" departSpeed="max"/>
+    <flow id="L048_q2" type="liviano" route="r_L048" begin="1800" end="2700" period="exp(0.000665)" departLane="best" departSpeed="max"/>
+    <flow id="L049_q2" type="liviano" route="r_L049" begin="1800" end="2700" period="exp(0.000664)" departLane="best" departSpeed="max"/>
+    <flow id="L050_q2" type="liviano" route="r_L050" begin="1800" end="2700" period="exp(0.000617)" departLane="best" departSpeed="max"/>
+    <flow id="L051_q2" type="liviano" route="r_L051" begin="1800" end="2700" period="exp(0.000588)" departLane="best" departSpeed="max"/>
+    <flow id="L052_q2" type="liviano" route="r_L052" begin="1800" end="2700" period="exp(0.000489)" departLane="best" departSpeed="max"/>
+    <flow id="L053_q2" type="liviano" route="r_L053" begin="1800" end="2700" period="exp(0.000481)" departLane="best" departSpeed="max"/>
+    <flow id="L054_q2" type="liviano" route="r_L054" begin="1800" end="2700" period="exp(0.000476)" departLane="best" departSpeed="max"/>
+    <flow id="L055_q2" type="liviano" route="r_L055" begin="1800" end="2700" period="exp(0.000428)" departLane="best" departSpeed="max"/>
+    <flow id="L056_q2" type="liviano" route="r_L056" begin="1800" end="2700" period="exp(0.000398)" departLane="best" departSpeed="max"/>
+    <flow id="L057_q2" type="liviano" route="r_L057" begin="1800" end="2700" period="exp(0.000394)" departLane="best" departSpeed="max"/>
+    <flow id="L058_q2" type="liviano" route="r_L058" begin="1800" end="2700" period="exp(0.000390)" departLane="best" departSpeed="max"/>
+    <flow id="L059_q2" type="liviano" route="r_L059" begin="1800" end="2700" period="exp(0.000345)" departLane="best" departSpeed="max"/>
+    <flow id="L060_q2" type="liviano" route="r_L060" begin="1800" end="2700" period="exp(0.000299)" departLane="best" departSpeed="max"/>
+    <flow id="L061_q2" type="liviano" route="r_L061" begin="1800" end="2700" period="exp(0.000252)" departLane="best" departSpeed="max"/>
+    <flow id="L062_q2" type="liviano" route="r_L062" begin="1800" end="2700" period="exp(0.000188)" departLane="best" departSpeed="max"/>
+    <flow id="L063_q2" type="liviano" route="r_L063" begin="1800" end="2700" period="exp(0.000161)" departLane="best" departSpeed="max"/>
+    <flow id="L064_q2" type="liviano" route="r_L064" begin="1800" end="2700" period="exp(0.000151)" departLane="best" departSpeed="max"/>
+    <flow id="L065_q2" type="liviano" route="r_L065" begin="1800" end="2700" period="exp(0.000144)" departLane="best" departSpeed="max"/>
+    <flow id="L066_q2" type="liviano" route="r_L066" begin="1800" end="2700" period="exp(0.000120)" departLane="best" departSpeed="max"/>
+    <flow id="L067_q2" type="liviano" route="r_L067" begin="1800" end="2700" period="exp(0.000115)" departLane="best" departSpeed="max"/>
+    <flow id="L068_q2" type="liviano" route="r_L068" begin="1800" end="2700" period="exp(0.000115)" departLane="best" departSpeed="max"/>
+    <flow id="L069_q2" type="liviano" route="r_L069" begin="1800" end="2700" period="exp(0.000104)" departLane="best" departSpeed="max"/>
+    <flow id="L070_q2" type="liviano" route="r_L070" begin="1800" end="2700" period="exp(0.000088)" departLane="best" departSpeed="max"/>
+    <flow id="L071_q2" type="liviano" route="r_L071" begin="1800" end="2700" period="exp(0.000054)" departLane="best" departSpeed="max"/>
+    <flow id="P000_q2" type="pesado" route="r_P000" begin="1800" end="2700" period="exp(0.008860)" departLane="best" departSpeed="max"/>
+    <flow id="P001_q2" type="pesado" route="r_P001" begin="1800" end="2700" period="exp(0.008066)" departLane="best" departSpeed="max"/>
+    <flow id="P002_q2" type="pesado" route="r_P002" begin="1800" end="2700" period="exp(0.007586)" departLane="best" departSpeed="max"/>
+    <flow id="P003_q2" type="pesado" route="r_P003" begin="1800" end="2700" period="exp(0.007018)" departLane="best" departSpeed="max"/>
+    <flow id="P004_q2" type="pesado" route="r_P004" begin="1800" end="2700" period="exp(0.006828)" departLane="best" departSpeed="max"/>
+    <flow id="P005_q2" type="pesado" route="r_P005" begin="1800" end="2700" period="exp(0.004552)" departLane="best" departSpeed="max"/>
+    <flow id="P006_q2" type="pesado" route="r_P006" begin="1800" end="2700" period="exp(0.003780)" departLane="best" departSpeed="max"/>
+    <flow id="P007_q2" type="pesado" route="r_P007" begin="1800" end="2700" period="exp(0.003664)" departLane="best" departSpeed="max"/>
+    <flow id="P008_q2" type="pesado" route="r_P008" begin="1800" end="2700" period="exp(0.002747)" departLane="best" departSpeed="max"/>
+    <flow id="P009_q2" type="pesado" route="r_P009" begin="1800" end="2700" period="exp(0.001901)" departLane="best" departSpeed="max"/>
+    <flow id="P010_q2" type="pesado" route="r_P010" begin="1800" end="2700" period="exp(0.000949)" departLane="best" departSpeed="max"/>
+    <flow id="P011_q2" type="pesado" route="r_P011" begin="1800" end="2700" period="exp(0.000598)" departLane="best" departSpeed="max"/>
+    <flow id="P012_q2" type="pesado" route="r_P012" begin="1800" end="2700" period="exp(0.000395)" departLane="best" departSpeed="max"/>
+    <flow id="P013_q2" type="pesado" route="r_P013" begin="1800" end="2700" period="exp(0.000353)" departLane="best" departSpeed="max"/>
+    <flow id="P014_q2" type="pesado" route="r_P014" begin="1800" end="2700" period="exp(0.000338)" departLane="best" departSpeed="max"/>
+    <flow id="P015_q2" type="pesado" route="r_P015" begin="1800" end="2700" period="exp(0.000127)" departLane="best" departSpeed="max"/>
+    <flow id="P016_q2" type="pesado" route="r_P016" begin="1800" end="2700" period="exp(0.000024)" departLane="best" departSpeed="max"/>
+    <flow id="L000_q3" type="liviano" route="r_L000" begin="2700" end="3600" period="exp(0.225060)" departLane="best" departSpeed="max"/>
+    <flow id="L001_q3" type="liviano" route="r_L001" begin="2700" end="3600" period="exp(0.174229)" departLane="best" departSpeed="max"/>
+    <flow id="L002_q3" type="liviano" route="r_L002" begin="2700" end="3600" period="exp(0.166202)" departLane="best" departSpeed="max"/>
+    <flow id="L003_q3" type="liviano" route="r_L003" begin="2700" end="3600" period="exp(0.138400)" departLane="best" departSpeed="max"/>
+    <flow id="L004_q3" type="liviano" route="r_L004" begin="2700" end="3600" period="exp(0.105195)" departLane="best" departSpeed="max"/>
+    <flow id="L005_q3" type="liviano" route="r_L005" begin="2700" end="3600" period="exp(0.102235)" departLane="best" departSpeed="max"/>
+    <flow id="L006_q3" type="liviano" route="r_L006" begin="2700" end="3600" period="exp(0.101600)" departLane="best" departSpeed="max"/>
+    <flow id="L007_q3" type="liviano" route="r_L007" begin="2700" end="3600" period="exp(0.075609)" departLane="best" departSpeed="max"/>
+    <flow id="L008_q3" type="liviano" route="r_L008" begin="2700" end="3600" period="exp(0.068863)" departLane="best" departSpeed="max"/>
+    <flow id="L009_q3" type="liviano" route="r_L009" begin="2700" end="3600" period="exp(0.062588)" departLane="best" departSpeed="max"/>
+    <flow id="L010_q3" type="liviano" route="r_L010" begin="2700" end="3600" period="exp(0.061392)" departLane="best" departSpeed="max"/>
+    <flow id="L011_q3" type="liviano" route="r_L011" begin="2700" end="3600" period="exp(0.044447)" departLane="best" departSpeed="max"/>
+    <flow id="L012_q3" type="liviano" route="r_L012" begin="2700" end="3600" period="exp(0.040545)" departLane="best" departSpeed="max"/>
+    <flow id="L013_q3" type="liviano" route="r_L013" begin="2700" end="3600" period="exp(0.032397)" departLane="best" departSpeed="max"/>
+    <flow id="L014_q3" type="liviano" route="r_L014" begin="2700" end="3600" period="exp(0.031013)" departLane="best" departSpeed="max"/>
+    <flow id="L015_q3" type="liviano" route="r_L015" begin="2700" end="3600" period="exp(0.030992)" departLane="best" departSpeed="max"/>
+    <flow id="L016_q3" type="liviano" route="r_L016" begin="2700" end="3600" period="exp(0.027593)" departLane="best" departSpeed="max"/>
+    <flow id="L017_q3" type="liviano" route="r_L017" begin="2700" end="3600" period="exp(0.023011)" departLane="best" departSpeed="max"/>
+    <flow id="L018_q3" type="liviano" route="r_L018" begin="2700" end="3600" period="exp(0.018408)" departLane="best" departSpeed="max"/>
+    <flow id="L019_q3" type="liviano" route="r_L019" begin="2700" end="3600" period="exp(0.015530)" departLane="best" departSpeed="max"/>
+    <flow id="L020_q3" type="liviano" route="r_L020" begin="2700" end="3600" period="exp(0.015496)" departLane="best" departSpeed="max"/>
+    <flow id="L021_q3" type="liviano" route="r_L021" begin="2700" end="3600" period="exp(0.012953)" departLane="best" departSpeed="max"/>
+    <flow id="L022_q3" type="liviano" route="r_L022" begin="2700" end="3600" period="exp(0.007748)" departLane="best" departSpeed="max"/>
+    <flow id="L023_q3" type="liviano" route="r_L023" begin="2700" end="3600" period="exp(0.007065)" departLane="best" departSpeed="max"/>
+    <flow id="L024_q3" type="liviano" route="r_L024" begin="2700" end="3600" period="exp(0.006340)" departLane="best" departSpeed="max"/>
+    <flow id="L025_q3" type="liviano" route="r_L025" begin="2700" end="3600" period="exp(0.004783)" departLane="best" departSpeed="max"/>
+    <flow id="L026_q3" type="liviano" route="r_L026" begin="2700" end="3600" period="exp(0.004366)" departLane="best" departSpeed="max"/>
+    <flow id="L027_q3" type="liviano" route="r_L027" begin="2700" end="3600" period="exp(0.004245)" departLane="best" departSpeed="max"/>
+    <flow id="L028_q3" type="liviano" route="r_L028" begin="2700" end="3600" period="exp(0.003905)" departLane="best" departSpeed="max"/>
+    <flow id="L029_q3" type="liviano" route="r_L029" begin="2700" end="3600" period="exp(0.003353)" departLane="best" departSpeed="max"/>
+    <flow id="L030_q3" type="liviano" route="r_L030" begin="2700" end="3600" period="exp(0.003039)" departLane="best" departSpeed="max"/>
+    <flow id="L031_q3" type="liviano" route="r_L031" begin="2700" end="3600" period="exp(0.002754)" departLane="best" departSpeed="max"/>
+    <flow id="L032_q3" type="liviano" route="r_L032" begin="2700" end="3600" period="exp(0.002504)" departLane="best" departSpeed="max"/>
+    <flow id="L033_q3" type="liviano" route="r_L033" begin="2700" end="3600" period="exp(0.002496)" departLane="best" departSpeed="max"/>
+    <flow id="L034_q3" type="liviano" route="r_L034" begin="2700" end="3600" period="exp(0.002301)" departLane="best" departSpeed="max"/>
+    <flow id="L035_q3" type="liviano" route="r_L035" begin="2700" end="3600" period="exp(0.001932)" departLane="best" departSpeed="max"/>
+    <flow id="L036_q3" type="liviano" route="r_L036" begin="2700" end="3600" period="exp(0.001867)" departLane="best" departSpeed="max"/>
+    <flow id="L037_q3" type="liviano" route="r_L037" begin="2700" end="3600" period="exp(0.001633)" departLane="best" departSpeed="max"/>
+    <flow id="L038_q3" type="liviano" route="r_L038" begin="2700" end="3600" period="exp(0.001263)" departLane="best" departSpeed="max"/>
+    <flow id="L039_q3" type="liviano" route="r_L039" begin="2700" end="3600" period="exp(0.001191)" departLane="best" departSpeed="max"/>
+    <flow id="L040_q3" type="liviano" route="r_L040" begin="2700" end="3600" period="exp(0.001125)" departLane="best" departSpeed="max"/>
+    <flow id="L041_q3" type="liviano" route="r_L041" begin="2700" end="3600" period="exp(0.000999)" departLane="best" departSpeed="max"/>
+    <flow id="L042_q3" type="liviano" route="r_L042" begin="2700" end="3600" period="exp(0.000950)" departLane="best" departSpeed="max"/>
+    <flow id="L043_q3" type="liviano" route="r_L043" begin="2700" end="3600" period="exp(0.000898)" departLane="best" departSpeed="max"/>
+    <flow id="L044_q3" type="liviano" route="r_L044" begin="2700" end="3600" period="exp(0.000887)" departLane="best" departSpeed="max"/>
+    <flow id="L045_q3" type="liviano" route="r_L045" begin="2700" end="3600" period="exp(0.000782)" departLane="best" departSpeed="max"/>
+    <flow id="L046_q3" type="liviano" route="r_L046" begin="2700" end="3600" period="exp(0.000775)" departLane="best" departSpeed="max"/>
+    <flow id="L047_q3" type="liviano" route="r_L047" begin="2700" end="3600" period="exp(0.000731)" departLane="best" departSpeed="max"/>
+    <flow id="L048_q3" type="liviano" route="r_L048" begin="2700" end="3600" period="exp(0.000577)" departLane="best" departSpeed="max"/>
+    <flow id="L049_q3" type="liviano" route="r_L049" begin="2700" end="3600" period="exp(0.000575)" departLane="best" departSpeed="max"/>
+    <flow id="L050_q3" type="liviano" route="r_L050" begin="2700" end="3600" period="exp(0.000534)" departLane="best" departSpeed="max"/>
+    <flow id="L051_q3" type="liviano" route="r_L051" begin="2700" end="3600" period="exp(0.000510)" departLane="best" departSpeed="max"/>
+    <flow id="L052_q3" type="liviano" route="r_L052" begin="2700" end="3600" period="exp(0.000424)" departLane="best" departSpeed="max"/>
+    <flow id="L053_q3" type="liviano" route="r_L053" begin="2700" end="3600" period="exp(0.000417)" departLane="best" departSpeed="max"/>
+    <flow id="L054_q3" type="liviano" route="r_L054" begin="2700" end="3600" period="exp(0.000413)" departLane="best" departSpeed="max"/>
+    <flow id="L055_q3" type="liviano" route="r_L055" begin="2700" end="3600" period="exp(0.000371)" departLane="best" departSpeed="max"/>
+    <flow id="L056_q3" type="liviano" route="r_L056" begin="2700" end="3600" period="exp(0.000345)" departLane="best" departSpeed="max"/>
+    <flow id="L057_q3" type="liviano" route="r_L057" begin="2700" end="3600" period="exp(0.000342)" departLane="best" departSpeed="max"/>
+    <flow id="L058_q3" type="liviano" route="r_L058" begin="2700" end="3600" period="exp(0.000338)" departLane="best" departSpeed="max"/>
+    <flow id="L059_q3" type="liviano" route="r_L059" begin="2700" end="3600" period="exp(0.000299)" departLane="best" departSpeed="max"/>
+    <flow id="L060_q3" type="liviano" route="r_L060" begin="2700" end="3600" period="exp(0.000259)" departLane="best" departSpeed="max"/>
+    <flow id="L061_q3" type="liviano" route="r_L061" begin="2700" end="3600" period="exp(0.000218)" departLane="best" departSpeed="max"/>
+    <flow id="L062_q3" type="liviano" route="r_L062" begin="2700" end="3600" period="exp(0.000163)" departLane="best" departSpeed="max"/>
+    <flow id="L063_q3" type="liviano" route="r_L063" begin="2700" end="3600" period="exp(0.000140)" departLane="best" departSpeed="max"/>
+    <flow id="L064_q3" type="liviano" route="r_L064" begin="2700" end="3600" period="exp(0.000131)" departLane="best" departSpeed="max"/>
+    <flow id="L065_q3" type="liviano" route="r_L065" begin="2700" end="3600" period="exp(0.000125)" departLane="best" departSpeed="max"/>
+    <flow id="L066_q3" type="liviano" route="r_L066" begin="2700" end="3600" period="exp(0.000104)" departLane="best" departSpeed="max"/>
+    <flow id="L067_q3" type="liviano" route="r_L067" begin="2700" end="3600" period="exp(0.000100)" departLane="best" departSpeed="max"/>
+    <flow id="L068_q3" type="liviano" route="r_L068" begin="2700" end="3600" period="exp(0.000100)" departLane="best" departSpeed="max"/>
+    <flow id="L069_q3" type="liviano" route="r_L069" begin="2700" end="3600" period="exp(0.000090)" departLane="best" departSpeed="max"/>
+    <flow id="L070_q3" type="liviano" route="r_L070" begin="2700" end="3600" period="exp(0.000077)" departLane="best" departSpeed="max"/>
+    <flow id="L071_q3" type="liviano" route="r_L071" begin="2700" end="3600" period="exp(0.000047)" departLane="best" departSpeed="max"/>
+    <flow id="P000_q3" type="pesado" route="r_P000" begin="2700" end="3600" period="exp(0.007678)" departLane="best" departSpeed="max"/>
+    <flow id="P001_q3" type="pesado" route="r_P001" begin="2700" end="3600" period="exp(0.006991)" departLane="best" departSpeed="max"/>
+    <flow id="P002_q3" type="pesado" route="r_P002" begin="2700" end="3600" period="exp(0.006575)" departLane="best" departSpeed="max"/>
+    <flow id="P003_q3" type="pesado" route="r_P003" begin="2700" end="3600" period="exp(0.006082)" departLane="best" departSpeed="max"/>
+    <flow id="P004_q3" type="pesado" route="r_P004" begin="2700" end="3600" period="exp(0.005917)" departLane="best" departSpeed="max"/>
+    <flow id="P005_q3" type="pesado" route="r_P005" begin="2700" end="3600" period="exp(0.003945)" departLane="best" departSpeed="max"/>
+    <flow id="P006_q3" type="pesado" route="r_P006" begin="2700" end="3600" period="exp(0.003276)" departLane="best" departSpeed="max"/>
+    <flow id="P007_q3" type="pesado" route="r_P007" begin="2700" end="3600" period="exp(0.003176)" departLane="best" departSpeed="max"/>
+    <flow id="P008_q3" type="pesado" route="r_P008" begin="2700" end="3600" period="exp(0.002381)" departLane="best" departSpeed="max"/>
+    <flow id="P009_q3" type="pesado" route="r_P009" begin="2700" end="3600" period="exp(0.001647)" departLane="best" departSpeed="max"/>
+    <flow id="P010_q3" type="pesado" route="r_P010" begin="2700" end="3600" period="exp(0.000823)" departLane="best" departSpeed="max"/>
+    <flow id="P011_q3" type="pesado" route="r_P011" begin="2700" end="3600" period="exp(0.000518)" departLane="best" departSpeed="max"/>
+    <flow id="P012_q3" type="pesado" route="r_P012" begin="2700" end="3600" period="exp(0.000342)" departLane="best" departSpeed="max"/>
+    <flow id="P013_q3" type="pesado" route="r_P013" begin="2700" end="3600" period="exp(0.000306)" departLane="best" departSpeed="max"/>
+    <flow id="P014_q3" type="pesado" route="r_P014" begin="2700" end="3600" period="exp(0.000293)" departLane="best" departSpeed="max"/>
+    <flow id="P015_q3" type="pesado" route="r_P015" begin="2700" end="3600" period="exp(0.000110)" departLane="best" departSpeed="max"/>
+    <flow id="P016_q3" type="pesado" route="r_P016" begin="2700" end="3600" period="exp(0.000021)" departLane="best" departSpeed="max"/>
+    <flow id="L000_q4" type="liviano" route="r_L000" begin="3600" end="4500" period="exp(0.225060)" departLane="best" departSpeed="max"/>
+    <flow id="L001_q4" type="liviano" route="r_L001" begin="3600" end="4500" period="exp(0.174229)" departLane="best" departSpeed="max"/>
+    <flow id="L002_q4" type="liviano" route="r_L002" begin="3600" end="4500" period="exp(0.166202)" departLane="best" departSpeed="max"/>
+    <flow id="L003_q4" type="liviano" route="r_L003" begin="3600" end="4500" period="exp(0.138400)" departLane="best" departSpeed="max"/>
+    <flow id="L004_q4" type="liviano" route="r_L004" begin="3600" end="4500" period="exp(0.105195)" departLane="best" departSpeed="max"/>
+    <flow id="L005_q4" type="liviano" route="r_L005" begin="3600" end="4500" period="exp(0.102235)" departLane="best" departSpeed="max"/>
+    <flow id="L006_q4" type="liviano" route="r_L006" begin="3600" end="4500" period="exp(0.101600)" departLane="best" departSpeed="max"/>
+    <flow id="L007_q4" type="liviano" route="r_L007" begin="3600" end="4500" period="exp(0.075609)" departLane="best" departSpeed="max"/>
+    <flow id="L008_q4" type="liviano" route="r_L008" begin="3600" end="4500" period="exp(0.068863)" departLane="best" departSpeed="max"/>
+    <flow id="L009_q4" type="liviano" route="r_L009" begin="3600" end="4500" period="exp(0.062588)" departLane="best" departSpeed="max"/>
+    <flow id="L010_q4" type="liviano" route="r_L010" begin="3600" end="4500" period="exp(0.061392)" departLane="best" departSpeed="max"/>
+    <flow id="L011_q4" type="liviano" route="r_L011" begin="3600" end="4500" period="exp(0.044447)" departLane="best" departSpeed="max"/>
+    <flow id="L012_q4" type="liviano" route="r_L012" begin="3600" end="4500" period="exp(0.040545)" departLane="best" departSpeed="max"/>
+    <flow id="L013_q4" type="liviano" route="r_L013" begin="3600" end="4500" period="exp(0.032397)" departLane="best" departSpeed="max"/>
+    <flow id="L014_q4" type="liviano" route="r_L014" begin="3600" end="4500" period="exp(0.031013)" departLane="best" departSpeed="max"/>
+    <flow id="L015_q4" type="liviano" route="r_L015" begin="3600" end="4500" period="exp(0.030992)" departLane="best" departSpeed="max"/>
+    <flow id="L016_q4" type="liviano" route="r_L016" begin="3600" end="4500" period="exp(0.027593)" departLane="best" departSpeed="max"/>
+    <flow id="L017_q4" type="liviano" route="r_L017" begin="3600" end="4500" period="exp(0.023011)" departLane="best" departSpeed="max"/>
+    <flow id="L018_q4" type="liviano" route="r_L018" begin="3600" end="4500" period="exp(0.018408)" departLane="best" departSpeed="max"/>
+    <flow id="L019_q4" type="liviano" route="r_L019" begin="3600" end="4500" period="exp(0.015530)" departLane="best" departSpeed="max"/>
+    <flow id="L020_q4" type="liviano" route="r_L020" begin="3600" end="4500" period="exp(0.015496)" departLane="best" departSpeed="max"/>
+    <flow id="L021_q4" type="liviano" route="r_L021" begin="3600" end="4500" period="exp(0.012953)" departLane="best" departSpeed="max"/>
+    <flow id="L022_q4" type="liviano" route="r_L022" begin="3600" end="4500" period="exp(0.007748)" departLane="best" departSpeed="max"/>
+    <flow id="L023_q4" type="liviano" route="r_L023" begin="3600" end="4500" period="exp(0.007065)" departLane="best" departSpeed="max"/>
+    <flow id="L024_q4" type="liviano" route="r_L024" begin="3600" end="4500" period="exp(0.006340)" departLane="best" departSpeed="max"/>
+    <flow id="L025_q4" type="liviano" route="r_L025" begin="3600" end="4500" period="exp(0.004783)" departLane="best" departSpeed="max"/>
+    <flow id="L026_q4" type="liviano" route="r_L026" begin="3600" end="4500" period="exp(0.004366)" departLane="best" departSpeed="max"/>
+    <flow id="L027_q4" type="liviano" route="r_L027" begin="3600" end="4500" period="exp(0.004245)" departLane="best" departSpeed="max"/>
+    <flow id="L028_q4" type="liviano" route="r_L028" begin="3600" end="4500" period="exp(0.003905)" departLane="best" departSpeed="max"/>
+    <flow id="L029_q4" type="liviano" route="r_L029" begin="3600" end="4500" period="exp(0.003353)" departLane="best" departSpeed="max"/>
+    <flow id="L030_q4" type="liviano" route="r_L030" begin="3600" end="4500" period="exp(0.003039)" departLane="best" departSpeed="max"/>
+    <flow id="L031_q4" type="liviano" route="r_L031" begin="3600" end="4500" period="exp(0.002754)" departLane="best" departSpeed="max"/>
+    <flow id="L032_q4" type="liviano" route="r_L032" begin="3600" end="4500" period="exp(0.002504)" departLane="best" departSpeed="max"/>
+    <flow id="L033_q4" type="liviano" route="r_L033" begin="3600" end="4500" period="exp(0.002496)" departLane="best" departSpeed="max"/>
+    <flow id="L034_q4" type="liviano" route="r_L034" begin="3600" end="4500" period="exp(0.002301)" departLane="best" departSpeed="max"/>
+    <flow id="L035_q4" type="liviano" route="r_L035" begin="3600" end="4500" period="exp(0.001932)" departLane="best" departSpeed="max"/>
+    <flow id="L036_q4" type="liviano" route="r_L036" begin="3600" end="4500" period="exp(0.001867)" departLane="best" departSpeed="max"/>
+    <flow id="L037_q4" type="liviano" route="r_L037" begin="3600" end="4500" period="exp(0.001633)" departLane="best" departSpeed="max"/>
+    <flow id="L038_q4" type="liviano" route="r_L038" begin="3600" end="4500" period="exp(0.001263)" departLane="best" departSpeed="max"/>
+    <flow id="L039_q4" type="liviano" route="r_L039" begin="3600" end="4500" period="exp(0.001191)" departLane="best" departSpeed="max"/>
+    <flow id="L040_q4" type="liviano" route="r_L040" begin="3600" end="4500" period="exp(0.001125)" departLane="best" departSpeed="max"/>
+    <flow id="L041_q4" type="liviano" route="r_L041" begin="3600" end="4500" period="exp(0.000999)" departLane="best" departSpeed="max"/>
+    <flow id="L042_q4" type="liviano" route="r_L042" begin="3600" end="4500" period="exp(0.000950)" departLane="best" departSpeed="max"/>
+    <flow id="L043_q4" type="liviano" route="r_L043" begin="3600" end="4500" period="exp(0.000898)" departLane="best" departSpeed="max"/>
+    <flow id="L044_q4" type="liviano" route="r_L044" begin="3600" end="4500" period="exp(0.000887)" departLane="best" departSpeed="max"/>
+    <flow id="L045_q4" type="liviano" route="r_L045" begin="3600" end="4500" period="exp(0.000782)" departLane="best" departSpeed="max"/>
+    <flow id="L046_q4" type="liviano" route="r_L046" begin="3600" end="4500" period="exp(0.000775)" departLane="best" departSpeed="max"/>
+    <flow id="L047_q4" type="liviano" route="r_L047" begin="3600" end="4500" period="exp(0.000731)" departLane="best" departSpeed="max"/>
+    <flow id="L048_q4" type="liviano" route="r_L048" begin="3600" end="4500" period="exp(0.000577)" departLane="best" departSpeed="max"/>
+    <flow id="L049_q4" type="liviano" route="r_L049" begin="3600" end="4500" period="exp(0.000575)" departLane="best" departSpeed="max"/>
+    <flow id="L050_q4" type="liviano" route="r_L050" begin="3600" end="4500" period="exp(0.000534)" departLane="best" departSpeed="max"/>
+    <flow id="L051_q4" type="liviano" route="r_L051" begin="3600" end="4500" period="exp(0.000510)" departLane="best" departSpeed="max"/>
+    <flow id="L052_q4" type="liviano" route="r_L052" begin="3600" end="4500" period="exp(0.000424)" departLane="best" departSpeed="max"/>
+    <flow id="L053_q4" type="liviano" route="r_L053" begin="3600" end="4500" period="exp(0.000417)" departLane="best" departSpeed="max"/>
+    <flow id="L054_q4" type="liviano" route="r_L054" begin="3600" end="4500" period="exp(0.000413)" departLane="best" departSpeed="max"/>
+    <flow id="L055_q4" type="liviano" route="r_L055" begin="3600" end="4500" period="exp(0.000371)" departLane="best" departSpeed="max"/>
+    <flow id="L056_q4" type="liviano" route="r_L056" begin="3600" end="4500" period="exp(0.000345)" departLane="best" departSpeed="max"/>
+    <flow id="L057_q4" type="liviano" route="r_L057" begin="3600" end="4500" period="exp(0.000342)" departLane="best" departSpeed="max"/>
+    <flow id="L058_q4" type="liviano" route="r_L058" begin="3600" end="4500" period="exp(0.000338)" departLane="best" departSpeed="max"/>
+    <flow id="L059_q4" type="liviano" route="r_L059" begin="3600" end="4500" period="exp(0.000299)" departLane="best" departSpeed="max"/>
+    <flow id="L060_q4" type="liviano" route="r_L060" begin="3600" end="4500" period="exp(0.000259)" departLane="best" departSpeed="max"/>
+    <flow id="L061_q4" type="liviano" route="r_L061" begin="3600" end="4500" period="exp(0.000218)" departLane="best" departSpeed="max"/>
+    <flow id="L062_q4" type="liviano" route="r_L062" begin="3600" end="4500" period="exp(0.000163)" departLane="best" departSpeed="max"/>
+    <flow id="L063_q4" type="liviano" route="r_L063" begin="3600" end="4500" period="exp(0.000140)" departLane="best" departSpeed="max"/>
+    <flow id="L064_q4" type="liviano" route="r_L064" begin="3600" end="4500" period="exp(0.000131)" departLane="best" departSpeed="max"/>
+    <flow id="L065_q4" type="liviano" route="r_L065" begin="3600" end="4500" period="exp(0.000125)" departLane="best" departSpeed="max"/>
+    <flow id="L066_q4" type="liviano" route="r_L066" begin="3600" end="4500" period="exp(0.000104)" departLane="best" departSpeed="max"/>
+    <flow id="L067_q4" type="liviano" route="r_L067" begin="3600" end="4500" period="exp(0.000100)" departLane="best" departSpeed="max"/>
+    <flow id="L068_q4" type="liviano" route="r_L068" begin="3600" end="4500" period="exp(0.000100)" departLane="best" departSpeed="max"/>
+    <flow id="L069_q4" type="liviano" route="r_L069" begin="3600" end="4500" period="exp(0.000090)" departLane="best" departSpeed="max"/>
+    <flow id="L070_q4" type="liviano" route="r_L070" begin="3600" end="4500" period="exp(0.000077)" departLane="best" departSpeed="max"/>
+    <flow id="L071_q4" type="liviano" route="r_L071" begin="3600" end="4500" period="exp(0.000047)" departLane="best" departSpeed="max"/>
+    <flow id="P000_q4" type="pesado" route="r_P000" begin="3600" end="4500" period="exp(0.007678)" departLane="best" departSpeed="max"/>
+    <flow id="P001_q4" type="pesado" route="r_P001" begin="3600" end="4500" period="exp(0.006991)" departLane="best" departSpeed="max"/>
+    <flow id="P002_q4" type="pesado" route="r_P002" begin="3600" end="4500" period="exp(0.006575)" departLane="best" departSpeed="max"/>
+    <flow id="P003_q4" type="pesado" route="r_P003" begin="3600" end="4500" period="exp(0.006082)" departLane="best" departSpeed="max"/>
+    <flow id="P004_q4" type="pesado" route="r_P004" begin="3600" end="4500" period="exp(0.005917)" departLane="best" departSpeed="max"/>
+    <flow id="P005_q4" type="pesado" route="r_P005" begin="3600" end="4500" period="exp(0.003945)" departLane="best" departSpeed="max"/>
+    <flow id="P006_q4" type="pesado" route="r_P006" begin="3600" end="4500" period="exp(0.003276)" departLane="best" departSpeed="max"/>
+    <flow id="P007_q4" type="pesado" route="r_P007" begin="3600" end="4500" period="exp(0.003176)" departLane="best" departSpeed="max"/>
+    <flow id="P008_q4" type="pesado" route="r_P008" begin="3600" end="4500" period="exp(0.002381)" departLane="best" departSpeed="max"/>
+    <flow id="P009_q4" type="pesado" route="r_P009" begin="3600" end="4500" period="exp(0.001647)" departLane="best" departSpeed="max"/>
+    <flow id="P010_q4" type="pesado" route="r_P010" begin="3600" end="4500" period="exp(0.000823)" departLane="best" departSpeed="max"/>
+    <flow id="P011_q4" type="pesado" route="r_P011" begin="3600" end="4500" period="exp(0.000518)" departLane="best" departSpeed="max"/>
+    <flow id="P012_q4" type="pesado" route="r_P012" begin="3600" end="4500" period="exp(0.000342)" departLane="best" departSpeed="max"/>
+    <flow id="P013_q4" type="pesado" route="r_P013" begin="3600" end="4500" period="exp(0.000306)" departLane="best" departSpeed="max"/>
+    <flow id="P014_q4" type="pesado" route="r_P014" begin="3600" end="4500" period="exp(0.000293)" departLane="best" departSpeed="max"/>
+    <flow id="P015_q4" type="pesado" route="r_P015" begin="3600" end="4500" period="exp(0.000110)" departLane="best" departSpeed="max"/>
+    <flow id="P016_q4" type="pesado" route="r_P016" begin="3600" end="4500" period="exp(0.000021)" departLane="best" departSpeed="max"/>
+</routes>
