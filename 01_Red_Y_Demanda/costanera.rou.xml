@@ -9,8 +9,9 @@
     <!-- Tipos de vehiculo (revisados 2026-10-16 para eliminar choques y comportamientos irreales):
          - sin jmIgnoreFoeProb: ningun vehiculo ignora al que tiene prioridad (antes se atravesaban en las intersecciones)
          - pesado: aceleracion 1,0 m/s2 (antes 0,4; SUMO usa 1,2 para buses), prefiere el carril derecho y casi no cambia de carril para adelantar
-         - se mantiene el comportamiento local: impaciencia y paso con amarillo (jmDriveAfterYellowTime) -->
-<vType id="liviano" length="5.00" minGap="1.50" maxSpeed="22.22" speedFactor="norm(0.90,0.12)" vClass="passenger" guiShape="passenger" color="blue" width="1.85"
+         - se mantiene el comportamiento local: impaciencia y paso con amarillo (jmDriveAfterYellowTime)
+         - livianos y carritos circulan en promedio 10 % sobre el limite (40 -> 44 km/h): velocidad de circulacion de 40-50 km/h observada por Perozo (2022) y Savignani (2021) -->
+<vType id="liviano" length="5.00" minGap="1.50" maxSpeed="22.22" speedFactor="norm(1.10,0.10)" vClass="passenger" guiShape="passenger" color="blue" width="1.85"
        accel="2.6" decel="4.5" emergencyDecel="9.0" sigma="0.5" tau="1.0" impatience="0.50"
        laneChangeModel="LC2013" lcStrategic="1.0" lcCooperative="0.5" lcSpeedGain="1.5" lcKeepRight="1.0" lcAssertive="1.3"
        jmDriveAfterYellowTime="2.0"/>
@@ -20,7 +21,7 @@
        laneChangeModel="LC2013" lcStrategic="1.0" lcCooperative="1.0" lcSpeedGain="0.1" lcKeepRight="5.0" lcAssertive="0.8"
        jmDriveAfterYellowTime="1.0"/>
 
-<vType id="carrito" length="5.00" minGap="1.00" maxSpeed="19.44" speedFactor="norm(1.00,0.12)" vClass="bus" guiShape="passenger" color="yellow" width="1.85"
+<vType id="carrito" length="5.00" minGap="1.00" maxSpeed="19.44" speedFactor="norm(1.10,0.12)" vClass="bus" guiShape="passenger" color="yellow" width="1.85"
        accel="2.8" decel="4.5" emergencyDecel="9.0" sigma="0.6" tau="1.0" impatience="0.80"
        laneChangeModel="LC2013" lcStrategic="1.5" lcCooperative="0.5" lcSpeedGain="3.0" lcKeepRight="0.5" lcAssertive="1.5"
        jmDriveAfterYellowTime="2.0"/>

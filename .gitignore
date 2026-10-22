@@ -1,0 +1,6 @@
+﻿# Resultados de SUMO: se regeneran en cada simulacion (no se guardan en git)
+02_Resultados_*/
+
+# Archivos temporales de Python
+__pycache__/
+*.pyc

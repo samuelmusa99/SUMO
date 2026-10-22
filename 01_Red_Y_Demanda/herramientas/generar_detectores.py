@@ -126,6 +126,9 @@ def main():
     lineas.append('</additional>')
     with open(SALIDA, 'w', encoding='utf-8') as f:
         f.write('\n'.join(lineas) + '\n')
+    # misma configuracion para el horizonte 2041, con sus resultados en su propia carpeta
+    with open(SALIDA.replace('.add.xml', '_2041.add.xml'), 'w', encoding='utf-8') as f:
+        f.write('\n'.join(lineas).replace('../02_Resultados_Base/', '../02_Resultados_2041/') + '\n')
     with open(MAPA, 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.writer(f, delimiter=';')
         w.writerow(['interseccion', 'acceso', 'tipo', 'tramo_final', 'tramos_del_acceso', 'longitud_m'])

@@ -5,10 +5,12 @@ y el nivel de servicio HCM 2000 de la demora promedio.  ->  resumen_replicas.csv
 
 Tambien agrega por acceso: demanda, capacidad (HCM 2000 o medida si esta saturado), V/C y demanda atendida.
 
-Uso: python replicas.py <N> <archivo.sumocfg> <carpeta_xml> <carpeta_csv> [archivo_salida.csv]
+Uso: python replicas.py <N> <archivo.sumocfg> <carpeta_xml> <carpeta_csv> [archivo_salida.csv] [resumen_replicas_base.csv]
+  El ultimo argumento (opcional) es el resumen de la base 2026: si se indica, la capacidad de cada acceso se toma de ahi.
 """
 import csv
 import os
+import re
 import statistics
 import subprocess
 import sys
@@ -33,17 +35,17 @@ def adicionales_aislados(config, tmp):
         ruta = os.path.join(base, nombre.strip())
         with open(ruta, encoding='utf-8') as f:
             texto = f.read()
-        if '../02_Resultados_Base/' in texto:
+        if '../02_Resultados_' in texto:
             copia = os.path.join(tmp, os.path.basename(ruta))
             with open(copia, 'w', encoding='utf-8') as f:
-                f.write(texto.replace('../02_Resultados_Base/', tmp.replace('\\', '/') + '/'))
+                f.write(re.sub(r'\.\./02_Resultados_[^/"]+/', tmp.replace('\\', '/') + '/', texto))
             salida.append(copia)
         else:
             salida.append(ruta)
     return salida
 
 
-def main(n, config, carpeta_xml, carpeta_csv, archivo_salida='resumen_replicas.csv'):
+def main(n, config, carpeta_xml, carpeta_csv, archivo_salida='resumen_replicas.csv', referencia=None):
     n = int(n)
     datos = {}   # (interseccion, nivel, acceso) -> lista de (volumen, demora, tipo)
     orden = []
@@ -79,9 +81,9 @@ def main(n, config, carpeta_xml, carpeta_csv, archivo_salida='resumen_replicas.c
 
     semaf = {nombre: ref[0] == 'semaforizada' for nombre, ref in rr.REFERENCIA.items()}
     atendido = {(k[0], k[2]): statistics.mean(d[0] for d in datos[k]) for k in orden if k[1] == 'ACCESO'}
-    capac = cap.calcular(config, atendido)
-    referencia = os.path.join(carpeta_csv, 'resumen_replicas.csv')
-    if archivo_salida != 'resumen_replicas.csv' and os.path.exists(referencia):
+    demora_acc = {(k[0], k[2]): statistics.mean(d[1] for d in datos[k]) for k in orden if k[1] == 'ACCESO'}
+    capac = cap.calcular(config, atendido, demora_acc)
+    if referencia and os.path.exists(referencia):
         # La capacidad depende de la via y los semaforos, no de la demanda: en escenarios futuros con la misma red se
         # usa la capacidad de la situacion actual (en un bloqueo, el flujo medido ya no refleja la capacidad del acceso)
         with open(referencia, encoding='utf-8-sig') as f:
@@ -132,4 +134,4 @@ def main(n, config, carpeta_xml, carpeta_csv, archivo_salida='resumen_replicas.c
 
 
 if __name__ == '__main__':
-    main(*sys.argv[1:6])
+    main(*sys.argv[1:7])

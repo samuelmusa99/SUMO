@@ -5,7 +5,7 @@ set "SUMO_HOME=C:\SUMO"
 set "XML2CSV=C:\SUMO\tools\xml\xml2csv.py"
 set "RED_DIR=C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda"
 set "XML_DIR=C:\Users\samue_yffy\Desktop\SUMO\02_Resultados_Base"
-set "CSV_DIR=C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS"
+set "CSV_DIR=C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\BASE_2026"
 
 echo ==========================================
 echo   Iniciando Simulación de la Costanera

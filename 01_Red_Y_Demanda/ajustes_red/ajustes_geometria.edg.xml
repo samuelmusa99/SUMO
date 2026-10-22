@@ -1,0 +1,15 @@
+﻿<edges>
+    <!-- Ajustes 2026-10-22 segun las tesis evaluadas y la senalizacion observada en campo -->
+    <!-- Tramos de entrada a la red: 60 km/h (maximo senalizado; antes 80 km/h) -->
+    <edge id="lecheria_salida" speed="16.67"/>
+    <edge id="fuerzas_armadas_salida" speed="16.67"/>
+    <edge id="cruce_cc_paos" speed="16.67"/>
+    <!-- Prolongacion Av. El Ejercito hacia Camino Real: calzada de 10,1 m (Savignani 2021, Tabla 25) en 3 carriles de 3,37 m -->
+    <edge id="costanera_salida" width="3.37"/>
+    <edge id="ejercito_1" width="3.37"/>
+    <edge id="ejercito_2" width="3.37"/>
+    <edge id="ejercito_3" width="3.37"/>
+    <edge id="semaforo_caminoreal_elejercito" width="3.37"/>
+    <!-- Carril de giro libre Fabricio Ojeda -> Madre Vieja en CC Paos: 1 carril de 5,5 m (Savignani 2021, Tabla 26) -->
+    <edge id="172642222" width="5.50"/>
+</edges>

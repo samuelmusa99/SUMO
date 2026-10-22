@@ -16,6 +16,8 @@
         <tripinfo-output value="../02_Resultados_Base/reporte_viajes.xml"/>
         <queue-output value="../02_Resultados_Base/reporte_colas.xml"/>
         <statistic-output value="../02_Resultados_Base/estadisticas.xml"/>
+        <!-- tambien se registran los vehiculos que siguen en la red al final (atrapados), no solo los que llegaron -->
+        <tripinfo-output.write-unfinished value="true"/>
     </output>
 
     <processing>

@@ -20,14 +20,14 @@
     <e3Detector id="e3_CC_Paos" file="../02_Resultados_Base/reporte_intersecciones.xml" period="900" timeThreshold="2" speedThreshold="1.39">
         <detEntry lane="172344969#11_0" pos="29.67" friendlyPos="true"/>
         <detEntry lane="172344969#11_1" pos="29.67" friendlyPos="true"/>
-        <detEntry lane="lecheria_salida_0" pos="132.25" friendlyPos="true"/>
-        <detEntry lane="lecheria_salida_1" pos="132.25" friendlyPos="true"/>
+        <detEntry lane="lecheria_salida_0" pos="132.24" friendlyPos="true"/>
+        <detEntry lane="lecheria_salida_1" pos="132.24" friendlyPos="true"/>
         <detEntry lane="madre_vieja_salida_0" pos="611.06" friendlyPos="true"/>
         <detEntry lane="madre_vieja_salida_1" pos="611.06" friendlyPos="true"/>
         <detExit lane="592256719#1_0" pos="60.00" friendlyPos="true"/>
         <detExit lane="592256719#1_1" pos="60.00" friendlyPos="true"/>
-        <detExit lane="592256721#1_0" pos="30.73" friendlyPos="true"/>
-        <detExit lane="592256721#1_1" pos="30.73" friendlyPos="true"/>
+        <detExit lane="592256721#1_0" pos="29.86" friendlyPos="true"/>
+        <detExit lane="592256721#1_1" pos="29.86" friendlyPos="true"/>
         <detExit lane="madevieja_hacialecheria_0" pos="60.00" friendlyPos="true"/>
         <detExit lane="madevieja_hacialecheria_1" pos="60.00" friendlyPos="true"/>
     </e3Detector>

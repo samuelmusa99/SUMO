@@ -11,7 +11,7 @@ Capacidad (veh/h), metodo HCM 2000 (el mismo enfoque de las tesis evaluadas):
         y Vc = flujo de los accesos principales medido en la simulacion (la mitad para el giro a la derecha);
         c_acceso = suma(v_m) / suma(v_m / c_m)
   fVP = 1 / (1 + %pesados x (2 - 1)) (factor por vehiculos pesados, equivalente 2,0).
-  Si en la simulacion el acceso esta saturado (atiende menos del 95 % de su demanda, con al menos 50 veh/h), la capacidad es el
+  Si en la simulacion el acceso esta saturado (con al menos 50 veh/h: atiende menos del 95 % de su demanda o su demora es de nivel F), la capacidad es el
   flujo que realmente logra descargar (capacidad medida en la simulacion).
 """
 import csv
@@ -96,7 +96,7 @@ def capacidad_potencial(vc, tc, tf):
     return vc * math.exp(-vc * tc / 3600.0) / (1 - math.exp(-vc * tf / 3600.0))
 
 
-def calcular(config, atendido_por_acceso):
+def calcular(config, atendido_por_acceso, demora_por_acceso=None):
     """atendido_por_acceso: (interseccion, acceso) -> veh/h atendidos (promedio de replicas).
     Devuelve (interseccion, acceso) -> dict con demanda, capacidad_hcm, capacidad, fuente, vc, atendida"""
     red, archivos = archivos_de_ruta(config)
@@ -137,8 +137,12 @@ def calcular(config, atendido_por_acceso):
             cap_hcm = suma_v / suma_vc if suma_vc else s * n
         atendido = atendido_por_acceso.get((a['interseccion'], a['acceso']), 0.0)
         atendida = atendido / demanda if demanda else 1.0
-        # saturado: atiende menos del 95 % de una demanda apreciable (con pocos veh/h la diferencia es solo azar)
-        if demanda >= 50 and atendida < 0.95:
+        # saturado: con una demanda apreciable (con pocos veh/h la diferencia es solo azar), atiende menos del 95 %
+        # o su demora ya es de nivel F (cola permanente; p. ej. carril bloqueado por vehiculos que giran a la izquierda)
+        semaforizado = e.getToNode().getType() == 'traffic_light'
+        demora = (demora_por_acceso or {}).get((a['interseccion'], a['acceso']), 0.0)
+        nivel_f = demora > (80.0 if semaforizado else 50.0)
+        if demanda >= 50 and (atendida < 0.95 or nivel_f):
             capacidad, fuente = atendido, 'medida (acceso saturado)'
         else:
             capacidad, fuente = cap_hcm, 'HCM 2000'
