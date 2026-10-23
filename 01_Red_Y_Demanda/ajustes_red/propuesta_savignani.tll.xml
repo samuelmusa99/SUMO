@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-10-23 11:50:15.112077 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <source value="main.net.xml"/>
+    <dest value="savignani.net.xml"/>
+    <outprefix value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/ajustes_red/propuesta_savignani"/>
+</configuration>
+-->
+
+<tlLogics version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tllogic_file.xsd">
+    <!-- Deleted Elements -->
+    <delete from="semaforo_caminoreal_FA" fromLane="1" to="172344969#0" toLane="1" linkIndex="1" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <delete from="semaforo_caminoreal_FA" fromLane="1" to="172680169#1" toLane="0" linkIndex="2" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <delete from="semaforo_caminoreal_FA" fromLane="1" to="172680169#1" toLane="1" linkIndex="3" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <delete from="semaforo_caminoreal_costanera" fromLane="1" to="semaforocaminorea_haciaperrokero" toLane="1" linkIndex="8" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <delete from="semaforo_caminoreal_costanera" fromLane="1" to="semaforocaminorea_haciaperrokero" toLane="2" linkIndex="9" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <delete from="semaforo_caminoreal_elejercito" fromLane="1" to="172344969#0" toLane="0" linkIndex="5" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <delete from="semaforo_caminoreal_elejercito" fromLane="2" to="172344969#0" toLane="1" linkIndex="6" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <!-- Created Elements -->
+    <!-- Changed Elements -->
+    <tlLogic id="cluster_13002069148_2322602638_2322679769_3753399808_#2more" programID="0" >
+        <phase duration="30" state="GGGGrrrrrrrrrrr"/>
+        <phase duration="3" state="yyyyrrrrrrrrrrr"/>
+        <phase duration="40" state="rrrrrrrGGGGrrrr"/>
+        <phase duration="3" state="rrrrrrryyyyrrrr"/>
+        <phase duration="20" state="rrrrrrrrrrrGGGG"/>
+        <phase duration="3" state="rrrrrrrrrrryyyy"/>
+        <phase duration="20" state="rrrrGGGrrrrrrrr"/>
+        <phase duration="3" state="rrrryyyrrrrrrrr"/>
+    </tlLogic>
+    <!-- Created Elements -->
+    <connection from="av_proyeccion_salida" fromLane="0" to="172344969#0" toLane="0" linkIndex="0" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="av_proyeccion_salida" fromLane="0" to="172680169#1" toLane="0" linkIndex="1" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="av_proyeccion_salida" fromLane="1" to="172680169#1" toLane="1" linkIndex="2" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="av_proyeccion_salida" fromLane="1" to="semaforocaminorea_haciaperrokero" toLane="1" linkIndex="3" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="semaforo_caminoreal_FA" fromLane="0" to="av_proyeccion_entrada" toLane="0" linkIndex="4" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="semaforo_caminoreal_FA" fromLane="0" to="172680169#1" toLane="1" linkIndex="6" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="semaforo_caminoreal_costanera" fromLane="0" to="semaforocaminorea_haciaperrokero" toLane="1" linkIndex="13" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="semaforo_caminoreal_costanera" fromLane="0" to="av_proyeccion_entrada" toLane="1" linkIndex="14" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="semaforo_caminoreal_elejercito" fromLane="0" to="av_proyeccion_entrada" toLane="0" linkIndex="8" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="semaforo_caminoreal_elejercito" fromLane="1" to="av_proyeccion_entrada" toLane="1" linkIndex="9" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <connection from="semaforo_caminoreal_elejercito" fromLane="2" to="172344969#0" toLane="0" linkIndex="10" tl="cluster_13002069148_2322602638_2322679769_3753399808_#2more"/>
+    <!-- Changed Elements -->
+    <connection from="semaforo_caminoreal_FA" fromLane="0" to="172344969#0" toLane="0" linkIndex="5"/>
+    <connection from="semaforo_caminoreal_costanera" fromLane="0" to="semaforocaminorea_haciaperrokero" toLane="0" linkIndex="12"/>
+    <connection from="semaforo_caminoreal_elejercito" fromLane="0" to="semaforocaminorea_haciaperrokero" toLane="0" linkIndex="7"/>
+</tlLogics>

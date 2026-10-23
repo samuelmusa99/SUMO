@@ -31,7 +31,7 @@ INTERSECCIONES = {
 }
 ACCESOS = {
     'semaforo_caminoreal_FA': 'Sur (FFAA)', 'semaforo_caminoreal_costanera': 'Norte (Costanera)',
-    'semaforo_caminoreal_elejercito': 'Oeste (El Ejercito)',
+    'semaforo_caminoreal_elejercito': 'Oeste (El Ejercito)', 'av_proyeccion_salida': 'Este (Av. Proyeccion)',
     'lecheria_haciacaminoreal': 'Este (Lecheria)', 'madre_vieja_salida': 'Norte (Madre Vieja)',
     'costanera_haciamadrevieja': 'Sur (Costanera)',
     'FA_1': 'Sur (FFAA)', 'FA_3': 'Norte (desde Camino Real)', 'avrio_1': 'Este (Av. Rio)',
@@ -43,6 +43,12 @@ ACCESOS = {
     'costanera_puerto_guaica_haciacaminoreal': 'Costanera sentido Camino Real',
     'salida:puerto_guaica': 'Salida Puerto Guaica', '-335982664#1': 'Salida Fernandez Padilla',
 }
+# Propuesta Savignani: los vehiculos que cruzan Camino Real por el distribuidor (puente) salen del detector al bajar
+# del puente, asi su demora tambien cuenta en la interseccion.
+SALIDAS_EXTRA = {'semaforo_caminoreal': ['puente_bajada_hacia_ffaa', 'puente_bajada_hacia_costanera']}
+# Tramo anterior fijado a mano donde la geometria engana al criterio de "seguir derecho" (la Costanera llega al
+# distribuidor girando a la izquierda y la calle local de enfrente queda como "recta").
+ANTERIOR_FORZADO = {'costanera_hacia_distribuidor': '592256719#7'}
 SECUNDARIOS = {'avrio_1', 'res_salida', 'salida_bissau_1', 'salida_bissau_2', 'salida:puerto_guaica', '-335982664#1'}
 AGUAS_ARRIBA, AGUAS_ABAJO, PERIODO = 300.0, 60.0, 900
 
@@ -62,6 +68,9 @@ def aguas_arriba(net, edge):
                      if e.getFunction() != 'internal' and e.getFromNode() != cadena[-1].getToNode()]
         rectos = [e for e in entrantes if any(c.getDirection() == 's' for c in e.getConnections(cadena[-1]))]
         cand = rectos if rectos else (entrantes if len(entrantes) == 1 else [])
+        forzado = ANTERIOR_FORZADO.get(cadena[-1].getID())
+        if forzado and net.hasEdge(forzado):
+            cand = [net.getEdge(forzado)]
         if not cand:
             break
         sig = max(cand, key=lambda e: (e.getLaneNumber(), e.getPriority()))
@@ -107,6 +116,7 @@ def main():
         entrantes = [e for e in nodo.getIncoming()
                      if e.getFunction() != 'internal' and any(o.getFromNode() == nodo for o in e.getOutgoing())]
         salientes = [e for e in nodo.getOutgoing() if e.getFunction() != 'internal']
+        salientes += [net.getEdge(i) for i in SALIDAS_EXTRA.get(jid, []) if net.hasEdge(i)]
         lineas.append(f'    <e3Detector id="e3_{nombre.replace(" ", "_")}" file="../02_Resultados_Base/reporte_intersecciones.xml" '
                       f'period="{PERIODO}" timeThreshold="2" speedThreshold="1.39">')
         for e in entrantes:

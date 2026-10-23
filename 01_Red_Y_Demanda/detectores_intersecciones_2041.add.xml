@@ -2,20 +2,24 @@
 <!-- Generado por herramientas/generar_detectores.py. Volver a generar si cambia la red. -->
 <additional>
     <e3Detector id="e3_Camino_Real" file="../02_Resultados_2041/reporte_intersecciones.xml" period="900" timeThreshold="2" speedThreshold="1.39">
-        <detEntry lane="-371794626#3_0" pos="0.96" friendlyPos="true"/>
-        <detEntry lane="-371794626#3_1" pos="0.96" friendlyPos="true"/>
+        <detEntry lane="av_proyeccion_salida_0" pos="125.37" friendlyPos="true"/>
+        <detEntry lane="av_proyeccion_salida_1" pos="125.37" friendlyPos="true"/>
+        <detEntry lane="-371794626#5_0" pos="11.86" friendlyPos="true"/>
+        <detEntry lane="-371794626#5_1" pos="11.86" friendlyPos="true"/>
         <detEntry lane="592256719#6_0" pos="0.10" friendlyPos="true"/>
         <detEntry lane="592256719#6_1" pos="0.10" friendlyPos="true"/>
         <detEntry lane="costanera_salida_0" pos="15.00" friendlyPos="true"/>
         <detEntry lane="costanera_salida_1" pos="15.00" friendlyPos="true"/>
         <detEntry lane="costanera_salida_2" pos="15.00" friendlyPos="true"/>
-        <detExit lane="172344969#0_0" pos="56.62" friendlyPos="true"/>
-        <detExit lane="172344969#0_1" pos="56.62" friendlyPos="true"/>
-        <detExit lane="entrada_caminoreal_0" pos="10.17" friendlyPos="true"/>
-        <detExit lane="entrada_caminoreal_1" pos="10.17" friendlyPos="true"/>
-        <detExit lane="semaforocaminorea_haciaperrokero_0" pos="21.74" friendlyPos="true"/>
-        <detExit lane="semaforocaminorea_haciaperrokero_1" pos="21.74" friendlyPos="true"/>
-        <detExit lane="semaforocaminorea_haciaperrokero_2" pos="21.74" friendlyPos="true"/>
+        <detExit lane="172344969#0_0" pos="58.80" friendlyPos="true"/>
+        <detExit lane="entrada_caminoreal_0" pos="16.26" friendlyPos="true"/>
+        <detExit lane="entrada_caminoreal_1" pos="16.26" friendlyPos="true"/>
+        <detExit lane="av_proyeccion_entrada_0" pos="60.00" friendlyPos="true"/>
+        <detExit lane="av_proyeccion_entrada_1" pos="60.00" friendlyPos="true"/>
+        <detExit lane="semaforocaminorea_haciaperrokero_0" pos="60.00" friendlyPos="true"/>
+        <detExit lane="semaforocaminorea_haciaperrokero_1" pos="60.00" friendlyPos="true"/>
+        <detExit lane="puente_bajada_hacia_ffaa_0" pos="46.25" friendlyPos="true"/>
+        <detExit lane="puente_bajada_hacia_costanera_0" pos="38.01" friendlyPos="true"/>
     </e3Detector>
     <e3Detector id="e3_CC_Paos" file="../02_Resultados_2041/reporte_intersecciones.xml" period="900" timeThreshold="2" speedThreshold="1.39">
         <detEntry lane="172344969#11_0" pos="29.67" friendlyPos="true"/>
@@ -69,7 +73,6 @@
         <detEntry lane="costanera_puerto_guaica_haciacaminoreal_0" pos="22.45" friendlyPos="true"/>
         <detEntry lane="costanera_puerto_guaica_haciacaminoreal_1" pos="22.45" friendlyPos="true"/>
         <detEntry lane="172344969#0_0" pos="0.10" friendlyPos="true"/>
-        <detEntry lane="172344969#0_1" pos="0.10" friendlyPos="true"/>
         <detEntry lane="-335982654#0_0" pos="103.18" friendlyPos="true"/>
         <detExit lane="172344969#4_0" pos="60.00" friendlyPos="true"/>
         <detExit lane="172344969#4_1" pos="60.00" friendlyPos="true"/>
@@ -78,5 +81,5 @@
         <detExit lane="puerto_guaica_0" pos="18.56" friendlyPos="true"/>
         <detExit lane="fernandez_padilla_0" pos="60.00" friendlyPos="true"/>
     </e3Detector>
-    <edgeData id="accesos" file="../02_Resultados_2041/reporte_accesos.xml" freq="900" edges="-1088915526 -1225795048 -1227058160#0 -1227058160#1 -335982654#0 -335982664#1 -371794626#1 -371794626#2 -371794626#3 -495730009#2 -830761843#0 -830761843#1 -830761843#2 -830761843#3 1225795049 172344969#0 172344969#1 172344969#11 172344969#4 172344969#5 172344969#6 172680884 172682268#1 172682268#2 371794626#10 371794626#11 371794626#12 371794626#6 371794626#8 371794626#9 592256719#6 592256719#7 FA_1 FA_3 av_rio_salida avrio_1 bifurcacion_FA_perrokero bissau_salida costanera_bissau_haciacaminoreal costanera_bissau_hacialecheria costanera_haciamadrevieja costanera_puerto_guaica_haciacaminoreal costanera_puerto_guaica_hacialecheria costanera_salida cruce_cc_paos ejercito_1 ejercito_2 ejercito_3 fuerzas_armadas_salida lecheria_haciacaminoreal lecheria_salida madre_vieja_salida res_salida salida:puerto_guaica salida_bissau_1 salida_bissau_2 semaforo_caminoreal_FA semaforo_caminoreal_costanera semaforo_caminoreal_elejercito"/>
+    <edgeData id="accesos" file="../02_Resultados_2041/reporte_accesos.xml" freq="900" edges="-1088915526 -1225795048 -1227058160#0 -1227058160#1 -335982654#0 -335982664#1 -371794626#2 -371794626#3 -371794626#5 -495730009#2 -830761843#0 -830761843#1 -830761843#2 -830761843#3 1225795049 172344969#0 172344969#1 172344969#11 172344969#4 172344969#5 172344969#6 172680884 172682268#1 172682268#2 371794626#10 371794626#11 371794626#12 371794626#6 371794626#8 371794626#9 592256719#6 592256719#7 FA_1 FA_3 av_proyeccion_salida av_rio_salida avrio_1 bifurcacion_FA_perrokero bissau_salida costanera_bissau_haciacaminoreal costanera_bissau_hacialecheria costanera_hacia_distribuidor costanera_haciamadrevieja costanera_puerto_guaica_haciacaminoreal costanera_puerto_guaica_hacialecheria costanera_salida cruce_cc_paos ejercito_1 ejercito_2 ejercito_3 ffaa_hacia_semaforo fuerzas_armadas_salida lecheria_haciacaminoreal lecheria_salida madre_vieja_salida res_salida salida:puerto_guaica salida_bissau_1 salida_bissau_2 semaforo_caminoreal_FA semaforo_caminoreal_costanera semaforo_caminoreal_elejercito"/>
 </additional>

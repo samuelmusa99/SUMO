@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-10-23 11:50:14.787907 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <source value="main.net.xml"/>
+    <dest value="savignani.net.xml"/>
+    <outprefix value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/ajustes_red/propuesta_savignani"/>
+</configuration>
+-->
+
+<edges version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edgediff_file.xsd">
+    <!-- Deleted Elements -->
+    <delete id="-371794626#1"/>
+    <delete id="1414925032#0"/>
+    <delete id="1414925032#1"/>
+    <delete id="1414925033"/>
+    <delete id="371794626#1"/>
+    <!-- Created Elements -->
+    <edge id="av_proyeccion_entrada" from="semaforo_caminoreal" numLanes="2" priority="-1" shape="803.48,1554.99 1162.66,1786.19" speed="13.89" to="av_proyeccion_extremo" width="3.92"/>
+    <edge id="av_proyeccion_salida" from="av_proyeccion_extremo" numLanes="2" priority="-1" shape="1162.66,1786.19 803.48,1554.99" speed="11.11" to="semaforo_caminoreal" width="3.92"/>
+    <edge id="costanera_hacia_distribuidor" from="cruce_camino_real" numLanes="2" priority="-1" shape="712.83,1656.19 738.95,1612.89" speed="13.89" to="distribuidor_lado_costanera" width="3.70"/>
+    <edge id="ffaa_hacia_semaforo" from="distribuidor_lado_ffaa" numLanes="1" priority="-1" shape="871.88,1471.25 823.99,1523.94" speed="13.89" to="ffaa_nueva_etruria"/>
+    <edge id="puente_bajada_hacia_costanera" from="puente_apoyo_2" numLanes="1" priority="20" shape="767.36,1576.09,6.00 747.60,1601.99" speed="11.11" to="distribuidor_lado_costanera" width="4.00">
+        <lane index="0" changeRight="custom2"/>
+    </edge>
+    <edge id="puente_bajada_hacia_ffaa" from="puente_apoyo_3" numLanes="1" priority="20" shape="833.73,1506.23,6.00 855.17,1482.88" speed="11.11" to="distribuidor_lado_ffaa" width="4.00"/>
+    <edge id="puente_hacia_costanera_1" from="puente_apoyo_3" numLanes="1" priority="20" speed="11.11" to="puente_apoyo_1" width="4.00"/>
+    <edge id="puente_hacia_costanera_2" from="puente_apoyo_1" numLanes="1" priority="20" speed="11.11" to="puente_centro" width="4.00"/>
+    <edge id="puente_hacia_costanera_3" from="puente_centro" numLanes="1" priority="20" speed="11.11" to="puente_apoyo_2" width="4.00"/>
+    <edge id="puente_hacia_ffaa_1" from="puente_apoyo_2" numLanes="1" priority="20" speed="11.11" to="puente_centro" width="4.00"/>
+    <edge id="puente_hacia_ffaa_2" from="puente_centro" numLanes="1" priority="20" speed="11.11" to="puente_apoyo_1" width="4.00"/>
+    <edge id="puente_hacia_ffaa_3" from="puente_apoyo_1" numLanes="1" priority="20" speed="11.11" to="puente_apoyo_3" width="4.00"/>
+    <edge id="puente_subida_hacia_costanera" from="distribuidor_lado_ffaa" numLanes="1" priority="20" shape="855.17,1482.88 833.73,1506.23,6.00" speed="11.11" to="puente_apoyo_3" width="4.00"/>
+    <edge id="puente_subida_hacia_ffaa" disallow="bus" from="distribuidor_lado_costanera" numLanes="1" priority="20" shape="747.60,1601.99 767.36,1576.09,6.00" speed="11.11" to="puente_apoyo_2" width="4.00"/>
+    <!-- Changed Elements -->
+    <edge id="-1223690884" shape="879.43,1700.07 800.69,1650.09 743.56,1614.40" to="distribuidor_lado_costanera"/>
+    <edge id="-1410013845" shape="888.76,1486.83 868.81,1469.68" to="distribuidor_lado_ffaa"/>
+    <edge id="-371794626#2" to="distribuidor_lado_ffaa">  <!-- missingAttributes: disallow -->
+        <lane index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone"/>
+        <lane index="1" disallow="bus tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone"/>
+    </edge>
+    <edge id="-462104532#0" shape="724.16,1445.34 730.73,1451.51 732.66,1455.00 731.95,1459.06 711.74,1487.43"/>
+    <edge id="1223690884" from="distribuidor_lado_costanera" shape="743.09,1614.49 800.69,1650.09 879.43,1700.07"/>
+    <edge id="1348019583" from="ffaa_nueva_etruria" shape="820.30,1521.05 835.51,1529.23 924.34,1587.17"/>
+    <edge id="1410013845" from="distribuidor_lado_ffaa" shape="868.81,1469.68 888.76,1486.83"/>
+    <edge id="172344969#0" numLanes="1" priority="20" shape="785.40,1562.23 768.97,1581.08 754.03,1600.24 743.65,1614.62" spreadType="right" to="distribuidor_lado_costanera">  <!-- missingAttributes: disallow -->
+        <lane index="0" changeLeft="custom2"/>
+    </edge>
+    <edge id="172344969#1" from="distribuidor_lado_costanera" shape="740.08,1612.90 735.78,1620.35 727.79,1636.89 719.75,1654.71 713.95,1672.26 710.81,1688.93 710.25,1693.63"/>
+    <edge id="172680169#1" priority="10" shape="779.71,1548.19 771.19,1542.59 756.90,1532.13"/>
+    <edge id="371794626#2" from="distribuidor_lado_ffaa"/>
+    <edge id="462104532#0" shape="711.74,1487.43 731.95,1459.06 732.66,1455.00 730.73,1451.51 724.16,1445.34"/>
+    <edge id="592256719#7" shape="707.67,1762.87 705.17,1735.14 704.53,1723.46 705.04,1710.32 706.15,1696.89 709.11,1672.37 713.42,1656.21"/>
+    <edge id="curva_caminoreal" shape="712.28,1654.48 719.89,1630.30 726.20,1612.22 730.82,1604.06 737.35,1592.58 748.78,1575.75 756.64,1562.23 758.75,1553.59 758.13,1544.50 753.48,1537.86 747.26,1527.74"/>
+    <edge id="ejercito4" shape="734.83,1516.93 658.03,1462.57"/>
+    <edge id="ejercito_2" shape="665.44,1452.60 711.74,1487.43"/>
+    <edge id="ejercito_5" shape="658.03,1462.52 642.92,1451.33 624.54,1437.69 589.04,1410.55"/>
+    <edge id="entrada_caminoreal" shape="757.09,1532.25 734.83,1516.93"/>
+    <edge id="nueva_etruria" shape="924.34,1587.17 835.51,1529.23 820.30,1521.05" to="ffaa_nueva_etruria"/>
+    <edge id="semaforo_caminoreal_FA" from="ffaa_nueva_etruria" numLanes="1" priority="-1" shape="822.91,1523.94 803.26,1544.26" width="3.92"/>  <!-- missingAttributes: disallow -->
+    <edge id="semaforo_caminoreal_costanera" from="distribuidor_lado_costanera" numLanes="1" priority="-1" shape="736.54,1611.06 760.31,1577.97 775.78,1560.43 781.47,1554.07" spreadType="right"/>  <!-- missingAttributes: disallow -->
+    <edge id="semaforo_caminoreal_elejercito" shape="743.09,1510.39 780.13,1536.18 785.23,1539.39">
+        <lane index="0" changeRight="custom2"/>
+        <lane index="1" changeLeft="custom2" changeRight="custom2"/>
+        <lane index="2" changeLeft="custom2"/>
+    </edge>
+    <edge id="semaforocaminorea_haciaperrokero" numLanes="2" priority="-1" shape="801.42,1535.36 868.96,1463.09" to="distribuidor_lado_ffaa"/>  <!-- missingAttributes: disallow -->
+</edges>

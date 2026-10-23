@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-09-29T12:51:00.642384-04:00 by Eclipse SUMO netedit 1.26.0
+-->
+
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    <!-- Shapes -->
+    <poly id="distribuidor" color="131,139,139" fill="1" layer="5.00" shape="742.434169,1604.143238 747.861917,1607.007883 771.231388,1577.306039 789.926965,1556.348901 837.721302,1506.896085 839.489739,1504.981842 834.220113,1500.614550 810.939393,1525.892264 780.906057,1555.855265 761.518823,1577.808719 742.221996,1604.181563 742.307537,1604.058005 742.497627,1604.181563"/>
+</additional>

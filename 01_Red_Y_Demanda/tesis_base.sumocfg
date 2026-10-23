@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Simulacion base: situacion actual en hora pico 2026 (volumenes del cap. 4 de Savignani y Perozo x 1,697) con los semaforos medidos en campo.
+<!-- Propuesta Estanga y Savignani (2021), hora pico 2026: distribuidor tipo puente en Camino Real y avenida en proyeccion
+     (30 % de los viajes FFAA sur por Camino Real). Misma demanda base 2026 (herramientas/demanda_propuesta.py).
      Tiempo: 0-900 s calentamiento, 900-4500 s hora de analisis, despues se vacia la red. -->
 <sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
     <input>
         <net-file value="costanera.net.xml"/>
-        <route-files value="costanera.rou.xml,demanda/demanda_base.rou.xml"/>
-        <additional-files value="mapa_fondo.poly.xml,medidores.add.xml,vista.xml,paradas.add.xml,detectores_intersecciones.add.xml"/>
+        <route-files value="costanera.rou.xml,demanda/demanda_savignani_2026.rou.xml"/>
+        <additional-files value="mapa_fondo.poly.xml,medidores.add.xml,vista.xml,paradas.add.xml,detectores_intersecciones.add.xml,distribuidor.add.xml"/>
     </input>
 
     <gui_only>
