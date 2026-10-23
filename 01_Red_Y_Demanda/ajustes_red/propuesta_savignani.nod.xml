@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-10-23 11:50:14.584136 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
+<!-- generated on 2026-10-23 14:19:50.035317 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
 <configuration>
     <source value="main.net.xml"/>
-    <dest value="savignani.net.xml"/>
+    <dest value="nueva.net.xml"/>
     <outprefix value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/ajustes_red/propuesta_savignani"/>
 </configuration>
 -->
@@ -16,14 +16,20 @@
     <delete id="1832563855"/>
     <delete id="2322602629"/>
     <!-- Created Elements -->
+    <node id="172344969#4_km10" type="priority" x="722.11" y="1802.72"/>
+    <node id="172344969#4_km376" type="priority" x="783.71" y="2162.63"/>
+    <node id="172344969#4_km80" type="priority" x="732.60" y="1871.92"/>
+    <node id="172344969#9_km135" type="priority" x="878.39" y="2377.86"/>
+    <node id="172344969#9_km58" type="priority" x="846.74" y="2307.69"/>
+    <node id="172344969#9_km65" type="priority" x="849.66" y="2314.05"/>
+    <node id="592256719#7_km10" type="priority" x="706.77" y="1752.91"/>
+    <node id="592256719#7_km60" type="priority" x="705.64" y="1703.03"/>
     <node id="av_proyeccion_extremo" type="dead_end" x="1162.66" y="1786.19"/>
     <node id="distribuidor_lado_costanera" type="unregulated" x="742.82" y="1609.04"/>
     <node id="distribuidor_lado_ffaa" type="priority" x="862.19" y="1475.47"/>
     <node id="ffaa_nueva_etruria" type="priority" x="822.86" y="1524.21"/>
-    <node id="puente_apoyo_1" type="priority" x="812.83" y="1528.82" z="6.00"/>
-    <node id="puente_apoyo_2" type="priority" x="767.36" y="1576.09" z="6.00"/>
-    <node id="puente_apoyo_3" type="priority" x="833.73" y="1506.23" z="6.00"/>
-    <node id="puente_centro" type="priority" x="788.61" y="1552.61" z="6.00"/>
+    <node id="puente_tablero_lado_costanera" type="priority" x="786.90" y="1554.50" z="7.40"/>
+    <node id="puente_tablero_lado_ffaa" type="priority" x="808.20" y="1533.37" z="7.40"/>
     <!-- Changed Elements -->
     <node id="11350354081" type="dead_end"/>
     <node id="11350384751" x="734.83" y="1516.93"/>

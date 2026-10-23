@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-10-23 11:50:15.074030 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
+<!-- generated on 2026-10-23 14:19:50.763926 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
 <configuration>
     <source value="main.net.xml"/>
-    <dest value="savignani.net.xml"/>
+    <dest value="nueva.net.xml"/>
     <outprefix value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/ajustes_red/propuesta_savignani"/>
 </configuration>
 -->
 
 <connections version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/connections_file.xsd">
     <!-- Deleted Elements -->
+    <delete from="-1201018455#0" fromLane="0" to="172344969#6" toLane="0"/>
     <delete from="-1223688133#0" fromLane="0" to="semaforo_caminoreal_costanera" toLane="0"/>
     <delete from="-1223690884" fromLane="0" to="1223690884" toLane="0"/>
+    <delete from="-1223987566#0" fromLane="0" to="172344969#5" toLane="0"/>
+    <delete from="-1227058166#0" fromLane="0" to="costanera_bissau_hacialecheria" toLane="0"/>
     <delete from="-1410013845" fromLane="0" to="-371794626#1" toLane="0"/>
     <delete from="-1410013845" fromLane="0" to="371794626#2" toLane="1"/>
     <delete from="-1410013845" fromLane="0" to="1410013845" toLane="0"/>
@@ -25,14 +28,24 @@
     <delete from="1348019583" fromLane="0" to="nueva_etruria" toLane="0"/>
     <delete from="1410013845" fromLane="0" to="-1410013845" toLane="0"/>
     <delete from="172344969#0" fromLane="1" to="172344969#1" toLane="1"/>
+    <delete from="172344969#4" fromLane="0" to="1223987566#0" toLane="0"/>
+    <delete from="172344969#4" fromLane="0" to="172344969#5" toLane="0"/>
+    <delete from="172344969#4" fromLane="1" to="172344969#5" toLane="1"/>
+    <delete from="172344969#9" fromLane="0" to="1223987567" toLane="0"/>
+    <delete from="172344969#9" fromLane="0" to="172344969#10" toLane="0"/>
+    <delete from="172344969#9" fromLane="1" to="172344969#10" toLane="1"/>
     <delete from="371794626#1" fromLane="0" to="371794626#2" toLane="0"/>
     <delete from="371794626#1" fromLane="1" to="371794626#2" toLane="1"/>
     <delete from="371794626#1" fromLane="2" to="371794626#2" toLane="2"/>
     <delete from="371794626#1" fromLane="2" to="1410013845" toLane="0"/>
+    <delete from="592256719#7" fromLane="0" to="1223688133#0" toLane="0"/>
+    <delete from="592256719#7" fromLane="0" to="curva_caminoreal" toLane="0"/>
     <delete from="592256719#7" fromLane="1" to="semaforo_caminoreal_costanera" toLane="1"/>
+    <delete from="costanera_bissau_hacialecheria" fromLane="0" to="172344969#9" toLane="0"/>
     <delete from="nueva_etruria" fromLane="0" to="371794626#1" toLane="1"/>
     <delete from="nueva_etruria" fromLane="0" to="371794626#1" toLane="2"/>
     <delete from="nueva_etruria" fromLane="0" to="1348019583" toLane="0"/>
+    <delete from="salida_bissau_1" fromLane="0" to="172344969#9" toLane="1"/>
     <delete from="semaforo_caminoreal_FA" fromLane="1" to="172344969#0" toLane="1"/>
     <delete from="semaforo_caminoreal_FA" fromLane="1" to="172680169#1" toLane="0"/>
     <delete from="semaforo_caminoreal_FA" fromLane="1" to="172680169#1" toLane="1"/>
@@ -45,19 +58,58 @@
     <delete from="semaforocaminorea_haciaperrokero" fromLane="2" to="371794626#1" toLane="2"/>
     <delete from="semaforocaminorea_haciaperrokero" fromLane="2" to="1348019583" toLane="0"/>
     <!-- Created Elements -->
+    <connection from="-1201018455#0" fromLane="0" to="172344969#6" toLane="1" />
     <connection from="-1223688133#0" fromLane="0" to="costanera_hacia_distribuidor" toLane="0" />
+    <connection from="-1223987566#0" fromLane="0" to="172344969#5" toLane="1" />
+    <connection from="-1227058166#0" fromLane="0" to="costanera_bissau_hacialecheria" toLane="1" />
     <connection from="-1410013845" fromLane="0" to="ffaa_hacia_semaforo" toLane="0" />
     <connection from="-335982662#1" fromLane="0" to="costanera_hacia_distribuidor" toLane="1" />
     <connection from="-371794626#2" fromLane="0" to="ffaa_hacia_semaforo" toLane="0" />
     <connection from="-371794626#2" fromLane="1" to="puente_subida_hacia_costanera" toLane="0" />
     <connection from="1223690884" />
-    <connection from="592256719#7" fromLane="0" to="costanera_hacia_distribuidor" toLane="0" />
-    <connection from="592256719#7" fromLane="1" to="costanera_hacia_distribuidor" toLane="1" />
+    <connection from="172344969#4" fromLane="0" to="172344969#4_bahia" toLane="0" />
+    <connection from="172344969#4" fromLane="0" to="172344969#4_bahia" toLane="1" />
+    <connection from="172344969#4" fromLane="1" to="172344969#4_bahia" toLane="2" />
+    <connection from="172344969#4_b" fromLane="0" to="172344969#4_salida_bissau" toLane="0" />
+    <connection from="172344969#4_b" fromLane="0" to="172344969#4_salida_bissau" toLane="1" />
+    <connection from="172344969#4_b" fromLane="1" to="172344969#4_salida_bissau" toLane="2" />
+    <connection from="172344969#4_bahia" fromLane="0" to="172344969#4_b" toLane="0" />
+    <connection from="172344969#4_bahia" fromLane="1" to="172344969#4_b" toLane="0" keepClear="0"/>
+    <connection from="172344969#4_bahia" fromLane="2" to="172344969#4_b" toLane="1" keepClear="0"/>
+    <connection from="172344969#4_salida_bissau" fromLane="0" to="1223987566#0" toLane="0" />
+    <connection from="172344969#4_salida_bissau" fromLane="0" to="172344969#5" toLane="0" />
+    <connection from="172344969#4_salida_bissau" fromLane="1" to="172344969#5" toLane="1" />
+    <connection from="172344969#4_salida_bissau" fromLane="2" to="172344969#5" toLane="2" />
+    <connection from="172344969#5" fromLane="2" to="172344969#6" toLane="2" />
+    <connection from="172344969#6" fromLane="2" to="costanera_bissau_hacialecheria" toLane="2" />
+    <connection from="172344969#9" fromLane="0" to="172344969#9_b" toLane="0" />
+    <connection from="172344969#9" fromLane="1" to="172344969#9_b" toLane="0" keepClear="0"/>
+    <connection from="172344969#9" fromLane="2" to="172344969#9_b" toLane="1" keepClear="0"/>
+    <connection from="172344969#9_b" fromLane="0" to="172344969#9_bahia" toLane="0" />
+    <connection from="172344969#9_b" fromLane="0" to="172344969#9_bahia" toLane="1" />
+    <connection from="172344969#9_b" fromLane="1" to="172344969#9_bahia" toLane="2" />
+    <connection from="172344969#9_bahia" fromLane="0" to="172344969#9_c" toLane="0" />
+    <connection from="172344969#9_bahia" fromLane="1" to="172344969#9_c" toLane="0" keepClear="0"/>
+    <connection from="172344969#9_bahia" fromLane="2" to="172344969#9_c" toLane="1" keepClear="0"/>
+    <connection from="172344969#9_c" fromLane="0" to="1223987567" toLane="0" />
+    <connection from="172344969#9_c" fromLane="0" to="172344969#10" toLane="0" />
+    <connection from="172344969#9_c" fromLane="1" to="172344969#10" toLane="1" />
+    <connection from="592256719#7" fromLane="0" to="592256719#7_bahia" toLane="0" />
+    <connection from="592256719#7" fromLane="0" to="592256719#7_bahia" toLane="1" />
+    <connection from="592256719#7" fromLane="1" to="592256719#7_bahia" toLane="2" />
+    <connection from="592256719#7_b" fromLane="0" to="1223688133#0" toLane="0" />
+    <connection from="592256719#7_b" fromLane="0" to="curva_caminoreal" toLane="0" />
+    <connection from="592256719#7_b" fromLane="0" to="costanera_hacia_distribuidor" toLane="0" />
+    <connection from="592256719#7_b" fromLane="1" to="costanera_hacia_distribuidor" toLane="1" />
+    <connection from="592256719#7_bahia" fromLane="0" to="592256719#7_b" toLane="0" />
+    <connection from="592256719#7_bahia" fromLane="1" to="592256719#7_b" toLane="0" keepClear="0"/>
+    <connection from="592256719#7_bahia" fromLane="2" to="592256719#7_b" toLane="1" keepClear="0"/>
     <connection from="av_proyeccion_entrada" />
     <connection from="av_proyeccion_salida" fromLane="0" to="172344969#0" toLane="0" keepClear="0"/>
     <connection from="av_proyeccion_salida" fromLane="0" to="172680169#1" toLane="0" keepClear="0"/>
     <connection from="av_proyeccion_salida" fromLane="1" to="172680169#1" toLane="1" keepClear="0"/>
     <connection from="av_proyeccion_salida" fromLane="1" to="semaforocaminorea_haciaperrokero" toLane="1" keepClear="0"/>
+    <connection from="costanera_bissau_hacialecheria" fromLane="2" to="172344969#9" toLane="2" />
     <connection from="costanera_hacia_distribuidor" fromLane="0" to="semaforo_caminoreal_costanera" toLane="0" keepClear="0"/>
     <connection from="costanera_hacia_distribuidor" fromLane="1" to="puente_subida_hacia_ffaa" toLane="0" keepClear="0"/>
     <connection from="ffaa_hacia_semaforo" fromLane="0" to="1348019583" toLane="0" />
@@ -65,14 +117,11 @@
     <connection from="puente_bajada_hacia_costanera" fromLane="0" to="172344969#1" toLane="1" keepClear="0"/>
     <connection from="puente_bajada_hacia_ffaa" fromLane="0" to="371794626#2" toLane="2" />
     <connection from="puente_bajada_hacia_ffaa" fromLane="0" to="1410013845" toLane="0" />
-    <connection from="puente_hacia_costanera_1" fromLane="0" to="puente_hacia_costanera_2" toLane="0" />
-    <connection from="puente_hacia_costanera_2" fromLane="0" to="puente_hacia_costanera_3" toLane="0" />
-    <connection from="puente_hacia_costanera_3" fromLane="0" to="puente_bajada_hacia_costanera" toLane="0" />
-    <connection from="puente_hacia_ffaa_1" fromLane="0" to="puente_hacia_ffaa_2" toLane="0" />
-    <connection from="puente_hacia_ffaa_2" fromLane="0" to="puente_hacia_ffaa_3" toLane="0" />
-    <connection from="puente_hacia_ffaa_3" fromLane="0" to="puente_bajada_hacia_ffaa" toLane="0" />
-    <connection from="puente_subida_hacia_costanera" fromLane="0" to="puente_hacia_costanera_1" toLane="0" />
-    <connection from="puente_subida_hacia_ffaa" fromLane="0" to="puente_hacia_ffaa_1" toLane="0" />
+    <connection from="puente_hacia_costanera" fromLane="0" to="puente_bajada_hacia_costanera" toLane="0" />
+    <connection from="puente_hacia_ffaa" fromLane="0" to="puente_bajada_hacia_ffaa" toLane="0" />
+    <connection from="puente_subida_hacia_costanera" fromLane="0" to="puente_hacia_costanera" toLane="0" />
+    <connection from="puente_subida_hacia_ffaa" fromLane="0" to="puente_hacia_ffaa" toLane="0" />
+    <connection from="salida_bissau_1" fromLane="0" to="172344969#9" toLane="0" />
     <connection from="semaforo_caminoreal_FA" fromLane="0" to="av_proyeccion_entrada" toLane="0" keepClear="0"/>
     <connection from="semaforo_caminoreal_FA" fromLane="0" to="172680169#1" toLane="1" keepClear="0"/>
     <connection from="semaforo_caminoreal_costanera" fromLane="0" to="semaforocaminorea_haciaperrokero" toLane="1" keepClear="0"/>

@@ -34,10 +34,10 @@ PROY_ORIGEN, PROY_DESTINO = 'av_proyeccion_salida', 'av_proyeccion_entrada'
 FFAA_EN_CAMINO_REAL = {'semaforo_caminoreal_FA', 'semaforocaminorea_haciaperrokero'}
 # nodos del distribuidor: los tramos que llegan o salen de ellos se rehacen (no se usan como puntos de paso)
 NODOS_DISTRIBUIDOR = {'semaforo_caminoreal', 'distribuidor_lado_costanera', 'distribuidor_lado_ffaa', 'ffaa_nueva_etruria',
-                      'puente_apoyo_1', 'puente_apoyo_2', 'puente_apoyo_3', 'puente_centro'}
+                      'puente_tablero_lado_costanera', 'puente_tablero_lado_ffaa'}
 # el transito liviano pasante Costanera <-> FFAA cruza por el puente (en la red el puente no admite pesados: van a nivel)
-PUENTE = {('semaforo_caminoreal_costanera', 'semaforocaminorea_haciaperrokero'): 'puente_hacia_ffaa_2',
-          ('semaforo_caminoreal_FA', '172344969#0'): 'puente_hacia_costanera_2'}
+PUENTE = {('semaforo_caminoreal_costanera', 'semaforocaminorea_haciaperrokero'): 'puente_hacia_ffaa',
+          ('semaforo_caminoreal_FA', '172344969#0'): 'puente_hacia_costanera'}
 VCLASS = {'liviano': 'passenger', 'pesado': 'bus', 'carrito': 'bus'}
 
 

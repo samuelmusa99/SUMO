@@ -48,7 +48,7 @@ ACCESOS = {
 SALIDAS_EXTRA = {'semaforo_caminoreal': ['puente_bajada_hacia_ffaa', 'puente_bajada_hacia_costanera']}
 # Tramo anterior fijado a mano donde la geometria engana al criterio de "seguir derecho" (la Costanera llega al
 # distribuidor girando a la izquierda y la calle local de enfrente queda como "recta").
-ANTERIOR_FORZADO = {'costanera_hacia_distribuidor': '592256719#7'}
+ANTERIOR_FORZADO = {'costanera_hacia_distribuidor': '592256719#7_b'}
 SECUNDARIOS = {'avrio_1', 'res_salida', 'salida_bissau_1', 'salida_bissau_2', 'salida:puerto_guaica', '-335982664#1'}
 AGUAS_ARRIBA, AGUAS_ABAJO, PERIODO = 300.0, 60.0, 900
 

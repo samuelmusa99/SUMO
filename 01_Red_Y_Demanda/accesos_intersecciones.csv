@@ -1,7 +1,7 @@
 ﻿interseccion;acceso;tipo;tramo_final;tramos_del_acceso;longitud_m
 Camino Real;Este (Av. Proyeccion);principal;av_proyeccion_salida;av_proyeccion_salida;300
 Camino Real;Sur (FFAA);principal;semaforo_caminoreal_FA;semaforo_caminoreal_FA ffaa_hacia_semaforo -371794626#2 -371794626#3 -371794626#5;300
-Camino Real;Norte (Costanera);principal;semaforo_caminoreal_costanera;semaforo_caminoreal_costanera costanera_hacia_distribuidor 592256719#7 592256719#6;161
+Camino Real;Norte (Costanera);principal;semaforo_caminoreal_costanera;semaforo_caminoreal_costanera costanera_hacia_distribuidor 592256719#7_b 592256719#7_bahia 592256719#7 592256719#6;150
 Camino Real;Oeste (El Ejercito);principal;semaforo_caminoreal_elejercito;semaforo_caminoreal_elejercito ejercito_3 ejercito_2 ejercito_1 costanera_salida;288
 CC Paos;Sur (Costanera);principal;costanera_haciamadrevieja;costanera_haciamadrevieja 172344969#11;300
 CC Paos;Este (Lecheria);principal;lecheria_haciacaminoreal;lecheria_haciacaminoreal cruce_cc_paos lecheria_salida;300
@@ -11,7 +11,7 @@ Perrokero;Norte (desde Camino Real);principal;FA_3;FA_3 371794626#12 371794626#1
 Perrokero;Este (Av. Rio);secundario;avrio_1;avrio_1 172682268#2 172682268#1 av_rio_salida;300
 Perrokero;Oeste (Residencias);secundario;res_salida;res_salida -830761843#0 -830761843#1 -830761843#2 -830761843#3;300
 Bissau;Costanera sentido Camino Real;principal;costanera_bissau_haciacaminoreal;costanera_bissau_haciacaminoreal;300
-Bissau;Costanera sentido Lecheria;principal;costanera_bissau_hacialecheria;costanera_bissau_hacialecheria 172344969#6 172344969#5 172344969#4;300
+Bissau;Costanera sentido Lecheria;principal;costanera_bissau_hacialecheria;costanera_bissau_hacialecheria 172344969#6 172344969#5 172344969#4_salida_bissau 172344969#4_b;300
 Bissau;Salida Bissau (residencias/CC);secundario;salida_bissau_1;salida_bissau_1 -495730009#2 -1225795048;112
 Bissau;Salida Bissau (galpones);secundario;salida_bissau_2;salida_bissau_2 bissau_salida 1225795049;105
 Puerto Guaica;Salida Fernandez Padilla;secundario;-335982664#1;-335982664#1 -1088915526;140

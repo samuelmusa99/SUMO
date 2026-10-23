@@ -5,6 +5,9 @@
 
 <additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
     <!-- StoppingPlaces -->
-    <busStop id="bs_0" name="Parada Puerto Guaica" lane="172344969#4_0" startPos="5.81" endPos="15.81"/>
+    <!-- Propuesta Savignani (cap. 5.5): bahias fuera de la via, de 30 m (Bissau, Puerto Guaica) y 20 m (Fernandez Padilla) -->
+    <busStop id="bs_0" name="Bahia Puerto Guaica" lane="172344969#4_bahia_0" startPos="16.00" endPos="46.00"/>
+    <busStop id="bs_bissau" name="Bahia Bissau" lane="172344969#9_bahia_0" startPos="16.00" endPos="46.00"/>
+    <busStop id="bs_fpadilla" name="Bahia Fernandez Padilla" lane="592256719#7_bahia_0" startPos="11.00" endPos="31.00"/>
     <busStop id="bs_1" lane="ejercito4_0" startPos="4.17" endPos="24.17"/>
 </additional>
