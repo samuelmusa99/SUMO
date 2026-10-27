@@ -19,6 +19,10 @@ Se va completando a medida que se revisa cada propuesta. Páginas: **impresa** (
 | S4 | El nivel **F en los accesos residenciales** (Bissau y Fernández Padilla, demoras de 1.074 a 1.228 s) es un error de cálculo del HCM. Recalculado da unos 28 s (nivel D). | Cap. 4, imp. 205–206 / PDF 231–232 | Justifica la propuesta 2 con un problema exagerado. |
 | S5 | Para Camino Real no calculan un horizonte futuro sin proyecto, porque "no se considera necesario" (ya da F). | imp. 220 / PDF 246 | No hay un escenario futuro sin proyecto contra el cual comparar la propuesta. |
 | S6 | El aforo se hizo durante la pandemia de COVID-19 y la crisis de combustible. Ellos mismos estiman una caída del 70 al 90 % (o del 75 %) del tránsito y luego suponen un aumento "mínimo del 50 %". | imp. 229–233 / PDF 255–259 | Los volúmenes de diseño son inciertos. En la simulación se aplicó ×1,5 como recuperación post COVID. |
+| S22 | **Ancho de la Costanera contradictorio**: los Anexos B y C dicen "dos canales de 8 m" con separador de 1 m, pero las Tablas 25 y 26 dan calzadas de 7,4 m (2 × 3,7 m) con isla de 1,3 m. En la Tabla 25 un sentido de la Costanera mide 6,3 m (2 × 3,15 m). | Tablas 25 y 26, imp. 173 / PDF 199; Anexos B y C, imp. 270–271 | En la simulación se usó 3,70 m por carril. |
+| S23 | **Prolongación Av. El Ejército**: la Tabla 25 da 10,1 m con "2 carriles de 5,05 m" en cada sentido; el Anexo G da 10,1 m de entrada y 6,3 m de salida; en campo hay 3 carriles de entrada. | Tabla 25, imp. 173; Anexo G, imp. 279 | Un carril de 5,05 m no es normativo. En la simulación: entrada de 3 × 3,37 m (campo) y salida de 2 × 3,70 m. |
+| S24 | En la Tabla 26 los carriles de la Costanera son de "2 de 3,75 m" (7,5 m), pero la calzada se reporta en 7,4 m. | Tabla 26, imp. 173 | Detalle de medición. |
+| S25 | **Ninguna de las dos tesis reporta radios de giro ni hombrillos** de las intersecciones existentes. Solo dan calzada, carriles, brocal, isla y acera. | Tablas 25 y 26; Perozo, Cuadros 4.1 y 4.2 | El indicador "radios de giro" y "hombrillos" del Cuadro 1.2 no tiene fuente en las tesis. |
 
 ### 1.2 Propuesta 1: distribuidor en Camino Real
 
@@ -70,6 +74,7 @@ Se va completando a medida que se revisa cada propuesta. Páginas: **impresa** (
 | P5 | La Av. Río se describe con **1 carril de 5 m**; en campo tiene 2 carriles por sentido (confirmado por el usuario). | Cap. 4 | Capacidad del acceso mal representada. |
 | P6 | Costos tomados de una tesis extranjera (Quito, 2012). | Costos | No refleja precios locales. |
 | P7 | Aforo hecho durante la pandemia y la crisis de combustible. | Cap. 4 | Volúmenes inciertos. |
+| P8 | **Ancho de carril de FFAA contradictorio**: el Cuadro 4.1 da calzadas de 7,85 m por sentido (2 carriles, 3,92 m c/u), pero el cálculo HCM usa carriles de 3,60 y 3,70 m. | Cuadro 4.1, imp. 127 / PDF 149; tabla de capacidad del cap. 4 | Capacidad calculada con un ancho distinto al medido. En la simulación: 3,92 m. |
 
 ---
 
