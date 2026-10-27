@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Anchos de carril iguales a las tesis evaluadas, sin cambiar el numero de carriles del modelo (confirmado en campo).
+     Donde el modelo tiene mas carriles que la tesis, se reparte el ancho de calzada de la tesis entre los carriles.
+     Se aplica con: netconvert -s costanera.net.xml -e ajustes_red/anchos_tesis.edg.xml (ver opciones en el encabezado de la red) -->
+<edges>
+    <!-- Camino Real: Savignani (2021), Tabla 25 y Fig. 84 -->
+    <edge id="curva_caminoreal" width="6.30"/>                   <!-- canal de giro libre Costanera - El Ejercito: 1 carril de 6,3 m -->
+    <edge id="semaforo_caminoreal_FA" width="3.75"/>             <!-- Av. Fuerzas Armadas, llegada: 2 de 3,75 m -->
+    <edge id="semaforocaminorea_haciaperrokero" width="3.75"/>   <!-- Av. Fuerzas Armadas, salida: 3,75 m por carril -->
+    <!-- CC Paos: Savignani (2021), Tabla 26 (Av. La Costanera, 2 de 3,75 m) -->
+    <edge id="costanera_haciamadrevieja" width="3.75"/>
+    <edge id="592256719#1" width="3.75"/>
+    <edge id="madre_vieja_salida" width="3.75"/>
+    <edge id="592256721#0" width="3.75"/>
+    <!-- Perrokero: Assouad y Peroza (2022), Cuadro 4.2, dan 1 carril de 5,0 m en la Av. Rio y en Residencias; en campo hay 2.
+         Repartir 5,0 m en 2 carriles de 2,5 m hacia que SUMO redibujara el cruce y en algunas replicas la interseccion se
+         bloqueaba por completo (efecto del modelo, no del ancho real). Se mantienen 2 carriles de 3,0 m. -->
+</edges>

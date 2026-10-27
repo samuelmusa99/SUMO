@@ -1,6 +1,6 @@
 ﻿interseccion;acceso;tipo;tramo_final;tramos_del_acceso;longitud_m
-Camino Real;Sur (FFAA);principal;semaforo_caminoreal_FA;semaforo_caminoreal_FA -371794626#1 -371794626#2 -371794626#3;300
-Camino Real;Norte (Costanera);principal;semaforo_caminoreal_costanera;semaforo_caminoreal_costanera 592256719#7 592256719#6;158
+Camino Real;Sur (FFAA);principal;semaforo_caminoreal_FA;semaforo_caminoreal_FA -371794626#1 -371794626#2 -371794626#3 -371794626#5;300
+Camino Real;Norte (Costanera);principal;semaforo_caminoreal_costanera;semaforo_caminoreal_costanera 592256719#7 592256719#6;150
 Camino Real;Oeste (El Ejercito);principal;semaforo_caminoreal_elejercito;semaforo_caminoreal_elejercito ejercito_3 ejercito_2 ejercito_1 costanera_salida;285
 CC Paos;Sur (Costanera);principal;costanera_haciamadrevieja;costanera_haciamadrevieja 172344969#11;300
 CC Paos;Este (Lecheria);principal;lecheria_haciacaminoreal;lecheria_haciacaminoreal cruce_cc_paos lecheria_salida;300
