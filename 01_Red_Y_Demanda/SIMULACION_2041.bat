@@ -5,13 +5,13 @@ set "SUMO_HOME=C:\SUMO"
 set "XML2CSV=C:\SUMO\tools\xml\xml2csv.py"
 set "RED_DIR=C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda"
 set "XML_DIR=C:\Users\samue_yffy\Desktop\SUMO\02_Resultados_2041"
-set "CSV_DIR=C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\FUTURO_2041"
-:: resumen de la base 2026: de ahi se toma la capacidad de cada acceso (la via y los semaforos son los mismos)
-set "BASE_2026=C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\BASE_2026\resumen_replicas.csv"
+set "CSV_DIR=C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_PEROZO\2041"
+:: resumen de la propuesta en 2026: de ahi se toma la capacidad de cada acceso (la via y los semaforos son los mismos)
+set "BASE_2026=C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_PEROZO\2026\resumen_replicas.csv"
 
 echo ==========================================
 echo   Simulación de la Costanera
-echo   Horizonte 2041 sin proyecto (demanda 2026 x 1,448)
+echo   Propuesta Perozo: horizonte 2041 (demanda 2026 x 1,448)
 echo ==========================================
 
 :: Abre SUMO y ESPERA a que lo cierres (los XML se terminan de escribir al cerrar SUMO)
@@ -32,7 +32,7 @@ for %%N in (reporte_viajes reporte_colas reporte_densidad) do (
 )
 
 echo Calculando niveles de servicio por intersección...
-python "%RED_DIR%\herramientas\resumen_resultados.py" futuro2041 "%XML_DIR%" "%CSV_DIR%"
+python "%RED_DIR%\herramientas\resumen_resultados.py" perozo2041 "%XML_DIR%" "%CSV_DIR%"
 if errorlevel 1 (
     echo ERROR al calcular el resumen de intersecciones
     pause
@@ -52,6 +52,6 @@ echo.
 echo ¡Proceso terminado! Abriendo Excel de Análisis 2041...
 
 :: Abrir maximizado
-start /max excel "%CSV_DIR%\RESULTADOS SIMULACION 2041.xlsm"
+start /max excel "%CSV_DIR%\RESULTADOS PEROZO 2041.xlsm"
 
 exit
