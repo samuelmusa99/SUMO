@@ -222,9 +222,9 @@ p('El Cuadro 4.2 resume la sección transversal de cada vía tal como se represe
 geo = [
     ['Camino Real', 'Av. La Costanera, llegada', '2', '3,70', '7,40', '1,30', '2,04', 'Savignani, T. 25 y Fig. 84'],
     ['', 'Av. La Costanera, salida', '2', '3,70', '7,40', '1,30', '2,25', 'Savignani, Fig. 84'],
-    ['', 'Canal de giro libre Costanera - El Ejército', '1', '6,30', '6,30', '-', '-', 'Savignani, Fig. 84'],
-    ['', 'Av. Fuerzas Armadas, llegada', '2', '3,75', '7,50', 'No dividida', '2,25', 'Savignani, T. 25 y Fig. 84'],
-    ['', 'Av. Fuerzas Armadas, salida', '3 (*)', '3,75', '11,25', 'No dividida', '1,50', 'Savignani: 2 de 3,75 m'],
+    ['', 'Canal de giro libre Costanera - El Ejército', '1', '6,30 (**)', '6,30', '-', '-', 'Savignani, Fig. 84'],
+    ['', 'Av. Fuerzas Armadas, llegada', '2', '3,75 (**)', '7,50', 'No dividida', '2,25', 'Savignani, T. 25 y Fig. 84'],
+    ['', 'Av. Fuerzas Armadas, salida', '3 (*)', '3,75 (**)', '11,25', 'No dividida', '1,50', 'Savignani: 2 de 3,75 m'],
     ['', 'Prolong. Av. El Ejército, llegada', '3 (*)', '3,37', '10,10', '1,30', '2,60', 'Savignani: 2 de 5,05 m'],
     ['', 'Prolong. Av. El Ejército, salida', '2', '3,70', '7,40', '1,30', '2,60', 'Savignani, Fig. 84'],
     ['CC Paos', 'Av. La Costanera (ambos sentidos)', '2', '3,75', '7,50', '1,30', '2,60', 'Savignani, T. 26'],
@@ -241,14 +241,28 @@ cuadro('Cuadro 4.2 Sección transversal por vía (sentido de circulación)',
        ['Intersección', 'Vía', 'N.º carriles', 'Ancho de carril (m)', 'Calzada (m)', 'Isla (m)', 'Acera (m)', 'Fuente'],
        geo, [2.0, 4.0, 1.3, 1.5, 1.4, 1.5, 1.2, 3.3], tam=8,
        fuente='Fuente: El autor (2026), a partir de Estanga y Savignani (2021), Assouad y Peroza (2022) e inspección de campo. '
-              '(*) Número de carriles observado en campo, distinto al de la tesis.')
+              '(*) Número de carriles observado en campo, distinto al de la tesis. (**) Ancho de la tesis; en el modelo se usaron 3,70 m '
+              '(canal de giro) y 3,20 m (Av. Fuerzas Armadas), ver nota.')
 nota('Donde la tesis reporta menos carriles que los observados en campo (*), se conservaron los carriles de campo. En El '
-     'Ejército se repartió el ancho de calzada de la tesis (10,1 m) entre los 3 carriles. En la Av. Río y el acceso '
-     'residencial de Perrokero, la tesis da 1 carril de 5,0 m; repartirlo en 2 carriles de 2,5 m provocaba bloqueos '
-     'artificiales en la simulación, por lo que se mantuvieron 2 carriles de 3,0 m. La velocidad máxima es de 40 km/h en '
-     'todo el eje (señal observada en campo), salvo en las salidas residenciales (20 a 30 km/h). Las Tablas 25 y 26 y la '
+     'Ejército se repartió el ancho de calzada de la tesis (10,1 m) entre los 3 carriles. La velocidad máxima es de 40 km/h '
+     'en todo el eje (señal observada en campo), salvo en las salidas residenciales (20 a 30 km/h). Las Tablas 25 y 26 y la '
      'Fig. 84 de Savignani se contradicen en algunos anchos (ver INCONGRUENCIAS_TESIS_EVALUADAS, S22 a S24); se usó la '
      'Fig. 84, que es la más detallada.')
+nota('Anchos que no se pudieron usar tal cual en el modelo (texto sugerido): "Los anchos de carril se tomaron de las tesis '
+     'evaluadas. Sin embargo, en tres casos se mantuvo en el modelo un ancho distinto, porque el software SUMO, al '
+     'ensanchar el carril, redibuja el área de la intersección y altera su funcionamiento de una forma que no corresponde '
+     'a la realidad: (a) en Camino Real, el canal de giro libre de la Costanera hacia El Ejército (6,30 m según Estanga y '
+     'Savignani, 2021, Fig. 84) se modeló con 3,70 m, y la Av. Fuerzas Armadas (3,75 m según la Tabla 25) con 3,20 m. Con '
+     'los anchos de la tesis, el programa agranda el área del cruce en un 45 % (de 782 a 1.137 m²), alarga los recorridos '
+     'internos y reduce la capacidad del acceso de la Costanera, cuya cola llegaba hasta Puerto Guaica; ese efecto es '
+     'contrario al del HCM 2000, según el cual un carril más ancho tiene mayor capacidad, y no está respaldado por las '
+     'tesis ni por los conteos de campo. (b) En Perrokero, Assouad y Peroza (2022) reportan en la Av. Río y en el acceso '
+     'residencial un solo carril de 5,0 m, pero en campo se observaron dos; repartir esos 5,0 m en dos carriles de 2,5 m '
+     'provocaba el bloqueo total de la intersección en una de cada tres réplicas, por lo que se usaron dos carriles de '
+     '3,0 m. En los demás accesos, los anchos del modelo coinciden con los de las tesis." Efecto en los resultados 2026 si se '
+     'hubieran usado los anchos de la tesis en Camino Real: la demora de Camino Real pasaba de '
+     f"{n(I26['Camino Real']['demora_promedio_s'], 1)} s a 53,3 s y la de Puerto Guaica de "
+     f"{n(I26['Puerto Guaica']['demora_promedio_s'], 1)} s a 43,2 s (de {I26['Puerto Guaica']['LOS_HCM']} a F).")
 
 doc.add_heading('4.1.3 Señalización vial', level=2)
 p('Durante la inspección de campo se registraron fotográficamente los siguientes dispositivos de control:')
