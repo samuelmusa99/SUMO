@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-10-23 14:19:50.035317 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
+<!-- generated on 2026-10-29 10:44:14.307267 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
 <configuration>
-    <source value="main.net.xml"/>
-    <dest value="nueva.net.xml"/>
-    <outprefix value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/ajustes_red/propuesta_savignani"/>
+    <source value="C:/Users/SAMUE_~1/AppData/Local/Temp/claude/C--Users-samue-yffy-Desktop-SUMO-01-Red-Y-Demanda/4d7d932a-f339-4fdd-85d9-ef675fc2afc1/scratchpad/dprop/main.net.xml"/>
+    <dest value="C:/Users/SAMUE_~1/AppData/Local/Temp/claude/C--Users-samue-yffy-Desktop-SUMO-01-Red-Y-Demanda/4d7d932a-f339-4fdd-85d9-ef675fc2afc1/scratchpad/dprop/sav.net.xml"/>
+    <outprefix value="ajustes_red/propuesta_savignani"/>
 </configuration>
 -->
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Anchos de carril iguales a las tesis evaluadas, sin cambiar el numero de carriles del modelo (confirmado en campo).
+     Se aplica con: netconvert -s costanera.net.xml -e ajustes_red/anchos_tesis.edg.xml (ver opciones en el encabezado de la red) -->
+<edges>
+    <!-- CC Paos: Savignani (2021), Tabla 26 (Av. La Costanera, 2 de 3,75 m). No cambia los resultados. -->
+    <edge id="costanera_haciamadrevieja" width="3.75"/>
+    <edge id="592256719#1" width="3.75"/>
+    <edge id="madre_vieja_salida" width="3.75"/>
+    <edge id="592256721#0" width="3.75"/>
+
+    <!-- NO APLICADOS (se dejan los anchos anteriores del modelo):
+         Camino Real, Savignani (2021) Tabla 25 y Fig. 84: canal de giro libre Costanera - El Ejercito de 6,30 m (modelo 3,70 m)
+         y Av. Fuerzas Armadas de 3,75 m (modelo 3,20 m). Con esos anchos SUMO agranda el poligono del cruce (de 782 a 1.137 m2),
+         alarga los recorridos internos y reduce la capacidad de la Costanera, al reves de lo que indica el HCM 2000 (un carril
+         mas ancho tiene mas capacidad). La cola llegaba hasta Puerto Guaica sin respaldo en las tesis ni en el conteo de campo.
+         Perrokero, Assouad y Peroza (2022) Cuadro 4.2: 1 carril de 5,0 m en la Av. Rio y en Residencias (en campo hay 2).
+         Repartirlo en 2 carriles de 2,5 m hacia que el cruce se bloqueara por completo en 1 de cada 3 replicas.
+         Se mantienen 2 carriles de 3,0 m. -->
+</edges>

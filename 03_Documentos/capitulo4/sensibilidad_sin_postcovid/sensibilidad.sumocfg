@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Escenario de sensibilidad: igual a la base 2026, pero con la demanda sin el +50 % post COVID (x1,131) -->
+<sumoConfiguration>
+    <input>
+        <net-file value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/costanera.net.xml"/>
+        <route-files value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/costanera.rou.xml,C:/Users/SAMUE_~1/AppData/Local/Temp/claude/C--Users-samue-yffy-Desktop-SUMO-01-Red-Y-Demanda/4d7d932a-f339-4fdd-85d9-ef675fc2afc1/scratchpad/sens/demanda_sensibilidad.rou.xml"/>
+        <additional-files value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/mapa_fondo.poly.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/medidores.add.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/vista.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/paradas.add.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/detectores_intersecciones.add.xml"/>
+    </input>
+    <output>
+        <tripinfo-output.write-unfinished value="true"/>
+    </output>
+    <processing>
+        <time-to-teleport value="-1"/>
+    </processing>
+    <time>
+        <begin value="0"/>
+        <end value="5400"/>
+    </time>
+</sumoConfiguration>
