@@ -140,11 +140,13 @@ def main(escenario, carpeta_xml, carpeta_csv):
     with open(os.path.join(carpeta_csv, 'resumen_viajes.csv'), 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.writer(f, delimiter=';')
         w.writerow(['escenario', 'tipo_vehiculo', 'viajes', 'tiempo_viaje_s', 'demora_s', 'tiempo_detenido_s',
-                    'velocidad_media_kmh', 'teleports_simulacion'])
+                    'velocidad_media_kmh', 'teleports_simulacion', 'tiempo_en_paradas_s'])
         for clave in sorted(tipos, key=lambda k: (k == 'TOTAL', k)):
             n, dur, perd, esp, dist, parada = tipos[clave]
+            # la demora (timeLoss) no incluye el tiempo detenido en las paradas de bus; el tiempo de viaje si
             w.writerow([escenario, clave, n, num(dur / n), num(perd / n), num(esp / n),
-                        num(dist / (dur - parada) * 3.6) if dur > parada else '', teleports if clave == 'TOTAL' else ''])
+                        num(dist / (dur - parada) * 3.6) if dur > parada else '', teleports if clave == 'TOTAL' else '',
+                        num(parada / n)])
 
     for fila in filas:
         if fila[2] == 'INTERSECCION':

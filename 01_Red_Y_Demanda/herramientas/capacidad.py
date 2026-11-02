@@ -120,7 +120,7 @@ def calcular(config, atendido_por_acceso, demora_por_acceso=None):
         if e.getToNode().getType() == 'traffic_light':
             g, ciclo = verde_y_ciclo(net, e)
             cap_hcm = s * n * g / ciclo
-        elif a['tipo'] == 'principal':
+        elif a['tipo'] in ('principal', 'puente'):   # el puente es flujo libre, sin control
             cap_hcm = s * n
         else:
             vc_total = principal_vol[a['interseccion']]
