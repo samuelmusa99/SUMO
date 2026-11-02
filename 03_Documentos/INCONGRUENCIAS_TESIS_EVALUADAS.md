@@ -39,6 +39,7 @@ Se va completando a medida que se revisa cada propuesta. Páginas: **impresa** (
 | S15 | La Alternativa C dice que el canal a nivel del acceso Sur es para **"tráfico pesado colectivo"**, pero en el Anexo B ese acceso tiene **fVP = 1,00** (sin pesados) y fB = 0,75. | imp. 232 / PDF 258; Anexo B | La capacidad del acceso FFAA a nivel queda sobrestimada. |
 | S16 | El vehículo de diseño del puente es un camión SU de 9,1 m (Cuadro 26), pero el texto de la Alternativa C manda los pesados a nivel. | Cuadro 26, imp. 240; imp. 232 | No queda claro si el puente se diseñó para pesados. En la simulación los pesados cruzan a nivel. |
 | S17 | La separación central del puente es de **0,30 m** en el Cuadro 26 y en el texto, y en el Anexo G aparece una "isleta Av" de **1,3 m**. | Cuadro 26; Anexo G, imp. 279 | Detalle de dimensiones. |
+| S26 | **El propio cálculo del Anexo B muestra un acceso saturado**: el giro de El Ejército hacia la Costanera (685 veh/h en 1 carril) tiene Xc = **1,04** y 61,4 s (nivel E), aunque la intersección se presenta en nivel C (35,1 s). Debajo del puente, ese giro y el de FFAA sale por **un solo carril** hacia la Costanera. | Anexo B, imp. 269 / PDF 295; Anexo G | La propuesta deja un cuello de botella a nivel. En la simulación, ese carril de salida recibe 897 veh/h (683 de El Ejército) y El Ejército queda en F; la cola bloquea también el acceso al puente. |
 
 ### 1.3 Propuesta 2: accesos residenciales y bahías
 
