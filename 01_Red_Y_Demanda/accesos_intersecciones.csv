@@ -3,6 +3,8 @@ Camino Real;Este (Av. Proyeccion);principal;av_proyeccion_salida;av_proyeccion_s
 Camino Real;Sur (FFAA);principal;semaforo_caminoreal_FA;semaforo_caminoreal_FA ffaa_hacia_semaforo -371794626#2 -371794626#3 -371794626#5;300
 Camino Real;Norte (Costanera);principal;semaforo_caminoreal_costanera;semaforo_caminoreal_costanera costanera_hacia_distribuidor 592256719#7_b 592256719#7_bahia 592256719#7 592256719#6;150
 Camino Real;Oeste (El Ejercito);principal;semaforo_caminoreal_elejercito;semaforo_caminoreal_elejercito ejercito_3 ejercito_2 ejercito_1 costanera_salida;288
+Camino Real;Puente hacia FFAA;puente;puente_bajada_hacia_ffaa;puente_bajada_hacia_ffaa puente_hacia_ffaa puente_subida_hacia_ffaa costanera_hacia_distribuidor 592256719#7_b 592256719#7_bahia 592256719#7 592256719#6;272
+Camino Real;Puente hacia Costanera;puente;puente_bajada_hacia_costanera;puente_bajada_hacia_costanera puente_hacia_costanera puente_subida_hacia_costanera -371794626#2;300
 CC Paos;Sur (Costanera);principal;costanera_haciamadrevieja;costanera_haciamadrevieja 172344969#11;300
 CC Paos;Este (Lecheria);principal;lecheria_haciacaminoreal;lecheria_haciacaminoreal cruce_cc_paos lecheria_salida;300
 CC Paos;Norte (Madre Vieja);principal;madre_vieja_salida;madre_vieja_salida;300

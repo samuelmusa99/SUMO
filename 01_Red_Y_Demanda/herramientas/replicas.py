@@ -138,7 +138,8 @@ def main(n, config, carpeta_xml, carpeta_csv, archivo_salida='resumen_replicas.c
                         teleports.append(int(r['teleports_simulacion']))
                     viajes.setdefault(r['tipo_vehiculo'], []).append(
                         (float(r['viajes']), float(r['tiempo_viaje_s']), float(r['demora_s']),
-                         float(r['velocidad_media_kmh']) if r['velocidad_media_kmh'] else None))
+                         float(r['velocidad_media_kmh']) if r['velocidad_media_kmh'] else None,
+                         float(r.get('tiempo_en_paradas_s') or 0)))
             for k, (prom, maxima) in colas_por_acceso(os.path.join(tmp, 'reporte_colas.xml'), tramos, largo).items():
                 colas[k].append((prom, maxima))
             for k, v in velocidad_por_acceso(os.path.join(tmp, 'reporte_accesos.xml'), tramos).items():
@@ -181,18 +182,36 @@ def main(n, config, carpeta_xml, carpeta_csv, archivo_salida='resumen_replicas.c
             vc = max(v['vc'] for v in propios)
             at = min(1.0, statistics.mean(vol) / demanda) if demanda else 1.0
         ref = rr.REFERENCIA[inter]
-        extra = ['', '', '', '', '']
+        extra = ['', '', '', '', '', '']
         if nivel == 'ACCESO' and colas.get((inter, acceso)):
             cp = statistics.mean(c[0] for c in colas[(inter, acceso)])
             cm = statistics.mean(c[1] for c in colas[(inter, acceso)])
             lleno = cm >= LLENO * sum(largo[e] for e in tramos[(inter, acceso)])
             v = veloc[(inter, acceso)]
             extra = [f'{cp:.0f}', f'{cm:.0f}', 'si' if lleno else 'no',
-                     f'{statistics.mean(v):.1f}' if v and float(demanda) > 0 else '', '']
+                     f'{statistics.mean(v):.1f}' if v and float(demanda) > 0 else '', '', '']
         filas.append([inter, nivel, acceso, n, f'{statistics.mean(vol):.0f}', f'{dm:.1f}', f'{min(dem):.1f}', f'{max(dem):.1f}',
                       f'{statistics.stdev(dem) if n > 1 else 0:.1f}', rr.los(dm, semaf[inter]), los,
                       f'{demanda:.0f}', capacidad, fuente, f'{vc:.2f}', f'{at * 100:.0f}',
                       ref[2] if nivel == 'INTERSECCION' else '', ref[3] if nivel == 'INTERSECCION' else ''] + extra)
+        if nivel == 'INTERSECCION' and any(j[0] == inter and j[1] == 'ACCESO' and datos[j][0][2] == 'puente' for j in orden):
+            # interseccion con distribuidor: ademas del total (a nivel + puente), la parte que cruza a nivel, para
+            # compararla con la interseccion de la base. Demora = promedio ponderado por volumen de los accesos a nivel.
+            nivel_acc = [j for j in orden if j[0] == inter and j[1] == 'ACCESO' and datos[j][0][2] != 'puente']
+            por_rep = []
+            for i in range(n):
+                v_i = sum(datos[j][i][0] for j in nivel_acc)
+                por_rep.append((v_i, sum(datos[j][i][0] * datos[j][i][1] for j in nivel_acc) / v_i if v_i else 0.0))
+            vol_n = statistics.mean(x[0] for x in por_rep)
+            dem_n = [x[1] for x in por_rep]
+            dm_n = statistics.mean(dem_n)
+            propios_n = [capac[(inter, j[2])] for j in nivel_acc]
+            demanda_n = sum(v['demanda'] for v in propios_n)
+            filas.append([inter, 'INTERSECCION_A_NIVEL', '(sin puente)', n, f'{vol_n:.0f}', f'{dm_n:.1f}',
+                          f'{min(dem_n):.1f}', f'{max(dem_n):.1f}', f'{statistics.stdev(dem_n) if n > 1 else 0:.1f}',
+                          rr.los(dm_n, semaf[inter]), rr.los(dm_n, semaf[inter]), f'{demanda_n:.0f}', '',
+                          'V/C del acceso critico a nivel', f"{max(v['vc'] for v in propios_n):.2f}",
+                          f'{min(1.0, vol_n / demanda_n) * 100 if demanda_n else 100:.0f}', '', '', '', '', '', '', '', ''])
     # indicadores de todos los viajes de la hora de analisis (toda la red), por tipo de vehiculo
     for tipo in sorted(viajes, key=lambda t: (t == 'TOTAL', t)):
         d = viajes[tipo]
@@ -201,7 +220,8 @@ def main(n, config, carpeta_xml, carpeta_csv, archivo_salida='resumen_replicas.c
         filas.append(['Red completa', 'RED', tipo, len(d), f'{statistics.mean(x[0] for x in d):.0f}', f'{statistics.mean(dem):.1f}',
                       f'{min(dem):.1f}', f'{max(dem):.1f}', f'{statistics.stdev(dem) if len(d) > 1 else 0:.1f}',
                       '', '', '', '', '', '', '', '', '', '', '', '',
-                      f'{statistics.mean(vel):.1f}' if vel else '', f'{statistics.mean(x[1] for x in d):.1f}'])
+                      f'{statistics.mean(vel):.1f}' if vel else '', f'{statistics.mean(x[1] for x in d):.1f}',
+                      f'{statistics.mean(x[4] for x in d):.1f}'])
 
     with open(os.path.join(carpeta_csv, archivo_salida), 'w', encoding='utf-8-sig', newline='') as f:
         w = csv.writer(f, delimiter=';')
@@ -209,10 +229,10 @@ def main(n, config, carpeta_xml, carpeta_csv, archivo_salida='resumen_replicas.c
                     'demora_min_s', 'demora_max_s', 'desviacion_estandar_s', 'LOS_promedio', 'LOS_HCM',
                     'demanda_veh_h', 'capacidad_veh_h', 'fuente_capacidad', 'VC', 'demanda_atendida_pct',
                     'tesis_LOS', 'tesis_demora_s', 'cola_promedio_m', 'cola_maxima_m', 'cola_llena_el_tramo',
-                    'velocidad_media_kmh', 'tiempo_viaje_s'])
+                    'velocidad_media_kmh', 'tiempo_viaje_s', 'tiempo_en_paradas_s'])
         w.writerows(filas)
     for fila in filas:
-        if fila[1] == 'INTERSECCION':
+        if fila[1] in ('INTERSECCION', 'INTERSECCION_A_NIVEL'):
             print(f'  {fila[0]:14s} {fila[4]:>6s} de {fila[11]:>5s} veh/h ({fila[15]} %)  demora {fila[5]:>6s} s ({fila[6]}-{fila[7]})  LOS {fila[10]}  V/C max {fila[14]}  | tesis {fila[16]}')
         elif fila[1] == 'RED' and fila[2] == 'TOTAL':
             print(f'  Red completa   {fila[4]:>6s} viajes  tiempo de viaje {fila[22]} s  demora {fila[5]} s  velocidad {fila[21]} km/h')

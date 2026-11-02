@@ -48,7 +48,13 @@ ACCESOS = {
 SALIDAS_EXTRA = {'semaforo_caminoreal': ['puente_bajada_hacia_ffaa', 'puente_bajada_hacia_costanera']}
 # Tramo anterior fijado a mano donde la geometria engana al criterio de "seguir derecho" (la Costanera llega al
 # distribuidor girando a la izquierda y la calle local de enfrente queda como "recta").
-ANTERIOR_FORZADO = {'costanera_hacia_distribuidor': '592256719#7_b'}
+ANTERIOR_FORZADO = {'costanera_hacia_distribuidor': '592256719#7_b',
+                    'puente_subida_hacia_ffaa': 'costanera_hacia_distribuidor',
+                    'puente_subida_hacia_costanera': '-371794626#2'}
+# Accesos por puente (distribuidores): se reportan como accesos tipo "puente" de la interseccion que cruzan, para
+# comparar la interseccion completa (a nivel + puente) con el escenario base. (interseccion, acceso, tramo de bajada)
+PUENTES = [('semaforo_caminoreal', 'Puente hacia FFAA', 'puente_bajada_hacia_ffaa'),
+           ('semaforo_caminoreal', 'Puente hacia Costanera', 'puente_bajada_hacia_costanera')]
 SECUNDARIOS = {'avrio_1', 'res_salida', 'salida_bissau_1', 'salida_bissau_2', 'salida:puerto_guaica', '-335982664#1'}
 AGUAS_ARRIBA, AGUAS_ABAJO, PERIODO = 300.0, 60.0, 900
 
@@ -131,6 +137,14 @@ def main():
             for ln in ultimo.getLanes():
                 lineas.append(f'        <detExit lane="{ln.getID()}" pos="{pos:.2f}" friendlyPos="true"/>')
         lineas.append('    </e3Detector>')
+        # el detector E3 ya registra a los vehiculos del puente (entran por los mismos accesos y salen al bajar);
+        # aqui solo se agregan sus filas para medir su volumen y su demora por separado
+        for jp, acceso, bajada in PUENTES:
+            if jp == jid and net.hasEdge(bajada):
+                cadena, _, _ = aguas_arriba(net, net.getEdge(bajada))
+                tramos_acceso.extend(c.getID() for c in cadena)
+                filas.append([nombre, acceso, 'puente', bajada, ' '.join(c.getID() for c in cadena),
+                              f'{min(sum(c.getLength() for c in cadena), AGUAS_ARRIBA):.0f}'])
     lineas.append(f'    <edgeData id="accesos" file="../02_Resultados_Base/reporte_accesos.xml" freq="{PERIODO}" '
                   f'edges="{" ".join(sorted(set(tramos_acceso)))}"/>')
     lineas.append('</additional>')
