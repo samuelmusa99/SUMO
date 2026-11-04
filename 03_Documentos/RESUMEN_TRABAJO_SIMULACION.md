@@ -256,11 +256,14 @@ Lo aplicado en la red con `ajustes_red/propuesta_perozo.py` (se corre sobre la r
 
 ## 8. Próximos pasos
 
-1. Push normal de `main`, `propuestaSavignani`, `propuestaPerozo` y `propuestaFinal`.
-2. Correr los `.bat` de Savignani y llevar sus consultas al tutor (sección 7).
-3. **Perozo:** aplicada y simulada el 04/11 (sección 7b). Falta revisarla en el GUI, correr sus `.bat` y hacer commit.
-4. **Propuesta final:** con las recomendaciones del usuario.
-5. Documento para la amiga de los objetivos 3 y 4 (igual al del capítulo IV de la base), y costos (objetivo 4: cómputos métricos y APU con precios de 2026). Ya se puede empezar la parte de Savignani con la tabla de la sección 7.
+*(Actualizado el 04/11/2026.)*
+1. **Commit y push de `propuestaPerozo`** (todo lo del 04/11 está sin commit, salvo el merge `859d9fe`). Después, llevar a main el resumen, `INCONGRUENCIAS_TESIS_EVALUADAS.md` (P9–P19), `generar_detectores.py` y `herramientas/red_excel.py`, y agregar la línea `copy /Y` de la red a los `.bat` de main, Savignani y Final.
+2. **Revisar Perozo en el SUMO-GUI** (geometría del puente y cola del acceso norte que bloquea la entrada al puente hacia el sur).
+3. **Consultas al tutor:** Savignani (semáforo de 122 s, isla central, 30 % de la Av. En Proyección, carriles de incorporación), Perozo (1 carril a nivel según la figura frente a los 2 del cálculo HCM, P10) y el factor post COVID (escenario de sensibilidad).
+4. **Objetivo 3, recomendaciones:** comparar base, Savignani y Perozo (2026 y 2041) y decidir la propuesta final. Hallazgos ya disponibles: el distribuidor de Savignani lleva el cuello de botella a la salida de 1 carril hacia la Costanera (S26); en Perozo la cola a nivel del acceso norte tapa la entrada al puente; ninguna resuelve 2041.
+5. **Propuesta final** en `propuestaFinal`, con las recomendaciones del usuario. Su Excel se hace copiando el de Savignani (`copiar_excel.py` + `red_excel.py`).
+6. **Documento para la amiga de los objetivos 3 y 4** (como el del capítulo IV de la base), con las tablas de las secciones 7 y 7b.
+7. **Objetivo 4, costos:** cómputos métricos y APU con precios de 2026 (las dos tesis copian costos de trabajos extranjeros, S21 y P6).
 
 ---
 
