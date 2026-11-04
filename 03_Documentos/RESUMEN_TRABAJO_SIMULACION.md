@@ -1,6 +1,6 @@
 # Resumen del trabajo de simulación — Tesis Samuel Mujica (USM, Ing. Civil)
 
-**Actualizado:** 02/11/2026 · **Uso:** compartir este archivo al iniciar un chat nuevo para retomar el trabajo.
+**Actualizado:** 04/11/2026 · **Uso:** compartir este archivo al iniciar un chat nuevo para retomar el trabajo.
 **Estado general:** la **simulación base (2026 y 2041) está terminada y revisada**, y la información de los objetivos 1 y 2 ya está lista para la redacción. **Savignani está aplicada y simulada** (2026 y 2041, 5 réplicas; resultados en la sección 7); solo faltan las consultas al tutor y refrescar sus Excel. Lo siguiente es **Perozo** y luego la propuesta final. Lo hecho el 02/11 está en la sección 10.
 
 ---
@@ -157,6 +157,13 @@ Desktop\EXCEL RESULTADOS\
    - agregar las referencias: MTC 1997, MINDUR 1981, MVDUCT/INTT 2011, HCM 2000, FHWA Toolbox vol. III y las dos tesis.
 4. Apoyo: `INCONGRUENCIAS_TESIS_EVALUADAS.md` y la sección 3 de la revisión.
 5. `TRABAJO DE GRADO\SUGERENCIAS CAPITULO II - MARCO TEORICO.docx` (estructura, antecedentes, 8 bloques teóricos incluido el de simulación, bases legales, 46 términos y fuentes). Se regenera con `capitulo4\sugerencias_cap2.py`.
+6. **Antecedentes del capítulo II (04/11/2026).** El tutor pide solo los trabajos que de verdad se usaron (3 a 5, sin mínimo de nacionales o internacionales). Quedaron así (verificados en los PDF; el usuario debe leer al menos el resumen, la metodología y las conclusiones de los nuevos):
+   1. Estanga y Savignani (2021), USM. Nacional.
+   2. Assouad y Peroza (2022), USM. Nacional.
+   3. Villalba, C. (2022). *Modelación del tránsito vehicular al tramo Avenida Busch entre segundo y cuarto anillo, Santa Cruz de la Sierra* [Tesis de grado, Universidad Católica Boliviana "San Pablo"]. https://www.tesis.ucb.edu.bo/scz/ucb_civ/2022/villalba_c/ — SUMO (NetEdit + SUMO-GUI), HCM 2010, conteos en 4 nodos, proyección a 2, 5 y 10 años y 3 alternativas; sin intervención las esperas se duplican en 5 años y el sistema colapsa a los 10. Ya se cita en el capítulo I. Se entregó un borrador del antecedente con su "aporte a la investigación".
+   4. Molina Toledo, D. A. (2024). *Análisis de niveles de servicio mediante la aplicación del método HCM: Estudio de caso Megamaxi Cuenca*. Universidad de Cuenca (Ecuador). SUMO + HCM 2000, matrices O-D, fases semafóricas. https://dspace-test.ucuenca.edu.ec/bitstream/123456789/45467/4/Trabajo-de-Titulaci%C3%B3n.pdf
+   5. Opcional: Gómez Arias, J. A. (2017). *Modelación y calibración de tránsito usando el software PTV VISSIM…* Universidade do Minho / UIS. Respalda la calibración con GEH.
+   - La tesis de Valentina Marcano (riego, 2025) **no** sirve como antecedente. Lopez y otros (2018) es un artículo: va en bases teóricas.
 - **Falta un documento igual para las propuestas** (objetivos 3 y 4).
 
 ---
