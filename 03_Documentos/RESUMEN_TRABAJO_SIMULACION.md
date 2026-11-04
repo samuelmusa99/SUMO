@@ -1,7 +1,7 @@
 # Resumen del trabajo de simulación — Tesis Samuel Mujica (USM, Ing. Civil)
 
-**Actualizado:** 29/10/2026 · **Uso:** compartir este archivo al iniciar un chat nuevo para retomar el trabajo.
-**Estado general:** la **simulación base (2026 y 2041) está terminada y revisada**, y la información de los objetivos 1 y 2 ya está lista para la redacción. Lo siguiente son las **propuestas**: terminar Savignani, luego Perozo y luego la propuesta final.
+**Actualizado:** 04/11/2026 · **Uso:** compartir este archivo al iniciar un chat nuevo para retomar el trabajo.
+**Estado general:** la **simulación base (2026 y 2041) está terminada y revisada**, y la información de los objetivos 1 y 2 ya está lista para la redacción. **Savignani está aplicada y simulada** (2026 y 2041, 5 réplicas; resultados en la sección 7); solo faltan las consultas al tutor y refrescar sus Excel. Lo siguiente es **Perozo** y luego la propuesta final. Lo hecho el 02/11 está en la sección 10.
 
 ---
 
@@ -51,10 +51,12 @@ Desktop\SUMO\                            repositorio git (GitKraken)
 ├── 02_Resultados_Base\ 02_Resultados_2041\   XML de SUMO (ignorados por git)
 └── 03_Documentos\
     ├── RESUMEN_TRABAJO_SIMULACION.md    este archivo
-    ├── INCONGRUENCIAS_TESIS_EVALUADAS.md   errores de las tesis (S1–S25 Savignani, P1–P8 Perozo), base del objetivo 3
+    ├── INCONGRUENCIAS_TESIS_EVALUADAS.md   errores de las tesis (S1–S26 Savignani, P1–P8 Perozo), base del objetivo 3
     ├── REVISION_SIMULACION_BASE.md      revisión completa de la base y escenario de sensibilidad
     ├── capitulo4\                       generar_doc.py (documento del cap. IV), guia_excel.py (guía del Excel),
-    │                                    replicas_anchos_tesis\2026|2041 (resultados finales), sensibilidad_sin_postcovid\
+    │                                    sugerencias_cap2.py (sugerencias del marco teórico),
+    │                                    replicas_anchos_tesis\2026|2041 (resultados finales de la base), sensibilidad_sin_postcovid\,
+    │                                    replicas_savignani\2026|2041 (resultados de Savignani del 02/11)
     └── FLUJO VEHICULAR.xlsx (aforo propio), PDF de validación
 
 Desktop\EXCEL RESULTADOS\
@@ -66,16 +68,16 @@ Desktop\EXCEL RESULTADOS\
 └── _RESPALDOS\                     versiones viejas de cada carpeta y Excel
 ```
 
-**Git (29/10/2026):**
+**Git (02/11/2026):**
 | Rama | Contenido |
 |---|---|
-| `main` (`6c9a669`) | Simulación base final |
-| `propuestaPerozo` (`bd71357`) | Igual a main + sus `.bat` (escriben en `PROPUESTA_PEROZO\2026` y `\2041`). Red todavía sin la propuesta. |
-| `propuestaFinal` (`c4b4e5b`) | Igual a main + sus `.bat` (`PROPUESTA_FINAL\2026` y `\2041`). Red todavía sin la propuesta. |
-| `propuestaSavignani` (`6f349d3`) | Main fusionado el 29/10 + la propuesta (ver sección 7) |
+| `main` (`744747c` + este resumen) | Simulación base final + reporte de puentes y tiempo en paradas (sin efecto en la base) |
+| `propuestaPerozo` (`bdbdedb`) | Igual a main + sus `.bat` (escriben en `PROPUESTA_PEROZO\2026` y `\2041`). Red todavía sin la propuesta. |
+| `propuestaFinal` (`d350840`) | Igual a main + sus `.bat` (`PROPUESTA_FINAL\2026` y `\2041`). Red todavía sin la propuesta. |
+| `propuestaSavignani` (`4e8ec59` + este resumen) | Main fusionado el 02/11 + la propuesta (ver sección 7) |
 | `respaldo/propuesta*-2026-10-23` | Versiones viejas, también en GitHub |
 
-- Falta **push normal** (sin force) de `main`, `propuestaPerozo` y `propuestaFinal`.
+- Falta **push normal** (sin force) de las 4 ramas: los commits del 02/11 son locales.
 - El usuario hace commit y push en GitKraken. **No hacer Pull/Sync** en una rama reiniciada, porque mezcla la versión vieja de GitHub (si pasa: `git merge --abort`).
 - Para llevar cambios de main a una propuesta: fusionar main en la rama. En `costanera.net.xml` conservar la red de la propuesta y aplicarle el parche que cambió en main con `netconvert -s ... -e <parche>`; luego regenerar los detectores.
 
@@ -114,10 +116,11 @@ Desktop\EXCEL RESULTADOS\
 - **Capacidad:** con semáforo, c = 1900·fVP·N·g/C; principal sin semáforo, 1900·fVP·N; secundario, capacidad potencial. Si el acceso está saturado, se usa el flujo medido. En 2041 se usa la capacidad de 2026.
 - **5 réplicas** (semillas 1 a 5); cada una en una carpeta temporal.
 - **`replicas.py` (desde el 27/10)** agrega a `resumen_replicas.csv`: `cola_promedio_m`, `cola_maxima_m`, `cola_llena_el_tramo`, `velocidad_media_kmh`, `tiempo_viaje_s`, y filas `nivel=RED` ("Red completa", por tipo de vehículo y TOTAL). Todo es el promedio de 5 réplicas.
+- **Desde el 02/11** (24 columnas): columna `tiempo_en_paradas_s` (tiempo detenido en paradas de bus; la demora `timeLoss` de SUMO no lo incluye, el tiempo de viaje sí), también en `resumen_viajes.csv`. En las propuestas con puente: cada rampa de bajada es un acceso tipo `puente` de la intersección que cruza (flujo libre en `capacidad.py`), y se agrega la fila `INTERSECCION_A_NIVEL` / `(sin puente)` con la demora ponderada solo de los accesos a nivel. La fila `INTERSECCION` sigue siendo el detector E3 completo (a nivel + puente), que es la que se compara con la base.
 
 ### Excel
 - 13 hojas (Reporte Viajes, Analisis Por Vehiculo, Analisis HMD, Reporte Colas, Reporte Densidad, Tramos, Tramos Criticos, Intersecciones, Reporte Densidad Interseccion, Analisis Intersecciones, Resumen Intersecciones, Resumen Viajes y **Resumen Replicas**, que es la que va a la tesis). Una macro actualiza todo al abrir.
-- La consulta `resumen_replicas` tiene un paso `TiposNuevas` que convierte a número las columnas nuevas si existen.
+- La consulta `resumen_replicas` tiene un paso `TiposNuevas` que convierte a número las columnas nuevas si existen (desde el 02/11 incluye `tiempo_en_paradas_s`); `resumen_viajes` tiene el mismo paso para `tiempo_en_paradas_s`. Aplicado en los 8 Excel (respaldo en `_RESPALDOS\antes_paradas_2026-11-02`).
 - Las hojas "Reporte…/Analisis…", Resumen Intersecciones y Resumen Viajes son de **una corrida** (la del SUMO-GUI); Resumen Replicas es el promedio de 5.
 - Explicación completa hoja por hoja: `EXCEL RESULTADOS\GUIA DEL EXCEL DE RESULTADOS.docx`.
 - La parada de bus de Puerto Guaica se redacta como "bloquea el carril derecho cerca del 23 % de la hora pico". En 2041, las demoras de miles de segundos en los accesos secundarios se dejan tal cual.
@@ -153,6 +156,14 @@ Desktop\EXCEL RESULTADOS\
    - en el Cuadro 1.2, cambiar "hombrillos" y "radios de giro" por "isla y acera" y "número de carriles";
    - agregar las referencias: MTC 1997, MINDUR 1981, MVDUCT/INTT 2011, HCM 2000, FHWA Toolbox vol. III y las dos tesis.
 4. Apoyo: `INCONGRUENCIAS_TESIS_EVALUADAS.md` y la sección 3 de la revisión.
+5. `TRABAJO DE GRADO\SUGERENCIAS CAPITULO II - MARCO TEORICO.docx` (estructura, antecedentes, 8 bloques teóricos incluido el de simulación, bases legales, 46 términos y fuentes). Se regenera con `capitulo4\sugerencias_cap2.py`.
+6. **Antecedentes del capítulo II (04/11/2026).** El tutor pide solo los trabajos que de verdad se usaron (3 a 5, sin mínimo de nacionales o internacionales). Quedaron así (verificados en los PDF; el usuario debe leer al menos el resumen, la metodología y las conclusiones de los nuevos):
+   1. Estanga y Savignani (2021), USM. Nacional.
+   2. Assouad y Peroza (2022), USM. Nacional.
+   3. Villalba, C. (2022). *Modelación del tránsito vehicular al tramo Avenida Busch entre segundo y cuarto anillo, Santa Cruz de la Sierra* [Tesis de grado, Universidad Católica Boliviana "San Pablo"]. https://www.tesis.ucb.edu.bo/scz/ucb_civ/2022/villalba_c/ — SUMO (NetEdit + SUMO-GUI), HCM 2010, conteos en 4 nodos, proyección a 2, 5 y 10 años y 3 alternativas; sin intervención las esperas se duplican en 5 años y el sistema colapsa a los 10. Ya se cita en el capítulo I. Se entregó un borrador del antecedente con su "aporte a la investigación".
+   4. Molina Toledo, D. A. (2024). *Análisis de niveles de servicio mediante la aplicación del método HCM: Estudio de caso Megamaxi Cuenca*. Universidad de Cuenca (Ecuador). SUMO + HCM 2000, matrices O-D, fases semafóricas. https://dspace-test.ucuenca.edu.ec/bitstream/123456789/45467/4/Trabajo-de-Titulaci%C3%B3n.pdf
+   5. Opcional: Gómez Arias, J. A. (2017). *Modelación y calibración de tránsito usando el software PTV VISSIM…* Universidade do Minho / UIS. Respalda la calibración con GEH.
+   - La tesis de Valentina Marcano (riego, 2025) **no** sirve como antecedente. Lopez y otros (2018) es un artículo: va en bases teóricas.
 - **Falta un documento igual para las propuestas** (objetivos 3 y 4).
 
 ---
@@ -166,24 +177,48 @@ Lo aplicado en la red (`ajustes_red/propuesta_savignani_fase2.py`; diff respecto
 - **Semáforo de Camino Real:** el del usuario, 4 fases separadas (av. en proyección 30 s, El Ejército 40 s, Costanera 20 s y FFAA 20 s, + 3 s de amarillo; **ciclo de 122 s**). El del Anexo B (3 fases 40/40/80 s con ciclos incoherentes de 88/83/113 s) se descartó porque cruza movimientos; pendiente de consultar con el tutor.
 - FFAA a nivel con 3,75 m (Anexo G). CC Paos con 3,75 m (traído de main).
 - **Bahías de bus** con parada en las 3: Puerto Guaica (sentido Lechería, `bs_0`) y Bissau (sentido Lechería, `bs_bissau`) de 30 m + cuñas de 20 m; Fernández Padilla (sentido Camino Real, `bs_fpadilla`) de 20 m + cuñas de 15 m. Carril de 2,5 m que solo admite buses y carritos.
-- **Carriles de 3 m en Bissau** (sentido Lechería): uno de salida y otro de incorporación, de unos 50 m.
+- **Carriles de 3 m en Bissau** (sentido Lechería): uno de salida y otro de incorporación, de unos 50 m. **Es el único lugar donde la tesis los propone** (4.4.1, p. 233 impresa: "canales de acceso e incorporación… sentido Sur-Norte (Acceso a Residencia Bissau)"; Fig. 118 Bissau; la Fig. 119 muestra solo bahías en Puerto Guaica y Fernández Padilla). Agregarlos en Puerto Guaica y Fernández Padilla puede ir como **recomendación propia** (objetivo 3 / propuesta final).
 - **Isla central NO prolongada:** no hay dónde retornar (Bissau → Camino Real quedaría sin ruta). Pendiente de consultar con el tutor.
-- Detectores: `generar_detectores.py` de esta rama tiene `SALIDAS_EXTRA` (salidas del detector al bajar del puente) y `ANTERIOR_FORZADO`.
-- **Resultado de prueba 2026** (5 réplicas, semáforo de 122 s): Camino Real F con unos 83 s (El Ejército F 137 s; FFAA a nivel F 269 s); Bissau y Puerto Guaica en A en la Costanera. La red tiene congestión de inserción en El Ejército.
-- **Pendientes de Savignani:**
-  1. Quedó sin respuesta qué carriles de incorporación faltan: los de Bissau ya están; preguntar si también quiere los de Puerto Guaica y Fernández Padilla, o si los de Bissau no se ven bien en el GUI.
-  2. Correr sus `.bat` (2026 y luego 2041) para actualizar `PROPUESTA_SAVIGNANI\2026|2041`: sus datos son de antes del 29/10.
-  3. Consultar con el tutor el semáforo de 122 s, la isla central y el 30 % de la avenida en proyección.
+- Detectores: `generar_detectores.py` (ahora igual en main y en todas las ramas) tiene `SALIDAS_EXTRA` (salidas del E3 al bajar del puente), `ANTERIOR_FORZADO` y `PUENTES` (filas "Puente hacia FFAA", 272 m, y "Puente hacia Costanera", 300 m).
+
+**Resultados finales de Savignani (02/11, 5 réplicas; en `capitulo4\replicas_savignani\2026|2041`):**
+
+| 2026 | Base | Savignani |
+|---|---|---|
+| Camino Real completa (a nivel + puente) | D · 43,9 s · V/C 0,95 | **F · 81,7 s** · V/C 1,25 · 94 % atendida |
+| Camino Real solo a nivel | — | F · 130,4 s · 89 % |
+| Puente hacia FFAA | — | A · 5,0 s · 648 veh/h |
+| Puente hacia Costanera | — | **F · 117,6 s** · 434 veh/h |
+| FFAA a nivel | D · 53 s · 942 veh/h | F · 259 s · 214 veh/h (1 carril, 20 s de verde) |
+| Costanera a nivel | E · 58 s | E · 56 s |
+| El Ejército | C · 27,5 s | **F · 137 s** · 87 % atendida |
+| Av. En Proyección | — | D · 40 s · 216 veh/h |
+| CC Paos | C · 21,1 s | C · 29,0 s (Madre Vieja 67 s: es azar, ver abajo) |
+| Perrokero | F · 145 s (Av. Río 817 s) | F · 40 s (Av. Río 109 s; FFAA norte D 31 s) |
+| Bissau / Puerto Guaica | 7,3 s / 17,0 s | 4,3 s (C) / 4,9 s (B) |
+| Red completa | 4.544 viajes · 160 s demora · 23,3 km/h | 4.418 viajes · 115 s · 26,7 km/h |
+| Buses (`carrito`) | 127 s demora · 28,4 km/h | **367 s** demora (+28 s en paradas, aparte) · 15,8 km/h |
+| Pesados | 132 s | 225 s |
+
+- **2041:** la red colapsa igual que la base (4,1 km/h en ambos; demora 1.217 frente a 1.280 s). Camino Real F 110 s con 42 % atendida (base 190 s y 51 %); el distribuidor no resuelve el horizonte 2041.
+- **Cuello de botella en El Ejército / salida a la Costanera:** la salida a nivel hacia la Costanera es de 1 carril y recibe El Ejército + la bajada del puente (~900 veh/h). Por eso el puente hacia FFAA va en A pero el puente hacia la Costanera queda en F. Registrado como **S26** (Anexo B de la tesis: El Ejército → Costanera 685 veh/h en 1 carril, Xc 1,04, 61,4 s (E), pero la intersección se presenta como C). **Idea para la tesis:** quizá el distribuidor no es la mejor propuesta, porque traslada el cuello de botella a la salida hacia la Costanera.
+- **Buses:** el atraso es real, no efecto de las paradas: el puente prohíbe buses, así que cruzan por FFAA a nivel, que queda saturado (FFAA → Lechería: 873–916 s frente a 210–237 s en la base).
+- **Madre Vieja (CC Paos):** con 5 semillas parecía empeorar (67 frente a 33 s), pero con 10 semillas da base 39,8 s y Savignani 33,3 s → variabilidad aleatoria (carril compartido con giro a la izquierda permisivo), no efecto de la propuesta.
+- **Bissau y Puerto Guaica sentido Lechería** salen con V/C 1,15 y nivel A a la vez: no están saturados, sino que llega menos tráfico porque se queda atrapado en Camino Real (la "capacidad medida" es lo que llega). Explicarlo así en la tesis.
+
+**Pendientes de Savignani:**
+1. Correr sus `.bat` (2026 y luego 2041) para refrescar `PROPUESTA_SAVIGNANI\2026|2041` (sus Excel tienen datos del 23/10). Los resultados deben parecerse a los de la tabla.
+2. Consultar con el tutor: semáforo de 122 s frente al del Anexo B, isla central, el 30 % de la Av. En Proyección y los carriles de incorporación de Puerto Guaica y Fernández Padilla como recomendación.
 
 ---
 
 ## 8. Próximos pasos
 
-1. Push normal de `main`, `propuestaPerozo` y `propuestaFinal`.
-2. Terminar Savignani (pendientes de la sección 7) y correr sus `.bat`.
+1. Push normal de `main`, `propuestaSavignani`, `propuestaPerozo` y `propuestaFinal`.
+2. Correr los `.bat` de Savignani y llevar sus consultas al tutor (sección 7).
 3. **Perozo:** su rama ya tiene sus `.bat` y Excel, pero la red no tiene la propuesta. El puente de Perrokero va desde cero (la rama vieja no tenía geometría). Revisar a fondo la tesis de Perozo (planos, perfil y semáforo de 120 s) y agregar sus incongruencias al archivo.
 4. **Propuesta final:** con las recomendaciones del usuario.
-5. Documento para la amiga de los objetivos 3 y 4 (igual al del capítulo IV de la base), y costos (objetivo 4: cómputos métricos y APU con precios de 2026).
+5. Documento para la amiga de los objetivos 3 y 4 (igual al del capítulo IV de la base), y costos (objetivo 4: cómputos métricos y APU con precios de 2026). Ya se puede empezar la parte de Savignani con la tabla de la sección 7.
 
 ---
 
@@ -199,3 +234,17 @@ Lo aplicado en la red (`ajustes_red/propuesta_savignani_fase2.py`; diff respecto
 - `netdiff.py` deja archivos planos (`costanera.con.xml`, etc.) junto a la red de entrada: borrarlos si aparecen en `01_Red_Y_Demanda`.
 - No correr simulaciones en `02_Resultados_*` con SUMO-GUI abierto.
 - Revisar siempre el realismo (choques, colas, bloqueos, volúmenes por calle). El usuario valora el realismo por encima de cuadrar cifras. Desconfiar de cambios de geometría que alteran el dibujo de los cruces en SUMO (probar con varias semillas).
+- Si un acceso cambia mucho entre escenarios sin una causa clara, correr 10 semillas antes de concluir (caso Madre Vieja).
+
+---
+
+## 10. Bitácora del 02/11/2026
+
+1. **Revisión de lo que faltaba en Savignani** (rama `propuestaSavignani`): diagnóstico con 5 réplicas 2026 (Camino Real F, El Ejército F, FFAA a nivel F, buses muy demorados).
+2. **Incongruencia S26** agregada (salida a la Costanera de 1 carril; Anexo B con Xc 1,04).
+3. **Carriles de incorporación:** confirmado en la tesis que solo los propone en Bissau; los de Puerto Guaica y Fernández Padilla quedan como posible recomendación propia.
+4. **Madre Vieja:** probado con 10 semillas; es azar.
+5. **Reporte para comparar con la base** (commit `744747c` en main, fusionado en las 3 ramas): accesos tipo `puente`, fila `INTERSECCION_A_NIVEL`, columna `tiempo_en_paradas_s` en `resumen_viajes.csv` y `resumen_replicas.csv` (`resumen_resultados.py`, `replicas.py`, `capacidad.py`, `generar_detectores.py`). En la base no cambia nada (verificado).
+6. **Los 8 Excel** (base, 2041, Savignani, Perozo y Final) actualizados para tipar la columna nueva; se probó el refresco de una copia sin errores.
+7. **Réplicas finales de Savignani 2026 y 2041** con el reporte nuevo (sección 7), guardadas en `capitulo4\replicas_savignani`.
+8. Este resumen e `INCONGRUENCIAS_TESIS_EVALUADAS.md` (con S26) llevados también a main.
