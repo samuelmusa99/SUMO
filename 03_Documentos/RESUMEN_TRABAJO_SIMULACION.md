@@ -1,6 +1,6 @@
 # Resumen del trabajo de simulación — Tesis Samuel Mujica (USM, Ing. Civil)
 
-**Actualizado:** 04/11/2026 · **Uso:** compartir este archivo al iniciar un chat nuevo para retomar el trabajo.
+**Actualizado:** 04/11/2026 (tarde: Perozo aplicada, sección 7b) · **Uso:** compartir este archivo al iniciar un chat nuevo para retomar el trabajo.
 **Estado general:** la **simulación base (2026 y 2041) está terminada y revisada**, y la información de los objetivos 1 y 2 ya está lista para la redacción. **Savignani está aplicada y simulada** (2026 y 2041, 5 réplicas; resultados en la sección 7); solo faltan las consultas al tutor y refrescar sus Excel. Lo siguiente es **Perozo** y luego la propuesta final. Lo hecho el 02/11 está en la sección 10.
 
 ---
@@ -212,11 +212,53 @@ Lo aplicado en la red (`ajustes_red/propuesta_savignani_fase2.py`; diff respecto
 
 ---
 
+## 7b. Propuesta Perozo (rama `propuestaPerozo`): estado al 04/11/2026
+
+Lo aplicado en la red con `ajustes_red/propuesta_perozo.py` (se corre sobre la red plana de main; diff en `ajustes_red/propuesta_perozo.*`):
+- **Puente sobre FFAA** (cap. V, 5.6 y figuras, imp. 168–170): rampa de 40 m al 15 % + tablero de 20 m a 6,00 m + rampa de 40 m (100 m en total), centrado en el cruce; 1 carril de 3,70 m por sentido; 40 km/h. Tramos `puente_subida_hacia_sur`, `puente_hacia_sur`, `puente_bajada_hacia_sur` y los equivalentes `..._hacia_norte`.
+- **Solo livianos** en el puente (`allow` passenger); pesados y carritos (clase bus) a nivel, igual que en Savignani.
+- **A nivel queda 1 carril por sentido en FFAA** (el derecho), como en la figura de la tesis: el carril izquierdo de campo es el que sube al puente (la sección sigue con 2 carriles por sentido). Por eso los giros a la izquierda salen del carril derecho. El cálculo HCM de la tesis supone 2 carriles a nivel (incongruencia **P10**).
+- Los carriles se separan 8 m antes del pie de la rampa (58 m del centro) para que netconvert no corte la rampa. En el sentido sur → norte, el carril izquierdo se separa en el nodo `11353318191` (~75 m), antes de la bifurcación hacia la Av. Río, y sigue a nivel hasta los 50 m.
+- **Semáforo de 120 s** bajo el puente, una fase por acceso: Norte 33, Oeste (Residencias) 20, Sur 25 y Este (Av. Río) 30 s + 3 s de amarillo, sin todo rojo (tal cual la tesis).
+- Tramos nuevos a nivel: `FA_3_antes`, `FA_3` (1 carril), `fuerzas_armadas_entrada_nivel`, `FA_2` (1 carril), `FA_2_despues`; `bifurcacion_FA_perrokero` y `FA_1` con 1 carril. El giro libre FFAA sur → Av. Río (`172682274`) se mantiene.
+- Demanda: `herramientas/demanda_propuesta.py` → `demanda/demanda_perozo_2026|2041.rou.xml` (misma demanda de la base; los livianos que siguen derecho por FFAA van por el puente: 753 y 726 veh/h en 2026). Las `.sumocfg` de la rama apuntan a esos archivos.
+- `resumen_resultados.py` de la rama: Perrokero pasa a `semaforizada` (umbrales HCM con semáforo) y la referencia de la tesis es la Alternativa C (E, 65,6 s). `generar_detectores.py`: filas `puente` "Puente hacia el sur (FFAA)" y "Puente hacia Camino Real" (también sirven en main, están protegidas con `hasEdge`).
+
+**Resultados (5 réplicas; `capitulo4\replicas_perozo\2026|2041`; 0 teletransportes):**
+
+| 2026 | Base | Perozo |
+|---|---|---|
+| Perrokero completa (a nivel + puente) | F · 145,2 s · V/C 1,42 | **E · 62,3 s** · V/C 1,08 · 98 % atendida |
+| Perrokero solo a nivel | — | E · 67,2 s (tesis, 2041: E · 65,6 s) |
+| FFAA norte (desde Camino Real) a nivel | F · 116,5 s · 1.128 veh/h | **F · 93,1 s** · 372 veh/h · cola 76 m (máx. 258 m) |
+| FFAA sur a nivel | A · 4,7 s | D · 43,9 s · 133 veh/h |
+| Av. Río | F · 817 s · 70 % atendida | **D · 37,9 s** · 97 % |
+| Residencias | F · 51,4 s | D · 42,4 s |
+| Puente hacia el sur | — | D · 43,6 s · 767 veh/h |
+| Puente hacia Camino Real | — | A · 3,4 s · 761 veh/h |
+| Camino Real / CC Paos | D 43,9 s / C 21,1 s | D 40,7 s / C 21,6 s |
+| Red completa | 4.544 viajes · 160 s demora · 313 s viaje · 23,3 km/h | 4.547 viajes · **117 s** · 271 s · **27,0 km/h** |
+
+- **Hallazgo:** el puente hacia el sur tiene 43,6 s de demora aunque el tablero va libre: la cola del acceso norte a nivel (1 carril, 33 s de verde, con el giro a la izquierda GI4 hacia la Av. Río) pasa de los 50 m de separación y **bloquea la entrada al puente**. Es una recomendación natural para el objetivo 3 (alargar la separación de carriles o dar más verde al acceso norte). Hacia Camino Real no pasa, porque el acceso sur tiene poco giro.
+- **2041:** Perrokero E · 77,0 s (71 % atendida; a nivel 72,8 s), pero la red sigue colapsada (7,1 km/h frente a 4,1 de la base; demora 754 frente a 1.280 s); el colapso pasa a Camino Real (FFAA a nivel 227 s), CC Paos y Bissau.
+
+- **Polígono del puente en el GUI:** `distribuidor.add.xml` (mismo id, color gris 131,139,139 y capa 5 que el de Savignani), generado con `ajustes_red/poligono_puente_perozo.py` sobre los dos carriles del puente (100 m × 8,67 m); cargado en las dos `.sumocfg`. No cambia la simulación.
+- **Excel (04/11):** los de Perozo se rehicieron como copia de los de Savignani con `copiar_excel.py` (misma estructura) y se refrescaron con los CSV de Perozo; los anteriores están en `_RESPALDOS\PROPUESTA_PEROZO_antes_igualar_2026-11-04`.
+- **Mapeo de intersecciones (hoja "Intersecciones", tabla `MAPEO_INTERSECCIONES`), 04/11:** en los 4 Excel de propuestas (Savignani y Perozo, 2026 y 2041) se agregaron las mismas 6 filas: `puente_subida_hacia_sur` y `puente_subida_hacia_norte` (Perrokero), `puente_subida_hacia_ffaa`, `puente_subida_hacia_costanera`, `ffaa_hacia_semaforo` y `av_proyeccion_salida` (Camino Real). Así "Analisis Intersecciones" y "Reporte Densidad Interseccion" cuentan también el puente (Perrokero Perozo 2026: de 778 a 2.356 veh/h; Camino Real Savignani 2026: de 1.106 a 2.546 veh/h). `ffaa_hacia_semaforo` reemplaza en Savignani a `semaforo_caminoreal_FA`, que mide 18 m y la consulta descarta (< 20 m). Respaldo en `_RESPALDOS\antes_mapeo_puentes_2026-11-04`.
+- **Red propia de cada Excel (04/11):** la consulta "costanera net" leía `01_Red_Y_Demanda\costanera.net.xml`, o sea, la red de la rama activa, y la macro refresca al abrir. Ahora los 8 Excel (base, 2041, Savignani, Perozo y Final) leen `costanera.net.xml` **de su propia carpeta** (`herramientas/red_excel.py`; respaldo en `_RESPALDOS\antes_red_propia_2026-11-04`). Se copiaron: red de main en BASE_2026 y FUTURO_2041, la de cada rama en su propuesta (Final = main por ahora). Los `.bat` de Perozo copian la red en cada corrida (`copy /Y "%RED_DIR%\costanera.net.xml" "%CSV_DIR%\costanera.net.xml"`). **Falta agregar esa misma línea a los `.bat` de main, Savignani y Final** cuando se trabaje en cada rama (mientras tanto sus Excel usan la copia de hoy, que está bien mientras no cambie su red).
+
+**Pendientes de Perozo:**
+1. Revisar en el SUMO-GUI la geometría del puente y la cola del acceso norte (los `.bat` ya se corrieron el 04/11).
+2. Commit y push de la rama (el merge de main del 04/11, `859d9fe`, también es local).
+3. Llevar a main el resumen, `INCONGRUENCIAS_TESIS_EVALUADAS.md` (P9–P19) y `generar_detectores.py`.
+
+---
+
 ## 8. Próximos pasos
 
 1. Push normal de `main`, `propuestaSavignani`, `propuestaPerozo` y `propuestaFinal`.
 2. Correr los `.bat` de Savignani y llevar sus consultas al tutor (sección 7).
-3. **Perozo:** su rama ya tiene sus `.bat` y Excel, pero la red no tiene la propuesta. El puente de Perrokero va desde cero (la rama vieja no tenía geometría). Revisar a fondo la tesis de Perozo (planos, perfil y semáforo de 120 s) y agregar sus incongruencias al archivo.
+3. **Perozo:** aplicada y simulada el 04/11 (sección 7b). Falta revisarla en el GUI, correr sus `.bat` y hacer commit.
 4. **Propuesta final:** con las recomendaciones del usuario.
 5. Documento para la amiga de los objetivos 3 y 4 (igual al del capítulo IV de la base), y costos (objetivo 4: cómputos métricos y APU con precios de 2026). Ya se puede empezar la parte de Savignani con la tabla de la sección 7.
 

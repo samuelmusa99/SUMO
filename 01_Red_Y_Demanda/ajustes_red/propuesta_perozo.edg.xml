@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-04 12:48:50.165583 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <source value="main.net.xml"/>
+    <dest value="paso1.net.xml"/>
+    <outprefix value="diff"/>
+</configuration>
+-->
+
+<edges version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edgediff_file.xsd">
+    <!-- Deleted Elements -->
+    <!-- Created Elements -->
+    <edge id="FA_2_despues" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" from="perozo_bajada_norte" numLanes="2" priority="10" speed="11.11" to="7756816786" type="highway.tertiary" width="3.92"/>
+    <edge id="FA_3_antes" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" from="7756816786" numLanes="2" priority="10" speed="11.11" to="perozo_rampa_norte" type="highway.tertiary" width="3.92"/>
+    <edge id="fuerzas_armadas_entrada_nivel" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" from="interseccion_avrio_FA" numLanes="1" priority="10" shape="1328.00,913.97 1332.22,907.54 1351.77,877.81 1359.07,866.79" speed="11.11" spreadType="center" to="perozo_bajada_sur" type="highway.tertiary" width="3.92"/>
+    <edge id="puente_bajada_hacia_norte" allow="private passenger taxi evehicle" from="perozo_tablero_norte_2" numLanes="1" priority="10" shape="1329.25,928.44,6.00 1306.78,961.54 1302.31,968.13" speed="11.11" spreadType="center" to="perozo_bajada_norte" type="highway.tertiary" width="3.70"/>
+    <edge id="puente_bajada_hacia_sur" allow="private passenger taxi evehicle" from="perozo_tablero_sur_2" numLanes="1" priority="10" shape="1336.20,909.02,6.00 1358.06,875.52 1362.35,868.94" speed="11.11" spreadType="center" to="perozo_bajada_sur" type="highway.tertiary" width="3.70"/>
+    <edge id="puente_hacia_norte" allow="private passenger taxi evehicle" from="perozo_tablero_norte_1" numLanes="1" priority="10" speed="11.11" spreadType="center" to="perozo_tablero_norte_2" type="highway.tertiary" width="3.70"/>
+    <edge id="puente_hacia_sur" allow="private passenger taxi evehicle" from="perozo_tablero_sur_1" numLanes="1" priority="10" speed="11.11" spreadType="center" to="perozo_tablero_sur_2" type="highway.tertiary" width="3.70"/>
+    <edge id="puente_subida_hacia_norte" allow="private passenger taxi evehicle" from="11353318191" numLanes="1" priority="10" shape="1377.18,857.82 1362.94,878.80 1340.48,911.90,6.00" speed="11.11" spreadType="center" to="perozo_tablero_norte_1" type="highway.tertiary" width="3.70"/>
+    <edge id="puente_subida_hacia_sur" allow="private passenger taxi evehicle" from="perozo_rampa_norte" numLanes="1" priority="10" shape="1299.04,965.97 1303.41,959.27 1325.27,925.77,6.00" speed="11.11" spreadType="center" to="perozo_tablero_sur_1" type="highway.tertiary" width="3.70"/>
+    <!-- Changed Elements -->
+    <edge id="FA_1" numLanes="1" shape="1375.40,864.69 1355.92,893.20 1342.66,912.82 1337.45,918.48"/>
+    <edge id="FA_2" numLanes="1" shape="1335.01,925.68 1326.72,937.91 1305.55,970.34" spreadType="center" to="perozo_bajada_norte"/>
+    <edge id="FA_3" from="perozo_rampa_norte" numLanes="1" shape="1295.75,963.83 1316.88,931.45 1325.23,919.17" spreadType="center"/>
+    <edge id="bifurcacion_FA_perrokero" numLanes="1" shape="1380.44,860.00 1376.74,865.56"/>
+    <edge id="fuerzas_armadas_entrada" from="perozo_bajada_sur" shape="1360.71,867.86 1383.01,834.19 1401.97,806.35 1418.85,779.86"/>
+</edges>

@@ -25,7 +25,8 @@ MAPA = os.path.join(AQUI, '..', 'accesos_intersecciones.csv')
 REFERENCIA = {
     'Camino Real': ('semaforizada', 'Savignani 2021, interseccion 1', 'F', '129.3', 1575, 1290),
     'CC Paos': ('semaforizada', 'Savignani 2021, interseccion 2', 'C', '22.6', 1061, 1080),
-    'Perrokero': ('no semaforizada', 'Perozo 2022', 'F', '2883.7 (tabla 4.9); 1000.0 en conclusiones', 2349, 800),
+    # Propuesta Perozo: bajo el puente queda un semaforo de 120 s (su calculo: E, 65,6 s en 2041; base sin semaforo: F)
+    'Perrokero': ('semaforizada', 'Perozo 2022, Alternativa C (a nivel, 2041)', 'E', '65.6 (base sin semaforo: 2883.7)', 2349, 800),
     'Bissau': ('no semaforizada', 'Savignani 2021, acceso Bissau', 'F', '1074 a 1228 (HCM recalculado: ~28 s, D)', 1572, 1470),
     'Puerto Guaica': ('no semaforizada', 'Savignani 2021, acceso Fernandez Padilla', 'F', '1074 a 1228', 1637, 1290),
 }

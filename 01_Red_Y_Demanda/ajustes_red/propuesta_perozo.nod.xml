@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-04 12:48:49.925751 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <source value="main.net.xml"/>
+    <dest value="paso1.net.xml"/>
+    <outprefix value="diff"/>
+</configuration>
+-->
+
+<nodes version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <!-- Deleted Elements -->
+    <!-- Created Elements -->
+    <node id="perozo_bajada_norte" type="priority" x="1300.68" y="967.03"/>
+    <node id="perozo_bajada_sur" type="priority" x="1360.71" y="867.86"/>
+    <node id="perozo_rampa_norte" type="priority" x="1300.68" y="967.04"/>
+    <node id="perozo_tablero_norte_1" type="priority" x="1340.48" y="911.90" z="6.00"/>
+    <node id="perozo_tablero_norte_2" type="priority" x="1329.25" y="928.44" z="6.00"/>
+    <node id="perozo_tablero_sur_1" type="priority" x="1325.27" y="925.77" z="6.00"/>
+    <node id="perozo_tablero_sur_2" type="priority" x="1336.20" y="909.02" z="6.00"/>
+    <!-- Changed Elements -->
+    <node id="interseccion_avrio_FA" tl="interseccion_avrio_FA" type="traffic_light"/>
+</nodes>

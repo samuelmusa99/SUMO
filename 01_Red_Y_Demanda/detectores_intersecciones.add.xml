@@ -36,17 +36,17 @@
         <detEntry lane="172680884_1" pos="15.00" friendlyPos="true"/>
         <detEntry lane="172680884_2" pos="15.00" friendlyPos="true"/>
         <detEntry lane="172680884_3" pos="15.00" friendlyPos="true"/>
-        <detEntry lane="371794626#6_0" pos="3.58" friendlyPos="true"/>
-        <detEntry lane="371794626#6_1" pos="3.58" friendlyPos="true"/>
+        <detEntry lane="371794626#6_0" pos="0.61" friendlyPos="true"/>
+        <detEntry lane="371794626#6_1" pos="0.61" friendlyPos="true"/>
         <detEntry lane="av_rio_salida_0" pos="37.18" friendlyPos="true"/>
         <detEntry lane="av_rio_salida_1" pos="37.18" friendlyPos="true"/>
         <detEntry lane="-830761843#3_0" pos="94.35" friendlyPos="true"/>
-        <detExit lane="FA_2_0" pos="60.00" friendlyPos="true"/>
-        <detExit lane="FA_2_1" pos="60.00" friendlyPos="true"/>
+        <detExit lane="FA_2_despues_0" pos="14.55" friendlyPos="true"/>
+        <detExit lane="FA_2_despues_1" pos="14.55" friendlyPos="true"/>
         <detExit lane="-172682268#2_0" pos="19.69" friendlyPos="true"/>
         <detExit lane="-172682268#2_1" pos="19.69" friendlyPos="true"/>
-        <detExit lane="fuerzas_armadas_entrada_0" pos="60.00" friendlyPos="true"/>
-        <detExit lane="fuerzas_armadas_entrada_1" pos="60.00" friendlyPos="true"/>
+        <detExit lane="fuerzas_armadas_entrada_0" pos="18.90" friendlyPos="true"/>
+        <detExit lane="fuerzas_armadas_entrada_1" pos="18.90" friendlyPos="true"/>
         <detExit lane="res_entrada_0" pos="60.00" friendlyPos="true"/>
         <detExit lane="res_entrada_1" pos="60.00" friendlyPos="true"/>
     </e3Detector>
@@ -78,5 +78,5 @@
         <detExit lane="puerto_guaica_0" pos="18.56" friendlyPos="true"/>
         <detExit lane="fernandez_padilla_0" pos="60.00" friendlyPos="true"/>
     </e3Detector>
-    <edgeData id="accesos" file="../02_Resultados_Base/reporte_accesos.xml" freq="900" edges="-1088915526 -1225795048 -1227058160#0 -1227058160#1 -335982654#0 -335982664#1 -371794626#1 -371794626#2 -371794626#3 -495730009#2 -830761843#0 -830761843#1 -830761843#2 -830761843#3 1225795049 172344969#0 172344969#1 172344969#11 172344969#4 172344969#5 172344969#6 172680884 172682268#1 172682268#2 371794626#10 371794626#11 371794626#12 371794626#6 371794626#8 371794626#9 592256719#6 592256719#7 FA_1 FA_3 av_rio_salida avrio_1 bifurcacion_FA_perrokero bissau_salida costanera_bissau_haciacaminoreal costanera_bissau_hacialecheria costanera_haciamadrevieja costanera_puerto_guaica_haciacaminoreal costanera_puerto_guaica_hacialecheria costanera_salida cruce_cc_paos ejercito_1 ejercito_2 ejercito_3 fuerzas_armadas_salida lecheria_haciacaminoreal lecheria_salida madre_vieja_salida res_salida salida:puerto_guaica salida_bissau_1 salida_bissau_2 semaforo_caminoreal_FA semaforo_caminoreal_costanera semaforo_caminoreal_elejercito"/>
+    <edgeData id="accesos" file="../02_Resultados_Base/reporte_accesos.xml" freq="900" edges="-1088915526 -1225795048 -1227058160#0 -1227058160#1 -335982654#0 -335982664#1 -371794626#1 -371794626#2 -371794626#3 -495730009#2 -830761843#0 -830761843#1 -830761843#2 -830761843#3 1225795049 172344969#0 172344969#1 172344969#11 172344969#4 172344969#5 172344969#6 172680884 172682268#1 172682268#2 371794626#10 371794626#11 371794626#12 371794626#6 371794626#8 371794626#9 592256719#6 592256719#7 FA_1 FA_3 FA_3_antes av_rio_salida avrio_1 bifurcacion_FA_perrokero bissau_salida costanera_bissau_haciacaminoreal costanera_bissau_hacialecheria costanera_haciamadrevieja costanera_puerto_guaica_haciacaminoreal costanera_puerto_guaica_hacialecheria costanera_salida cruce_cc_paos ejercito_1 ejercito_2 ejercito_3 fuerzas_armadas_salida lecheria_haciacaminoreal lecheria_salida madre_vieja_salida puente_bajada_hacia_norte puente_bajada_hacia_sur puente_hacia_norte puente_hacia_sur puente_subida_hacia_norte puente_subida_hacia_sur res_salida salida:puerto_guaica salida_bissau_1 salida_bissau_2 semaforo_caminoreal_FA semaforo_caminoreal_costanera semaforo_caminoreal_elejercito"/>
 </additional>

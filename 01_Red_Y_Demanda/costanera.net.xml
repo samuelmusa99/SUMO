@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-10-28T17:59:59.767692-04:00 by Eclipse SUMO netconvert 1.26.0
+<!-- generated on 2026-11-04T12:48:10.135440-04:00 by Eclipse SUMO netconvert 1.26.0
 <netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <sumo-net-file value="C:/Users/SAMUE_~1/AppData/Local/Temp/claude/C&#45;&#45;Users-samue-yffy-Desktop-SUMO-01-Red-Y-Demanda/4d7d932a-f339-4fdd-85d9-ef675fc2afc1/scratchpad/red_main_antes.net.xml"/>
-        <edge-files value="ajustes_red/anchos_tesis.edg.xml"/>
+        <node-files value="mod.nod.xml"/>
+        <edge-files value="mod.edg.xml"/>
+        <connection-files value="mod.con.xml"/>
+        <tllogic-files value="mod.tll.xml"/>
+        <type-files value="act.typ.xml"/>
     </input>
 
     <output>
-        <output-file value="costanera.net.xml"/>
+        <output-file value="paso1.net.xml"/>
     </output>
 
     <processing>
@@ -17,7 +20,6 @@
         <geometry.avoid-overlap value="false"/>
         <geometry.max-grade.fix value="false"/>
         <offset.disable-normalization value="true"/>
-        <lefthand value="0"/>
     </processing>
 
     <junctions>
@@ -31,10 +33,6 @@
     <pedestrian>
         <walkingareas value="false"/>
     </pedestrian>
-
-    <report>
-        <no-warnings value="true"/>
-    </report>
 
 </netconvertConfiguration>
 -->
@@ -594,14 +592,16 @@
         <lane id=":11353318190_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="3.65" length="4.67" shape="1516.55,880.97 1517.59,881.97 1517.85,882.83 1517.31,883.55 1515.99,884.13"/>
     </edge>
     <edge id=":11353318191_0" function="internal">
-        <lane id=":11353318191_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.16" length="10.15" width="3.92" shape="1386.73,861.28 1383.76,861.04 1381.26,861.45 1379.21,862.51 1377.63,864.22"/>
+        <lane id=":11353318191_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.16" length="10.15" width="3.92" shape="1386.73,861.28 1383.76,861.04 1381.26,861.45 1379.22,862.51 1377.63,864.22"/>
     </edge>
     <edge id=":11353318191_1" function="internal">
         <lane id=":11353318191_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.99" length="9.54" shape="1384.21,851.44 1383.03,853.92 1383.15,855.86 1384.57,857.26 1387.29,858.13"/>
     </edge>
     <edge id=":11353318191_2" function="internal">
-        <lane id=":11353318191_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="14.40" width="3.92" shape="1384.21,851.44 1382.06,855.12 1380.92,857.83 1379.78,860.54 1377.63,864.22"/>
-        <lane id=":11353318191_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="14.40" width="3.92" shape="1380.94,849.27 1378.80,852.95 1377.66,855.66 1376.51,858.37 1374.37,862.05"/>
+        <lane id=":11353318191_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="14.39" width="3.92" shape="1384.21,851.44 1381.89,855.38 1380.47,858.51 1379.27,861.31 1377.63,864.22"/>
+    </edge>
+    <edge id=":11353318191_3" function="internal">
+        <lane id=":11353318191_3_0" index="0" allow="private passenger taxi evehicle" speed="13.89" length="14.39" width="3.70" shape="1380.94,849.27 1378.63,853.20 1377.20,856.34 1375.99,859.13 1374.33,862.02"/>
     </edge>
     <edge id=":11367620510_0" function="internal">
         <lane id=":11367620510_0_0" index="0" allow="pedestrian delivery bicycle" speed="3.65" length="4.67" shape="757.14,1762.90 755.89,1762.18 755.44,1761.40 755.79,1760.58 756.94,1759.70"/>
@@ -2916,10 +2916,10 @@
         <lane id=":7756816786_0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="16.46" width="3.92" shape="1281.23,1000.42 1272.23,1014.21"/>
     </edge>
     <edge id=":7756816786_2" function="internal">
-        <lane id=":7756816786_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.33" length="2.12" shape="1281.23,1000.42 1279.68,1001.87"/>
+        <lane id=":7756816786_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.33" length="2.12" shape="1281.23,1000.42 1279.69,1001.87"/>
     </edge>
     <edge id=":7756816786_9" function="internal">
-        <lane id=":7756816786_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.33" length="17.87" shape="1279.68,1001.87 1278.35,1003.12 1274.34,1004.13 1269.19,1003.46 1262.90,1001.10"/>
+        <lane id=":7756816786_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.33" length="17.87" shape="1279.69,1001.87 1278.35,1003.12 1274.34,1004.13 1269.19,1003.46 1262.90,1001.10"/>
     </edge>
     <edge id=":7756816786_3" function="internal">
         <lane id=":7756816786_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="7.73" length="11.74" width="3.92" shape="1264.26,998.20 1267.51,999.29 1270.33,999.31 1272.72,998.26 1274.66,996.14"/>
@@ -3147,11 +3147,10 @@
         <lane id=":8343278834_3_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="14.44" width="3.70" shape="713.34,1687.33 711.45,1701.66"/>
     </edge>
     <edge id=":8424094388_0" function="internal">
-        <lane id=":8424094388_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.30" length="27.01" width="3.50" shape="1376.74,865.56 1372.69,872.14 1369.01,878.83 1365.93,884.80 1363.67,889.17"/>
+        <lane id=":8424094388_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.30" length="24.50" width="3.50" shape="1376.74,865.56 1374.05,870.04 1370.64,876.17 1367.32,882.35 1364.85,886.97"/>
     </edge>
     <edge id=":8424094388_1" function="internal">
-        <lane id=":8424094388_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="27.11" width="3.92" shape="1376.74,865.56 1360.14,887.02"/>
-        <lane id=":8424094388_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="27.11" width="3.92" shape="1373.48,863.38 1356.91,884.81"/>
+        <lane id=":8424094388_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="24.63" width="3.92" shape="1376.74,865.56 1361.55,884.96"/>
     </edge>
     <edge id=":8474279334_0" function="internal">
         <lane id=":8474279334_0_0" index="0" allow="pedestrian delivery bicycle" speed="9.72" length="0.31" shape="1017.43,1106.32 1017.36,1106.39 1017.32,1106.43 1017.28,1106.48 1017.23,1106.56"/>
@@ -3989,47 +3988,39 @@
         <lane id=":cruce_camino_real_8_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="64.23" width="3.70" shape="710.37,1677.33 713.83,1665.03 720.65,1647.00 728.24,1629.24 734.00,1617.74"/>
     </edge>
     <edge id=":interseccion_avrio_FA_0" function="internal">
-        <lane id=":interseccion_avrio_FA_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="10.05" length="17.12" width="3.92" shape="1345.92,924.42 1341.82,923.99 1338.03,924.95 1334.55,927.29 1331.39,931.02"/>
+        <lane id=":interseccion_avrio_FA_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="10.05" length="17.11" width="3.92" shape="1345.92,924.42 1341.81,923.99 1338.03,924.94 1334.55,927.28 1331.40,931.01"/>
     </edge>
     <edge id=":interseccion_avrio_FA_1" function="internal">
         <lane id=":interseccion_avrio_FA_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.30" width="3.00" shape="1345.92,924.42 1338.96,922.54 1332.32,920.78 1325.65,919.21 1318.56,917.92"/>
-        <lane id=":interseccion_avrio_FA_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.30" width="3.00" shape="1346.69,921.52 1339.68,919.63 1332.93,917.84 1326.14,916.25 1319.01,914.95"/>
+        <lane id=":interseccion_avrio_FA_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.30" width="3.00" shape="1346.69,921.52 1339.68,919.63 1332.93,917.84 1326.15,916.25 1319.01,914.95"/>
     </edge>
     <edge id=":interseccion_avrio_FA_3" function="internal">
-        <lane id=":interseccion_avrio_FA_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="9.10" length="23.36" width="3.92" shape="1346.69,921.52 1340.14,918.86 1336.66,915.14 1336.24,910.37 1338.89,904.54"/>
+        <lane id=":interseccion_avrio_FA_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="9.83" length="27.46" width="3.92" shape="1346.69,921.52 1339.00,918.65 1334.17,914.62 1332.83,909.25 1335.63,902.36"/>
     </edge>
     <edge id=":interseccion_avrio_FA_4" function="internal">
-        <lane id=":interseccion_avrio_FA_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="26.18" width="3.92" shape="1345.35,908.85 1331.39,931.02"/>
-        <lane id=":interseccion_avrio_FA_4_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="26.18" width="3.92" shape="1342.09,906.67 1328.15,928.82"/>
+        <lane id=":interseccion_avrio_FA_4_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="26.18" width="3.92" shape="1345.35,908.85 1331.40,931.01"/>
+    </edge>
+    <edge id=":interseccion_avrio_FA_5" function="internal">
+        <lane id=":interseccion_avrio_FA_5_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.38" width="3.00" shape="1345.35,908.85 1341.38,912.66 1335.67,914.96 1328.21,915.72 1319.01,914.95"/>
     </edge>
     <edge id=":interseccion_avrio_FA_6" function="internal">
-        <lane id=":interseccion_avrio_FA_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="2.29" width="3.00" shape="1342.09,906.67 1340.54,908.36"/>
-    </edge>
-    <edge id=":interseccion_avrio_FA_15" function="internal">
-        <lane id=":interseccion_avrio_FA_15_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="23.65" width="3.00" shape="1340.54,908.36 1337.93,911.20 1332.70,914.09 1326.40,915.34 1319.01,914.95"/>
+        <lane id=":interseccion_avrio_FA_6_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="10.84" length="18.11" width="3.92" shape="1319.91,909.02 1324.76,909.19 1328.99,908.14 1332.62,905.86 1335.63,902.36"/>
     </edge>
     <edge id=":interseccion_avrio_FA_7" function="internal">
-        <lane id=":interseccion_avrio_FA_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="10.85" length="18.12" width="3.92" shape="1319.91,909.02 1324.76,909.19 1329.00,908.14 1332.62,905.86 1335.63,902.36"/>
+        <lane id=":interseccion_avrio_FA_7_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.94" width="3.00" shape="1319.91,909.02 1327.15,910.34 1334.15,911.98 1341.11,913.81 1348.22,915.72"/>
+        <lane id=":interseccion_avrio_FA_7_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.94" width="3.00" shape="1319.46,911.99 1326.65,913.30 1333.54,914.91 1340.39,916.72 1347.45,918.62"/>
     </edge>
-    <edge id=":interseccion_avrio_FA_8" function="internal">
-        <lane id=":interseccion_avrio_FA_8_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.95" width="3.00" shape="1319.91,909.02 1327.14,910.34 1334.15,911.98 1341.11,913.81 1348.22,915.72"/>
-        <lane id=":interseccion_avrio_FA_8_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.95" width="3.00" shape="1319.46,911.99 1326.64,913.30 1333.54,914.91 1340.39,916.72 1347.46,918.62"/>
+    <edge id=":interseccion_avrio_FA_9" function="internal">
+        <lane id=":interseccion_avrio_FA_9_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="9.65" length="28.36" width="3.92" shape="1319.46,911.99 1327.52,914.30 1332.68,918.33 1334.22,923.94 1331.40,931.01"/>
     </edge>
     <edge id=":interseccion_avrio_FA_10" function="internal">
-        <lane id=":interseccion_avrio_FA_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="9.06" length="24.87" width="3.92" shape="1319.46,911.99 1326.84,914.08 1330.75,917.58 1331.19,922.49 1328.15,928.82"/>
+        <lane id=":interseccion_avrio_FA_10_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.92" length="9.46" width="3.00" shape="1321.67,924.41 1322.86,921.96 1322.75,920.06 1321.31,918.71 1318.56,917.92"/>
     </edge>
     <edge id=":interseccion_avrio_FA_11" function="internal">
-        <lane id=":interseccion_avrio_FA_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.92" length="9.46" width="3.00" shape="1321.66,924.41 1322.86,921.96 1322.74,920.06 1321.31,918.71 1318.56,917.92"/>
+        <lane id=":interseccion_avrio_FA_11_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="26.10" width="3.92" shape="1321.67,924.41 1335.63,902.36"/>
     </edge>
     <edge id=":interseccion_avrio_FA_12" function="internal">
-        <lane id=":interseccion_avrio_FA_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="26.12" width="3.92" shape="1321.66,924.41 1335.63,902.36"/>
-        <lane id=":interseccion_avrio_FA_12_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="26.12" width="3.92" shape="1324.91,926.61 1338.89,904.54"/>
-    </edge>
-    <edge id=":interseccion_avrio_FA_14" function="internal">
-        <lane id=":interseccion_avrio_FA_14_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="2.85" width="3.00" shape="1324.91,926.61 1326.81,924.49"/>
-    </edge>
-    <edge id=":interseccion_avrio_FA_16" function="internal">
-        <lane id=":interseccion_avrio_FA_16_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="22.84" width="3.00" shape="1326.81,924.49 1329.33,921.68 1334.56,918.70 1340.60,917.68 1347.46,918.62"/>
+        <lane id=":interseccion_avrio_FA_12_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.24" width="3.00" shape="1321.67,924.41 1326.00,920.04 1331.75,917.62 1338.90,917.15 1347.45,918.62"/>
     </edge>
     <edge id=":interseccion_bissau_0" function="internal">
         <lane id=":interseccion_bissau_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="13.89" length="20.47" width="3.70" shape="816.39,2266.83 808.05,2248.16"/>
@@ -4131,6 +4122,36 @@
     </edge>
     <edge id=":interseccion_puerto_guaica_15" function="internal">
         <lane id=":interseccion_puerto_guaica_15_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.33" length="23.52" width="3.70" shape="702.38,1794.95 709.19,1792.26 714.40,1792.45 718.01,1795.50 720.02,1801.42"/>
+    </edge>
+    <edge id=":perozo_bajada_norte_0" function="internal">
+        <lane id=":perozo_bajada_norte_0_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="3.10" width="3.92" shape="1303.21,966.80 1301.49,969.38"/>
+    </edge>
+    <edge id=":perozo_bajada_norte_1" function="internal">
+        <lane id=":perozo_bajada_norte_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="3.03" width="3.92" shape="1306.43,968.99 1304.77,971.52"/>
+    </edge>
+    <edge id=":perozo_bajada_sur_0" function="internal">
+        <lane id=":perozo_bajada_sur_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="3.01" width="3.92" shape="1358.24,868.04 1359.90,865.53"/>
+    </edge>
+    <edge id=":perozo_bajada_sur_1" function="internal">
+        <lane id=":perozo_bajada_sur_1_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="2.98" width="3.92" shape="1361.53,870.19 1363.17,867.70"/>
+    </edge>
+    <edge id=":perozo_rampa_norte_0" function="internal">
+        <lane id=":perozo_rampa_norte_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="3.00" width="3.92" shape="1294.93,965.08 1296.57,962.57"/>
+    </edge>
+    <edge id=":perozo_rampa_norte_1" function="internal">
+        <lane id=":perozo_rampa_norte_1_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="3.00" width="3.70" shape="1298.22,967.23 1299.86,964.72"/>
+    </edge>
+    <edge id=":perozo_tablero_norte_1_0" function="internal">
+        <lane id=":perozo_tablero_norte_1_0_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="0.10" width="3.70" shape="1340.48,911.90,6.00 1340.48,911.90,6.00"/>
+    </edge>
+    <edge id=":perozo_tablero_norte_2_0" function="internal">
+        <lane id=":perozo_tablero_norte_2_0_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="0.10" width="3.70" shape="1329.25,928.44,6.00 1329.25,928.44,6.00"/>
+    </edge>
+    <edge id=":perozo_tablero_sur_1_0" function="internal">
+        <lane id=":perozo_tablero_sur_1_0_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="0.10" width="3.70" shape="1325.27,925.77,6.00 1325.27,925.77,6.00"/>
+    </edge>
+    <edge id=":perozo_tablero_sur_2_0" function="internal">
+        <lane id=":perozo_tablero_sur_2_0_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="0.10" width="3.70" shape="1336.20,909.02,6.00 1336.20,909.02,6.00"/>
     </edge>
     <edge id=":semaforo_caminoreal_0" function="internal">
         <lane id=":semaforo_caminoreal_0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="31.61" width="3.70" shape="803.80,1541.45 798.06,1546.58 792.37,1552.12 786.97,1557.91 782.07,1563.84"/>
@@ -5067,7 +5088,7 @@
         <lane id="172682268#2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="19.79" width="3.00" shape="1389.04,926.56 1369.38,924.34"/>
     </edge>
     <edge id="172682274" from="8424094388" to="1835630725" priority="5" type="highway.tertiary_link" spreadType="center" shape="1376.44,865.35 1359.08,897.74 1357.46,904.79 1358.34,910.86 1361.87,915.98 1369.12,920.06 1378.32,923.84">
-        <lane id="172682274_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.50" length="22.95" width="3.50" shape="1363.67,889.17 1359.08,897.74 1357.46,904.79 1358.32,910.73"/>
+        <lane id="172682274_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.50" length="25.45" width="3.50" shape="1364.85,886.97 1359.08,897.74 1357.46,904.79 1358.32,910.73"/>
     </edge>
     <edge id="223358280" from="2322602535" to="2322602523" priority="3" type="highway.residential" shape="1112.17,1209.29 1272.62,1334.56 1276.34,1335.51 1280.08,1333.67 1300.66,1305.52 1302.54,1301.86 1301.50,1298.15 1150.71,1166.70">
         <lane id="223358280_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.56" length="423.35" shape="1123.48,1216.09 1273.34,1333.09 1276.16,1333.81 1279.02,1332.41 1299.29,1304.68 1300.83,1301.69 1300.09,1299.04 1159.38,1176.38"/>
@@ -5547,17 +5568,22 @@
     <edge id="998221555#1" from="9216884319" to="9216884320" priority="1" type="highway.service" shape="933.66,2872.01 932.89,2904.40 933.23,2914.03 930.62,2922.84">
         <lane id="998221555#1_0" index="0" allow="pedestrian delivery bicycle" speed="5.56" length="34.76" shape="935.16,2876.11 934.49,2904.39 934.72,2910.86"/>
     </edge>
-    <edge id="FA_1" from="8424094388" to="interseccion_avrio_FA" priority="10" type="highway.tertiary" spreadType="center" shape="1373.78,863.58 1354.30,892.10 1341.08,911.66 1336.01,917.15">
-        <lane id="FA_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="26.39" width="3.92" shape="1360.14,887.02 1355.92,893.20 1345.35,908.85"/>
-        <lane id="FA_1_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="26.39" width="3.92" shape="1356.91,884.81 1352.68,891.00 1342.09,906.67"/>
+    <edge id="FA_1" from="8424094388" to="interseccion_avrio_FA" priority="10" type="highway.tertiary" spreadType="center" shape="1375.40,864.69 1355.92,893.20 1342.66,912.82 1337.45,918.48">
+        <lane id="FA_1_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="28.87" width="3.92" shape="1361.55,884.96 1355.92,893.20 1345.35,908.85"/>
     </edge>
-    <edge id="FA_2" from="interseccion_avrio_FA" to="7756816786" priority="10" type="highway.tertiary" shape="1330.15,922.38 1321.80,934.68 1275.70,1005.31">
-        <lane id="FA_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="85.57" width="3.92" shape="1331.39,931.02 1326.69,937.94 1284.51,1002.57"/>
-        <lane id="FA_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="85.57" width="3.92" shape="1328.15,928.82 1323.43,935.77 1281.23,1000.42"/>
+    <edge id="FA_2" from="interseccion_avrio_FA" to="perozo_bajada_norte" priority="10" type="highway.tertiary" spreadType="center" shape="1335.01,925.68 1326.72,937.91 1305.55,970.34">
+        <lane id="FA_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="45.45" width="3.92" shape="1331.40,931.01 1326.72,937.91 1306.43,968.99"/>
     </edge>
-    <edge id="FA_3" from="7756816786" to="interseccion_avrio_FA" priority="10" type="highway.tertiary" shape="1275.70,1005.31 1321.80,934.68 1330.15,922.38">
-        <lane id="FA_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="85.72" width="3.92" shape="1274.66,996.14 1316.91,931.42 1321.66,924.41"/>
-        <lane id="FA_3_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="85.72" width="3.92" shape="1277.95,998.28 1320.17,933.59 1324.91,926.61"/>
+    <edge id="FA_2_despues" from="perozo_bajada_norte" to="7756816786" priority="10" type="highway.tertiary">
+        <lane id="FA_2_despues_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="37.07" width="3.92" shape="1304.77,971.52 1284.51,1002.57"/>
+        <lane id="FA_2_despues_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="37.07" width="3.92" shape="1301.49,969.38 1281.23,1000.42"/>
+    </edge>
+    <edge id="FA_3" from="perozo_rampa_norte" to="interseccion_avrio_FA" priority="10" type="highway.tertiary" spreadType="center" shape="1295.75,963.83 1316.88,931.45 1325.23,919.17">
+        <lane id="FA_3_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="45.67" width="3.92" shape="1296.57,962.57 1316.88,931.45 1321.67,924.41"/>
+    </edge>
+    <edge id="FA_3_antes" from="7756816786" to="perozo_rampa_norte" priority="10" type="highway.tertiary">
+        <lane id="FA_3_antes_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="37.08" width="3.92" shape="1274.66,996.14 1294.93,965.08"/>
+        <lane id="FA_3_antes_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="37.08" width="3.92" shape="1277.95,998.28 1298.22,967.23"/>
     </edge>
     <edge id="av_rio_entrada" from="1835630761" to="2998630588" priority="3" type="highway.residential" shape="1490.24,936.44 1507.99,938.49 1671.13,957.40 1724.81,964.09">
         <lane id="av_rio_entrada_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="228.82" width="3.00" shape="1498.11,932.82 1508.51,934.02 1671.67,952.93 1725.37,959.62"/>
@@ -5573,11 +5599,10 @@
     </edge>
     <edge id="avrio_2" from="interseccion_avrio_FA" to="1835630725" priority="3" type="highway.residential" shape="1336.01,917.15 1348.77,920.52 1378.32,923.84">
         <lane id="avrio_2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="7.49" width="3.00" shape="1348.22,915.72 1349.60,916.08 1355.40,916.74"/>
-        <lane id="avrio_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="7.49" width="3.00" shape="1347.46,918.62 1349.05,919.04 1355.07,919.72"/>
+        <lane id="avrio_2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="7.49" width="3.00" shape="1347.45,918.62 1349.05,919.04 1355.07,919.72"/>
     </edge>
-    <edge id="bifurcacion_FA_perrokero" from="11353318191" to="8424094388" priority="10" type="highway.tertiary" spreadType="center" shape="1378.81,858.91 1375.11,864.47">
-        <lane id="bifurcacion_FA_perrokero_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="1.60" width="3.92" shape="1377.63,864.22 1376.74,865.56"/>
-        <lane id="bifurcacion_FA_perrokero_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="1.60" width="3.92" shape="1374.37,862.05 1373.48,863.38"/>
+    <edge id="bifurcacion_FA_perrokero" from="11353318191" to="8424094388" priority="10" type="highway.tertiary" spreadType="center" shape="1380.44,860.00 1376.74,865.56">
+        <lane id="bifurcacion_FA_perrokero_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="1.61" width="3.92" shape="1377.63,864.22 1376.74,865.56"/>
     </edge>
     <edge id="bissau_entrada" from="11372350554" to="11367620516" priority="3" type="highway.residential">
         <lane id="bissau_entrada_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="8.33" length="41.56" shape="839.40,2247.44 880.91,2245.34"/>
@@ -5676,9 +5701,12 @@
     <edge id="fernandez_padilla" from="interseccion_puerto_guaica" to="3430699027" priority="3" type="highway.residential" shape="711.06,1792.07 691.53,1802.64 658.94,1830.39 644.28,1843.19">
         <lane id="fernandez_padilla_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.55" length="67.53" shape="703.90,1797.76 692.44,1803.97 659.98,1831.60 651.04,1839.41"/>
     </edge>
-    <edge id="fuerzas_armadas_entrada" from="interseccion_avrio_FA" to="1835291683" priority="10" type="highway.tertiary" spreadType="center" shape="1329.64,915.05 1333.86,908.62 1353.41,878.89 1383.01,834.19 1401.97,806.35 1418.85,779.86">
-        <lane id="fuerzas_armadas_entrada_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="144.11" width="3.92" shape="1335.63,902.36 1351.77,877.81 1381.38,833.10 1400.33,805.27 1415.05,782.17"/>
-        <lane id="fuerzas_armadas_entrada_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="144.11" width="3.92" shape="1338.89,904.54 1355.05,879.97 1384.64,835.28 1403.61,807.43 1418.36,784.28"/>
+    <edge id="fuerzas_armadas_entrada" from="perozo_bajada_sur" to="1835291683" priority="10" type="highway.tertiary" spreadType="center" shape="1360.71,867.86 1383.01,834.19 1401.97,806.35 1418.85,779.86">
+        <lane id="fuerzas_armadas_entrada_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="100.00" width="3.92" shape="1359.90,865.53 1381.38,833.10 1400.33,805.27 1415.05,782.17"/>
+        <lane id="fuerzas_armadas_entrada_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="100.00" width="3.92" shape="1363.17,867.70 1384.64,835.28 1403.61,807.43 1418.36,784.28"/>
+    </edge>
+    <edge id="fuerzas_armadas_entrada_nivel" from="interseccion_avrio_FA" to="perozo_bajada_sur" priority="10" type="highway.tertiary" spreadType="center" shape="1328.00,913.97 1332.22,907.54 1351.77,877.81 1359.07,866.79">
+        <lane id="fuerzas_armadas_entrada_nivel_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="41.10" width="3.92" shape="1335.63,902.36 1351.77,877.81 1358.24,868.04"/>
     </edge>
     <edge id="fuerzas_armadas_salida" from="1835291509" to="11353318191" priority="10" type="highway.tertiary" spreadType="center" shape="1426.41,784.41 1405.23,816.28 1377.48,858.02">
         <lane id="fuerzas_armadas_salida_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="16.67" length="75.19" width="3.92" shape="1425.83,788.82 1406.86,817.37 1384.21,851.44"/>
@@ -5710,6 +5738,24 @@
     </edge>
     <edge id="nueva_etruria" from="2322602645" to="2322602629" priority="3" type="highway.residential" shape="924.34,1587.17 835.51,1529.23 821.41,1520.04">
         <lane id="nueva_etruria_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.56" length="103.06" shape="917.36,1584.53 834.64,1530.57 831.04,1528.23"/>
+    </edge>
+    <edge id="puente_bajada_hacia_norte" from="perozo_tablero_norte_2" to="perozo_bajada_norte" priority="10" type="highway.tertiary" spreadType="center" shape="1329.25,928.44,6.00 1306.78,961.54 1302.31,968.13">
+        <lane id="puente_bajada_hacia_norte_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="46.81" width="3.70" shape="1329.25,928.44,6.00 1306.78,961.54 1303.21,966.80"/>
+    </edge>
+    <edge id="puente_bajada_hacia_sur" from="perozo_tablero_sur_2" to="perozo_bajada_sur" priority="10" type="highway.tertiary" spreadType="center" shape="1336.20,909.02,6.00 1358.06,875.52 1362.35,868.94">
+        <lane id="puente_bajada_hacia_sur_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="46.81" width="3.70" shape="1336.20,909.02,6.00 1358.06,875.52 1361.53,870.19"/>
+    </edge>
+    <edge id="puente_hacia_norte" from="perozo_tablero_norte_1" to="perozo_tablero_norte_2" priority="10" type="highway.tertiary" spreadType="center">
+        <lane id="puente_hacia_norte_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="19.99" width="3.70" shape="1340.48,911.90,6.00 1329.25,928.44,6.00"/>
+    </edge>
+    <edge id="puente_hacia_sur" from="perozo_tablero_sur_1" to="perozo_tablero_sur_2" priority="10" type="highway.tertiary" spreadType="center">
+        <lane id="puente_hacia_sur_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="20.00" width="3.70" shape="1325.27,925.77,6.00 1336.20,909.02,6.00"/>
+    </edge>
+    <edge id="puente_subida_hacia_norte" from="11353318191" to="perozo_tablero_norte_1" priority="10" type="highway.tertiary" spreadType="center" shape="1377.18,857.82 1362.94,878.80 1340.48,911.90,6.00">
+        <lane id="puente_subida_hacia_norte_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="60.73" width="3.70" shape="1374.33,862.02 1362.94,878.80 1340.48,911.90,6.00"/>
+    </edge>
+    <edge id="puente_subida_hacia_sur" from="perozo_rampa_norte" to="perozo_tablero_sur_1" priority="10" type="highway.tertiary" spreadType="center" shape="1299.04,965.97 1303.41,959.27 1325.27,925.77,6.00">
+        <lane id="puente_subida_hacia_sur_0" index="0" allow="private passenger taxi evehicle" speed="11.11" length="46.95" width="3.70" shape="1299.86,964.72 1303.41,959.27 1325.27,925.77,6.00"/>
     </edge>
     <edge id="puerto_guaica" from="3430699021" to="3430699020" priority="3" type="highway.residential">
         <lane id="puerto_guaica_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.55" length="18.66" shape="765.94,1801.17 784.57,1800.12"/>
@@ -5770,6 +5816,16 @@
         <phase duration="3"  state="rryyyyr"/>
         <phase duration="27" state="GGrrrrr"/>
         <phase duration="3"  state="yyrrrrr"/>
+    </tlLogic>
+    <tlLogic id="interseccion_avrio_FA" type="static" programID="0" offset="0">
+        <phase duration="33" state="GGGrrrrrrrrrr"/>
+        <phase duration="3"  state="yyyrrrrrrrrrr"/>
+        <phase duration="20" state="rrrGGGGrrrrrr"/>
+        <phase duration="3"  state="rrryyyyrrrrrr"/>
+        <phase duration="25" state="rrrrrrrGGrrrr"/>
+        <phase duration="3"  state="rrrrrrryyrrrr"/>
+        <phase duration="30" state="rrrrrrrrrGGGG"/>
+        <phase duration="3"  state="rrrrrrrrryyyy"/>
     </tlLogic>
 
     <junction id="10109961524" type="priority" x="1159.16" y="741.87" incLanes="-1227928326_0" intLanes=":10109961524_0_0" shape="1159.16,741.87 1156.12,740.87 1159.16,741.87">
@@ -6037,11 +6093,11 @@
     <junction id="11353318190" type="priority" x="1516.27" y="882.55" incLanes="1223999765#1_0" intLanes=":11353318190_0_0" shape="1516.27,882.55 1516.83,879.40 1516.27,882.55">
         <request index="0" response="0" foes="0" cont="0"/>
     </junction>
-    <junction id="11353318191" type="priority" x="1377.48" y="858.02" incLanes="-1223999765#0_0 fuerzas_armadas_salida_0 fuerzas_armadas_salida_1" intLanes=":11353318191_0_0 :11353318191_1_0 :11353318191_2_0 :11353318191_2_1" shape="1386.45,862.86 1387.56,856.55 1385.62,855.80 1385.16,855.20 1385.05,854.45 1385.27,853.56 1385.84,852.53 1379.31,848.19 1377.72,850.79 1376.72,852.83 1375.33,856.32 1374.33,858.35 1372.74,860.96 1379.26,865.31 1381.05,863.55 1382.17,863.03 1383.44,862.74 1384.87,862.68">
-        <request index="0" response="1100" foes="1100" cont="0"/>
+    <junction id="11353318191" type="priority" x="1377.48" y="858.02" incLanes="-1223999765#0_0 fuerzas_armadas_salida_0 fuerzas_armadas_salida_1" intLanes=":11353318191_0_0 :11353318191_1_0 :11353318191_2_0 :11353318191_3_0" shape="1386.45,862.86 1387.56,856.55 1385.62,855.80 1385.16,855.20 1385.05,854.45 1385.27,853.56 1385.84,852.53 1379.31,848.19 1377.73,850.80 1376.75,852.85 1376.07,854.61 1375.39,856.36 1374.40,858.40 1372.79,861.00 1379.26,865.31 1381.05,863.55 1382.17,863.03 1383.44,862.74 1384.87,862.68">
+        <request index="0" response="0100" foes="0100" cont="0"/>
         <request index="1" response="0000" foes="0000" cont="0"/>
         <request index="2" response="0000" foes="0001" cont="0"/>
-        <request index="3" response="0000" foes="0001" cont="0"/>
+        <request index="3" response="0000" foes="0000" cont="0"/>
     </junction>
     <junction id="11367620510" type="priority" x="757.04" y="1761.30" incLanes="1225793910_0" intLanes=":11367620510_0_0" shape="757.04,1761.30 757.25,1764.49 757.04,1761.30">
         <request index="0" response="0" foes="0" cont="0"/>
@@ -6950,7 +7006,7 @@
         <request index="7" response="000011000" foes="000011110" cont="1"/>
         <request index="8" response="000010001" foes="000010001" cont="1"/>
     </junction>
-    <junction id="7756816786" type="priority" x="1275.70" y="1005.31" incLanes="FA_2_0 FA_2_1 830761838_0 371794626#12_0 371794626#12_1" intLanes=":7756816786_0_0 :7756816786_0_1 :7756816786_9_0 :7756816786_3_0 :7756816786_4_0 :7756816786_5_0 :7756816786_6_0 :7756816786_7_0 :7756816786_7_1" shape="1286.15,1003.64 1273.02,995.07 1270.91,997.12 1269.63,997.58 1268.21,997.68 1266.65,997.40 1264.93,996.75 1262.23,1002.55 1264.44,1004.19 1264.94,1005.19 1265.04,1006.29 1264.73,1007.52 1264.02,1008.85 1277.16,1017.42" radius="5.00">
+    <junction id="7756816786" type="priority" x="1275.70" y="1005.31" incLanes="FA_2_despues_0 FA_2_despues_1 830761838_0 371794626#12_0 371794626#12_1" intLanes=":7756816786_0_0 :7756816786_0_1 :7756816786_9_0 :7756816786_3_0 :7756816786_4_0 :7756816786_5_0 :7756816786_6_0 :7756816786_7_0 :7756816786_7_1" shape="1286.15,1003.64 1273.02,995.07 1270.91,997.12 1269.63,997.58 1268.21,997.68 1266.65,997.40 1264.93,996.75 1262.23,1002.55 1264.44,1004.19 1264.94,1005.19 1265.04,1006.29 1264.73,1007.52 1264.02,1008.85 1277.16,1017.42" radius="5.00">
         <request index="0" response="000000000" foes="000010000" cont="0"/>
         <request index="1" response="000000000" foes="000010000" cont="0"/>
         <request index="2" response="111000000" foes="111110000" cont="1"/>
@@ -7059,10 +7115,9 @@
         <request index="3" response="00000" foes="00001" cont="0"/>
         <request index="4" response="00000" foes="00001" cont="0"/>
     </junction>
-    <junction id="8424094388" type="priority" x="1373.78" y="863.58" incLanes="bifurcacion_FA_perrokero_0 bifurcacion_FA_perrokero_1" intLanes=":8424094388_0_0 :8424094388_1_0 :8424094388_1_1" shape="1378.37,866.64 1371.85,862.30 1355.29,883.70 1361.76,888.13 1362.13,888.35 1365.21,890.00 1367.87,884.94 1369.79,881.17 1371.38,878.08 1373.07,875.03 1375.26,871.43">
-        <request index="0" response="000" foes="000" cont="0"/>
-        <request index="1" response="000" foes="000" cont="0"/>
-        <request index="2" response="000" foes="000" cont="0"/>
+    <junction id="8424094388" type="priority" x="1373.78" y="863.58" incLanes="bifurcacion_FA_perrokero_0" intLanes=":8424094388_0_0 :8424094388_1_0" shape="1378.37,866.65 1375.11,864.47 1359.93,883.85 1363.17,886.06 1363.31,886.14 1366.39,887.80 1368.81,883.21 1370.55,879.80 1372.01,877.00 1373.55,874.25 1375.55,870.98">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
     </junction>
     <junction id="8474279334" type="priority" x="1016.06" y="1105.43" incLanes="-912235572_0 912235568#1_0" intLanes=":8474279334_0_0 :8474279334_1_0 :8474279334_3_0" shape="1018.58,1107.43 1013.98,1102.98 1013.66,1103.31 1013.56,1103.44 1013.46,1103.57 1013.35,1103.73 1013.21,1103.95">
         <request index="0" response="000" foes="100" cont="0"/>
@@ -7407,22 +7462,20 @@
         <request index="7" response="000000000" foes="000110011" cont="0"/>
         <request index="8" response="000000000" foes="000000000" cont="0"/>
     </junction>
-    <junction id="interseccion_avrio_FA" type="priority" x="1331.93" y="918.19" incLanes="avrio_1_0 avrio_1_1 FA_1_0 FA_1_1 res_salida_0 res_salida_1 FA_3_0 FA_3_1" intLanes=":interseccion_avrio_FA_0_0 :interseccion_avrio_FA_1_0 :interseccion_avrio_FA_1_1 :interseccion_avrio_FA_3_0 :interseccion_avrio_FA_4_0 :interseccion_avrio_FA_4_1 :interseccion_avrio_FA_15_0 :interseccion_avrio_FA_7_0 :interseccion_avrio_FA_8_0 :interseccion_avrio_FA_8_1 :interseccion_avrio_FA_10_0 :interseccion_avrio_FA_11_0 :interseccion_avrio_FA_12_0 :interseccion_avrio_FA_12_1 :interseccion_avrio_FA_16_0" shape="1345.54,925.87 1348.60,914.27 1346.70,913.33 1346.26,912.68 1346.16,911.89 1346.40,910.98 1346.98,909.94 1334.00,901.27 1332.22,903.56 1330.23,905.35 1328.03,906.64 1325.61,907.44 1322.98,907.74 1320.13,907.54 1318.33,919.40 1320.28,920.10 1320.74,920.68 1320.85,921.41 1320.62,922.28 1320.04,923.31 1333.01,932.12 1334.89,929.70 1336.85,927.82 1338.90,926.51 1341.03,925.74 1343.24,925.53">
-        <request index="0"  response="000000000110000" foes="000000000110000" cont="0"/>
-        <request index="1"  response="111100001110000" foes="111110001110000" cont="0"/>
-        <request index="2"  response="111100001110000" foes="111110001110000" cont="0"/>
-        <request index="3"  response="111001101110000" foes="111001101110000" cont="0"/>
-        <request index="4"  response="000000000000000" foes="100011100001111" cont="0"/>
-        <request index="5"  response="000000000000000" foes="100011100001111" cont="0"/>
-        <request index="6"  response="011000000000000" foes="011011100001110" cont="1"/>
-        <request index="7"  response="011000000000000" foes="011000000000000" cont="0"/>
-        <request index="8"  response="111000001110000" foes="111000001111000" cont="0"/>
-        <request index="9"  response="111000001110000" foes="111000001111000" cont="0"/>
-        <request index="10" response="111000001110110" foes="111000001110110" cont="0"/>
-        <request index="11" response="000000000000000" foes="000000000000110" cont="0"/>
-        <request index="12" response="000000000000000" foes="000011111001110" cont="0"/>
-        <request index="13" response="000000000000000" foes="000011111001110" cont="0"/>
-        <request index="14" response="000000000110000" foes="000011100111110" cont="1"/>
+    <junction id="interseccion_avrio_FA" type="traffic_light" x="1331.93" y="918.19" incLanes="avrio_1_0 avrio_1_1 FA_1_0 res_salida_0 res_salida_1 FA_3_0" intLanes=":interseccion_avrio_FA_0_0 :interseccion_avrio_FA_1_0 :interseccion_avrio_FA_1_1 :interseccion_avrio_FA_3_0 :interseccion_avrio_FA_4_0 :interseccion_avrio_FA_5_0 :interseccion_avrio_FA_6_0 :interseccion_avrio_FA_7_0 :interseccion_avrio_FA_7_1 :interseccion_avrio_FA_9_0 :interseccion_avrio_FA_10_0 :interseccion_avrio_FA_11_0 :interseccion_avrio_FA_12_0" shape="1345.54,925.87 1348.60,914.27 1346.70,913.33 1346.26,912.68 1346.16,911.89 1346.40,910.98 1346.98,909.93 1334.00,901.27 1332.22,903.56 1330.23,905.35 1328.03,906.64 1325.61,907.44 1322.98,907.74 1320.14,907.54 1318.34,919.40 1320.29,920.10 1320.74,920.68 1320.85,921.41 1320.62,922.28 1320.04,923.31 1333.02,932.11 1334.89,929.69 1336.85,927.82 1338.89,926.50 1341.02,925.74 1343.24,925.53">
+        <request index="0"  response="0000000010000" foes="0001000010000" cont="0"/>
+        <request index="1"  response="1110000110000" foes="1111000110000" cont="0"/>
+        <request index="2"  response="1110000110000" foes="1111000110000" cont="0"/>
+        <request index="3"  response="1100111110000" foes="1100111110000" cont="0"/>
+        <request index="4"  response="0000000000000" foes="1001110001111" cont="0"/>
+        <request index="5"  response="1100000000000" foes="1101110001110" cont="0"/>
+        <request index="6"  response="0100000000000" foes="0100000001000" cont="0"/>
+        <request index="7"  response="1100000110000" foes="1100000111000" cont="0"/>
+        <request index="8"  response="1100000110000" foes="1100000111000" cont="0"/>
+        <request index="9"  response="1100000110111" foes="1100000110111" cont="0"/>
+        <request index="10" response="0000000000000" foes="0000000000110" cont="0"/>
+        <request index="11" response="0000000000000" foes="0001111101110" cont="0"/>
+        <request index="12" response="0000000010000" foes="0001110111110" cont="0"/>
     </junction>
     <junction id="interseccion_bissau" type="priority" x="817.02" y="2252.93" incLanes="costanera_bissau_haciacaminoreal_0 costanera_bissau_haciacaminoreal_1 salida_bissau_2_0 salida_bissau_1_0 costanera_bissau_hacialecheria_0 costanera_bissau_hacialecheria_1" intLanes=":interseccion_bissau_0_0 :interseccion_bissau_0_1 :interseccion_bissau_12_0 :interseccion_bissau_13_0 :interseccion_bissau_4_0 :interseccion_bissau_5_0 :interseccion_bissau_6_0 :interseccion_bissau_7_0 :interseccion_bissau_8_0 :interseccion_bissau_9_0 :interseccion_bissau_10_0 :interseccion_bissau_10_1" shape="814.68,2267.54 829.51,2261.38 829.02,2259.33 829.25,2258.58 829.80,2258.02 830.66,2257.64 831.84,2257.45 831.25,2245.75 828.66,2245.78 826.45,2245.58 824.62,2245.15 823.15,2244.50 822.06,2243.61 821.34,2242.50 806.34,2248.88">
         <request index="0"  response="000000000000" foes="000010100000" cont="0"/>
@@ -7460,6 +7513,30 @@
         <request index="13" response="0000000000000110" foes="0000000000000110" cont="0"/>
         <request index="14" response="0000111100001110" foes="0000111110001110" cont="0"/>
         <request index="15" response="0000111001001110" foes="0000111001011110" cont="0"/>
+    </junction>
+    <junction id="perozo_bajada_norte" type="priority" x="1300.68" y="967.03" incLanes="puente_bajada_hacia_norte_0 FA_2_0" intLanes=":perozo_bajada_norte_0_0 :perozo_bajada_norte_1_0" shape="1308.06,970.09 1301.68,965.76 1299.84,968.31 1306.41,972.60">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="perozo_bajada_sur" type="priority" x="1360.71" y="867.86" incLanes="fuerzas_armadas_entrada_nivel_0 puente_bajada_hacia_sur_0" intLanes=":perozo_bajada_sur_0_0 :perozo_bajada_sur_1_0" shape="1364.80,868.78 1358.27,864.45 1356.60,866.97 1363.08,871.20">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="perozo_rampa_norte" type="priority" x="1300.68" y="967.04" incLanes="FA_3_antes_0 FA_3_antes_1" intLanes=":perozo_rampa_norte_0_0 :perozo_rampa_norte_1_0" shape="1301.41,965.73 1294.93,961.50 1293.29,964.01 1299.86,968.30">
+        <request index="0" response="00" foes="00" cont="0"/>
+        <request index="1" response="00" foes="00" cont="0"/>
+    </junction>
+    <junction id="perozo_tablero_norte_1" type="priority" x="1340.48" y="911.90" z="6.00" incLanes="puente_subida_hacia_norte_0" intLanes=":perozo_tablero_norte_1_0_0" shape="1342.01,912.94,6.00 1338.95,910.86,6.00 1342.01,912.94,6.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="perozo_tablero_norte_2" type="priority" x="1329.25" y="928.44" z="6.00" incLanes="puente_hacia_norte_0" intLanes=":perozo_tablero_norte_2_0_0" shape="1330.78,929.48,6.00 1327.72,927.40,6.00 1330.78,929.48,6.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="perozo_tablero_sur_1" type="priority" x="1325.27" y="925.77" z="6.00" incLanes="puente_subida_hacia_sur_0" intLanes=":perozo_tablero_sur_1_0_0" shape="1326.82,926.78,6.00 1323.72,924.76,6.00 1326.82,926.78,6.00">
+        <request index="0" response="0" foes="0" cont="0"/>
+    </junction>
+    <junction id="perozo_tablero_sur_2" type="priority" x="1336.20" y="909.02" z="6.00" incLanes="puente_hacia_sur_0" intLanes=":perozo_tablero_sur_2_0_0" shape="1337.75,910.03,6.00 1334.65,908.01,6.00 1337.75,910.03,6.00">
+        <request index="0" response="0" foes="0" cont="0"/>
     </junction>
     <junction id="semaforo_caminoreal" type="traffic_light" x="787.87" y="1548.68" incLanes="1414925033_0 semaforo_caminoreal_FA_0 semaforo_caminoreal_FA_1 semaforo_caminoreal_elejercito_0 semaforo_caminoreal_elejercito_1 semaforo_caminoreal_elejercito_2 semaforo_caminoreal_costanera_0 semaforo_caminoreal_costanera_1" intLanes=":semaforo_caminoreal_0_0 :semaforo_caminoreal_0_1 :semaforo_caminoreal_2_0 :semaforo_caminoreal_2_1 :semaforo_caminoreal_4_0 :semaforo_caminoreal_5_0 :semaforo_caminoreal_5_1 :semaforo_caminoreal_7_0 :semaforo_caminoreal_7_1 :semaforo_caminoreal_7_2" shape="790.89,1557.85 792.11,1556.27 792.79,1554.19 794.47,1552.23 797.04,1549.66 800.50,1546.47 804.85,1542.67 794.43,1530.52 791.31,1532.99 788.49,1534.80 785.97,1535.94 783.75,1536.42 781.82,1536.23 780.19,1535.38 769.89,1549.71 771.41,1551.34 771.72,1552.23 771.73,1553.17 771.45,1554.17 770.86,1555.22 783.53,1564.97 785.45,1562.54 787.09,1560.61 788.46,1559.18 789.55,1558.24 790.36,1557.80" fringe="outer">
         <request index="0" response="0001100000" foes="0001100000" cont="0"/>
@@ -7614,7 +7691,7 @@
     <junction id=":7756816785_9_0" type="internal" x="1181.73" y="953.92" incLanes=":7756816785_5_0 -830761837#2_0 -830761838_0" intLanes=":7756816785_1_0 :7756816785_6_0"/>
     <junction id=":7756816785_10_0" type="internal" x="1175.21" y="965.14" incLanes=":7756816785_7_0 830761837#1_0" intLanes=":7756816785_1_0 :7756816785_2_0 :7756816785_3_0 :7756816785_4_0"/>
     <junction id=":7756816785_11_0" type="internal" x="1177.47" y="966.52" incLanes=":7756816785_8_0 -830761838_0 830761837#1_0" intLanes=":7756816785_0_0 :7756816785_4_0"/>
-    <junction id=":7756816786_9_0" type="internal" x="1279.68" y="1001.87" incLanes=":7756816786_2_0 371794626#12_0 371794626#12_1" intLanes=":7756816786_4_0 :7756816786_5_0 :7756816786_6_0 :7756816786_7_0 :7756816786_7_1"/>
+    <junction id=":7756816786_9_0" type="internal" x="1279.69" y="1001.87" incLanes=":7756816786_2_0 371794626#12_0 371794626#12_1" intLanes=":7756816786_4_0 :7756816786_5_0 :7756816786_6_0 :7756816786_7_0 :7756816786_7_1"/>
     <junction id=":7756816788_7_0" type="internal" x="1162.90" y="993.74" incLanes=":7756816788_1_0 -830761837#4_0" intLanes=":7756816788_3_0 :7756816788_4_0 :7756816788_5_0 :7756816788_6_0"/>
     <junction id=":7756816796_3_0" type="internal" x="1147.78" y="1018.21" incLanes=":7756816796_1_0 -830761841#0_0" intLanes=":7756816796_2_0"/>
     <junction id=":8343278833_9_0" type="internal" x="749.66" y="1701.61" incLanes=":8343278833_2_0 -1227928323_0 897715900#0_0" intLanes=":8343278833_3_0 :8343278833_7_0"/>
@@ -7640,8 +7717,6 @@
     <junction id=":cluster_4575080764_4575080765_13_0" type="internal" x="666.12" y="1458.49" incLanes=":cluster_4575080764_4575080765_3_0 1223695890_0 ejercito_1_0 ejercito_1_1 ejercito_1_2" intLanes=":cluster_4575080764_4575080765_4_0 :cluster_4575080764_4575080765_4_1 :cluster_4575080764_4575080765_4_2 :cluster_4575080764_4575080765_10_0 :cluster_4575080764_4575080765_10_1"/>
     <junction id=":cluster_4575080764_4575080765_14_0" type="internal" x="661.13" y="1458.06" incLanes=":cluster_4575080764_4575080765_7_0 ejercito4_0 ejercito4_1" intLanes=":cluster_4575080764_4575080765_0_0 :cluster_4575080764_4575080765_1_0 :cluster_4575080764_4575080765_1_1 :cluster_4575080764_4575080765_10_0 :cluster_4575080764_4575080765_10_1 :cluster_4575080764_4575080765_12_0"/>
     <junction id=":cluster_4575080764_4575080765_15_0" type="internal" x="659.73" y="1458.26" incLanes=":cluster_4575080764_4575080765_8_0 1223695890_0 ejercito4_0 ejercito4_1" intLanes=":cluster_4575080764_4575080765_1_0 :cluster_4575080764_4575080765_1_1 :cluster_4575080764_4575080765_9_0"/>
-    <junction id=":interseccion_avrio_FA_15_0" type="internal" x="1340.54" y="908.36" incLanes=":interseccion_avrio_FA_6_0 FA_3_0 FA_3_1" intLanes=":interseccion_avrio_FA_1_0 :interseccion_avrio_FA_1_1 :interseccion_avrio_FA_3_0 :interseccion_avrio_FA_8_0 :interseccion_avrio_FA_8_1 :interseccion_avrio_FA_10_0 :interseccion_avrio_FA_11_0 :interseccion_avrio_FA_12_0 :interseccion_avrio_FA_12_1"/>
-    <junction id=":interseccion_avrio_FA_16_0" type="internal" x="1326.81" y="924.49" incLanes=":interseccion_avrio_FA_14_0 FA_1_0 FA_1_1" intLanes=":interseccion_avrio_FA_1_0 :interseccion_avrio_FA_1_1 :interseccion_avrio_FA_3_0 :interseccion_avrio_FA_4_0 :interseccion_avrio_FA_4_1 :interseccion_avrio_FA_8_0 :interseccion_avrio_FA_8_1 :interseccion_avrio_FA_10_0"/>
     <junction id=":interseccion_bissau_12_0" type="internal" x="817.70" y="2256.89" incLanes=":interseccion_bissau_2_0 costanera_bissau_hacialecheria_0 costanera_bissau_hacialecheria_1" intLanes=":interseccion_bissau_5_0 :interseccion_bissau_7_0 :interseccion_bissau_8_0 :interseccion_bissau_9_0 :interseccion_bissau_10_0 :interseccion_bissau_10_1"/>
     <junction id=":interseccion_bissau_13_0" type="internal" x="819.81" y="2261.43" incLanes=":interseccion_bissau_3_0 costanera_bissau_hacialecheria_0 costanera_bissau_hacialecheria_1" intLanes=":interseccion_bissau_5_0 :interseccion_bissau_6_0 :interseccion_bissau_7_0 :interseccion_bissau_9_0 :interseccion_bissau_10_0 :interseccion_bissau_10_1"/>
     <junction id=":interseccion_puerto_guaica_16_0" type="internal" x="715.32" y="1792.66" incLanes=":interseccion_puerto_guaica_3_0 costanera_puerto_guaica_hacialecheria_0 costanera_puerto_guaica_hacialecheria_1" intLanes=":interseccion_puerto_guaica_6_0 :interseccion_puerto_guaica_7_0 :interseccion_puerto_guaica_8_0 :interseccion_puerto_guaica_9_0 :interseccion_puerto_guaica_9_1 :interseccion_puerto_guaica_14_0 :interseccion_puerto_guaica_15_0"/>
@@ -8540,8 +8615,8 @@
     <connection from="371794626#11" to="371794626#12" fromLane="1" toLane="1" via=":1835291742_6_1" dir="s" state="M"/>
     <connection from="371794626#11" to="223358287#0" fromLane="1" toLane="0" via=":1835291742_8_0" dir="l" state="m"/>
     <connection from="371794626#12" to="-830761838" fromLane="0" toLane="0" via=":7756816786_6_0" dir="r" state="M"/>
-    <connection from="371794626#12" to="FA_3" fromLane="0" toLane="0" via=":7756816786_7_0" dir="s" state="M"/>
-    <connection from="371794626#12" to="FA_3" fromLane="1" toLane="1" via=":7756816786_7_1" dir="s" state="M"/>
+    <connection from="371794626#12" to="FA_3_antes" fromLane="0" toLane="0" via=":7756816786_7_0" dir="s" state="M"/>
+    <connection from="371794626#12" to="FA_3_antes" fromLane="1" toLane="1" via=":7756816786_7_1" dir="s" state="M"/>
     <connection from="371794626#2" to="223358291#0" fromLane="0" toLane="0" via=":2322602558_6_0" dir="r" state="M"/>
     <connection from="371794626#2" to="371794626#3" fromLane="0" toLane="0" via=":2322602558_7_0" dir="s" state="M"/>
     <connection from="371794626#2" to="371794626#3" fromLane="1" toLane="1" via=":2322602558_7_1" dir="s" state="M"/>
@@ -8671,7 +8746,7 @@
     <connection from="830761837#3" to="830761839" fromLane="0" toLane="0" via=":7756816788_1_0" dir="l" state="m"/>
     <connection from="830761837#4" to="830761841#0" fromLane="0" toLane="0" via=":7756816796_0_0" dir="s" state="M"/>
     <connection from="830761837#4" to="-830761837#4" fromLane="0" toLane="0" via=":7756816796_1_0" dir="t" state="m"/>
-    <connection from="830761838" to="FA_3" fromLane="0" toLane="0" via=":7756816786_3_0" dir="r" state="m"/>
+    <connection from="830761838" to="FA_3_antes" fromLane="0" toLane="0" via=":7756816786_3_0" dir="r" state="m"/>
     <connection from="830761838" to="-371794626#12" fromLane="0" toLane="1" via=":7756816786_4_0" dir="l" state="m"/>
     <connection from="830761838" to="-830761838" fromLane="0" toLane="0" via=":7756816786_5_0" dir="t" state="m"/>
     <connection from="830761839" to="-1227543319" fromLane="0" toLane="0" via=":7756816787_0_0" dir="t" state="M"/>
@@ -8767,29 +8842,29 @@
     <connection from="998221555#0" to="costa_guaica" fromLane="0" toLane="0" via=":9216884319_2_0" dir="r" state="M"/>
     <connection from="998221555#0" to="998221555#1" fromLane="0" toLane="0" via=":9216884319_3_0" dir="s" state="="/>
     <connection from="998221555#1" to="costanera_hacialecheria" fromLane="0" toLane="0" via=":9216884320_0_0" dir="s" state="m"/>
-    <connection from="FA_1" to="FA_2" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_4_0" dir="s" state="M"/>
-    <connection from="FA_1" to="FA_2" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_4_1" dir="s" state="M"/>
-    <connection from="FA_1" to="res_entrada" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_6_0" dir="l" state="m"/>
-    <connection from="FA_2" to="-371794626#12" fromLane="0" toLane="0" via=":7756816786_0_0" dir="s" state="M"/>
-    <connection from="FA_2" to="-371794626#12" fromLane="1" toLane="1" via=":7756816786_0_1" dir="s" state="M"/>
-    <connection from="FA_2" to="-830761838" fromLane="1" toLane="0" via=":7756816786_2_0" dir="l" state="m"/>
-    <connection from="FA_3" to="res_entrada" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_11_0" dir="r" state="M"/>
-    <connection from="FA_3" to="fuerzas_armadas_entrada" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_12_0" dir="s" state="M"/>
-    <connection from="FA_3" to="fuerzas_armadas_entrada" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_12_1" dir="s" state="M"/>
-    <connection from="FA_3" to="avrio_2" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_14_0" dir="l" state="m"/>
+    <connection from="FA_1" to="FA_2" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_4_0" tl="interseccion_avrio_FA" linkIndex="7" dir="s" state="O"/>
+    <connection from="FA_1" to="res_entrada" fromLane="0" toLane="1" keepClear="0" via=":interseccion_avrio_FA_5_0" tl="interseccion_avrio_FA" linkIndex="8" dir="l" state="o"/>
+    <connection from="FA_2" to="FA_2_despues" fromLane="0" toLane="0" via=":perozo_bajada_norte_1_0" dir="s" state="M"/>
+    <connection from="FA_2_despues" to="-371794626#12" fromLane="0" toLane="0" via=":7756816786_0_0" dir="s" state="M"/>
+    <connection from="FA_2_despues" to="-371794626#12" fromLane="1" toLane="1" via=":7756816786_0_1" dir="s" state="M"/>
+    <connection from="FA_2_despues" to="-830761838" fromLane="1" toLane="0" via=":7756816786_2_0" dir="l" state="m"/>
+    <connection from="FA_3" to="res_entrada" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_10_0" tl="interseccion_avrio_FA" linkIndex="0" dir="r" state="O"/>
+    <connection from="FA_3" to="fuerzas_armadas_entrada_nivel" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_11_0" tl="interseccion_avrio_FA" linkIndex="1" dir="s" state="O"/>
+    <connection from="FA_3" to="avrio_2" fromLane="0" toLane="1" keepClear="0" via=":interseccion_avrio_FA_12_0" tl="interseccion_avrio_FA" linkIndex="2" dir="l" state="o"/>
+    <connection from="FA_3_antes" to="FA_3" fromLane="0" toLane="0" via=":perozo_rampa_norte_0_0" dir="s" state="M"/>
+    <connection from="FA_3_antes" to="puente_subida_hacia_sur" fromLane="1" toLane="0" via=":perozo_rampa_norte_1_0" dir="s" state="M"/>
     <connection from="av_rio_entrada" to="av_rio_salida" fromLane="1" toLane="1" via=":2998630588_0_0" dir="t" state="M"/>
     <connection from="av_rio_salida" to="462104560" fromLane="0" toLane="0" via=":1835630761_0_0" dir="r" state="M"/>
     <connection from="av_rio_salida" to="172682268#1" fromLane="0" toLane="0" via=":1835630761_1_0" dir="s" state="M"/>
     <connection from="av_rio_salida" to="172682268#1" fromLane="1" toLane="1" via=":1835630761_1_1" dir="s" state="M"/>
-    <connection from="avrio_1" to="FA_2" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_0_0" dir="r" state="m"/>
-    <connection from="avrio_1" to="res_entrada" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_1_0" dir="s" state="m"/>
-    <connection from="avrio_1" to="res_entrada" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_1_1" dir="s" state="m"/>
-    <connection from="avrio_1" to="fuerzas_armadas_entrada" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_3_0" dir="l" state="m"/>
+    <connection from="avrio_1" to="FA_2" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_0_0" tl="interseccion_avrio_FA" linkIndex="9" dir="r" state="o"/>
+    <connection from="avrio_1" to="res_entrada" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_1_0" tl="interseccion_avrio_FA" linkIndex="10" dir="s" state="o"/>
+    <connection from="avrio_1" to="res_entrada" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_1_1" tl="interseccion_avrio_FA" linkIndex="11" dir="s" state="o"/>
+    <connection from="avrio_1" to="fuerzas_armadas_entrada_nivel" fromLane="1" toLane="0" keepClear="0" via=":interseccion_avrio_FA_3_0" tl="interseccion_avrio_FA" linkIndex="12" dir="l" state="o"/>
     <connection from="avrio_2" to="-172682268#2" fromLane="0" toLane="0" via=":1835630725_3_0" dir="s" state="m"/>
     <connection from="avrio_2" to="-172682268#2" fromLane="1" toLane="1" via=":1835630725_3_1" dir="s" state="m"/>
     <connection from="bifurcacion_FA_perrokero" to="172682274" fromLane="0" toLane="0" via=":8424094388_0_0" dir="s" state="M"/>
     <connection from="bifurcacion_FA_perrokero" to="FA_1" fromLane="0" toLane="0" via=":8424094388_1_0" dir="s" state="M"/>
-    <connection from="bifurcacion_FA_perrokero" to="FA_1" fromLane="1" toLane="1" via=":8424094388_1_1" dir="s" state="M"/>
     <connection from="bissau_entrada" to="495730009#3" fromLane="0" toLane="0" via=":11367620516_1_0" dir="s" state="M"/>
     <connection from="bissau_salida" to="-1227058169" fromLane="0" toLane="0" via=":4618647939_3_0" dir="r" state="M"/>
     <connection from="bissau_salida" to="salida_bissau_2" fromLane="0" toLane="0" via=":4618647939_4_0" dir="s" state="M"/>
@@ -8866,9 +8941,10 @@
     <connection from="fuerzas_armadas_entrada" to="172680883" fromLane="1" toLane="1" via=":1835291683_0_1" dir="s" state="M"/>
     <connection from="fuerzas_armadas_entrada" to="172680883" fromLane="1" toLane="2" via=":1835291683_0_2" dir="s" state="M"/>
     <connection from="fuerzas_armadas_entrada" to="172680883" fromLane="1" toLane="3" via=":1835291683_0_3" dir="s" state="M"/>
+    <connection from="fuerzas_armadas_entrada_nivel" to="fuerzas_armadas_entrada" fromLane="0" toLane="0" via=":perozo_bajada_sur_0_0" dir="s" state="M"/>
     <connection from="fuerzas_armadas_salida" to="1223999765#0" fromLane="0" toLane="0" via=":11353318191_1_0" dir="r" state="M"/>
     <connection from="fuerzas_armadas_salida" to="bifurcacion_FA_perrokero" fromLane="0" toLane="0" via=":11353318191_2_0" dir="s" state="M"/>
-    <connection from="fuerzas_armadas_salida" to="bifurcacion_FA_perrokero" fromLane="1" toLane="1" via=":11353318191_2_1" dir="s" state="M"/>
+    <connection from="fuerzas_armadas_salida" to="puente_subida_hacia_norte" fromLane="1" toLane="0" via=":11353318191_3_0" dir="s" state="M"/>
     <connection from="lecheria_haciacaminoreal" to="592256719#1" fromLane="0" toLane="0" via=":semaforo_costanera_0_0" tl="cluster_1832560256_1835269221_1835269336_7120285661" linkIndex="0" dir="l" state="o"/>
     <connection from="lecheria_haciacaminoreal" to="592256719#1" fromLane="1" toLane="1" via=":semaforo_costanera_0_1" tl="cluster_1832560256_1835269221_1835269336_7120285661" linkIndex="1" dir="l" state="o"/>
     <connection from="lecheria_salida" to="-830806307#2" fromLane="0" toLane="0" via=":7757101141_0_0" dir="r" state="M"/>
@@ -8883,16 +8959,22 @@
     <connection from="nueva_etruria" to="371794626#1" fromLane="0" toLane="1" via=":2322602629_1_0" dir="l" state="m"/>
     <connection from="nueva_etruria" to="371794626#1" fromLane="0" toLane="2" via=":2322602629_1_1" dir="l" state="m"/>
     <connection from="nueva_etruria" to="1348019583" fromLane="0" toLane="0" via=":2322602629_3_0" dir="t" state="m"/>
+    <connection from="puente_bajada_hacia_norte" to="FA_2_despues" fromLane="0" toLane="1" via=":perozo_bajada_norte_0_0" dir="s" state="M"/>
+    <connection from="puente_bajada_hacia_sur" to="fuerzas_armadas_entrada" fromLane="0" toLane="1" via=":perozo_bajada_sur_1_0" dir="s" state="M"/>
+    <connection from="puente_hacia_norte" to="puente_bajada_hacia_norte" fromLane="0" toLane="0" via=":perozo_tablero_norte_2_0_0" dir="s" state="M"/>
+    <connection from="puente_hacia_sur" to="puente_bajada_hacia_sur" fromLane="0" toLane="0" via=":perozo_tablero_sur_2_0_0" dir="s" state="M"/>
+    <connection from="puente_subida_hacia_norte" to="puente_hacia_norte" fromLane="0" toLane="0" via=":perozo_tablero_norte_1_0_0" dir="s" state="M"/>
+    <connection from="puente_subida_hacia_sur" to="puente_hacia_sur" fromLane="0" toLane="0" via=":perozo_tablero_sur_1_0_0" dir="s" state="M"/>
     <connection from="puerto_guaica" to="335982660#0" fromLane="0" toLane="0" via=":3430699020_6_0" dir="r" state="M"/>
     <connection from="puerto_guaica" to="1227058160#1" fromLane="0" toLane="0" via=":3430699020_7_0" dir="s" state="m"/>
     <connection from="puerto_guaica" to="-1227058160#0" fromLane="0" toLane="0" via=":3430699020_8_0" dir="t" state="m"/>
     <connection from="res_entrada" to="830761837#0" fromLane="0" toLane="0" via=":cluster_2322602471_7756816804_0_0" dir="r" state="m"/>
     <connection from="res_entrada" to="830761843#0" fromLane="0" toLane="0" via=":cluster_2322602471_7756816804_1_0" dir="s" state="m"/>
     <connection from="res_entrada" to="-1223690889#0" fromLane="1" toLane="0" via=":cluster_2322602471_7756816804_2_0" dir="l" state="m"/>
-    <connection from="res_salida" to="fuerzas_armadas_entrada" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_7_0" dir="r" state="m"/>
-    <connection from="res_salida" to="avrio_2" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_8_0" dir="s" state="m"/>
-    <connection from="res_salida" to="avrio_2" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_8_1" dir="s" state="m"/>
-    <connection from="res_salida" to="FA_2" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_10_0" dir="l" state="m"/>
+    <connection from="res_salida" to="fuerzas_armadas_entrada_nivel" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_6_0" tl="interseccion_avrio_FA" linkIndex="3" dir="r" state="o"/>
+    <connection from="res_salida" to="avrio_2" fromLane="0" toLane="0" keepClear="0" via=":interseccion_avrio_FA_7_0" tl="interseccion_avrio_FA" linkIndex="4" dir="s" state="o"/>
+    <connection from="res_salida" to="avrio_2" fromLane="1" toLane="1" keepClear="0" via=":interseccion_avrio_FA_7_1" tl="interseccion_avrio_FA" linkIndex="5" dir="s" state="o"/>
+    <connection from="res_salida" to="FA_2" fromLane="1" toLane="0" keepClear="0" via=":interseccion_avrio_FA_9_0" tl="interseccion_avrio_FA" linkIndex="6" dir="l" state="o"/>
     <connection from="salida:puerto_guaica" to="172344969#4" fromLane="0" toLane="0" via=":interseccion_puerto_guaica_5_0" dir="r" state="m"/>
     <connection from="salida:puerto_guaica" to="fernandez_padilla" fromLane="0" toLane="0" via=":interseccion_puerto_guaica_6_0" dir="R" state="m"/>
     <connection from="salida:puerto_guaica" to="592256719#6" fromLane="0" toLane="1" via=":interseccion_puerto_guaica_7_0" dir="l" state="m"/>
@@ -9104,7 +9186,7 @@
     <connection from=":11353318191_0" to="bifurcacion_FA_perrokero" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":11353318191_1" to="1223999765#0" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":11353318191_2" to="bifurcacion_FA_perrokero" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":11353318191_2" to="bifurcacion_FA_perrokero" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":11353318191_3" to="puente_subida_hacia_norte" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":11367620510_0" to="-1225793910" fromLane="0" toLane="0" dir="t" state="M"/>
     <connection from=":11367620511_0" to="1225793910" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":11367620511_1" to="335982660#1" fromLane="0" toLane="0" dir="s" state="M"/>
@@ -9909,12 +9991,12 @@
     <connection from=":7756816786_0" to="-371794626#12" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":7756816786_2" to="-830761838" fromLane="0" toLane="0" via=":7756816786_9_0" dir="l" state="m"/>
     <connection from=":7756816786_9" to="-830761838" fromLane="0" toLane="0" dir="l" state="M"/>
-    <connection from=":7756816786_3" to="FA_3" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":7756816786_3" to="FA_3_antes" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":7756816786_4" to="-371794626#12" fromLane="0" toLane="1" dir="l" state="M"/>
     <connection from=":7756816786_5" to="-830761838" fromLane="0" toLane="0" dir="t" state="M"/>
     <connection from=":7756816786_6" to="-830761838" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":7756816786_7" to="FA_3" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":7756816786_7" to="FA_3" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":7756816786_7" to="FA_3_antes" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":7756816786_7" to="FA_3_antes" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":7756816787_0" to="-1227543319" fromLane="0" toLane="0" dir="t" state="M"/>
     <connection from=":7756816788_0" to="830761837#4" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":7756816788_1" to="830761839" fromLane="0" toLane="0" via=":7756816788_7_0" dir="l" state="m"/>
@@ -9988,7 +10070,6 @@
     <connection from=":8343278834_3" to="costanera_puerto_guaica_hacialecheria" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":8424094388_0" to="172682274" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":8424094388_1" to="FA_1" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":8424094388_1" to="FA_1" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":8474279334_0" to="-912235568#1" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":8474279334_1" to="912235572" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":8474279334_2" to="-912235568#1" fromLane="0" toLane="0" via=":8474279334_3_0" dir="t" state="m"/>
@@ -10277,20 +10358,16 @@
     <connection from=":interseccion_avrio_FA_0" to="FA_2" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":interseccion_avrio_FA_1" to="res_entrada" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":interseccion_avrio_FA_1" to="res_entrada" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":interseccion_avrio_FA_3" to="fuerzas_armadas_entrada" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":interseccion_avrio_FA_3" to="fuerzas_armadas_entrada_nivel" fromLane="0" toLane="0" dir="l" state="M"/>
     <connection from=":interseccion_avrio_FA_4" to="FA_2" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":interseccion_avrio_FA_4" to="FA_2" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":interseccion_avrio_FA_6" to="res_entrada" fromLane="0" toLane="1" via=":interseccion_avrio_FA_15_0" dir="l" state="m"/>
-    <connection from=":interseccion_avrio_FA_15" to="res_entrada" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":interseccion_avrio_FA_7" to="fuerzas_armadas_entrada" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":interseccion_avrio_FA_8" to="avrio_2" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":interseccion_avrio_FA_8" to="avrio_2" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":interseccion_avrio_FA_10" to="FA_2" fromLane="0" toLane="1" dir="l" state="M"/>
-    <connection from=":interseccion_avrio_FA_11" to="res_entrada" fromLane="0" toLane="0" dir="r" state="M"/>
-    <connection from=":interseccion_avrio_FA_12" to="fuerzas_armadas_entrada" fromLane="0" toLane="0" dir="s" state="M"/>
-    <connection from=":interseccion_avrio_FA_12" to="fuerzas_armadas_entrada" fromLane="1" toLane="1" dir="s" state="M"/>
-    <connection from=":interseccion_avrio_FA_14" to="avrio_2" fromLane="0" toLane="1" via=":interseccion_avrio_FA_16_0" dir="l" state="m"/>
-    <connection from=":interseccion_avrio_FA_16" to="avrio_2" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":interseccion_avrio_FA_5" to="res_entrada" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":interseccion_avrio_FA_6" to="fuerzas_armadas_entrada_nivel" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":interseccion_avrio_FA_7" to="avrio_2" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":interseccion_avrio_FA_7" to="avrio_2" fromLane="1" toLane="1" dir="s" state="M"/>
+    <connection from=":interseccion_avrio_FA_9" to="FA_2" fromLane="0" toLane="0" dir="l" state="M"/>
+    <connection from=":interseccion_avrio_FA_10" to="res_entrada" fromLane="0" toLane="0" dir="r" state="M"/>
+    <connection from=":interseccion_avrio_FA_11" to="fuerzas_armadas_entrada_nivel" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":interseccion_avrio_FA_12" to="avrio_2" fromLane="0" toLane="1" dir="l" state="M"/>
     <connection from=":interseccion_bissau_0" to="592256719#4" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":interseccion_bissau_0" to="592256719#4" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":interseccion_bissau_2" to="entrada:bissau:1" fromLane="0" toLane="0" via=":interseccion_bissau_12_0" dir="l" state="m"/>
@@ -10328,6 +10405,16 @@
     <connection from=":interseccion_puerto_guaica_13" to="592256719#6" fromLane="0" toLane="0" dir="r" state="M"/>
     <connection from=":interseccion_puerto_guaica_14" to="entrada_puerto_guaica" fromLane="0" toLane="0" dir="L" state="M"/>
     <connection from=":interseccion_puerto_guaica_15" to="172344969#4" fromLane="0" toLane="1" dir="l" state="M"/>
+    <connection from=":perozo_bajada_norte_0" to="FA_2_despues" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":perozo_bajada_norte_1" to="FA_2_despues" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":perozo_bajada_sur_0" to="fuerzas_armadas_entrada" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":perozo_bajada_sur_1" to="fuerzas_armadas_entrada" fromLane="0" toLane="1" dir="s" state="M"/>
+    <connection from=":perozo_rampa_norte_0" to="FA_3" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":perozo_rampa_norte_1" to="puente_subida_hacia_sur" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":perozo_tablero_norte_1_0" to="puente_hacia_norte" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":perozo_tablero_norte_2_0" to="puente_bajada_hacia_norte" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":perozo_tablero_sur_1_0" to="puente_hacia_sur" fromLane="0" toLane="0" dir="s" state="M"/>
+    <connection from=":perozo_tablero_sur_2_0" to="puente_bajada_hacia_sur" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":semaforo_caminoreal_0" to="172344969#0" fromLane="0" toLane="0" dir="s" state="M"/>
     <connection from=":semaforo_caminoreal_0" to="172344969#0" fromLane="1" toLane="1" dir="s" state="M"/>
     <connection from=":semaforo_caminoreal_2" to="172680169#1" fromLane="0" toLane="0" dir="l" state="M"/>
