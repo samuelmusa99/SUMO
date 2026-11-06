@@ -1,0 +1,11 @@
+<edges>
+    <edge id="puente_subida_hacia_ffaa" disallow="bus"/>
+    <edge id="puente_hacia_ffaa" disallow="bus"/>
+    <edge id="puente_bajada_hacia_ffaa" disallow="bus"/>
+    <edge id="puente_subida_hacia_costanera" disallow="bus"/>
+    <edge id="puente_hacia_costanera" disallow="bus"/>
+    <edge id="puente_bajada_hacia_costanera" disallow="bus"/>
+    <edge id="172344969#4_bahia"><lane index="0" allow="bus taxi"/></edge>
+    <edge id="172344969#9_bahia"><lane index="0" allow="bus taxi"/></edge>
+    <edge id="592256719#7_bahia"><lane index="0" allow="bus taxi"/></edge>
+</edges>

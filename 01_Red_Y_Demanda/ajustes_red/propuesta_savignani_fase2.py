@@ -4,6 +4,8 @@
 - bahias de bus (Bissau y Puerto Guaica 30 m + cunas de 20 m; Fernandez Padilla 20 m + cunas de 15 m), carril 2,5 m
 - carriles de salida e incorporacion de Bissau (3 m x 50 m)
 - semaforo de Camino Real: 4 fases del usuario (ciclo 122 s), una por acceso
+- permisos (06/11/2026): los 6 tramos del puente prohiben la clase bus (pesados); las bahias admiten bus y taxi (carritos).
+  Sobre la red ya construida se aplico ajustes_red/propuesta_savignani_permisos.edg.xml con netconvert -s ... -e.
 """
 import math
 import xml.etree.ElementTree as ET
@@ -121,6 +123,7 @@ def tramo_puente(eid, f, t, shape):
     e.set('from', f)
     e.set('to', t)
     e.set('shape', shape)
+    e.set('disallow', 'bus')   # el distribuidor no admite pesados (Alternativa C: canal a nivel)
 
 
 tramo_puente('puente_subida_hacia_ffaa', 'distribuidor_lado_costanera', 'puente_tablero_lado_costanera', corte(P, 0, s2, cota))
@@ -184,7 +187,7 @@ def dividir(eid, tramos):
         inicio, desde = fin, hasta
 
 
-BAHIA, AUX = (2.5, 'bus'), (3.0, None)
+BAHIA, AUX = (2.5, 'bus taxi'), (3.0, None)   # bahias: buses y carritos (clase taxi)
 MOD = ['172344969#4', '172344969#5', '172344969#6', 'costanera_bissau_hacialecheria', '172344969#9', '592256719#7']
 quitar_con(set(MOD))
 L4 = acumulado(geom(edges['172344969#4']))[-1]

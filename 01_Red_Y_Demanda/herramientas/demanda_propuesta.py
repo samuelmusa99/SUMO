@@ -38,7 +38,7 @@ NODOS_DISTRIBUIDOR = {'semaforo_caminoreal', 'distribuidor_lado_costanera', 'dis
 # el transito liviano pasante Costanera <-> FFAA cruza por el puente (en la red el puente no admite pesados: van a nivel)
 PUENTE = {('semaforo_caminoreal_costanera', 'semaforocaminorea_haciaperrokero'): 'puente_hacia_ffaa',
           ('semaforo_caminoreal_FA', '172344969#0'): 'puente_hacia_costanera'}
-VCLASS = {'liviano': 'passenger', 'pesado': 'bus', 'carrito': 'bus'}
+VCLASS = {'liviano': 'passenger', 'pesado': 'bus', 'carrito': 'taxi'}   # carritos: taxis/por puestos, pueden usar el puente
 
 
 def rehacer(net, edges, vclass):
