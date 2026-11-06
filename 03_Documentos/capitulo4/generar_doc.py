@@ -416,8 +416,12 @@ cr, cp_, pk = I26['Camino Real'], I26['CC Paos'], I26['Perrokero']
 nota(f"Hallazgos 2026: Camino Real funciona en nivel {cr['LOS_HCM']} ({n(cr['demora_promedio_s'], 1)} s, V/C {n(cr['VC'], 2)}); "
      f"su acceso más cargado es la Costanera ({d(rep26, 'Camino Real', 'Norte (Costanera)')}). CC Paos opera en "
      f"{cp_['LOS_HCM']} ({n(cp_['demora_promedio_s'], 1)} s). Perrokero es el punto crítico: nivel {pk['LOS_HCM']} "
-     f"({n(pk['demora_promedio_s'], 1)} s), con la Av. Río saturada ({d(rep26, 'Perrokero', 'Este (Av. Rio)')}; atiende el "
-     f"{fila(rep26, 'Perrokero', 'Este (Av. Rio)')['demanda_atendida_pct']} % de su demanda). En Puerto Guaica, sentido "
+     f"({n(pk['demora_promedio_s'], 1)} s); su acceso crítico es la FFAA desde Camino Real "
+     f"({d(rep26, 'Perrokero', 'Norte (desde Camino Real)')}; atiende el "
+     f"{fila(rep26, 'Perrokero', 'Norte (desde Camino Real)')['demanda_atendida_pct']} % de su demanda, cola máxima de "
+     f"{n(fila(rep26, 'Perrokero', 'Norte (desde Camino Real)')['cola_maxima_m'])} m), y la Av. Río espera "
+     f"{d(rep26, 'Perrokero', 'Este (Av. Rio)')} pero descarga {n(fila(rep26, 'Perrokero', 'Este (Av. Rio)')['volumen_promedio_veh_h'])} "
+     f"veh/h, cerca de los 180 veh/h del conteo de campo. En Puerto Guaica, sentido "
      f"Camino Real, la parada de bus ocupa el carril derecho cerca del 23 % de la hora pico: redactarlo así, porque la "
      f"longitud de cola de ese acceso es un efecto de cómo mide SUMO.")
 

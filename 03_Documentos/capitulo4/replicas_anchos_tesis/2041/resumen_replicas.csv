@@ -1,28 +1,28 @@
-﻿interseccion;nivel;acceso;replicas;volumen_promedio_veh_h;demora_promedio_s;demora_min_s;demora_max_s;desviacion_estandar_s;LOS_promedio;LOS_HCM;demanda_veh_h;capacidad_veh_h;fuente_capacidad;VC;demanda_atendida_pct;tesis_LOS;tesis_demora_s;cola_promedio_m;cola_maxima_m;cola_llena_el_tramo;velocidad_media_kmh;tiempo_viaje_s
-Camino Real;INTERSECCION;(todos);5;2036;190.1;164.3;203.8;16.5;F;F;4031;;V/C del acceso critico;1.37;51;F;129.3;;;;;
-Camino Real;ACCESO;Sur (FFAA);5;937;256.2;210.4;371.5;65.9;F;F;1330;1067;capacidad de la situacion actual 2026;1.25;70;;;82;308;si;4.3;
-Camino Real;ACCESO;Norte (Costanera);5;228;415.3;285.5;496.6;80.8;F;F;1168;852;capacidad de la situacion actual 2026;1.37;20;;;121;161;si;1.8;
-Camino Real;ACCESO;Oeste (El Ejercito);5;871;322.6;236.7;417.9;65.0;F;F;1534;1590;capacidad de la situacion actual 2026;0.96;57;;;141;296;si;3.4;
-CC Paos;INTERSECCION;(todos);5;948;143.7;70.8;234.8;66.9;F;F;2578;;V/C del acceso critico;1.03;37;C;22.6;;;;;
-CC Paos;ACCESO;Sur (Costanera);5;220;256.6;108.7;811.7;310.5;F;F;376;1023;capacidad de la situacion actual 2026;0.37;59;;;34;102;no;6.4;
-CC Paos;ACCESO;Este (Lecheria);5;475;599.8;408.3;720.1;125.4;F;F;1480;1439;capacidad de la situacion actual 2026;1.03;32;;;70;158;no;2.8;
-CC Paos;ACCESO;Norte (Madre Vieja);5;253;2039.7;1562.6;3126.1;650.5;F;F;722;1721;capacidad de la situacion actual 2026;0.42;35;;;548;908;si;2.3;
-Perrokero;INTERSECCION;(todos);5;1443;241.3;212.1;304.1;37.1;F;F;3331;;V/C del acceso critico;2.05;43;F;"2883.7 (tabla 4.9); 1000.0 en conclusiones";;;;;
-Perrokero;ACCESO;Sur (FFAA);5;1024;39.8;33.4;57.0;9.9;E;E;1255;3635;capacidad de la situacion actual 2026;0.35;82;;;14;108;no;9.4;
-Perrokero;ACCESO;Norte (desde Camino Real);5;303;860.0;618.3;1174.4;232.9;F;F;1713;1128;capacidad de la situacion actual 2026;1.52;18;;;252;320;si;1.5;
-Perrokero;ACCESO;Este (Av. Rio);5;71;2934.3;2563.5;3318.9;337.5;F;F;250;122;capacidad de la situacion actual 2026;2.05;29;;;163;336;si;0.6;
-Perrokero;ACCESO;Oeste (Residencias);5;45;1419.3;1190.8;1777.2;272.9;F;F;114;77;capacidad de la situacion actual 2026;1.48;40;;;58;96;no;0.3;
-Bissau;INTERSECCION;(todos);5;1797;152.8;129.3;195.8;25.9;F;F;3836;;V/C del acceso critico;1.36;47;F;1074 a 1228 (HCM recalculado: ~28 s, D);;;;;
-Bissau;ACCESO;Costanera sentido Camino Real;5;512;534.1;472.2;605.0;60.5;F;F;1905;3618;capacidad de la situacion actual 2026;0.53;27;;;325;374;si;2.5;
-Bissau;ACCESO;Costanera sentido Lecheria;5;1278;162.4;77.4;328.5;96.4;F;F;1893;3638;capacidad de la situacion actual 2026;0.52;68;;;14;432;si;9.2;
-Bissau;ACCESO;Salida Bissau (residencias/CC);5;7;5959.5;1237.4;18592.7;7183.2;F;F;38;28;capacidad de la situacion actual 2026;1.36;17;;;11;45;no;0.1;
-Bissau;ACCESO;Salida Bissau (galpones);5;0;0.0;0.0;0.0;0.0;A;A;0;1900;capacidad de la situacion actual 2026;0.00;100;;;0;0;no;;
-Puerto Guaica;INTERSECCION;(todos);5;1796;88.5;81.4;103.9;9.2;F;F;3813;;V/C del acceso critico;0.53;47;F;1074 a 1228;;;;;
-Puerto Guaica;ACCESO;Salida Fernandez Padilla;5;12;87.0;8.0;321.2;132.1;F;F;14;27;capacidad de la situacion actual 2026;0.51;85;;;2;14;no;11.7;
-Puerto Guaica;ACCESO;Costanera sentido Camino Real;5;462;398.0;312.5;450.7;67.7;F;F;1884;3616;capacidad de la situacion actual 2026;0.52;25;;;264;326;si;2.9;
-Puerto Guaica;ACCESO;Costanera sentido Lecheria;5;1319;75.5;52.9;125.7;29.6;F;F;1910;3637;capacidad de la situacion actual 2026;0.53;69;;;86;209;si;9.0;
-Puerto Guaica;ACCESO;Salida Puerto Guaica;5;4;918.0;122.0;2214.7;976.0;F;F;6;29;capacidad de la situacion actual 2026;0.19;65;;;3;13;no;0.8;
-Red completa;RED;carrito;5;42;1348.6;1140.7;1729.6;227.1;;;;;;;;;;;;;5.4;1543.3
-Red completa;RED;liviano;5;3800;1271.7;1119.7;1619.0;201.5;;;;;;;;;;;;;4.1;1387.3
-Red completa;RED;pesado;5;158;1469.5;1117.3;1871.4;275.7;;;;;;;;;;;;;3.6;1634.3
-Red completa;RED;TOTAL;5;4000;1280.4;1121.5;1630.2;203.3;;;;;;;;;;;;;4.1;1398.8
+﻿interseccion;nivel;acceso;replicas;volumen_promedio_veh_h;demora_promedio_s;demora_min_s;demora_max_s;desviacion_estandar_s;LOS_promedio;LOS_HCM;demanda_veh_h;capacidad_veh_h;fuente_capacidad;VC;demanda_atendida_pct;tesis_LOS;tesis_demora_s;cola_promedio_m;cola_maxima_m;cola_llena_el_tramo;velocidad_media_kmh;tiempo_viaje_s;tiempo_en_paradas_s
+Camino Real;INTERSECCION;(todos);5;2411;183.5;168.5;203.7;15.5;F;F;4031;;V/C del acceso critico;1.77;60;F;129.3;;;;;;
+Camino Real;ACCESO;Sur (FFAA);5;879;292.9;212.6;504.6;121.4;F;F;1330;1067;capacidad de la situacion actual 2026;1.25;66;;;91;306;si;4.0;;
+Camino Real;ACCESO;Norte (Costanera);5;428;112.0;83.4;143.8;21.5;F;F;1168;658;capacidad de la situacion actual 2026;1.77;37;;;47;163;si;5.5;;
+Camino Real;ACCESO;Oeste (El Ejercito);5;1104;247.0;174.1;363.8;71.9;F;F;1534;1590;capacidad de la situacion actual 2026;0.96;72;;;130;297;si;4.4;;
+CC Paos;INTERSECCION;(todos);5;1130;218.6;80.6;350.5;115.6;F;F;2578;;V/C del acceso critico;1.03;44;C;22.6;;;;;;
+CC Paos;ACCESO;Sur (Costanera);5;190;463.6;118.3;1771.2;731.2;F;F;376;1023;capacidad de la situacion actual 2026;0.37;51;;;43;98;no;5.4;;
+CC Paos;ACCESO;Este (Lecheria);5;583;527.4;342.2;997.7;266.7;F;F;1480;1439;capacidad de la situacion actual 2026;1.03;39;;;67;89;no;3.4;;
+CC Paos;ACCESO;Norte (Madre Vieja);5;357;1468.4;964.5;2391.6;542.6;F;F;722;1721;capacidad de la situacion actual 2026;0.42;49;;;526;910;si;2.9;;
+Perrokero;INTERSECCION;(todos);5;2170;211.9;179.2;232.1;21.4;F;F;3331;;V/C del acceso critico;1.77;65;F;"2883.7 (tabla 4.9); 1000.0 en conclusiones";;;;;;
+Perrokero;ACCESO;Sur (FFAA);5;922;47.8;33.7;77.7;17.8;E;E;1255;3635;capacidad de la situacion actual 2026;0.35;73;;;17;111;no;8.3;;
+Perrokero;ACCESO;Norte (desde Camino Real);5;935;169.3;138.5;207.2;27.2;F;F;1713;969;capacidad de la situacion actual 2026;1.77;55;;;118;318;si;6.1;;
+Perrokero;ACCESO;Este (Av. Rio);5;210;457.9;239.8;565.7;148.9;F;F;250;167;capacidad de la situacion actual 2026;1.50;84;;;11;199;no;3.0;;
+Perrokero;ACCESO;Oeste (Residencias);5;104;244.7;186.0;302.5;41.5;F;F;114;109;capacidad de la situacion actual 2026;1.04;91;;;41;94;no;1.5;;
+Bissau;INTERSECCION;(todos);5;1853;182.6;110.5;221.7;44.1;F;F;3836;;V/C del acceso critico;1.56;48;F;1074 a 1228 (HCM recalculado: ~28 s, D);;;;;;
+Bissau;ACCESO;Costanera sentido Camino Real;5;698;351.0;237.5;502.1;98.2;F;F;1905;1224;capacidad de la situacion actual 2026;1.56;37;;;284;375;si;3.8;;
+Bissau;ACCESO;Costanera sentido Lecheria;5;1151;249.4;143.8;493.2;141.9;F;F;1893;3638;capacidad de la situacion actual 2026;0.52;61;;;17;433;si;6.6;;
+Bissau;ACCESO;Salida Bissau (residencias/CC);5;4;7693.9;2356.6;17432.1;6578.3;F;F;38;32;capacidad de la situacion actual 2026;1.19;10;;;9;29;no;0.1;;
+Bissau;ACCESO;Salida Bissau (galpones);5;0;0.0;0.0;0.0;0.0;A;A;0;1900;capacidad de la situacion actual 2026;0.00;100;;;0;0;no;;;
+Puerto Guaica;INTERSECCION;(todos);5;1952;106.9;87.0;122.8;14.6;F;F;3813;;V/C del acceso critico;1.63;51;F;1074 a 1228;;;;;;
+Puerto Guaica;ACCESO;Salida Fernandez Padilla;5;9;562.0;126.0;1951.9;779.7;F;F;14;33;capacidad de la situacion actual 2026;0.41;63;;;8;32;no;2.5;;
+Puerto Guaica;ACCESO;Costanera sentido Camino Real;5;706;182.7;116.8;344.4;94.6;F;F;1884;1159;capacidad de la situacion actual 2026;1.63;37;;;169;329;si;6.3;;
+Puerto Guaica;ACCESO;Costanera sentido Lecheria;5;1234;93.5;53.0;180.2;50.8;F;F;1910;3637;capacidad de la situacion actual 2026;0.53;65;;;87;209;si;8.0;;
+Puerto Guaica;ACCESO;Salida Puerto Guaica;5;3;826.6;31.5;1774.6;640.3;F;F;6;35;capacidad de la situacion actual 2026;0.16;61;;;4;16;no;1.3;;
+Red completa;RED;carrito;5;41;1385.0;1128.2;2005.6;372.7;;;;;;;;;;;;;5.3;1577.9;12.2
+Red completa;RED;liviano;5;4203;986.6;840.0;1407.2;238.1;;;;;;;;;;;;;5.5;1109.6;0.0
+Red completa;RED;pesado;5;184;1083.8;837.3;1434.5;227.6;;;;;;;;;;;;;5.0;1261.8;5.6
+Red completa;RED;TOTAL;5;4428;994.4;848.9;1413.7;237.9;;;;;;;;;;;;;5.5;1120.3;0.3
