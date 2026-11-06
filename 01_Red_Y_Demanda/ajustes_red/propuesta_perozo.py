@@ -245,7 +245,7 @@ total = sum(len(enl) for *_, enl in ACCESOS)
 i = 0
 for k, (_, f, verde, enl) in enumerate(ACCESOS):
     for t, fl, tl in enl:
-        con(f, t, fl, tl, keepClear='0')
+        con(f, t, fl, tl)   # keepClear por defecto (no bloquear el cruce; antes keepClear='0', ver keepclear_perrokero.con.xml)
         ET.SubElement(T, 'connection', {'from': f, 'to': t, 'fromLane': str(fl), 'toLane': str(tl), 'tl': CRUCE,
                                         'linkIndex': str(i + enl.index((t, fl, tl)))})
     for dur, c in ((verde, 'G'), (AMARILLO, 'y')):
