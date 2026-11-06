@@ -244,7 +244,7 @@ cuadro(f'Cuadro {num()} Descripción de los escenarios simulados',
          'por Camino Real usa la Av. En Proyección', 'La misma de la base'],
         ],
        [3.0, 3.6, 4.7, 4.7], tam=8)
-nota('El 30 % de la Av. En Proyección es un supuesto del autor (la tesis no le asigna volumen) y debe declararse. Por esa razón '
+nota('El 30 % de la Av. En Proyección lo indicó el tutor como criterio de experto (la tesis no le asigna volumen) y debe declararse así. Por esa razón '
      'la red de Savignani recibe algo menos de tránsito en FFAA, lo que la favorece levemente en la comparación. La capacidad de '
      'cada acceso en 2041 se toma de la de 2026 del mismo escenario.')
 

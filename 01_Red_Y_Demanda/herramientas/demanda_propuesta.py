@@ -4,8 +4,8 @@ Demanda de la propuesta Assouad y Peroza (2022) a partir de la demanda base (202
 La demanda de cada horizonte es la misma de la base (demanda/demanda_base.rou.xml y demanda_2041.rou.xml, generadas en
 main con generar_demanda.py); solo cambian las rutas en Perrokero, donde la propuesta divide FFAA en puente y nivel:
   - los livianos que siguen derecho por FFAA (movimientos MF2 y MF5 de la tesis) cruzan por el puente;
-  - los giros, los pesados y los carritos (clase bus, no admitidos en el puente) cruzan a nivel por el semaforo.
-El transporte publico con paradas (costanera.rou.xml) no cambia: SUMO le calcula la ruta y no puede usar el puente.
+  - los giros y los pesados (clase bus, no admitidos en el puente) cruzan a nivel por el semaforo.
+El transporte publico con paradas esta en costanera.rou.xml: los carritos (clase taxi) que siguen derecho van por el puente (via).
 
 Uso:  python demanda_propuesta.py   (volver a ejecutarlo si cambia la red o la demanda base)
 """
@@ -23,7 +23,7 @@ RED = os.path.join(AQUI, '..', 'costanera.net.xml')
 DEMANDA = os.path.join(AQUI, '..', 'demanda')
 ARCHIVOS = {'demanda_base.rou.xml': 'demanda_perozo_2026.rou.xml',
             'demanda_2041.rou.xml': 'demanda_perozo_2041.rou.xml'}
-VCLASS = {'liviano': 'passenger', 'pesado': 'bus', 'carrito': 'bus'}
+VCLASS = {'liviano': 'passenger', 'pesado': 'bus', 'carrito': 'taxi'}   # carritos: taxis/por puestos, pueden usar el puente
 # tramos de la red base -> tramos de la propuesta (a nivel) y recorrido por el puente de los livianos que siguen derecho
 NIVEL = {'FA_3': ['FA_3_antes', 'FA_3'], 'fuerzas_armadas_entrada': ['fuerzas_armadas_entrada_nivel', 'fuerzas_armadas_entrada'],
          'FA_2': ['FA_2', 'FA_2_despues']}
