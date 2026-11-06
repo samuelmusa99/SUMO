@@ -232,7 +232,7 @@ cuadro(f'Cuadro {num()} Descripción de los escenarios simulados',
         ['Obra principal', '-', 'Distribuidor tipo puente Costanera ↔ FFAA: 1 carril de 4 m por sentido; tablero de 30 m a 7,4 m; '
          'rampas de 60 m al 12,3 %', 'Puente sobre FFAA: 1 carril de 3,70 m por sentido; tablero de 20 m a 6,0 m; rampas de 40 m al 15 % '
          '(100 m en total)'],
-        ['Tránsito por el puente', '-', 'Solo livianos (pesados y carritos a nivel)', 'Solo livianos (pesados y carritos a nivel)'],
+        ['Tránsito por el puente', '-', 'Livianos y carritos (pesados a nivel)', 'Livianos y carritos (pesados a nivel)'],
         ['Control a nivel', 'Semáforo de 82 s (Camino Real); Perrokero sin semáforo',
          'Semáforo de 4 fases, ciclo de 122 s (una fase por acceso)', 'Semáforo de 4 fases, ciclo de 120 s (Norte 33, Oeste 20, Sur 25 '
          'y Este 30 s)'],
@@ -244,6 +244,8 @@ cuadro(f'Cuadro {num()} Descripción de los escenarios simulados',
          'por Camino Real usa la Av. En Proyección', 'La misma de la base'],
         ],
        [3.0, 3.6, 4.7, 4.7], tam=8)
+nota('Los carritos (taxis y por puestos) se modelan como automóviles con paradas de 15 s; como no son vehículos pesados, en ambas '
+     'propuestas pueden usar el puente (criterio del autor). Los pesados, incluidos los buses, cruzan siempre a nivel.')
 nota('El 30 % de la Av. En Proyección lo indicó el tutor como criterio de experto (la tesis no le asigna volumen) y debe declararse así. Por esa razón '
      'la red de Savignani recibe algo menos de tránsito en FFAA, lo que la favorece levemente en la comparación. La capacidad de '
      'cada acceso en 2041 se toma de la de 2026 del mismo escenario.')
@@ -357,9 +359,12 @@ vineta(f'La causa es la geometría a nivel bajo el puente: El Ejército y la baj
        f'{ds("2026", "Base", "Camino Real", "Sur (FFAA)")} a {ds("2026", "Savignani", "Camino Real", "Sur (FFAA)")}. El propio Anexo B '
        'de la tesis muestra ese giro con Xc = 1,04 (incongruencia S26): el distribuidor traslada el cuello de botella a la salida '
        'hacia la Costanera.')
-vineta(f'El transporte público empeora: los carritos no pueden usar el puente y cruzan por FFAA a nivel; su demora sube de '
+vineta(f'Transporte público: los carritos usan el distribuidor y su demora baja de '
        f'{n(fila("2026", "Base", "Red completa", "carrito")["demora_promedio_s"])} s a '
-       f'{n(fila("2026", "Savignani", "Red completa", "carrito")["demora_promedio_s"])} s.')
+       f'{n(fila("2026", "Savignani", "Red completa", "carrito")["demora_promedio_s"])} s; los buses y demás pesados no pueden '
+       f'subir y cruzan por FFAA a nivel, que queda saturada: su demora sube de '
+       f'{n(fila("2026", "Base", "Red completa", "pesado")["demora_promedio_s"])} s a '
+       f'{n(fila("2026", "Savignani", "Red completa", "pesado")["demora_promedio_s"])} s.')
 vineta(f'Bissau y Puerto Guaica mejoran ({n(I["2026", "Base"]["Bissau"]["demora_promedio_s"], 1)} → '
        f'{n(I["2026", "Savignani"]["Bissau"]["demora_promedio_s"], 1)} s y {n(I["2026", "Base"]["Puerto Guaica"]["demora_promedio_s"], 1)} → '
        f'{n(I["2026", "Savignani"]["Puerto Guaica"]["demora_promedio_s"], 1)} s) por las bahías de bus, pero también porque llega menos '
@@ -399,7 +404,12 @@ cuadro(f'Cuadro {num()} Síntesis de la comparación',
         ['Efecto en el resto del eje (2026)', 'Mejora Bissau y Puerto Guaica; Perrokero recibe menos tránsito', 'Sin cambios apreciables'],
         ['Red completa 2026', f'{n(R["2026", "Savignani"]["velocidad_media_kmh"], 1)} km/h; menos viajes completados',
          f'{n(R["2026", "Perozo"]["velocidad_media_kmh"], 1)} km/h; los mismos viajes'],
-        ['Transporte público', 'Empeora mucho (no usa el puente y FFAA a nivel queda saturada)', 'Empeora poco'],
+        ['Transporte público (2026)',
+         f'Carritos mejoran (usan el puente: {n(fila("2026", "Savignani", "Red completa", "carrito")["demora_promedio_s"])} s); '
+         f'pesados empeoran ({n(fila("2026", "Savignani", "Red completa", "pesado")["demora_promedio_s"])} s; FFAA a nivel saturada)',
+         f'Carritos y pesados empeoran poco ({n(fila("2026", "Perozo", "Red completa", "carrito")["demora_promedio_s"])} y '
+         f'{n(fila("2026", "Perozo", "Red completa", "pesado")["demora_promedio_s"])} s; base: '
+         f'{n(fila("2026", "Base", "Red completa", "carrito")["demora_promedio_s"])} y {n(fila("2026", "Base", "Red completa", "pesado")["demora_promedio_s"])} s)'],
         ['Horizonte 2041', 'Colapso igual a la base', 'Colapso, pero con más viajes atendidos y menos demora'],
         ['Problema principal detectado', 'Salida de un carril hacia la Costanera bajo el puente (S26)',
          'Un solo carril a nivel en el acceso norte: su cola bloquea la entrada al puente (P10)']],
@@ -412,7 +422,8 @@ vineta('Perozo: alargar la separación de carriles antes del puente en el acceso
        'cola de giro no bloquee la entrada al puente; revisar la pendiente del 15 % (P4, P9).')
 vineta('Savignani: el distribuidor necesita una salida de dos carriles hacia la Costanera bajo el puente; sin ella traslada el '
        'cuello de botella. Las bahías de bus y los carriles de incorporación sí aportan y pueden conservarse en la propuesta final.')
-vineta('El transporte público debe tener paso por el puente o un carril a nivel que no quede saturado.')
+vineta('Los buses y demás pesados no pueden usar los puentes: necesitan un carril a nivel que no quede saturado (en Savignani, '
+       'FFAA a nivel con un carril y 20 s de verde).')
 nota('Estas ideas son el punto de partida para la propuesta final, que se simulará con la misma metodología; sus resultados se '
      'agregarán a este mismo formato. Las incongruencias de cada tesis citadas (S26, P4, P9, P10) están en '
      'INCONGRUENCIAS_TESIS_EVALUADAS.md.')
