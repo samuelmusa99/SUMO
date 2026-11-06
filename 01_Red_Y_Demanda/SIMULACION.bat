@@ -29,6 +29,10 @@ for %%N in (reporte_viajes reporte_colas reporte_densidad) do (
     )
 )
 
+echo Copiando la red de este escenario a la carpeta del Excel...
+:: El Excel lee la red (hoja Tramos y densidades) desde su carpeta, no desde la rama de git activa.
+copy /Y "%RED_DIR%\costanera.net.xml" "%CSV_DIR%\costanera.net.xml" > nul
+
 echo Calculando niveles de servicio por intersección...
 python "%RED_DIR%\herramientas\resumen_resultados.py" savignani2026 "%XML_DIR%" "%CSV_DIR%"
 if errorlevel 1 (
