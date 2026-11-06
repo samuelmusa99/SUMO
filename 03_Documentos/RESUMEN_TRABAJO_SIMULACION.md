@@ -296,3 +296,22 @@ Lo aplicado en la red con `ajustes_red/propuesta_perozo.py` (se corre sobre la r
 6. **Los 8 Excel** (base, 2041, Savignani, Perozo y Final) actualizados para tipar la columna nueva; se probó el refresco de una copia sin errores.
 7. **Réplicas finales de Savignani 2026 y 2041** con el reporte nuevo (sección 7), guardadas en `capitulo4\replicas_savignani`.
 8. Este resumen e `INCONGRUENCIAS_TESIS_EVALUADAS.md` (con S26) llevados también a main.
+
+---
+
+## 11. Bitácora del 06/11/2026
+
+1. **Revisión exhaustiva** (`REVISION_EXHAUSTIVA_2026-11-06.md`). Puntos críticos: la demanda de Perrokero es de 3 a 10 veces el conteo de campo; el +50 % post COVID es un supuesto propio (Savignani solo lo usa para su propuesta, imp. 233); el GEH es verificación de la carga, no validación; con 5 réplicas, "Perozo mejora la red en 2026" no es significativo.
+2. **Decisiones del usuario:** recontar Perrokero (5 minutos en la hora pico durante 3 días), filmar la cola de la FFAA y recorrer el eje para medir la velocidad; quedarse con 5 réplicas y reportar el intervalo de confianza; el 30 % de la Av. En Proyección lo indicó el tutor (no hay sensibilidad con 0 %); en 2041 se reportan los mismos indicadores que en 2026, más la demanda atendida.
+3. **Pendiente de las rampas:** `carFollowModel="KraussPS"` en `propuestaPerozo` (`c66a9a4`) y en `propuestaSavignani` (`7c59139`). En la red plana da lo mismo que Krauss (verificado), así que la base no se volvió a correr y `main` sigue con Krauss.
+4. **Carritos en el puente de Perozo** (clase `taxi`, solo en esa rama).
+5. **Réplicas rehechas:**
+   - Perozo 2026: Perrokero E 61,1 s; red 112 s y 27,4 km/h.
+   - Perozo 2041: Perrokero F 87,5 s, en el límite de 80 s.
+   - Savignani 2026: Camino Real F 84,2 s; red 118 s y 26,4 km/h.
+   - Savignani 2041: red 4,2 km/h.
+   - Las conclusiones no cambian.
+6. **Consolidado en main:** documentos, `comparar_propuestas.py`, las réplicas de las tres simulaciones, `generar_detectores.py` y `red_excel.py`. Se regeneró el Word `COMPARACION DE ESCENARIOS - BASE, SAVIGNANI Y PEROZO.docx`. Los `.bat` de la base copian la red a su carpeta de Excel.
+7. **Carritos como taxi en las tres ramas** (decisión del usuario: se detienen en las paradas y, como no son pesados, usan los puentes). En main no cambia nada (verificado). En Savignani: bahías con `allow="bus taxi"`, ruta fija del carrito FFAA → Lechería por el distribuidor y **corrección de permisos**: antes solo `puente_subida_hacia_ffaa` prohibía `bus`; ningún pesado usó el puente (verificado) y ahora los 6 tramos lo prohíben (`ajustes_red/propuesta_savignani_permisos.edg.xml`). Réplicas nuevas de Savignani 2026: carritos de 391 a 49 s de demora; Camino Real E 76,6 s (en el límite de 80 s; la base está en D 43,9 s); red 106 s y 27,8 km/h. En 2041 no cambia.
+8. Se fusionó main en `propuestaSavignani` (`8581717`). Main tiene las réplicas definitivas de las tres simulaciones y el Word de comparación regenerado, con los textos sobre transporte público corregidos.
+9. **Falta:** la línea `copy /Y` de la red en los `.bat` de Final (Savignani ya la tiene por la fusión); correr los `.bat` de Savignani y Perozo para refrescar sus Excel con KraussPS; fusionar main en las tres ramas (en Perozo, conservar su `resumen_resultados.py` y su `costanera.rou.xml`).
