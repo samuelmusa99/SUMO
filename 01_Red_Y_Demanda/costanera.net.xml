@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-11-06T16:02:39.087821-04:00 by Eclipse SUMO netconvert 1.26.0
+<!-- generated on 2026-11-06T19:42:32.480427-04:00 by Eclipse SUMO netconvert 1.26.0
 <netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
         <sumo-net-file value="antes.net.xml"/>
-        <connection-files value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/ajustes_red/keepclear_perrokero.con.xml"/>
+        <edge-files value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/ajustes_red/cesion_giro_libre_perrokero.edg.xml"/>
     </input>
 
     <output>
@@ -5126,7 +5126,7 @@
         <lane id="172682268#2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="19.79" width="3.00" shape="1388.71,929.54 1369.04,927.32"/>
         <lane id="172682268#2_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="19.79" width="3.00" shape="1389.04,926.56 1369.38,924.34"/>
     </edge>
-    <edge id="172682274" from="8424094388" to="1835630725" priority="5" type="highway.tertiary_link" spreadType="center" shape="1376.44,865.35 1359.08,897.74 1357.46,904.79 1358.34,910.86 1361.87,915.98 1369.12,920.06 1378.32,923.84">
+    <edge id="172682274" from="8424094388" to="1835630725" priority="1" type="highway.tertiary_link" spreadType="center" shape="1376.44,865.35 1359.08,897.74 1357.46,904.79 1358.34,910.86 1361.87,915.98 1369.12,920.06 1378.32,923.84">
         <lane id="172682274_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="5.50" length="22.95" width="3.50" shape="1363.67,889.17 1359.08,897.74 1357.46,904.79 1358.32,910.73"/>
     </edge>
     <edge id="223358280" from="2322602535" to="2322602523" priority="3" type="highway.residential" shape="1112.17,1209.29 1272.62,1334.56 1276.34,1335.51 1280.08,1333.67 1300.66,1305.52 1302.54,1301.86 1301.50,1298.15 1150.71,1166.70">
@@ -6410,9 +6410,9 @@
     <junction id="1835630725" type="priority" x="1378.32" y="923.84" incLanes="172682268#2_0 172682268#2_1 172682274_0 avrio_2_0 avrio_2_1" intLanes=":1835630725_0_0 :1835630725_0_1 :1835630725_2_0 :1835630725_3_0 :1835630725_3_1" shape="1368.87,928.81 1370.22,916.89 1367.32,916.35 1364.88,915.47 1362.91,914.24 1361.39,912.65 1360.34,910.72 1359.76,908.43 1357.28,912.40 1358.10,914.18 1357.99,914.76 1357.53,915.13 1356.72,915.29 1355.57,915.25 1354.23,927.17">
         <request index="0" response="00000" foes="00000" cont="0"/>
         <request index="1" response="00000" foes="00000" cont="0"/>
-        <request index="2" response="00000" foes="11000" cont="0"/>
-        <request index="3" response="00100" foes="00100" cont="0"/>
-        <request index="4" response="00100" foes="00100" cont="0"/>
+        <request index="2" response="11000" foes="11000" cont="0"/>
+        <request index="3" response="00000" foes="00100" cont="0"/>
+        <request index="4" response="00000" foes="00100" cont="0"/>
     </junction>
     <junction id="1835630761" type="priority" x="1490.24" y="936.44" incLanes="av_rio_salida_0 av_rio_salida_1 -172682268#1_0 -172682268#1_1 -462104560_0" intLanes=":1835630761_0_0 :1835630761_1_0 :1835630761_1_1 :1835630761_3_0 :1835630761_3_1 :1835630761_8_0 :1835630761_6_0 :1835630761_7_0" shape="1496.91,943.25 1498.28,931.33 1483.94,929.69 1482.59,941.62 1484.76,942.33 1485.49,943.00 1485.98,943.88 1486.22,944.96 1486.23,946.26 1492.61,946.78 1493.23,944.61 1493.84,943.90 1494.66,943.44 1495.68,943.22">
         <request index="0" response="00000000" foes="00100000" cont="0"/>
@@ -8517,7 +8517,7 @@
     <connection from="172682268#1" to="172682268#2" fromLane="1" toLane="1" via=":11350354100_1_1" dir="s" state="M"/>
     <connection from="172682268#2" to="avrio_1" fromLane="0" toLane="0" via=":1835630725_0_0" dir="s" state="M"/>
     <connection from="172682268#2" to="avrio_1" fromLane="1" toLane="1" via=":1835630725_0_1" dir="s" state="M"/>
-    <connection from="172682274" to="-172682268#2" fromLane="0" toLane="0" via=":1835630725_2_0" dir="s" state="M"/>
+    <connection from="172682274" to="-172682268#2" fromLane="0" toLane="0" via=":1835630725_2_0" dir="s" state="m"/>
     <connection from="223358280" to="-371794626#9" fromLane="0" toLane="0" via=":2322602523_0_0" dir="r" state="m"/>
     <connection from="223358280" to="371794626#10" fromLane="0" toLane="1" via=":2322602523_1_0" dir="l" state="m"/>
     <connection from="223358287#0" to="421150182#1" fromLane="0" toLane="0" via=":4209674319_8_0" dir="r" state="m"/>
@@ -8930,8 +8930,8 @@
     <connection from="avrio_1" to="res_entrada" fromLane="0" toLane="0" via=":interseccion_avrio_FA_1_0" dir="s" state="m"/>
     <connection from="avrio_1" to="res_entrada" fromLane="1" toLane="1" via=":interseccion_avrio_FA_1_1" dir="s" state="m"/>
     <connection from="avrio_1" to="fuerzas_armadas_entrada" fromLane="1" toLane="1" via=":interseccion_avrio_FA_3_0" dir="l" state="m"/>
-    <connection from="avrio_2" to="-172682268#2" fromLane="0" toLane="0" via=":1835630725_3_0" dir="s" state="m"/>
-    <connection from="avrio_2" to="-172682268#2" fromLane="1" toLane="1" via=":1835630725_3_1" dir="s" state="m"/>
+    <connection from="avrio_2" to="-172682268#2" fromLane="0" toLane="0" via=":1835630725_3_0" dir="s" state="M"/>
+    <connection from="avrio_2" to="-172682268#2" fromLane="1" toLane="1" via=":1835630725_3_1" dir="s" state="M"/>
     <connection from="bifurcacion_FA_perrokero" to="172682274" fromLane="0" toLane="0" via=":8424094388_0_0" dir="s" state="M"/>
     <connection from="bifurcacion_FA_perrokero" to="FA_1" fromLane="0" toLane="0" via=":8424094388_1_0" dir="s" state="M"/>
     <connection from="bifurcacion_FA_perrokero" to="FA_1" fromLane="1" toLane="1" via=":8424094388_1_1" dir="s" state="M"/>
