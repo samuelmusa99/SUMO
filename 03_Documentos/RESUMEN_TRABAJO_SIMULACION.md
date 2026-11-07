@@ -127,17 +127,18 @@ Desktop\EXCEL RESULTADOS\
 
 ---
 
-## 5. Resultados finales de la base (5 réplicas; red de main)
+## 5. Resultados finales de la base (5 réplicas; red de main con keepClear y cesión del giro libre en Perrokero, 06/11/2026)
 
 | Intersección | 2026 | 2041 sin proyecto |
 |---|---|---|
-| Camino Real | **D** · 43,9 s · V/C 0,95 (FFAA D 53 s; Costanera E 58 s; El Ejército C 27,5 s) | **F** · 190,1 s · 51 % atendida |
-| CC Paos | **C** · 21,1 s · V/C 0,73 | **F** · 143,7 s · 37 % |
-| Perrokero | **F** · 145,2 s · V/C 1,42 (Av. Río 817 s y 70 % atendida; FFAA norte F 116 s; FFAA sur A) | **F** · 241,3 s · 43 % |
-| Bissau | promedio 7,3 s; avenida A; salida residencial F (66 s, 23 veh/h) | **F** · 152,8 s · 47 % |
-| Puerto Guaica | promedio 17,0 s (D por la salida residencial); avenida A–C | **F** · 88,5 s · 47 % |
-| Red completa | 4.544 viajes; 313 s de viaje; 160 s de demora; **23,3 km/h**; 0 teletransportes | 4.000 viajes; 1.399 s; **4,1 km/h** |
+| Camino Real | **D** · 41,9 s (Costanera D 53,5 s) | **F** · 178,2 s · 68 % atendida |
+| CC Paos | **C** · 21,5 s | **F** · 220,4 s · 50 % |
+| Perrokero | **F** · 95,8 s (Av. Río F 507 s, descarga 139 de 172 veh/h, campo 180; FFAA norte F 67 s; Residencias D 27 s; FFAA sur A) | **F** · 195,9 s · 71 % |
+| Bissau | promedio 4,3 s (D por la salida residencial) | **F** · 177,3 s · 56 % |
+| Puerto Guaica | promedio 12,7 s (D) | **F** · 95,3 s · 58 % |
+| Red completa | 4.545 viajes; 281 s de viaje; 127 s de demora; **26,0 km/h**; 0 teletransportes | 4.887 viajes; 824 s de demora; **6,6 km/h** |
 
+- **Valores anteriores (keepClear=0, hasta el 06/11):** Camino Real D 43,9 s; Perrokero F 145 s (Av. Río 817 s); red 23,3 km/h; 2041 red 4,1 km/h. Se cambiaron porque Perrokero se bloqueaba en ~30 % de las semillas (ver bitácora del 06/11).
 - En 2041 el colapso empieza en Perrokero (FFAA norte) y se propaga a Camino Real, Puerto Guaica, Bissau y CC Paos.
 - **Comparación con las tesis:** Perrokero coincide (F). CC Paos coincide (C; 22,6 s frente a 21,1 s). Camino Real: tesis F (129 s) frente a D, explicado por sus errores (GD3 = 603 frente a 190; 35 % de pesados frente a 6 %; ciclo de 111 s imposible). Bissau y Fernández Padilla: el F de Savignani es un error de cálculo (recalculado, unos 28 s, D).
 - **Escenario de sensibilidad** (sin el +50 % post COVID, ×1,131): Camino Real C 24,9 s, CC Paos B 16,6 s, Perrokero C 13,7 s, red 37 km/h, Av. Río sale 169 veh/h (campo 180). **El diagnóstico depende del factor post COVID.** Está en `REVISION_SIMULACION_BASE.md` (sección 2b) y en `capitulo4\sensibilidad_sin_postcovid`. **No se agregó al documento del capítulo IV**: el usuario lo consultará con el tutor y medirá las colas en los videos de campo (si hay colas de 150 a 300 m, la base es la más realista; si son de 30 a 80 m, se parece más a ×1,131).
@@ -312,4 +313,7 @@ Lo aplicado en la red con `ajustes_red/propuesta_perozo.py` (se corre sobre la r
    - Savignani 2041: red 4,2 km/h.
    - Las conclusiones no cambian.
 6. **Consolidado en main:** documentos, `comparar_propuestas.py`, las réplicas de las tres simulaciones, `generar_detectores.py` y `red_excel.py`. Se regeneró el Word `COMPARACION DE ESCENARIOS - BASE, SAVIGNANI Y PEROZO.docx`. Los `.bat` de la base copian la red a su carpeta de Excel.
-7. **Falta:** la línea `copy /Y` de la red en los `.bat` de Savignani y Final; correr los `.bat` de Savignani y Perozo para refrescar sus Excel con KraussPS; fusionar main en las tres ramas (en Perozo, conservar su `resumen_resultados.py` y su `costanera.rou.xml`).
+7. **Carritos como taxi en las tres ramas** (decisión del usuario: se detienen en las paradas y, como no son pesados, usan los puentes). En main no cambia nada (verificado). En Savignani: bahías con `allow="bus taxi"`, ruta fija del carrito FFAA → Lechería por el distribuidor y **corrección de permisos**: antes solo `puente_subida_hacia_ffaa` prohibía `bus`; ningún pesado usó el puente (verificado) y ahora los 6 tramos lo prohíben (`ajustes_red/propuesta_savignani_permisos.edg.xml`). Réplicas nuevas de Savignani 2026: carritos de 391 a 49 s de demora; Camino Real E 76,6 s (en el límite de 80 s; la base está en D 43,9 s); red 106 s y 27,8 km/h. En 2041 no cambia.
+8. Se fusionó main en `propuestaSavignani` (`8581717`). Main tiene las réplicas definitivas de las tres simulaciones y el Word de comparación regenerado, con los textos sobre transporte público corregidos.
+9. **Bloqueo de Perrokero:** una corrida del `.bat` dio FHMD 0,58 porque Perrokero quedó bloqueado desde los 30 minutos. Con 10 semillas, 3 se bloqueaban. La causa era `keepClear="0"` en sus 15 conexiones (desde los primeros commits): los que giraban hacia la Av. Río (salida `avrio_2` de 7,5 m que se une al canal de giro libre) quedaban dentro del cruce y lo bloqueaban en círculo. Se aplicó `keepClear="1"` ("no bloquear el cruce", `ajustes_red/keepclear_perrokero.con.xml`) y, como solo con eso la salida `avrio_2` de 7,5 m frenaba el cruce, también la **cesión de paso del canal de giro libre** `172682274` al incorporarse a la Av. Río (`ajustes_red/cesion_giro_libre_perrokero.edg.xml`, priority=1). Resultado: 0 bloqueos y 0 choques en 10 semillas (6 a 15), sin teletransportes. Base rehecha (tabla de la sección 5). Se regeneró `INFORMACION CAPITULO IV - ESCENARIO BASE.docx`. **Falta:** aplicarlo en Savignani y en Perozo (en Perozo también en `propuesta_perozo.py`, que ponía `keepClear='0'`), volver a correr sus réplicas, regenerar el Word de comparación y rehacer el escenario de sensibilidad (×1,131), que se corrió con la red anterior.
+10. **Falta:** la línea `copy /Y` de la red en los `.bat` de Final (Savignani ya la tiene por la fusión); correr los `.bat` de Savignani y Perozo para refrescar sus Excel con KraussPS; fusionar main en las tres ramas (en Perozo, conservar su `resumen_resultados.py` y su `costanera.rou.xml`).
