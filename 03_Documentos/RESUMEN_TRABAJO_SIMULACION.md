@@ -316,4 +316,19 @@ Lo aplicado en la red con `ajustes_red/propuesta_perozo.py` (se corre sobre la r
 7. **Carritos como taxi en las tres ramas** (decisión del usuario: se detienen en las paradas y, como no son pesados, usan los puentes). En main no cambia nada (verificado). En Savignani: bahías con `allow="bus taxi"`, ruta fija del carrito FFAA → Lechería por el distribuidor y **corrección de permisos**: antes solo `puente_subida_hacia_ffaa` prohibía `bus`; ningún pesado usó el puente (verificado) y ahora los 6 tramos lo prohíben (`ajustes_red/propuesta_savignani_permisos.edg.xml`). Réplicas nuevas de Savignani 2026: carritos de 391 a 49 s de demora; Camino Real E 76,6 s (en el límite de 80 s; la base está en D 43,9 s); red 106 s y 27,8 km/h. En 2041 no cambia.
 8. Se fusionó main en `propuestaSavignani` (`8581717`). Main tiene las réplicas definitivas de las tres simulaciones y el Word de comparación regenerado, con los textos sobre transporte público corregidos.
 9. **Bloqueo de Perrokero:** una corrida del `.bat` dio FHMD 0,58 porque Perrokero quedó bloqueado desde los 30 minutos. Con 10 semillas, 3 se bloqueaban. La causa era `keepClear="0"` en sus 15 conexiones (desde los primeros commits): los que giraban hacia la Av. Río (salida `avrio_2` de 7,5 m que se une al canal de giro libre) quedaban dentro del cruce y lo bloqueaban en círculo. Se aplicó `keepClear="1"` ("no bloquear el cruce", `ajustes_red/keepclear_perrokero.con.xml`) y, como solo con eso la salida `avrio_2` de 7,5 m frenaba el cruce, también la **cesión de paso del canal de giro libre** `172682274` al incorporarse a la Av. Río (`ajustes_red/cesion_giro_libre_perrokero.edg.xml`, priority=1). Resultado: 0 bloqueos y 0 choques en 10 semillas (6 a 15), sin teletransportes. Base rehecha (tabla de la sección 5). Se regeneró `INFORMACION CAPITULO IV - ESCENARIO BASE.docx`. **Falta:** aplicarlo en Savignani y en Perozo (en Perozo también en `propuesta_perozo.py`, que ponía `keepClear='0'`), volver a correr sus réplicas, regenerar el Word de comparación y rehacer el escenario de sensibilidad (×1,131), que se corrió con la red anterior.
-10. **Falta:** la línea `copy /Y` de la red en los `.bat` de Final (Savignani ya la tiene por la fusión); correr los `.bat` de Savignani y Perozo para refrescar sus Excel con KraussPS; fusionar main en las tres ramas (en Perozo, conservar su `resumen_resultados.py` y su `costanera.rou.xml`).
+10. **Resultados finales de las tres simulaciones** (las tres con keepClear y la cesión del giro libre en Perrokero, KraussPS y los carritos como taxi; 5 réplicas; 0 teletransportes; sin bloqueos en las semillas 6 a 15):
+
+| | Base | Savignani | Perozo |
+|---|---|---|---|
+| 2026 Camino Real | D · 41,9 s | E · 77,7 s | D · 39,7 s |
+| 2026 CC Paos | C · 21,5 s | C · 25,5 s | C · 22,3 s |
+| 2026 Perrokero | F · 95,8 s (Av. Río 507 s) | E · 21,4 s | **C · 29,6 s** (puente hacia el sur B 14 s) |
+| 2026 Red completa | 127 s · 26,0 km/h | 100 s · 28,4 km/h | **93 s · 29,6 km/h** |
+| 2026 Carritos / pesados | 126 / 111 s | **49** / 191 s | 123 / 107 s |
+| 2041 Red completa | 4.887 viajes · 6,6 km/h | **5.859 viajes · 15,3 km/h** | 5.156 viajes · 7,5 km/h |
+| 2041 Perrokero | F · 196 s (71 %) | F · 159 s (91 %) | **D · 44 s** (74 %) |
+
+    - **Conclusiones:** en 2026 Perozo resuelve Perrokero sin perjudicar el resto; Savignani empeora Camino Real (salida de un carril, S26). En 2041 Savignani es la que mejor responde, pero sobre todo porque la Av. En Proyección saca el 30 % de los viajes de FFAA sur del eje (hay que declararlo).
+    - **Ya no aplica:** "la cola del acceso norte de Perozo tapa la entrada al puente". Era un artefacto de la prioridad del canal de giro libre.
+    - Se regeneraron los dos Word (capítulo IV de la base y comparación de escenarios), con las frases fijas reescritas.
+11. **Falta:** la línea `copy /Y` de la red en los `.bat` de Final (Savignani ya la tiene por la fusión); correr los `.bat` de Savignani y Perozo para refrescar sus Excel con KraussPS; fusionar main en las tres ramas (en Perozo, conservar su `resumen_resultados.py` y su `costanera.rou.xml`).

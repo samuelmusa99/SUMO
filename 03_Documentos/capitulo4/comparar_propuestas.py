@@ -365,61 +365,72 @@ vineta(f'Transporte público: los carritos usan el distribuidor y su demora baja
        f'subir y cruzan por FFAA a nivel, que queda saturada: su demora sube de '
        f'{n(fila("2026", "Base", "Red completa", "pesado")["demora_promedio_s"])} s a '
        f'{n(fila("2026", "Savignani", "Red completa", "pesado")["demora_promedio_s"])} s.')
-vineta(f'Bissau y Puerto Guaica mejoran ({n(I["2026", "Base"]["Bissau"]["demora_promedio_s"], 1)} → '
-       f'{n(I["2026", "Savignani"]["Bissau"]["demora_promedio_s"], 1)} s y {n(I["2026", "Base"]["Puerto Guaica"]["demora_promedio_s"], 1)} → '
-       f'{n(I["2026", "Savignani"]["Puerto Guaica"]["demora_promedio_s"], 1)} s) por las bahías de bus, pero también porque llega menos '
-       'tránsito: parte queda retenida en Camino Real (por eso el sentido Lechería aparece con V/C mayor que 1 y nivel A a la vez).')
+vineta(f'Puerto Guaica pasa de {n(I["2026", "Base"]["Puerto Guaica"]["demora_promedio_s"], 1)} a '
+       f'{n(I["2026", "Savignani"]["Puerto Guaica"]["demora_promedio_s"], 1)} s (Bissau: {n(I["2026", "Base"]["Bissau"]["demora_promedio_s"], 1)} → '
+       f'{n(I["2026", "Savignani"]["Bissau"]["demora_promedio_s"], 1)} s), por las bahías de bus y porque llega algo menos de tránsito: parte queda '
+       'retenida en Camino Real (por eso el sentido Lechería aparece con V/C mayor que 1 y buen nivel a la vez).')
+vineta(f'Perrokero también mejora ({ds("2026", "Base", "Perrokero")} → {ds("2026", "Savignani", "Perrokero")}) sin intervenirlo: recibe menos '
+       'tránsito por la FFAA, porque el 30 % de los viajes de FFAA sur se desvía por la Av. En Proyección y otra parte queda retenida en Camino Real.')
 vineta(f'En la red completa la demora baja de {n(R["2026", "Base"]["demora_promedio_s"])} a {n(R["2026", "Savignani"]["demora_promedio_s"])} s '
        f'y la velocidad sube de {n(R["2026", "Base"]["velocidad_media_kmh"], 1)} a {n(R["2026", "Savignani"]["velocidad_media_kmh"], 1)} km/h, '
        f'con menos viajes completados ({n(R["2026", "Savignani"]["volumen_promedio_veh_h"])} frente a {n(R["2026", "Base"]["volumen_promedio_veh_h"])}).')
-vineta(f'En 2041 la red colapsa igual que sin proyecto ({n(R["2041", "Savignani"]["velocidad_media_kmh"], 1)} km/h en ambos casos); '
-       f'Camino Real solo atiende el {n(I["2041", "Savignani"]["Camino Real"]["demanda_atendida_pct"])} % de su demanda.')
+vineta(f'En 2041 es el escenario que mejor responde: la red circula a {n(R["2041", "Savignani"]["velocidad_media_kmh"], 1)} km/h '
+       f'(base {n(R["2041", "Base"]["velocidad_media_kmh"], 1)} km/h) y completa {n(R["2041", "Savignani"]["volumen_promedio_veh_h"])} viajes '
+       f'(base {n(R["2041", "Base"]["volumen_promedio_veh_h"])}); Camino Real sigue en F pero atiende el '
+       f'{n(I["2041", "Savignani"]["Camino Real"]["demanda_atendida_pct"])} % de su demanda (base '
+       f'{n(I["2041", "Base"]["Camino Real"]["demanda_atendida_pct"])} %). Buena parte de esa mejora viene de la Av. En Proyección, que '
+       'saca el 30 % de los viajes de FFAA sur del eje: el resultado depende de que esa avenida se construya.')
 
 doc.add_heading('5.2 Propuesta de Assouad y Peroza (2022)', level=2)
 vineta(f'Perrokero mejora: pasa de {ds("2026", "Base", "Perrokero")} a {ds("2026", "Perozo", "Perrokero")} en 2026, con la misma '
        f'demanda. La Av. Río, que era el acceso crítico, pasa de {ds("2026", "Base", "Perrokero", "Este (Av. Rio)")} a '
        f'{ds("2026", "Perozo", "Perrokero", "Este (Av. Rio)")}, gracias al semáforo bajo el puente.')
-vineta(f'Solo los accesos a nivel dan {ds("2026", "Perozo", "Perrokero", "(sin puente)")}, muy parecido al resultado de la propia tesis '
-       '(E, 65,6 s en 2041, Alternativa C).')
-vineta(f'El punto débil es el acceso norte a nivel ({ds("2026", "Perozo", "Perrokero", "Norte (desde Camino Real)")}, cola máxima de '
-       f'{n(fila("2026", "Perozo", "Perrokero", "Norte (desde Camino Real)")["cola_maxima_m"])} m): le queda un solo carril para el giro '
-       'a la izquierda hacia la Av. Río, los pesados y el giro a la derecha, y su cola sobrepasa el punto donde se separan los carriles '
-       f'y bloquea la entrada al puente hacia el sur ({ds("2026", "Perozo", "Perrokero", "Puente hacia el sur (FFAA)")}, aunque el tablero '
-       f'circula libre). El puente hacia Camino Real, sin ese problema, queda en {ds("2026", "Perozo", "Perrokero", "Puente hacia Camino Real")}.')
+vineta(f'Solo los accesos a nivel dan {ds("2026", "Perozo", "Perrokero", "(sin puente)")} y {ds("2041", "Perozo", "Perrokero", "(sin puente)")} '
+       'en 2041; la propia tesis obtiene E, 65,6 s para 2041 (Alternativa C), pero con una Av. Río mucho más cargada que la del modelo.')
+vineta(f'El acceso norte a nivel, con un solo carril para el giro a la izquierda hacia la Av. Río, los pesados y el giro a la derecha, '
+       f'queda en {ds("2026", "Perozo", "Perrokero", "Norte (desde Camino Real)")} (cola máxima de '
+       f'{n(fila("2026", "Perozo", "Perrokero", "Norte (desde Camino Real)")["cola_maxima_m"])} m), sin bloquear la entrada al puente: el puente '
+       f'hacia el sur queda en {ds("2026", "Perozo", "Perrokero", "Puente hacia el sur (FFAA)")} y el puente hacia Camino Real en '
+       f'{ds("2026", "Perozo", "Perrokero", "Puente hacia Camino Real")}.')
 vineta(f'No perjudica al resto del eje: Camino Real ({ds("2026", "Perozo", "Camino Real")}), CC Paos ({ds("2026", "Perozo", "CC Paos")}), '
        'Bissau y Puerto Guaica quedan prácticamente como en la base.')
 vineta(f'En la red completa la demora baja de {n(R["2026", "Base"]["demora_promedio_s"])} a {n(R["2026", "Perozo"]["demora_promedio_s"])} s '
        f'y la velocidad sube de {n(R["2026", "Base"]["velocidad_media_kmh"], 1)} a {n(R["2026", "Perozo"]["velocidad_media_kmh"], 1)} km/h, '
        f'completando los mismos viajes ({n(R["2026", "Perozo"]["volumen_promedio_veh_h"])}).')
-vineta(f'En 2041 la red sigue colapsada, pero es el único escenario que mejora: completa {n(R["2041", "Perozo"]["volumen_promedio_veh_h"])} '
-       f'viajes frente a {n(R["2041", "Base"]["volumen_promedio_veh_h"])} de la base, la demora baja de {n(R["2041", "Base"]["demora_promedio_s"])} '
-       f'a {n(R["2041", "Perozo"]["demora_promedio_s"])} s y Perrokero queda en {ds("2041", "Perozo", "Perrokero")} con el '
-       f'{n(I["2041", "Perozo"]["Perrokero"]["demanda_atendida_pct"])} % de la demanda atendida. El colapso pasa a Camino Real y CC Paos.')
+vineta(f'En 2041 Perrokero sigue funcionando ({ds("2041", "Perozo", "Perrokero")}, con el '
+       f'{n(I["2041", "Perozo"]["Perrokero"]["demanda_atendida_pct"])} % de la demanda atendida), pero el resto del eje colapsa casi como sin '
+       f'proyecto: la red circula a {n(R["2041", "Perozo"]["velocidad_media_kmh"], 1)} km/h (base {n(R["2041", "Base"]["velocidad_media_kmh"], 1)} km/h) '
+       f'y completa {n(R["2041", "Perozo"]["volumen_promedio_veh_h"])} viajes (base {n(R["2041", "Base"]["volumen_promedio_veh_h"])}). '
+       'El colapso pasa a Camino Real y CC Paos.')
 
 doc.add_heading('5.3 Síntesis', level=2)
 cuadro(f'Cuadro {num()} Síntesis de la comparación',
        ['Criterio', 'Estanga y Savignani (2021)', 'Assouad y Peroza (2022)'],
        [['Efecto en la intersección intervenida (2026)', f'Empeora ({ds("2026", "Base", "Camino Real")} → {ds("2026", "Savignani", "Camino Real")})',
          f'Mejora ({ds("2026", "Base", "Perrokero")} → {ds("2026", "Perozo", "Perrokero")})'],
-        ['Efecto en el resto del eje (2026)', 'Mejora Bissau y Puerto Guaica; Perrokero recibe menos tránsito', 'Sin cambios apreciables'],
+        ['Efecto en el resto del eje (2026)', 'Mejoran Perrokero y Puerto Guaica (menos tránsito y bahías de bus)', 'Sin cambios apreciables'],
         ['Red completa 2026', f'{n(R["2026", "Savignani"]["velocidad_media_kmh"], 1)} km/h; menos viajes completados',
          f'{n(R["2026", "Perozo"]["velocidad_media_kmh"], 1)} km/h; los mismos viajes'],
         ['Transporte público (2026)',
          f'Carritos mejoran (usan el puente: {n(fila("2026", "Savignani", "Red completa", "carrito")["demora_promedio_s"])} s); '
          f'pesados empeoran ({n(fila("2026", "Savignani", "Red completa", "pesado")["demora_promedio_s"])} s; FFAA a nivel saturada)',
-         f'Carritos y pesados empeoran poco ({n(fila("2026", "Perozo", "Red completa", "carrito")["demora_promedio_s"])} y '
+         f'Carritos y pesados casi sin cambio ({n(fila("2026", "Perozo", "Red completa", "carrito")["demora_promedio_s"])} y '
          f'{n(fila("2026", "Perozo", "Red completa", "pesado")["demora_promedio_s"])} s; base: '
          f'{n(fila("2026", "Base", "Red completa", "carrito")["demora_promedio_s"])} y {n(fila("2026", "Base", "Red completa", "pesado")["demora_promedio_s"])} s)'],
-        ['Horizonte 2041', 'Colapso igual a la base', 'Colapso, pero con más viajes atendidos y menos demora'],
+        ['Horizonte 2041', f'El que mejor responde: {n(R["2041", "Savignani"]["velocidad_media_kmh"], 1)} km/h y '
+         f'{n(R["2041", "Savignani"]["volumen_promedio_veh_h"])} viajes (base {n(R["2041", "Base"]["velocidad_media_kmh"], 1)} km/h); '
+         'depende de la Av. En Proyección',
+         f'Perrokero en {ds("2041", "Perozo", "Perrokero")}, pero el resto del eje colapsa '
+         f'({n(R["2041", "Perozo"]["velocidad_media_kmh"], 1)} km/h)'],
         ['Problema principal detectado', 'Salida de un carril hacia la Costanera bajo el puente (S26)',
-         'Un solo carril a nivel en el acceso norte: su cola bloquea la entrada al puente (P10)']],
+         'Semáforo repartido para una Av. Río mucho más cargada que la real; un solo carril a nivel en el acceso norte (P10)']],
        [4.2, 5.4, 5.4], tam=9)
 
 doc.add_heading('6. Elementos para las recomendaciones (objetivo 3)', level=1)
 vineta('Ninguna de las dos propuestas, por sí sola, mantiene un nivel de servicio aceptable en 2041: la solución del eje requiere '
-       'intervenir más de una intersección.')
-vineta('Perozo: alargar la separación de carriles antes del puente en el acceso norte (o dar más verde a ese acceso) para que la '
-       'cola de giro no bloquee la entrada al puente; revisar la pendiente del 15 % (P4, P9).')
+       'intervenir más de una intersección. Savignani resiste mejor porque la Av. En Proyección saca tránsito de la FFAA.')
+vineta('Perozo: resuelve Perrokero, pero su semáforo de 120 s se repartió para una Av. Río mucho más cargada que la real; conviene '
+       'reprogramarlo con la demanda actual. Revisar la pendiente del 15 % (P4, P9).')
 vineta('Savignani: el distribuidor necesita una salida de dos carriles hacia la Costanera bajo el puente; sin ella traslada el '
        'cuello de botella. Las bahías de bus y los carriles de incorporación sí aportan y pueden conservarse en la propuesta final.')
 vineta('Los buses y demás pesados no pueden usar los puentes: necesitan un carril a nivel que no quede saturado (en Savignani, '
