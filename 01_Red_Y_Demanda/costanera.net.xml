@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on 2026-11-06T18:39:03.929092-04:00 by Eclipse SUMO netconvert 1.26.0
+<!-- generated on 2026-11-11T13:09:51.504721-04:00 by Eclipse SUMO netconvert 1.26.0
 <netconvertConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
         <sumo-net-file value="antes.net.xml"/>
-        <edge-files value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/ajustes_red/cesion_giro_libre_perrokero.edg.xml"/>
+        <edge-files value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/ajustes_red/prioridad_giro_libre_cc_paos.edg.xml"/>
     </input>
 
     <output>
@@ -5416,7 +5416,7 @@
         <lane id="598218053#0_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="64.58" width="3.70" shape="923.70,2846.45 924.84,2856.99 930.02,2900.13 931.15,2910.60"/>
         <lane id="598218053#0_1" index="1" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="11.11" length="64.58" width="3.70" shape="920.02,2846.85 921.16,2857.41 926.34,2900.55 927.48,2911.00"/>
     </edge>
-    <edge id="598218053#2" from="11332146279" to="1832560188" priority="5" type="highway.tertiary_link" spreadType="center">
+    <edge id="598218053#2" from="11332146279" to="1832560188" priority="11" type="highway.tertiary_link" spreadType="center">
         <lane id="598218053#2_0" index="0" disallow="tram rail_urban rail rail_electric rail_fast ship container cable_car subway aircraft wheelchair scooter drone" speed="22.22" length="3.26" width="3.70" shape="941.61,3021.83 942.04,3025.06"/>
     </edge>
     <edge id="830761836" from="7756814870" to="7756814869" priority="1" type="highway.service">
@@ -6249,9 +6249,9 @@
     <junction id="13002069159" type="dead_end" x="1032.07" y="1800.75" incLanes="1414925032#0_0" intLanes="" shape="1035.53,1801.31 1035.27,1799.32 1034.52,1799.28 1034.32,1799.13 1034.24,1798.90 1034.28,1798.58 1034.44,1798.17 1032.64,1797.29 1031.96,1798.82 1031.68,1799.35 1031.31,1799.80 1030.78,1800.22 1029.98,1800.67 1030.87,1802.46 1032.50,1801.76 1033.11,1801.60 1033.74,1801.51 1034.51,1801.43"/>
     <junction id="1829021654" type="dead_end" x="1109.79" y="3353.75" incLanes="lecheria_entrada_0 lecheria_entrada_1" intLanes="" shape="1111.67,3350.56 1107.91,3356.94"/>
     <junction id="1832560188" type="priority" x="942.55" y="3028.94" incLanes="598218053#2_0 madevieja_hacialecheria_0 madevieja_hacialecheria_1" intLanes=":1832560188_0_0 :1832560188_1_0 :1832560188_1_1" shape="939.31,3033.13 946.66,3032.28 945.84,3029.37 945.28,3028.42 944.70,3027.48 944.20,3026.28 943.84,3024.58 937.96,3026.14 938.63,3028.69 938.83,3029.60 938.99,3030.51 939.14,3031.63">
-        <request index="0" response="110" foes="110" cont="0"/>
-        <request index="1" response="000" foes="001" cont="0"/>
-        <request index="2" response="000" foes="001" cont="0"/>
+        <request index="0" response="000" foes="110" cont="0"/>
+        <request index="1" response="001" foes="001" cont="0"/>
+        <request index="2" response="001" foes="001" cont="0"/>
     </junction>
     <junction id="1832560202" type="dead_end" x="1103.54" y="3359.26" incLanes="" intLanes="" shape="1105.32,3356.02 1101.76,3362.50"/>
     <junction id="1832560206" type="priority" x="946.70" y="3064.47" incLanes="-1221886406_0 172641720#0_0 172641720#0_1" intLanes=":1832560206_0_0 :1832560206_1_0 :1832560206_2_0 :1832560206_3_0 :1832560206_3_1" shape="943.47,3068.28 950.81,3067.31 951.12,3066.22 951.61,3065.61 952.32,3064.95 953.25,3064.24 954.40,3063.49 951.04,3058.04 950.31,3058.31 950.04,3058.26 949.83,3058.08 949.68,3057.77 949.59,3057.34 942.24,3058.20">
@@ -8731,7 +8731,7 @@
     <connection from="592256721#1" to="madre_vieja_entrada" fromLane="1" toLane="1" via=":1835269304_3_1" dir="s" state="M"/>
     <connection from="598218053#0" to="costanera_hacialecheria" fromLane="0" toLane="0" via=":9216884320_1_0" dir="s" state="M"/>
     <connection from="598218053#0" to="costanera_hacialecheria" fromLane="1" toLane="1" via=":9216884320_1_1" dir="s" state="M"/>
-    <connection from="598218053#2" to="172641720#0" fromLane="0" toLane="0" via=":1832560188_0_0" dir="s" state="m"/>
+    <connection from="598218053#2" to="172641720#0" fromLane="0" toLane="0" via=":1832560188_0_0" dir="s" state="M"/>
     <connection from="830761836" to="-830761836" fromLane="0" toLane="0" via=":7756814869_0_0" dir="t" state="M"/>
     <connection from="830761837#0" to="830761837#1" fromLane="0" toLane="0" via=":7756814868_0_0" dir="s" state="M"/>
     <connection from="830761837#0" to="1227543320" fromLane="0" toLane="0" via=":7756814868_1_0" dir="l" state="m"/>
@@ -8948,8 +8948,8 @@
     <connection from="lecheria_salida" to="-830806307#2" fromLane="0" toLane="0" via=":7757101141_0_0" dir="r" state="M"/>
     <connection from="lecheria_salida" to="cruce_cc_paos" fromLane="0" toLane="0" via=":7757101141_1_0" dir="s" state="M"/>
     <connection from="lecheria_salida" to="cruce_cc_paos" fromLane="1" toLane="1" via=":7757101141_1_1" dir="s" state="M"/>
-    <connection from="madevieja_hacialecheria" to="172641720#0" fromLane="0" toLane="0" via=":1832560188_1_0" dir="s" state="M"/>
-    <connection from="madevieja_hacialecheria" to="172641720#0" fromLane="1" toLane="1" via=":1832560188_1_1" dir="s" state="M"/>
+    <connection from="madevieja_hacialecheria" to="172641720#0" fromLane="0" toLane="0" via=":1832560188_1_0" dir="s" state="m"/>
+    <connection from="madevieja_hacialecheria" to="172641720#0" fromLane="1" toLane="1" via=":1832560188_1_1" dir="s" state="m"/>
     <connection from="madre_vieja_salida" to="592256719#1" fromLane="0" toLane="0" via=":semaforo_costanera_4_0" tl="cluster_1832560256_1835269221_1835269336_7120285661" linkIndex="4" dir="s" state="O"/>
     <connection from="madre_vieja_salida" to="592256719#1" fromLane="1" toLane="1" via=":semaforo_costanera_4_1" tl="cluster_1832560256_1835269221_1835269336_7120285661" linkIndex="5" dir="s" state="O"/>
     <connection from="madre_vieja_salida" to="madevieja_hacialecheria" fromLane="1" toLane="1" via=":semaforo_costanera_6_0" tl="cluster_1832560256_1835269221_1835269336_7120285661" linkIndex="6" dir="l" state="o"/>
