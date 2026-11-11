@@ -116,7 +116,10 @@ def main(n, config, carpeta_xml, carpeta_csv, archivo_salida='resumen_replicas.c
                             '-a', ','.join(adicionales_aislados(config, tmp)),
                             '--tripinfo-output', os.path.join(tmp, 'reporte_viajes.xml'),
                             '--queue-output', os.path.join(tmp, 'reporte_colas.xml'),
-                            '--statistic-output', os.path.join(tmp, 'estadisticas.xml')],
+                            '--statistic-output', os.path.join(tmp, 'estadisticas.xml'),
+                            # rutas con la hora de salida de cada tramo: demora por acceso vehiculo por vehiculo
+                            '--vehroute-output', os.path.join(tmp, 'reporte_rutas.xml'),
+                            '--vehroute-output.exit-times', 'true'],
                            check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
             sal = sys.stdout
             sys.stdout = open(os.devnull, 'w')

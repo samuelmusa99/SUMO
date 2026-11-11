@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- CC Paos (11/11/2026): el giro libre Costanera -> Lecheria (Av. Fabricio Ojeda), el movimiento mas cargado del corredor
+     (~1.090 veh/h), tiene prioridad al unirse con la salida del semaforo Madre Vieja -> Lecheria (madevieja_hacialecheria).
+     Antes cedia el paso (prioridad 5 frente a 10, heredada de OpenStreetMap): con un tramo de 1 carril de 3,3 m acumulaba unos
+     134 s de demora por vehiculo (22 % de la demora de la red base), una cola que en campo no se observa (decision del usuario).
+     Ahora cede la salida de Madre Vieja. Aplicar con: netconvert -s costanera.net.xml -e este_archivo. -->
+<edges>
+    <edge id="598218053#2" priority="11"/>
+</edges>
