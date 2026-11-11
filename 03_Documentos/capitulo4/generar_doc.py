@@ -430,12 +430,14 @@ p('Para el horizonte 2041 se multiplicó toda la demanda 2026 por 1,448 y se man
   'llenan todo el tramo medido se indican con "≥".')
 bloque_resultados(rep41, '4.11', '4.12', '2041')
 at41 = [int(r['demanda_atendida_pct']) for r in I41.values()]
-nota(f"Hallazgos 2041: todas las intersecciones pasan a nivel F y atienden solo entre el {min(at41)} % y el {max(at41)} % "
-     f"de la demanda. El colapso empieza en Perrokero: el acceso FFAA norte atiende el "
-     f"{fila(rep41, 'Perrokero', 'Norte (desde Camino Real)')['demanda_atendida_pct']} % de su demanda. La cola se propaga "
-     f"hacia Camino Real, luego a Puerto Guaica y Bissau, y llega hasta CC Paos. Por eso conviene evaluar las propuestas "
-     f"en conjunto. Las demoras de miles de segundos en los accesos secundarios se dejan tal cual (decisión del autor): "
-     f"indican vehículos que prácticamente no logran salir.")
+niveles41 = '; '.join(f"{k} {v['LOS_HCM']}" for k, v in I41.items())
+nota(f"Hallazgos 2041: por intersección, {niveles41}. Las intersecciones atienden solo entre el {min(at41)} % y el "
+     f"{max(at41)} % de la demanda. En Perrokero, el acceso FFAA norte atiende el "
+     f"{fila(rep41, 'Perrokero', 'Norte (desde Camino Real)')['demanda_atendida_pct']} % de su demanda y su cola se "
+     f"propaga hacia Camino Real; en CC Paos, la salida de Madre Vieja espera "
+     f"{d(rep41, 'CC Paos', 'Norte (Madre Vieja)')}. Por eso conviene evaluar las propuestas en conjunto. Las demoras de "
+     f"cientos de segundos en los accesos secundarios se dejan tal cual (decisión del autor): indican vehículos que "
+     f"prácticamente no logran salir.")
 
 doc.add_heading('4.2.6 Indicadores de la red completa', level=2)
 p('Los cuadros anteriores evalúan cada intersección por separado. El Cuadro 4.13 evalúa el viaje completo de cada '
