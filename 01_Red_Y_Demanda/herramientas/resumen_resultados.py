@@ -193,7 +193,8 @@ def main(escenario, carpeta_xml, carpeta_csv):
     for t in ET.parse(os.path.join(carpeta_xml, 'reporte_viajes.xml')).getroot().iter('tripinfo'):
         if not INICIO <= float(t.get('depart')) < FIN:
             continue
-        for clave in (t.get('vType'), 'TOTAL'):
+        # liviano_ag / pesado_ag (conductores que fuerzan el paso en Perrokero, 20/11/2026) se reportan con su tipo base
+        for clave in (t.get('vType').removesuffix('_ag'), 'TOTAL'):
             a = tipos[clave]
             a[0] += 1
             a[1] += float(t.get('duration'))
