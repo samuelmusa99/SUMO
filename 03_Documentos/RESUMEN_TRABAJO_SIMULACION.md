@@ -397,3 +397,14 @@ Lo aplicado en la red con `ajustes_red/propuesta_perozo.py` (se corre sobre la r
 | Red | **24,0 km/h · 145 s de demora · 4.818 viajes** | 10,7 km/h · 493 s · 5.865 viajes |
 
    El usuario debe volver a correr `SIMULACION.bat` y `SIMULACION_2041.bat` para refrescar los Excel.
+9. **Savignani con la Av. Río nueva (20/11, rama `propuestaSavignani`; main fusionado sin commit):** `demanda_propuesta.py` toma la clase del tipo base para `_ag` (`removesuffix('_ag')`); demanda Savignani 2026/2041 regenerada; 0 choques; réplicas anteriores en `capitulo4/_antes_avrio_2026-11-20/replicas_savignani`.
+
+| Savignani | 2026 antes | **2026 nuevo** | 2041 antes | **2041 nuevo** |
+|---|---|---|---|---|
+| Camino Real (E3 / a nivel) | E · 74,7 s | **F · 94,2 s** / a nivel F 172,9 s (FFAA a nivel F 559 s, cola 312 m) | F · 97,9 s · 82 % | F · 105,1 s · 73 % |
+| Puentes | A 4,6 / A 4,5 s | hacia FFAA A 5,2 s; **hacia Costanera C 33,5 s** (la cola de FFAA a nivel llega a Perrokero) | | |
+| Perrokero | E · 25,3 s | **F · 84,4 s** (Av. Río sale 549, F 194 s; FFAA sur C 20 s) | F · 168,4 s | F · 220,8 s · 73 % |
+| CC Paos | C · 25,3 s | C · 25,6 s | F · 84,0 s | F · 83,3 s |
+| Red | 28,9 km/h | **21,4 km/h** (base nueva 24,0) | 15,7 km/h | **13,2 km/h** (base nueva 10,7) |
+
+   Lectura: en 2026 Savignani mejora Perrokero frente a la base (84 frente a 185 s) pero empeora Camino Real (94 frente a 56 s) y la red (21,4 frente a 24,0 km/h): el cuello de FFAA a nivel (1 carril, 20 s de verde) ahora recibe también el tránsito Av. Río → Camino Real y su cola llega a Perrokero. En 2041 sigue siendo mejor que la base (13,2 frente a 10,7 km/h) gracias a la Av. En Proyección. Falta: el usuario corre los `.bat` de Savignani (Excel) y hace el commit de la fusión.

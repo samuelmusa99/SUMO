@@ -69,7 +69,8 @@ def main():
         tipo_ruta = {f.get('route'): f.get('type') for f in raiz.iter('flow')}
         nuevas, desviadas = {}, {}
         for rid, edges in rutas.items():
-            vc = VCLASS[tipo_ruta.get(rid, 'liviano')]
+            # liviano_ag / pesado_ag (conductores que fuerzan el paso en Perrokero, 20/11/2026) tienen la clase de su tipo base
+            vc = VCLASS[tipo_ruta.get(rid, 'liviano').removesuffix('_ag')]
             nuevas[rid] = rehacer(net, edges, vc)
             if FFAA_EN_CAMINO_REAL & set(edges) and (edges[0] == FFAA_ORIGEN or edges[-1] == FFAA_DESTINO):
                 # la avenida en proyeccion reemplaza todo el recorrido por FFAA hasta Camino Real
