@@ -351,8 +351,8 @@ def ds(a, e, i, acc='(todos)'):
 doc.add_heading('5. Análisis de los resultados', level=1)
 doc.add_heading('5.1 Propuesta de Estanga y Savignani (2021)', level=2)
 vineta(f'Camino Real empeora: pasa de {ds("2026", "Base", "Camino Real")} a {ds("2026", "Savignani", "Camino Real")} en 2026. '
-       f'El puente hacia FFAA funciona bien ({ds("2026", "Savignani", "Camino Real", "Puente hacia FFAA")}), pero el puente hacia '
-       f'la Costanera queda en {ds("2026", "Savignani", "Camino Real", "Puente hacia Costanera")}.')
+       f'Los dos puentes funcionan bien (hacia FFAA {ds("2026", "Savignani", "Camino Real", "Puente hacia FFAA")}; hacia la '
+       f'Costanera {ds("2026", "Savignani", "Camino Real", "Puente hacia Costanera")}): el problema está a nivel, bajo el puente.')
 vineta(f'La causa es la geometría a nivel bajo el puente: El Ejército y la bajada del puente salen hacia la Costanera por un solo '
        f'carril, que se satura (El Ejército pasa de {ds("2026", "Base", "Camino Real", "Oeste (El Ejercito)")} a '
        f'{ds("2026", "Savignani", "Camino Real", "Oeste (El Ejercito)")}), y FFAA a nivel, con un solo carril y 20 s de verde, pasa de '

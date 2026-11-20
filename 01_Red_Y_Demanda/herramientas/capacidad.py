@@ -43,7 +43,7 @@ def archivos_de_ruta(config):
 def demanda_por_movimiento(net, archivos):
     """(edge, edge siguiente) -> [veh/h totales, veh/h pesados] en la hora de analisis"""
     mov = defaultdict(lambda: [0.0, 0.0])
-    tipos_pesados = {'pesado'}
+    tipos_pesados = {'pesado', 'pesado_ag'}
     for archivo in archivos:
         raiz = ET.parse(archivo).getroot()
         rutas = {r.get('id'): r.get('edges').split() for r in raiz.iter('route') if r.get('id')}
