@@ -397,3 +397,20 @@ Lo aplicado en la red con `ajustes_red/propuesta_perozo.py` (se corre sobre la r
 | Red | **24,0 km/h · 145 s de demora · 4.818 viajes** | 10,7 km/h · 493 s · 5.865 viajes |
 
    El usuario debe volver a correr `SIMULACION.bat` y `SIMULACION_2041.bat` para refrescar los Excel.
+10. **Perozo con la Av. Río nueva (20/11, rama `propuestaPerozo`; main fusionado sin commit):** mismo ajuste en su `demanda_propuesta.py`; demanda regenerada (puente hacia el sur 753 y hacia Camino Real 649 veh/h en 2026); 0 choques; réplicas anteriores en `capitulo4/_antes_avrio_2026-11-20/replicas_perozo`. Con semáforo en Perrokero la Av. Río tiene su propia fase, así que "forzar el paso" casi no influye.
+
+| Perozo | 2026 antes | **2026 nuevo** | 2041 antes | **2041 nuevo** |
+|---|---|---|---|---|
+| Perrokero (E3 / a nivel) | C · 33,3 s | **D · 36,6 s** / a nivel E 55,8 s (Av. Río sale 613 de 619, E 58 s; norte E 60 s; puentes A 5,4 y 2,4 s) | E · 69,7 s | F · 152,7 s · 80 % (Av. Río F 318 s) |
+| Camino Real | D · 39,9 s | E · 59,6 s | F · 112,1 s | F · 115,6 s · 82 % |
+| CC Paos | C · 23,0 s | C · 21,8 s | F · 151,6 s | F · 151,2 s |
+| Red | 32,9 km/h | **30,1 km/h** | 12,5 km/h | **12,0 km/h** |
+
+   **Comparación de las tres (2026 / 2041):** red base 24,0 / 10,7 km/h; Savignani 21,4 / 13,2; **Perozo 30,1 / 12,0**. Perrokero: base F 185 s; Savignani F 84 s; **Perozo D 37 s**. En 2026 Perozo es claramente la mejor; en 2041 Savignani mueve algo mejor la red (Av. En Proyección), pero Perozo atiende más viajes (6.398 frente a 5.487). **Cambia una recomendación anterior:** el semáforo de Perozo (verdes N 33 / S 25 / E 30 / O 20 s) estaba pensado para una Av. Río cargada; ahora que la Av. Río tiene ~620 veh/h atiende el 99 % con demora E, así que ya no hace falta "reprogramarlo" por sobredimensionado (sí revisar el acceso norte, E 60 s). Falta: el usuario corre los `.bat` de Perozo y hace el commit; luego llevar las réplicas de Savignani y Perozo a main y regenerar los dos Word.
+11. **Revisión de los Excel de Perozo (20/11):** iguales a `capitulo4/replicas_perozo`, 0 choques y 0 teletransportes, sin errores ni `_ag`. FHMD 0,88 (2026, el más cercano a 0,90 porque hay menos congestión) y 0,91 (2041). Coherente: al resolver Perrokero, Perozo deja pasar más tránsito hacia Camino Real, cuyo acceso Sur (FFAA) queda en F (110 s, cola 241 m) y en 2041 frena al puente hacia Camino Real (E 77 s). **Las tres simulaciones quedan revisadas y sin incongruencias** (base en main, Savignani y Perozo en sus ramas, todas con la Av. Río nueva).
+
+### Hallazgos para la propuesta final (resumen al 20/11)
+- **Base 2026:** Perrokero F 185 s (Av. Río F 389 s; FFAA norte F 105 s); Camino Real E 56 s (Sur FFAA F 97 s, Norte Costanera E); red 24,0 km/h. 2041: todo en F, red 10,7 km/h.
+- **Savignani:** los puentes funcionan, pero FFAA a nivel (1 carril, 20 s de verde) queda en F 559 s, la salida de El Ejército a la Costanera tiene 1 carril (S26) y los pesados (sin puente) sufren 411 s de demora; la cola de FFAA a nivel llega a Perrokero. Su Av. En Proyección (30 %, criterio del tutor) es lo que mejor ayuda en 2041.
+- **Perozo:** resuelve Perrokero (D 37 s, Av. Río 99 % atendida con su propia fase) y da la mejor red 2026 (30,1 km/h); su semáforo está bien dimensionado para la Av. Río actual. Traslada el cuello a Camino Real (Sur FFAA F 110 s). En 2041 todo vuelve a F (12,0 km/h).
+- **Idea de propuesta final (por decidir con el usuario):** Perozo en Perrokero + resolver Camino Real (desde optimizar el semáforo hasta un distribuidor de Savignani corregido: 2 carriles a nivel en FFAA, salida de El Ejército de 2 carriles, paso de pesados) + evaluar la Av. En Proyección para 2041. Se trabaja en la rama `propuestaFinal` (Excel en `PROPUESTA_FINAL\2026|2041`).

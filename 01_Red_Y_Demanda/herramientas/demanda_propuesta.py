@@ -65,7 +65,8 @@ def main():
         tipo_ruta = {f.get('route'): f.get('type') for f in raiz.iter('flow')}
         nuevas = {}
         for rid, edges in rutas.items():
-            vc = VCLASS[tipo_ruta.get(rid, 'liviano')]
+            # liviano_ag / pesado_ag (conductores que fuerzan el paso en Perrokero, 20/11/2026) tienen la clase de su tipo base
+            vc = VCLASS[tipo_ruta.get(rid, 'liviano').removesuffix('_ag')]
             nuevas[rid] = rehacer(edges, vc)
             revisar(net, nuevas[rid], vc, rid)
         por_puente = {rid for rid, r in nuevas.items() if any(e.startswith('puente_') for e in r)}
