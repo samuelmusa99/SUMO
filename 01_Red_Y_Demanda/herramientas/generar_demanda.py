@@ -41,14 +41,18 @@ SEMILLA = 2026
 ESCENARIO_FUENTE = 'tesis2021'          # filas de conteos_movimientos.csv que se usan
 FACTOR_2026 = 1.025 ** 5 * 1.5          # = 1,697
 # Calles secundarias (salidas de Av. Rio, Residencias y accesos residenciales): solo crecimiento INE.
-# La recuperacion post COVID de +50 % (Savignani) corresponde al transito del corredor principal;
-# aplicada a Av. Rio daba unos 850 veh/h (Perozo 2021: 559; campo 2026: 180 sin motos).
+# La recuperacion post COVID de +50 % (Savignani) corresponde al transito del corredor principal.
 FACTOR_SECUNDARIAS = 1.025 ** 5             # = 1,131
 ACCESOS_SECUNDARIOS = {'avrio_1', 'res_salida', 'salida_bissau_1', 'salida_bissau_2', 'salida:puerto_guaica', '-335982664#1'}
-# En Perrokero, las salidas de Av. Rio y Residencias usan el aforo propio 2026 (sin motos): es el flujo que realmente
-# logra salir. Esos giros sin semaforo cruzando FFAA tienen una capacidad muy baja (Perozo 2022, tabla 4.8: 93 veh/h),
-# por lo que los 559 veh/h de 2021 (o 850 con el factor) no caben fisicamente y generaban colas irreales.
-CAMPO_PARA_SECUNDARIAS = {'avrio_1', 'res_salida'}
+# Hasta el 20/11/2026 la Av. Rio y Residencias usaban el aforo de abril 2026 (2-3 min: 180 y 80 veh/h), porque se creia
+# que el giro sin semaforo no podia atender mas. El conteo manual de noviembre (3 dias x 5 min, hora pico de la tarde)
+# dio ~1.070 veh/h saliendo de la Av. Rio y ~170 de Residencias: el volumen de Perozo x 1,131 (Av. Rio ~620-670,
+# Residencias ~125) queda del orden correcto y conservador, asi que ahora siguen la misma regla que las demas secundarias.
+CAMPO_PARA_SECUNDARIAS = set()
+# En Perrokero no hay prioridad efectiva (observado en los videos): los conductores de la Av. Rio y Residencias se meten
+# por orden de llegada y FFAA les cede el paso. Se les asigna un tipo de vehiculo propio (liviano_ag / pesado_ag en
+# costanera.rou.xml) que acepta huecos pequenos y fuerza el paso a baja velocidad.
+ORIGENES_QUE_FUERZAN_PASO = {'av_rio_salida', 'res_salida'}
 # Variacion dentro de la hora: un cuarto de hora pico con FHMD = 0,90 (promedio de los FHMD de Savignani 0,87-0,92
 # y Perozo 0,83-0,94). Cuarto pico = 1/FHMD = 1,111 veces el promedio; los otros tres = 0,963 (el total horario no cambia).
 FHMD = 0.90
@@ -307,6 +311,8 @@ def generar(escenario):
             # SUMO exige los flujos ordenados por hora de inicio: primero todos los del cuarto 0, luego los del 1, etc.
             for q, (ini, fin, tipo) in enumerate(PERFIL_15MIN):
                 for fid, vtype, v, r in salida_rutas:
+                    if r[0] in ORIGENES_QUE_FUERZAN_PASO:
+                        vtype = vtype + '_ag'
                     tasa = v * multiplicador * (pico if tipo == 'pico' else resto) / 3600.0
                     f.write(f'    <flow id="{fid}_q{q}" type="{vtype}" route="r_{fid}" begin="{ini}" end="{fin}" period="exp({tasa:.6f})" departLane="best" departSpeed="max"/>\n')
             f.write('</routes>\n')

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sumoConfiguration>
+    <input>
+        <net-file value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/costanera.net.xml"/>
+        <route-files value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/costanera.rou.xml,C:/Users/SAMUE_~1/AppData/Local/Temp/claude/73cba0c32d112faa/04786506-c03d-4b61-b273-cd83662d4986/scratchpad/sens2026/demanda_sensibilidad.rou.xml"/>
+        <additional-files value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/mapa_fondo.poly.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/medidores.add.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/vista.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/paradas.add.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/detectores_intersecciones.add.xml"/>
+    </input>
+    <output>
+        <tripinfo-output.write-unfinished value="true"/>
+    </output>
+    <processing>
+        <time-to-teleport value="-1"/>
+    </processing>
+    <time>
+        <begin value="0"/>
+        <end value="5400"/>
+    </time>
+</sumoConfiguration>

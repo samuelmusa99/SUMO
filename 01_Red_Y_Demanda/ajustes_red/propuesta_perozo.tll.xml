@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-04 12:48:50.348910 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <source value="main.net.xml"/>
+    <dest value="paso1.net.xml"/>
+    <outprefix value="diff"/>
+</configuration>
+-->
+
+<tlLogics version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/tllogic_file.xsd">
+    <!-- Deleted Elements -->
+    <!-- Created Elements -->
+    <tlLogic id="interseccion_avrio_FA" programID="0" offset="0" type="static">
+        <phase duration="33" state="GGGrrrrrrrrrr"/>
+        <phase duration="3" state="yyyrrrrrrrrrr"/>
+        <phase duration="20" state="rrrGGGGrrrrrr"/>
+        <phase duration="3" state="rrryyyyrrrrrr"/>
+        <phase duration="25" state="rrrrrrrGGrrrr"/>
+        <phase duration="3" state="rrrrrrryyrrrr"/>
+        <phase duration="30" state="rrrrrrrrrGGGG"/>
+        <phase duration="3" state="rrrrrrrrryyyy"/>
+    </tlLogic>
+    <!-- Changed Elements -->
+    <!-- Created Elements -->
+    <connection from="FA_1" fromLane="0" to="FA_2" toLane="0" linkIndex="7" tl="interseccion_avrio_FA"/>
+    <connection from="FA_1" fromLane="0" to="res_entrada" toLane="1" linkIndex="8" tl="interseccion_avrio_FA"/>
+    <connection from="FA_3" fromLane="0" to="res_entrada" toLane="0" linkIndex="0" tl="interseccion_avrio_FA"/>
+    <connection from="FA_3" fromLane="0" to="fuerzas_armadas_entrada_nivel" toLane="0" linkIndex="1" tl="interseccion_avrio_FA"/>
+    <connection from="FA_3" fromLane="0" to="avrio_2" toLane="1" linkIndex="2" tl="interseccion_avrio_FA"/>
+    <connection from="avrio_1" fromLane="0" to="FA_2" toLane="0" linkIndex="9" tl="interseccion_avrio_FA"/>
+    <connection from="avrio_1" fromLane="0" to="res_entrada" toLane="0" linkIndex="10" tl="interseccion_avrio_FA"/>
+    <connection from="avrio_1" fromLane="1" to="res_entrada" toLane="1" linkIndex="11" tl="interseccion_avrio_FA"/>
+    <connection from="avrio_1" fromLane="1" to="fuerzas_armadas_entrada_nivel" toLane="0" linkIndex="12" tl="interseccion_avrio_FA"/>
+    <connection from="res_salida" fromLane="0" to="fuerzas_armadas_entrada_nivel" toLane="0" linkIndex="3" tl="interseccion_avrio_FA"/>
+    <connection from="res_salida" fromLane="0" to="avrio_2" toLane="0" linkIndex="4" tl="interseccion_avrio_FA"/>
+    <connection from="res_salida" fromLane="1" to="avrio_2" toLane="1" linkIndex="5" tl="interseccion_avrio_FA"/>
+    <connection from="res_salida" fromLane="1" to="FA_2" toLane="0" linkIndex="6" tl="interseccion_avrio_FA"/>
+    <!-- Changed Elements -->
+</tlLogics>

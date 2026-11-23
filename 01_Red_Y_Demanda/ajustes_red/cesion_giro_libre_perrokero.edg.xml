@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Perrokero (06/11/2026): el canal de giro libre FFAA sur -> Av. Rio (172682274) cede el paso al incorporarse a la Av. Rio
+     (se le baja la prioridad). Antes tenia prioridad sobre la salida del cruce (avrio_2, de solo 7,5 m): los que salian de Perrokero
+     hacia la Av. Rio esperaban un hueco dentro o justo a la salida del cruce, lo que bloqueaba Perrokero (con keepClear=0) o, con
+     keepClear=1, frenaba todo el acceso. Un giro libre canalizado cede el paso al transito de la via a la que se incorpora.
+     Se complementa con keepclear_perrokero.con.xml. Aplicar con: netconvert -s costanera.net.xml -e este_archivo. -->
+<edges>
+    <edge id="172682274" priority="1"/>
+</edges>

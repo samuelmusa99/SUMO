@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Perrokero (06/11/2026): "no bloquear el cruce" (keepClear=1) en sus 15 conexiones. Antes tenian keepClear=0 (desde los primeros
+     commits, sin documentar): los que giraban hacia la Av. Rio quedaban detenidos dentro del cruce cuando la salida avrio_2 (7,5 m) se llenaba
+     y el cruce se bloqueaba en circulo en ~30 % de las semillas (3 de 10). Aplicar con: netconvert -s costanera.net.xml -x este_archivo. -->
+<connections>
+    <connection from="FA_1" to="FA_2" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="FA_1" to="FA_2" fromLane="1" toLane="1" keepClear="1"/>
+    <connection from="FA_1" to="res_entrada" fromLane="1" toLane="1" keepClear="1"/>
+    <connection from="FA_3" to="res_entrada" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="FA_3" to="fuerzas_armadas_entrada" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="FA_3" to="fuerzas_armadas_entrada" fromLane="1" toLane="1" keepClear="1"/>
+    <connection from="FA_3" to="avrio_2" fromLane="1" toLane="1" keepClear="1"/>
+    <connection from="avrio_1" to="FA_2" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="avrio_1" to="res_entrada" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="avrio_1" to="res_entrada" fromLane="1" toLane="1" keepClear="1"/>
+    <connection from="avrio_1" to="fuerzas_armadas_entrada" fromLane="1" toLane="1" keepClear="1"/>
+    <connection from="res_salida" to="fuerzas_armadas_entrada" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="res_salida" to="avrio_2" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="res_salida" to="avrio_2" fromLane="1" toLane="1" keepClear="1"/>
+    <connection from="res_salida" to="FA_2" fromLane="1" toLane="1" keepClear="1"/>
+</connections>

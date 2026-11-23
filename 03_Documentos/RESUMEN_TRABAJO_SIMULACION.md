@@ -1,7 +1,7 @@
 # Resumen del trabajo de simulación — Tesis Samuel Mujica (USM, Ing. Civil)
 
-**Actualizado:** 29/10/2026 · **Uso:** compartir este archivo al iniciar un chat nuevo para retomar el trabajo.
-**Estado general:** la **simulación base (2026 y 2041) está terminada y revisada**, y la información de los objetivos 1 y 2 ya está lista para la redacción. Lo siguiente son las **propuestas**: terminar Savignani, luego Perozo y luego la propuesta final.
+**Actualizado:** 20/11/2026 (conteo manual de Perrokero; Av. Río y Residencias = Perozo × 1,131 con conductores que fuerzan el paso; base rehecha; ver sección 14) · **Uso:** compartir este archivo al iniciar un chat nuevo para retomar el trabajo.
+**Estado general (11/11/2026):** las **tres simulaciones (base, Savignani y Perozo; 2026 y 2041) están terminadas y revisadas** con el modelo corregido (Perrokero sin bloqueos, prioridad del giro libre de CC Paos, demora por acceso vehículo por vehículo, pendiente en los puentes, carritos como taxi). Resultados finales en la tabla del punto 6 de la sección 12. Los dos Word (capítulo IV de la base y comparación de escenarios) están regenerados. **Lo siguiente:** contar los videos de Perrokero (el usuario ya los tiene) y compararlos con el modelo; luego, las recomendaciones (objetivo 3) y la propuesta final.
 
 ---
 
@@ -51,10 +51,12 @@ Desktop\SUMO\                            repositorio git (GitKraken)
 ├── 02_Resultados_Base\ 02_Resultados_2041\   XML de SUMO (ignorados por git)
 └── 03_Documentos\
     ├── RESUMEN_TRABAJO_SIMULACION.md    este archivo
-    ├── INCONGRUENCIAS_TESIS_EVALUADAS.md   errores de las tesis (S1–S25 Savignani, P1–P8 Perozo), base del objetivo 3
+    ├── INCONGRUENCIAS_TESIS_EVALUADAS.md   errores de las tesis (S1–S26 Savignani, P1–P8 Perozo), base del objetivo 3
     ├── REVISION_SIMULACION_BASE.md      revisión completa de la base y escenario de sensibilidad
     ├── capitulo4\                       generar_doc.py (documento del cap. IV), guia_excel.py (guía del Excel),
-    │                                    replicas_anchos_tesis\2026|2041 (resultados finales), sensibilidad_sin_postcovid\
+    │                                    sugerencias_cap2.py (sugerencias del marco teórico),
+    │                                    replicas_anchos_tesis\2026|2041 (resultados finales de la base), sensibilidad_sin_postcovid\,
+    │                                    replicas_savignani\2026|2041 (resultados de Savignani del 02/11)
     └── FLUJO VEHICULAR.xlsx (aforo propio), PDF de validación
 
 Desktop\EXCEL RESULTADOS\
@@ -66,16 +68,16 @@ Desktop\EXCEL RESULTADOS\
 └── _RESPALDOS\                     versiones viejas de cada carpeta y Excel
 ```
 
-**Git (29/10/2026):**
+**Git (02/11/2026):**
 | Rama | Contenido |
 |---|---|
-| `main` (`6c9a669`) | Simulación base final |
-| `propuestaPerozo` (`bd71357`) | Igual a main + sus `.bat` (escriben en `PROPUESTA_PEROZO\2026` y `\2041`). Red todavía sin la propuesta. |
-| `propuestaFinal` (`c4b4e5b`) | Igual a main + sus `.bat` (`PROPUESTA_FINAL\2026` y `\2041`). Red todavía sin la propuesta. |
-| `propuestaSavignani` (`6f349d3`) | Main fusionado el 29/10 + la propuesta (ver sección 7) |
+| `main` (`744747c` + este resumen) | Simulación base final + reporte de puentes y tiempo en paradas (sin efecto en la base) |
+| `propuestaPerozo` (`bdbdedb`) | Igual a main + sus `.bat` (escriben en `PROPUESTA_PEROZO\2026` y `\2041`). Red todavía sin la propuesta. |
+| `propuestaFinal` (`d350840`) | Igual a main + sus `.bat` (`PROPUESTA_FINAL\2026` y `\2041`). Red todavía sin la propuesta. |
+| `propuestaSavignani` (`4e8ec59` + este resumen) | Main fusionado el 02/11 + la propuesta (ver sección 7) |
 | `respaldo/propuesta*-2026-10-23` | Versiones viejas, también en GitHub |
 
-- Falta **push normal** (sin force) de `main`, `propuestaPerozo` y `propuestaFinal`.
+- Falta **push normal** (sin force) de las 4 ramas: los commits del 02/11 son locales.
 - El usuario hace commit y push en GitKraken. **No hacer Pull/Sync** en una rama reiniciada, porque mezcla la versión vieja de GitHub (si pasa: `git merge --abort`).
 - Para llevar cambios de main a una propuesta: fusionar main en la rama. En `costanera.net.xml` conservar la red de la propuesta y aplicarle el parche que cambió en main con `netconvert -s ... -e <parche>`; luego regenerar los detectores.
 
@@ -114,27 +116,29 @@ Desktop\EXCEL RESULTADOS\
 - **Capacidad:** con semáforo, c = 1900·fVP·N·g/C; principal sin semáforo, 1900·fVP·N; secundario, capacidad potencial. Si el acceso está saturado, se usa el flujo medido. En 2041 se usa la capacidad de 2026.
 - **5 réplicas** (semillas 1 a 5); cada una en una carpeta temporal.
 - **`replicas.py` (desde el 27/10)** agrega a `resumen_replicas.csv`: `cola_promedio_m`, `cola_maxima_m`, `cola_llena_el_tramo`, `velocidad_media_kmh`, `tiempo_viaje_s`, y filas `nivel=RED` ("Red completa", por tipo de vehículo y TOTAL). Todo es el promedio de 5 réplicas.
+- **Desde el 02/11** (24 columnas): columna `tiempo_en_paradas_s` (tiempo detenido en paradas de bus; la demora `timeLoss` de SUMO no lo incluye, el tiempo de viaje sí), también en `resumen_viajes.csv`. En las propuestas con puente: cada rampa de bajada es un acceso tipo `puente` de la intersección que cruza (flujo libre en `capacidad.py`), y se agrega la fila `INTERSECCION_A_NIVEL` / `(sin puente)` con la demora ponderada solo de los accesos a nivel. La fila `INTERSECCION` sigue siendo el detector E3 completo (a nivel + puente), que es la que se compara con la base.
 
 ### Excel
 - 13 hojas (Reporte Viajes, Analisis Por Vehiculo, Analisis HMD, Reporte Colas, Reporte Densidad, Tramos, Tramos Criticos, Intersecciones, Reporte Densidad Interseccion, Analisis Intersecciones, Resumen Intersecciones, Resumen Viajes y **Resumen Replicas**, que es la que va a la tesis). Una macro actualiza todo al abrir.
-- La consulta `resumen_replicas` tiene un paso `TiposNuevas` que convierte a número las columnas nuevas si existen.
+- La consulta `resumen_replicas` tiene un paso `TiposNuevas` que convierte a número las columnas nuevas si existen (desde el 02/11 incluye `tiempo_en_paradas_s`); `resumen_viajes` tiene el mismo paso para `tiempo_en_paradas_s`. Aplicado en los 8 Excel (respaldo en `_RESPALDOS\antes_paradas_2026-11-02`).
 - Las hojas "Reporte…/Analisis…", Resumen Intersecciones y Resumen Viajes son de **una corrida** (la del SUMO-GUI); Resumen Replicas es el promedio de 5.
 - Explicación completa hoja por hoja: `EXCEL RESULTADOS\GUIA DEL EXCEL DE RESULTADOS.docx`.
 - La parada de bus de Puerto Guaica se redacta como "bloquea el carril derecho cerca del 23 % de la hora pico". En 2041, las demoras de miles de segundos en los accesos secundarios se dejan tal cual.
 
 ---
 
-## 5. Resultados finales de la base (5 réplicas; red de main)
+## 5. Resultados de la base hasta el 20/11 (REEMPLAZADOS por la sección 14; 5 réplicas; red de main con las correcciones de Perrokero (06/11) y de CC Paos y demora por acceso vehículo por vehículo (11/11/2026))
 
 | Intersección | 2026 | 2041 sin proyecto |
 |---|---|---|
-| Camino Real | **D** · 43,9 s · V/C 0,95 (FFAA D 53 s; Costanera E 58 s; El Ejército C 27,5 s) | **F** · 190,1 s · 51 % atendida |
-| CC Paos | **C** · 21,1 s · V/C 0,73 | **F** · 143,7 s · 37 % |
-| Perrokero | **F** · 145,2 s · V/C 1,42 (Av. Río 817 s y 70 % atendida; FFAA norte F 116 s; FFAA sur A) | **F** · 241,3 s · 43 % |
-| Bissau | promedio 7,3 s; avenida A; salida residencial F (66 s, 23 veh/h) | **F** · 152,8 s · 47 % |
-| Puerto Guaica | promedio 17,0 s (D por la salida residencial); avenida A–C | **F** · 88,5 s · 47 % |
-| Red completa | 4.544 viajes; 313 s de viaje; 160 s de demora; **23,3 km/h**; 0 teletransportes | 4.000 viajes; 1.399 s; **4,1 km/h** |
+| Camino Real | **D** · 39,4 s (Costanera E 56,4 s) | **F** · 120,6 s · 83 % atendida |
+| CC Paos | **C** · 22,0 s (Sur B 19 s) | **F** · 171,6 s · 75 % (Madre Vieja 415 s) |
+| Perrokero | **F** · 102,8 s (Av. Río F 333 s, descarga 136 de 172 veh/h, campo 180; FFAA norte F 73 s; Residencias D 34 s; FFAA sur A) | **F** · 165,8 s · 80 % |
+| Bissau | promedio 4,0 s (D por la salida residencial) | **F** · 70,7 s · 79 % |
+| Puerto Guaica | promedio 11,2 s (D) | **E** · 58,8 s · 79 % |
+| Red completa | 4.545 viajes; 249 s de viaje; 96 s de demora; **29,1 km/h**; 0 teletransportes | 5.853 viajes; 487 s de demora; **11,0 km/h** |
 
+- **Valores anteriores (keepClear=0, hasta el 06/11):** Camino Real D 43,9 s; Perrokero F 145 s (Av. Río 817 s); red 23,3 km/h; 2041 red 4,1 km/h. Se cambiaron porque Perrokero se bloqueaba en ~30 % de las semillas (ver bitácora del 06/11).
 - En 2041 el colapso empieza en Perrokero (FFAA norte) y se propaga a Camino Real, Puerto Guaica, Bissau y CC Paos.
 - **Comparación con las tesis:** Perrokero coincide (F). CC Paos coincide (C; 22,6 s frente a 21,1 s). Camino Real: tesis F (129 s) frente a D, explicado por sus errores (GD3 = 603 frente a 190; 35 % de pesados frente a 6 %; ciclo de 111 s imposible). Bissau y Fernández Padilla: el F de Savignani es un error de cálculo (recalculado, unos 28 s, D).
 - **Escenario de sensibilidad** (sin el +50 % post COVID, ×1,131): Camino Real C 24,9 s, CC Paos B 16,6 s, Perrokero C 13,7 s, red 37 km/h, Av. Río sale 169 veh/h (campo 180). **El diagnóstico depende del factor post COVID.** Está en `REVISION_SIMULACION_BASE.md` (sección 2b) y en `capitulo4\sensibilidad_sin_postcovid`. **No se agregó al documento del capítulo IV**: el usuario lo consultará con el tutor y medirá las colas en los videos de campo (si hay colas de 150 a 300 m, la base es la más realista; si son de 30 a 80 m, se parece más a ×1,131).
@@ -153,6 +157,14 @@ Desktop\EXCEL RESULTADOS\
    - en el Cuadro 1.2, cambiar "hombrillos" y "radios de giro" por "isla y acera" y "número de carriles";
    - agregar las referencias: MTC 1997, MINDUR 1981, MVDUCT/INTT 2011, HCM 2000, FHWA Toolbox vol. III y las dos tesis.
 4. Apoyo: `INCONGRUENCIAS_TESIS_EVALUADAS.md` y la sección 3 de la revisión.
+5. `TRABAJO DE GRADO\SUGERENCIAS CAPITULO II - MARCO TEORICO.docx` (estructura, antecedentes, 8 bloques teóricos incluido el de simulación, bases legales, 46 términos y fuentes). Se regenera con `capitulo4\sugerencias_cap2.py`.
+6. **Antecedentes del capítulo II (04/11/2026).** El tutor pide solo los trabajos que de verdad se usaron (3 a 5, sin mínimo de nacionales o internacionales). Quedaron así (verificados en los PDF; el usuario debe leer al menos el resumen, la metodología y las conclusiones de los nuevos):
+   1. Estanga y Savignani (2021), USM. Nacional.
+   2. Assouad y Peroza (2022), USM. Nacional.
+   3. Villalba, C. (2022). *Modelación del tránsito vehicular al tramo Avenida Busch entre segundo y cuarto anillo, Santa Cruz de la Sierra* [Tesis de grado, Universidad Católica Boliviana "San Pablo"]. https://www.tesis.ucb.edu.bo/scz/ucb_civ/2022/villalba_c/ — SUMO (NetEdit + SUMO-GUI), HCM 2010, conteos en 4 nodos, proyección a 2, 5 y 10 años y 3 alternativas; sin intervención las esperas se duplican en 5 años y el sistema colapsa a los 10. Ya se cita en el capítulo I. Se entregó un borrador del antecedente con su "aporte a la investigación".
+   4. Molina Toledo, D. A. (2024). *Análisis de niveles de servicio mediante la aplicación del método HCM: Estudio de caso Megamaxi Cuenca*. Universidad de Cuenca (Ecuador). SUMO + HCM 2000, matrices O-D, fases semafóricas. https://dspace-test.ucuenca.edu.ec/bitstream/123456789/45467/4/Trabajo-de-Titulaci%C3%B3n.pdf
+   5. Opcional: Gómez Arias, J. A. (2017). *Modelación y calibración de tránsito usando el software PTV VISSIM…* Universidade do Minho / UIS. Respalda la calibración con GEH.
+   - La tesis de Valentina Marcano (riego, 2025) **no** sirve como antecedente. Lopez y otros (2018) es un artículo: va en bases teóricas.
 - **Falta un documento igual para las propuestas** (objetivos 3 y 4).
 
 ---
@@ -162,28 +174,100 @@ Desktop\EXCEL RESULTADOS\
 Lo aplicado en la red (`ajustes_red/propuesta_savignani_fase2.py`; diff respecto a main en `ajustes_red/propuesta_savignani.*`):
 - **Distribuidor** Costanera ↔ FFAA: 1 carril de 4 m por sentido; perfil de la tesis (rasante a 7,4 m, rampas de 60 m al 12,3 % y tablero de 30 m). Tramos `puente_subida_hacia_ffaa`, `puente_hacia_ffaa`, `puente_bajada_hacia_ffaa` y sus equivalentes hacia la Costanera.
 - **Pesados a nivel:** el puente prohíbe la clase `bus` (coincide con la Alternativa C de la tesis, "canal a nivel para tráfico pesado colectivo").
-- **Avenida En Proyección** (`av_proyeccion_entrada/salida`), de 2 carriles por sentido; lleva el **30 % de los viajes de FFAA sur que cruzan Camino Real** (supuesto del usuario, a declarar; rompe a propósito la regla de "misma demanda"). Demanda: `herramientas/demanda_propuesta.py`, que genera `demanda/demanda_savignani_2026|2041.rou.xml` desde la demanda base.
+- **Avenida En Proyección** (`av_proyeccion_entrada/salida`), de 2 carriles por sentido; lleva el **30 % de los viajes de FFAA sur que cruzan Camino Real** (porcentaje indicado por el tutor, 06/11/2026: se declara como criterio de experto; rompe a propósito la regla de "misma demanda"). Demanda: `herramientas/demanda_propuesta.py`, que genera `demanda/demanda_savignani_2026|2041.rou.xml` desde la demanda base.
 - **Semáforo de Camino Real:** el del usuario, 4 fases separadas (av. en proyección 30 s, El Ejército 40 s, Costanera 20 s y FFAA 20 s, + 3 s de amarillo; **ciclo de 122 s**). El del Anexo B (3 fases 40/40/80 s con ciclos incoherentes de 88/83/113 s) se descartó porque cruza movimientos; pendiente de consultar con el tutor.
 - FFAA a nivel con 3,75 m (Anexo G). CC Paos con 3,75 m (traído de main).
 - **Bahías de bus** con parada en las 3: Puerto Guaica (sentido Lechería, `bs_0`) y Bissau (sentido Lechería, `bs_bissau`) de 30 m + cuñas de 20 m; Fernández Padilla (sentido Camino Real, `bs_fpadilla`) de 20 m + cuñas de 15 m. Carril de 2,5 m que solo admite buses y carritos.
-- **Carriles de 3 m en Bissau** (sentido Lechería): uno de salida y otro de incorporación, de unos 50 m.
+- **Carriles de 3 m en Bissau** (sentido Lechería): uno de salida y otro de incorporación, de unos 50 m. **Es el único lugar donde la tesis los propone** (4.4.1, p. 233 impresa: "canales de acceso e incorporación… sentido Sur-Norte (Acceso a Residencia Bissau)"; Fig. 118 Bissau; la Fig. 119 muestra solo bahías en Puerto Guaica y Fernández Padilla). Agregarlos en Puerto Guaica y Fernández Padilla puede ir como **recomendación propia** (objetivo 3 / propuesta final).
 - **Isla central NO prolongada:** no hay dónde retornar (Bissau → Camino Real quedaría sin ruta). Pendiente de consultar con el tutor.
-- Detectores: `generar_detectores.py` de esta rama tiene `SALIDAS_EXTRA` (salidas del detector al bajar del puente) y `ANTERIOR_FORZADO`.
-- **Resultado de prueba 2026** (5 réplicas, semáforo de 122 s): Camino Real F con unos 83 s (El Ejército F 137 s; FFAA a nivel F 269 s); Bissau y Puerto Guaica en A en la Costanera. La red tiene congestión de inserción en El Ejército.
-- **Pendientes de Savignani:**
-  1. Quedó sin respuesta qué carriles de incorporación faltan: los de Bissau ya están; preguntar si también quiere los de Puerto Guaica y Fernández Padilla, o si los de Bissau no se ven bien en el GUI.
-  2. Correr sus `.bat` (2026 y luego 2041) para actualizar `PROPUESTA_SAVIGNANI\2026|2041`: sus datos son de antes del 29/10.
-  3. Consultar con el tutor el semáforo de 122 s, la isla central y el 30 % de la avenida en proyección.
+- Detectores: `generar_detectores.py` (ahora igual en main y en todas las ramas) tiene `SALIDAS_EXTRA` (salidas del E3 al bajar del puente), `ANTERIOR_FORZADO` y `PUENTES` (filas "Puente hacia FFAA", 272 m, y "Puente hacia Costanera", 300 m).
+
+**Resultados finales de Savignani (02/11, 5 réplicas; en `capitulo4\replicas_savignani\2026|2041`):**
+
+| 2026 | Base | Savignani |
+|---|---|---|
+| Camino Real completa (a nivel + puente) | D · 43,9 s · V/C 0,95 | **F · 81,7 s** · V/C 1,25 · 94 % atendida |
+| Camino Real solo a nivel | — | F · 130,4 s · 89 % |
+| Puente hacia FFAA | — | A · 5,0 s · 648 veh/h |
+| Puente hacia Costanera | — | **F · 117,6 s** · 434 veh/h |
+| FFAA a nivel | D · 53 s · 942 veh/h | F · 259 s · 214 veh/h (1 carril, 20 s de verde) |
+| Costanera a nivel | E · 58 s | E · 56 s |
+| El Ejército | C · 27,5 s | **F · 137 s** · 87 % atendida |
+| Av. En Proyección | — | D · 40 s · 216 veh/h |
+| CC Paos | C · 21,1 s | C · 29,0 s (Madre Vieja 67 s: es azar, ver abajo) |
+| Perrokero | F · 145 s (Av. Río 817 s) | F · 40 s (Av. Río 109 s; FFAA norte D 31 s) |
+| Bissau / Puerto Guaica | 7,3 s / 17,0 s | 4,3 s (C) / 4,9 s (B) |
+| Red completa | 4.544 viajes · 160 s demora · 23,3 km/h | 4.418 viajes · 115 s · 26,7 km/h |
+| Buses (`carrito`) | 127 s demora · 28,4 km/h | **367 s** demora (+28 s en paradas, aparte) · 15,8 km/h |
+| Pesados | 132 s | 225 s |
+
+- **2041:** la red colapsa igual que la base (4,1 km/h en ambos; demora 1.217 frente a 1.280 s). Camino Real F 110 s con 42 % atendida (base 190 s y 51 %); el distribuidor no resuelve el horizonte 2041.
+- **Cuello de botella en El Ejército / salida a la Costanera:** la salida a nivel hacia la Costanera es de 1 carril y recibe El Ejército + la bajada del puente (~900 veh/h). Por eso el puente hacia FFAA va en A pero el puente hacia la Costanera queda en F. Registrado como **S26** (Anexo B de la tesis: El Ejército → Costanera 685 veh/h en 1 carril, Xc 1,04, 61,4 s (E), pero la intersección se presenta como C). **Idea para la tesis:** quizá el distribuidor no es la mejor propuesta, porque traslada el cuello de botella a la salida hacia la Costanera.
+- **Buses:** el atraso es real, no efecto de las paradas: el puente prohíbe buses, así que cruzan por FFAA a nivel, que queda saturado (FFAA → Lechería: 873–916 s frente a 210–237 s en la base).
+- **Madre Vieja (CC Paos):** con 5 semillas parecía empeorar (67 frente a 33 s), pero con 10 semillas da base 39,8 s y Savignani 33,3 s → variabilidad aleatoria (carril compartido con giro a la izquierda permisivo), no efecto de la propuesta.
+- **Bissau y Puerto Guaica sentido Lechería** salen con V/C 1,15 y nivel A a la vez: no están saturados, sino que llega menos tráfico porque se queda atrapado en Camino Real (la "capacidad medida" es lo que llega). Explicarlo así en la tesis.
+
+**Pendientes de Savignani:**
+1. Correr sus `.bat` (2026 y luego 2041) para refrescar `PROPUESTA_SAVIGNANI\2026|2041` (sus Excel tienen datos del 23/10). Los resultados deben parecerse a los de la tabla.
+2. Consultar con el tutor: semáforo de 122 s frente al del Anexo B, isla central y los carriles de incorporación de Puerto Guaica y Fernández Padilla como recomendación.
+
+---
+
+## 7b. Propuesta Perozo (rama `propuestaPerozo`): estado al 04/11/2026
+
+Lo aplicado en la red con `ajustes_red/propuesta_perozo.py` (se corre sobre la red plana de main; diff en `ajustes_red/propuesta_perozo.*`):
+- **Puente sobre FFAA** (cap. V, 5.6 y figuras, imp. 168–170): rampa de 40 m al 15 % + tablero de 20 m a 6,00 m + rampa de 40 m (100 m en total), centrado en el cruce; 1 carril de 3,70 m por sentido; 40 km/h. Tramos `puente_subida_hacia_sur`, `puente_hacia_sur`, `puente_bajada_hacia_sur` y los equivalentes `..._hacia_norte`.
+- **Solo livianos** en el puente (`allow` passenger); pesados y carritos (clase bus) a nivel, igual que en Savignani.
+- **A nivel queda 1 carril por sentido en FFAA** (el derecho), como en la figura de la tesis: el carril izquierdo de campo es el que sube al puente (la sección sigue con 2 carriles por sentido). Por eso los giros a la izquierda salen del carril derecho. El cálculo HCM de la tesis supone 2 carriles a nivel (incongruencia **P10**).
+- Los carriles se separan 8 m antes del pie de la rampa (58 m del centro) para que netconvert no corte la rampa. En el sentido sur → norte, el carril izquierdo se separa en el nodo `11353318191` (~75 m), antes de la bifurcación hacia la Av. Río, y sigue a nivel hasta los 50 m.
+- **Semáforo de 120 s** bajo el puente, una fase por acceso: Norte 33, Oeste (Residencias) 20, Sur 25 y Este (Av. Río) 30 s + 3 s de amarillo, sin todo rojo (tal cual la tesis).
+- Tramos nuevos a nivel: `FA_3_antes`, `FA_3` (1 carril), `fuerzas_armadas_entrada_nivel`, `FA_2` (1 carril), `FA_2_despues`; `bifurcacion_FA_perrokero` y `FA_1` con 1 carril. El giro libre FFAA sur → Av. Río (`172682274`) se mantiene.
+- Demanda: `herramientas/demanda_propuesta.py` → `demanda/demanda_perozo_2026|2041.rou.xml` (misma demanda de la base; los livianos que siguen derecho por FFAA van por el puente: 753 y 726 veh/h en 2026). Las `.sumocfg` de la rama apuntan a esos archivos.
+- `resumen_resultados.py` de la rama: Perrokero pasa a `semaforizada` (umbrales HCM con semáforo) y la referencia de la tesis es la Alternativa C (E, 65,6 s). `generar_detectores.py`: filas `puente` "Puente hacia el sur (FFAA)" y "Puente hacia Camino Real" (también sirven en main, están protegidas con `hasEdge`).
+
+**Resultados (5 réplicas; `capitulo4\replicas_perozo\2026|2041`; 0 teletransportes):**
+
+| 2026 | Base | Perozo |
+|---|---|---|
+| Perrokero completa (a nivel + puente) | F · 145,2 s · V/C 1,42 | **E · 62,3 s** · V/C 1,08 · 98 % atendida |
+| Perrokero solo a nivel | — | E · 67,2 s (tesis, 2041: E · 65,6 s) |
+| FFAA norte (desde Camino Real) a nivel | F · 116,5 s · 1.128 veh/h | **F · 93,1 s** · 372 veh/h · cola 76 m (máx. 258 m) |
+| FFAA sur a nivel | A · 4,7 s | D · 43,9 s · 133 veh/h |
+| Av. Río | F · 817 s · 70 % atendida | **D · 37,9 s** · 97 % |
+| Residencias | F · 51,4 s | D · 42,4 s |
+| Puente hacia el sur | — | D · 43,6 s · 767 veh/h |
+| Puente hacia Camino Real | — | A · 3,4 s · 761 veh/h |
+| Camino Real / CC Paos | D 43,9 s / C 21,1 s | D 40,7 s / C 21,6 s |
+| Red completa | 4.544 viajes · 160 s demora · 313 s viaje · 23,3 km/h | 4.547 viajes · **117 s** · 271 s · **27,0 km/h** |
+
+- **Hallazgo:** el puente hacia el sur tiene 43,6 s de demora aunque el tablero va libre: la cola del acceso norte a nivel (1 carril, 33 s de verde, con el giro a la izquierda GI4 hacia la Av. Río) pasa de los 50 m de separación y **bloquea la entrada al puente**. Es una recomendación natural para el objetivo 3 (alargar la separación de carriles o dar más verde al acceso norte). Hacia Camino Real no pasa, porque el acceso sur tiene poco giro.
+- **2041:** Perrokero E · 77,0 s (71 % atendida; a nivel 72,8 s), pero la red sigue colapsada (7,1 km/h frente a 4,1 de la base; demora 754 frente a 1.280 s); el colapso pasa a Camino Real (FFAA a nivel 227 s), CC Paos y Bissau.
+
+- **Polígono del puente en el GUI:** `distribuidor.add.xml` (mismo id, color gris 131,139,139 y capa 5 que el de Savignani), generado con `ajustes_red/poligono_puente_perozo.py` sobre los dos carriles del puente (100 m × 8,67 m); cargado en las dos `.sumocfg`. No cambia la simulación.
+- **Excel (04/11):** los de Perozo se rehicieron como copia de los de Savignani con `copiar_excel.py` (misma estructura) y se refrescaron con los CSV de Perozo; los anteriores están en `_RESPALDOS\PROPUESTA_PEROZO_antes_igualar_2026-11-04`.
+- **Mapeo de intersecciones (hoja "Intersecciones", tabla `MAPEO_INTERSECCIONES`), 04/11:** en los 4 Excel de propuestas (Savignani y Perozo, 2026 y 2041) se agregaron las mismas 6 filas: `puente_subida_hacia_sur` y `puente_subida_hacia_norte` (Perrokero), `puente_subida_hacia_ffaa`, `puente_subida_hacia_costanera`, `ffaa_hacia_semaforo` y `av_proyeccion_salida` (Camino Real). Así "Analisis Intersecciones" y "Reporte Densidad Interseccion" cuentan también el puente (Perrokero Perozo 2026: de 778 a 2.356 veh/h; Camino Real Savignani 2026: de 1.106 a 2.546 veh/h). `ffaa_hacia_semaforo` reemplaza en Savignani a `semaforo_caminoreal_FA`, que mide 18 m y la consulta descarta (< 20 m). Respaldo en `_RESPALDOS\antes_mapeo_puentes_2026-11-04`.
+- **Red propia de cada Excel (04/11):** la consulta "costanera net" leía `01_Red_Y_Demanda\costanera.net.xml`, o sea, la red de la rama activa, y la macro refresca al abrir. Ahora los 8 Excel (base, 2041, Savignani, Perozo y Final) leen `costanera.net.xml` **de su propia carpeta** (`herramientas/red_excel.py`; respaldo en `_RESPALDOS\antes_red_propia_2026-11-04`). Se copiaron: red de main en BASE_2026 y FUTURO_2041, la de cada rama en su propuesta (Final = main por ahora). Los `.bat` de Perozo copian la red en cada corrida (`copy /Y "%RED_DIR%\costanera.net.xml" "%CSV_DIR%\costanera.net.xml"`). **Falta agregar esa misma línea a los `.bat` de main, Savignani y Final** cuando se trabaje en cada rama (mientras tanto sus Excel usan la copia de hoy, que está bien mientras no cambie su red).
+
+- **Cambios del 06/11/2026 (rama Perozo):** (1) `carFollowModel="KraussPS"` en los tres tipos de vehículo (la pendiente reduce la aceleración en subida); en la red plana da resultados idénticos a Krauss (verificado con la base, semilla 1), así que solo afecta los puentes. Los livianos (aceleración 2,6 m/s²) mantienen unos 40 km/h en el 15 % porque la gravedad les resta 1,46 m/s²: el efecto se nota al arrancar en cola sobre la rampa, no a velocidad constante. (2) Carritos con clase `taxi` (taxis y por puestos; Perozo solo prohíbe pesados): el flujo `ffaa_lech_C` tiene ruta fija por el puente. Réplicas rehechas: 2026 Perrokero E 61,1 s, red 112 s y 27,4 km/h; carritos de 161 a 137 s de demora; 2041 Perrokero F 87,5 s (antes E 77 s: está en el límite y dentro de la variabilidad), red 7,0 km/h. **Falta aplicar KraussPS a Savignani** (su puente tiene pendiente; ahí los carritos siguen a nivel porque su tesis habla de "tráfico pesado colectivo"). **Ojo al llevar `costanera.rou.xml` a main o a Savignani:** la clase `taxi` de los carritos es solo de Perozo (las bahías de Savignani admiten solo `bus`).
+- **30 % de la Av. En Proyección:** lo indicó el tutor; se declara como criterio de experto (06/11).
+
+**Pendientes de Perozo:**
+1. Revisar en el SUMO-GUI la geometría del puente y la cola del acceso norte (los `.bat` ya se corrieron el 04/11).
+2. Commit y push de la rama (el merge de main del 04/11, `859d9fe`, también es local).
+3. Llevar a main el resumen, `INCONGRUENCIAS_TESIS_EVALUADAS.md` (P9–P19) y `generar_detectores.py`.
 
 ---
 
 ## 8. Próximos pasos
 
-1. Push normal de `main`, `propuestaPerozo` y `propuestaFinal`.
-2. Terminar Savignani (pendientes de la sección 7) y correr sus `.bat`.
-3. **Perozo:** su rama ya tiene sus `.bat` y Excel, pero la red no tiene la propuesta. El puente de Perrokero va desde cero (la rama vieja no tenía geometría). Revisar a fondo la tesis de Perozo (planos, perfil y semáforo de 120 s) y agregar sus incongruencias al archivo.
-4. **Propuesta final:** con las recomendaciones del usuario.
-5. Documento para la amiga de los objetivos 3 y 4 (igual al del capítulo IV de la base), y costos (objetivo 4: cómputos métricos y APU con precios de 2026).
+*(Actualizado el 06/11/2026.)*
+1. **Datos de campo del usuario** (en curso, 06 a 08/11): conteo de Perrokero (3 días × 5 min en la hora pico; prioridad: Camino Real → FFAA sur, Camino Real → Av. Río, FFAA sur → Camino Real, FFAA sur → Av. Río y la salida de la Av. Río), cola máxima de FFAA hacia Perrokero (también la Costanera hacia Camino Real y la Av. Río) y recorrido del eje en carro o tiempo de Google Maps a las 7:00 a. m. Al recibirlos: comparar con el modelo (base 2026: GI4 382, MF5 964, MF2 881 y GD3 467 veh/h; Av. Río descarga 139 veh/h; red 26,0 km/h; colas en `capitulo4/replicas_anchos_tesis/2026`), decidir el factor de demanda (×1,697 o menor) y, si cambia, regenerar la demanda y volver a correr las tres simulaciones.
+2. **Rehacer el escenario de sensibilidad (×1,131)** con la red corregida (`capitulo4/sensibilidad_sin_postcovid`).
+3. **Consultas al tutor:** Savignani (semáforo de 122 s, isla central, carriles de incorporación), Perozo (1 carril a nivel según la figura frente a los 2 del cálculo HCM, P10), el factor post COVID y el GEH presentado como verificación de la carga (no como validación).
+4. **Objetivo 3, recomendaciones:** con los resultados finales (sección 11, punto 10). Hallazgos: Savignani lleva el cuello de botella a la salida de 1 carril hacia la Costanera (S26); Perozo resuelve Perrokero, pero su semáforo se repartió para una Av. Río mucho más cargada (reprogramarlo); en 2041 solo Savignani mantiene la red en movimiento, gracias a la Av. En Proyección (30 %, criterio del tutor).
+5. **Propuesta final** en `propuestaFinal`, con las recomendaciones del usuario. Su Excel se hace copiando el de Savignani (`copiar_excel.py` + `red_excel.py`).
+6. **Documento para la amiga de los objetivos 3 y 4** (como el del capítulo IV de la base), con las tablas de las secciones 7 y 7b.
+7. **Objetivo 4, costos:** cómputos métricos y APU con precios de 2026 (las dos tesis copian costos de trabajos extranjeros, S21 y P6).
 
 ---
 
@@ -199,3 +283,134 @@ Lo aplicado en la red (`ajustes_red/propuesta_savignani_fase2.py`; diff respecto
 - `netdiff.py` deja archivos planos (`costanera.con.xml`, etc.) junto a la red de entrada: borrarlos si aparecen en `01_Red_Y_Demanda`.
 - No correr simulaciones en `02_Resultados_*` con SUMO-GUI abierto.
 - Revisar siempre el realismo (choques, colas, bloqueos, volúmenes por calle). El usuario valora el realismo por encima de cuadrar cifras. Desconfiar de cambios de geometría que alteran el dibujo de los cruces en SUMO (probar con varias semillas).
+- Si un acceso cambia mucho entre escenarios sin una causa clara, correr 10 semillas antes de concluir (caso Madre Vieja).
+
+---
+
+## 10. Bitácora del 02/11/2026
+
+1. **Revisión de lo que faltaba en Savignani** (rama `propuestaSavignani`): diagnóstico con 5 réplicas 2026 (Camino Real F, El Ejército F, FFAA a nivel F, buses muy demorados).
+2. **Incongruencia S26** agregada (salida a la Costanera de 1 carril; Anexo B con Xc 1,04).
+3. **Carriles de incorporación:** confirmado en la tesis que solo los propone en Bissau; los de Puerto Guaica y Fernández Padilla quedan como posible recomendación propia.
+4. **Madre Vieja:** probado con 10 semillas; es azar.
+5. **Reporte para comparar con la base** (commit `744747c` en main, fusionado en las 3 ramas): accesos tipo `puente`, fila `INTERSECCION_A_NIVEL`, columna `tiempo_en_paradas_s` en `resumen_viajes.csv` y `resumen_replicas.csv` (`resumen_resultados.py`, `replicas.py`, `capacidad.py`, `generar_detectores.py`). En la base no cambia nada (verificado).
+6. **Los 8 Excel** (base, 2041, Savignani, Perozo y Final) actualizados para tipar la columna nueva; se probó el refresco de una copia sin errores.
+7. **Réplicas finales de Savignani 2026 y 2041** con el reporte nuevo (sección 7), guardadas en `capitulo4\replicas_savignani`.
+8. Este resumen e `INCONGRUENCIAS_TESIS_EVALUADAS.md` (con S26) llevados también a main.
+
+---
+
+## 11. Bitácora del 06/11/2026
+
+1. **Revisión exhaustiva** (`REVISION_EXHAUSTIVA_2026-11-06.md`). Puntos críticos: la demanda de Perrokero es de 3 a 10 veces el conteo de campo; el +50 % post COVID es un supuesto propio (Savignani solo lo usa para su propuesta, imp. 233); el GEH es verificación de la carga, no validación; con 5 réplicas, "Perozo mejora la red en 2026" no es significativo.
+2. **Decisiones del usuario:** recontar Perrokero (5 minutos en la hora pico durante 3 días), filmar la cola de la FFAA y recorrer el eje para medir la velocidad; quedarse con 5 réplicas y reportar el intervalo de confianza; el 30 % de la Av. En Proyección lo indicó el tutor (no hay sensibilidad con 0 %); en 2041 se reportan los mismos indicadores que en 2026, más la demanda atendida.
+3. **Pendiente de las rampas:** `carFollowModel="KraussPS"` en `propuestaPerozo` (`c66a9a4`) y en `propuestaSavignani` (`7c59139`). En la red plana da lo mismo que Krauss (verificado), así que la base no se volvió a correr y `main` sigue con Krauss.
+4. **Carritos en el puente de Perozo** (clase `taxi`, solo en esa rama).
+5. **Réplicas rehechas:**
+   - Perozo 2026: Perrokero E 61,1 s; red 112 s y 27,4 km/h.
+   - Perozo 2041: Perrokero F 87,5 s, en el límite de 80 s.
+   - Savignani 2026: Camino Real F 84,2 s; red 118 s y 26,4 km/h.
+   - Savignani 2041: red 4,2 km/h.
+   - Las conclusiones no cambian.
+6. **Consolidado en main:** documentos, `comparar_propuestas.py`, las réplicas de las tres simulaciones, `generar_detectores.py` y `red_excel.py`. Se regeneró el Word `COMPARACION DE ESCENARIOS - BASE, SAVIGNANI Y PEROZO.docx`. Los `.bat` de la base copian la red a su carpeta de Excel.
+7. **Carritos como taxi en las tres ramas** (decisión del usuario: se detienen en las paradas y, como no son pesados, usan los puentes). En main no cambia nada (verificado). En Savignani: bahías con `allow="bus taxi"`, ruta fija del carrito FFAA → Lechería por el distribuidor y **corrección de permisos**: antes solo `puente_subida_hacia_ffaa` prohibía `bus`; ningún pesado usó el puente (verificado) y ahora los 6 tramos lo prohíben (`ajustes_red/propuesta_savignani_permisos.edg.xml`). Réplicas nuevas de Savignani 2026: carritos de 391 a 49 s de demora; Camino Real E 76,6 s (en el límite de 80 s; la base está en D 43,9 s); red 106 s y 27,8 km/h. En 2041 no cambia.
+8. Se fusionó main en `propuestaSavignani` (`8581717`). Main tiene las réplicas definitivas de las tres simulaciones y el Word de comparación regenerado, con los textos sobre transporte público corregidos.
+9. **Bloqueo de Perrokero:** una corrida del `.bat` dio FHMD 0,58 porque Perrokero quedó bloqueado desde los 30 minutos. Con 10 semillas, 3 se bloqueaban. La causa era `keepClear="0"` en sus 15 conexiones (desde los primeros commits): los que giraban hacia la Av. Río (salida `avrio_2` de 7,5 m que se une al canal de giro libre) quedaban dentro del cruce y lo bloqueaban en círculo. Se aplicó `keepClear="1"` ("no bloquear el cruce", `ajustes_red/keepclear_perrokero.con.xml`) y, como solo con eso la salida `avrio_2` de 7,5 m frenaba el cruce, también la **cesión de paso del canal de giro libre** `172682274` al incorporarse a la Av. Río (`ajustes_red/cesion_giro_libre_perrokero.edg.xml`, priority=1). Resultado: 0 bloqueos y 0 choques en 10 semillas (6 a 15), sin teletransportes. Base rehecha (tabla de la sección 5). Se regeneró `INFORMACION CAPITULO IV - ESCENARIO BASE.docx`. **Falta:** aplicarlo en Savignani y en Perozo (en Perozo también en `propuesta_perozo.py`, que ponía `keepClear='0'`), volver a correr sus réplicas, regenerar el Word de comparación y rehacer el escenario de sensibilidad (×1,131), que se corrió con la red anterior.
+10. **Resultados finales de las tres simulaciones** (las tres con keepClear y la cesión del giro libre en Perrokero, KraussPS y los carritos como taxi; 5 réplicas; 0 teletransportes; sin bloqueos en las semillas 6 a 15):
+
+| | Base | Savignani | Perozo |
+|---|---|---|---|
+| 2026 Camino Real | D · 41,9 s | E · 77,7 s | D · 39,7 s |
+| 2026 CC Paos | C · 21,5 s | C · 25,5 s | C · 22,3 s |
+| 2026 Perrokero | F · 95,8 s (Av. Río 507 s) | E · 21,4 s | **C · 29,6 s** (puente hacia el sur B 14 s) |
+| 2026 Red completa | 127 s · 26,0 km/h | 100 s · 28,4 km/h | **93 s · 29,6 km/h** |
+| 2026 Carritos / pesados | 126 / 111 s | **49** / 191 s | 123 / 107 s |
+| 2041 Red completa | 4.887 viajes · 6,6 km/h | **5.859 viajes · 15,3 km/h** | 5.156 viajes · 7,5 km/h |
+| 2041 Perrokero | F · 196 s (71 %) | F · 159 s (91 %) | **D · 44 s** (74 %) |
+
+    - **Conclusiones:** en 2026 Perozo resuelve Perrokero sin perjudicar el resto; Savignani empeora Camino Real (salida de un carril, S26). En 2041 Savignani es la que mejor responde, pero sobre todo porque la Av. En Proyección saca el 30 % de los viajes de FFAA sur del eje (hay que declararlo).
+    - **Ya no aplica:** "la cola del acceso norte de Perozo tapa la entrada al puente". Era un artefacto de la prioridad del canal de giro libre.
+    - Se regeneraron los dos Word (capítulo IV de la base y comparación de escenarios), con las frases fijas reescritas.
+11. **Falta:** la línea `copy /Y` de la red en los `.bat` de Final (Savignani ya la tiene por la fusión); correr los `.bat` de Savignani y Perozo para refrescar sus Excel con KraussPS; fusionar main en las tres ramas (en Perozo, conservar su `resumen_resultados.py` y su `costanera.rou.xml`).
+
+---
+
+## 12. Bitácora del 11/11/2026 (revisión sin Perrokero)
+
+1. **Faltaban en main las réplicas finales de Savignani** (había quedado la versión de 4,2 km/h en 2041; las finales están en `901167b` de su rama). Se trajeron a main.
+2. **Error de método en la demora por acceso** (`resumen_resultados.py`): repartía la pérdida de los tramos compartidos en proporción al tránsito, como si todos los vehículos perdieran lo mismo. Fallaba en los accesos que comparten tramo con un movimiento de demora muy distinta (giros libres que se separan después, carriles que suben a un puente). Ejemplos (semilla 1): Savignani, puente hacia la Costanera reportado 82 s (F) frente a 4 s reales (A), y FFAA a nivel reportada 244 s frente a 428 s reales; Perozo, acceso norte 68 frente a 96 s; base, Av. Río 309 frente a 196 s. **Corrección:** la demora por acceso se calcula ahora vehículo por vehículo con las rutas de SUMO (`reporte_rutas.xml`, `vehroute` con hora de salida de cada tramo): tiempo en el tramo menos el tiempo a la velocidad deseada de cada vehículo, incluyendo el paso por el interior del cruce y descontando el tiempo detenido en las paradas, igual que el `timeLoss` de SUMO. Validado: en los accesos que no comparten tramo coincide con el método anterior (0 a 2 s). `replicas.py` y las dos `.sumocfg` guardan ahora las rutas. Las columnas del CSV no cambian (el Excel sigue igual). La demora por intersección (E3) y la de la red no se ven afectadas.
+3. **Cuello de botella oculto en CC Paos:** el giro libre Costanera → Lechería (Av. Fabricio Ojeda, ~1.090 veh/h, el movimiento más cargado) cedía el paso a la salida Madre Vieja → Lechería en un tramo de 1 carril y 3,3 m (`598218053#2`, de OpenStreetMap). Perdía ~134 s por vehículo (22 % de la demora de la red base) y la cola llegaba a Bissau, algo que en campo no se observa. **Decisión del usuario:** el giro libre tiene prioridad, porque lleva más tránsito; ahora cede Madre Vieja (`ajustes_red/prioridad_giro_libre_cc_paos.edg.xml`, priority=11). Afecta igual a los tres escenarios.
+4. **Base rehecha** (tabla de la sección 5): 2026 red 29,1 km/h (antes 26,0), CC Paos Sur B 19 s (antes E 56 s); 2041 red 11,0 km/h (antes 6,6). El diagnóstico no cambia: Camino Real D, CC Paos C, Perrokero F. Se regeneró el Word del capítulo IV (el texto de los hallazgos de 2041 ahora sale de los datos).
+5. **Savignani y Perozo:** se fusionó main en cada rama (red y réplicas propias conservadas), se aplicó el parche de CC Paos a sus redes y se rehicieron las réplicas. Se trajeron a main y se regeneró el Word de comparación (frase corregida: en Savignani los dos puentes funcionan bien y el problema está a nivel).
+6. **Resultados finales (11/11/2026; 5 réplicas; 0 teletransportes):**
+
+| | Base | Savignani | Perozo |
+|---|---|---|---|
+| 2026 Camino Real | D · 39,4 s | E · 74,7 s | D · 39,9 s |
+| 2026 CC Paos | C · 22,0 s | C · 25,3 s | C · 23,0 s |
+| 2026 Perrokero | F · 102,8 s | E · 25,3 s | **C · 33,3 s** |
+| 2026 Red completa | 96 s · 29,1 km/h | 95 s · 28,9 km/h | **67 s · 32,9 km/h** |
+| 2041 Red completa | 5.853 viajes · 11,0 km/h | **5.859 · 15,7 km/h** | 6.022 · 12,5 km/h |
+
+    - **Savignani:** los dos puentes funcionan en A (hacia FFAA 4,6 s; hacia la Costanera 4,5 s); el problema está a nivel bajo el puente: FFAA con 1 carril y 20 s de verde (F, ~400 s, por ahí van buses y pesados) y El Ejército con salida de 1 carril hacia la Costanera (F, 133 s, S26). En 2041 es la que mejor responde, gracias a la Av. En Proyección (30 %, criterio del tutor).
+    - **Perozo:** resuelve Perrokero (C); los dos puentes en A; el acceso norte a nivel queda en E (75 s), con un solo carril para los giros hacia la Av. Río y los pesados, y el semáforo de la tesis repartido para una Av. Río mucho más cargada: recomendar reprogramarlo. Es la mejor red en 2026.
+7. **Pendiente al cierre del 11/11:** commit en main (las réplicas de Savignani y Perozo y `comparar_propuestas.py`); contar los videos de Perrokero (3 días × 5 min en la hora pico, cola de FFAA) y el recorrido del eje, y compararlos con la base (2026: Camino Real → Av. Río 382, Camino Real → FFAA sur 964, FFAA sur → Camino Real 881 y FFAA sur → Av. Río 467 veh/h; Av. Río descarga 136 veh/h; FFAA norte con cola máxima de 265 m; red 29,1 km/h); rehacer la sensibilidad ×1,131; consultas al tutor; recomendaciones y propuesta final.
+
+---
+
+## 13. Bitácora del 16/11/2026 (videos de Perrokero, comparación de flujos y escenario ×1,131)
+
+1. **Conteo automático aproximado de los 3 videos nuevos de Perrokero** (YOLO yolo11n + ByteTrack, estabilización ORB/homografía, línea vertical central; entorno `Desktop\conteo_env` instalado por el usuario). Solo da **totales por sentido**, no por movimiento (cámara en mano, giros y oclusiones). Orientación confirmada por el usuario: izquierda→derecha en la imagen = viene de la Costanera (vías 1 + 9 = MF5 + GI4); derecha→izquierda = va hacia la Costanera (vías 2 + 3 = MF2 + GD9).
+   - Resultado (promedio de 3 videos, sin motos): **≈ 668 veh/h** desde la Costanera; **≈ 432 veh/h** hacia la Costanera (648 brutos × 8/12: el programa sobrecuenta el fondo). Verificado a ojo en el minuto 2 del video 1 (sentido A 16 frente a 15; sentido B 12 frente a 8). No incluye unos 5 veh/min que giran sin cruzar la línea.
+   - Archivo: `TRABAJO DE CAMPO\CONTEO PERROKERO VIDEOS 2026 - CONTEO AUTOMATICO.xlsx` (hoja "Conteo automatico"). La plantilla original `CONTEO PERROKERO VIDEOS 2026.xlsx` sigue vacía para el **conteo manual del usuario** (lo envía el 17/11). Scripts y trayectorias: `TRABAJO DE CAMPO\CONTEO AUTOMATICO (scripts y trayectorias)`.
+2. **Comparación de flujos modelo / tesis / campo** por movimiento e intersección: `TRABAJO DE GRADO\COMPARACION DE FLUJOS - MODELO, TESIS Y CAMPO.xlsx` (hojas Ajustes sugeridos, Escenario x1,131, Por movimiento, Por interseccion, Modelo por acceso). Modelo ÷ campo: Camino Real 1,2; CC Paos 1,45; Costanera directa en Bissau 2,5 y Puerto Guaica 2,9; Perrokero 3,4 (abril) y 1,7 / 2,1 (videos). Mayores desajustes: **GD3 FFAA sur → Av. Río 467 frente a 60** y **GI4 Camino Real → Av. Río 324 frente a 40**. El modelo casi no tiene los giros en U y accesos de Puerto Guaica (≈ 25 frente a 390 veh/h en campo) ni la entrada a galpones de Bissau (0 frente a 150).
+3. **Escenario ×1,131 rehecho con la red actual** (5 réplicas, sin modificar el proyecto; en `capitulo4\sensibilidad_x1131_2026-11-16`): Camino Real C 24,7 s; CC Paos B 17,3 s; Perrokero B 11,5 s (Av. Río sale 178 veh/h, 100 %; campo 180; cola máx. FFAA norte 77 m frente a 265 m); red 37,4 km/h. Se parece más al campo en casi todo, salvo Camino Real (22 % bajo).
+4. **Decisión del usuario: se mantiene ×1,697.** Con ×1,131 los resultados no reflejan el tráfico real que la tesis quiere mejorar. Justificación: aforo de Savignani en pandemia y crisis de gasolina (él estima caída del 70–90 %), y aumento de población (necesita fuente citable: INE, OIM/R4V, etc.). El ×1,131 se menciona solo como sensibilidad/limitación. Nota: con ×1,131 la demanda 2041 sería 1,638, casi igual a la base actual.
+5. **Siguiente paso (17/11):** con el conteo manual por vías (1 a 9, 3 días) calcular los **porcentajes de giro por acceso de Perrokero** y repartir el total de cada acceso del modelo (tesis × 1,697) con esos porcentajes (con abril: GD3 467 → ~240, GI4 324 → ~210, MF2 → ~1.050, MF5 → ~935). Luego regenerar la demanda, correr réplicas de la base y, si cambia, de Savignani y Perozo. Otras mejoras posibles: giros en U y accesos de Puerto Guaica, residencias y galpones de Bissau con aforo propio; medir en los videos la cola de FFAA hacia Perrokero (modelo 265 m) como respaldo del ×1,697.
+
+## 14. Bitácora del 20/11/2026 (conteo manual de Perrokero y cambio de la Av. Río)
+
+1. **Conteo manual del usuario** (3 videos: 06/11 5:41 p. m., 09/11 6:02 p. m., 10/11 5:59 p. m.; PDF escaneado, cargado en `TRABAJO DE CAMPO\CONTEO PERROKERO VIDEOS 2026.xlsx`). Promedio ×12: **3.344 veh/h** (Perozo 2.351; modelo anterior 3.063 → 0,92; con FHMD 0,90 ≈ 3.010). Por acceso: Costanera 1.084 (modelo 1.394), FFAA 1.016 (1.409), **Av. Río 1.072 (modelo 180)**, Residencias 172 (80). Los % de giro del modelo en Costanera y FFAA coinciden con el campo (MF5 66 %, GI4 32 %; MF2 59 %, GD3 35 %). El conteo automático del 16/11 subestimó un 40–60 %; el de abril (2–3 min) no sirve para la Av. Río. **Respalda el ×1,697.**
+2. **Cómo funciona Perrokero (usuario + videos):** sin prioridad efectiva ni fiscal; entran por orden de llegada; FFAA pasa más por volumen, pero la Av. Río no espera a que pasen todos. A veces colapsa, no siempre.
+3. **Pruebas sin tocar el proyecto** (scratchpad, 5 réplicas cada una, 0 choques): con la Av. Río del conteo (863 veh/h) → prioridad actual sale 39 %; `allway_stop` 72 % pero la red cae a 12 km/h; `right_before_left` 75 % y 10 km/h; conductores con impaciencia 1 y jmTimegapMinor 0,5: 48 %; + jmIgnoreFoeProb 0,5 / jmIgnoreFoeSpeed 8 m/s ("fuerzan el paso"): 77 %, red 22 km/h. Ninguna saca ~960 veh/h sin colas.
+4. **Decisión del usuario (opción intermedia):** la Av. Río y Residencias siguen la **regla de calles secundarias (Perozo × 1,131)**: Av. Río ~620 veh/h, Residencias ~120 (antes 180 y 80 del aforo de abril). El conteo manual se usa para **validar** que es del orden correcto y conservador. Sus conductores usan los tipos **`liviano_ag` / `pesado_ag`** (en `costanera.rou.xml`; los asigna `generar_demanda.py` con `ORIGENES_QUE_FUERZAN_PASO`; en los reportes se suman a liviano/pesado). La red no cambia. Cambios: `generar_demanda.py` (`CAMPO_PARA_SECUNDARIAS = set()`), `costanera.rou.xml`, `resumen_resultados.py`, `capacidad.py`, demanda 2026 y 2041 regeneradas (GEH < 5 en 66 de 68). Réplicas anteriores en `capitulo4/_antes_avrio_2026-11-20`.
+5. **Base nueva (5 réplicas, 0 teletransportes):**
+
+| | 2026 antes | **2026 nuevo** | 2041 antes | **2041 nuevo** |
+|---|---|---|---|---|
+| Camino Real | D · 39,4 s | **E · 61,0 s** (Sur FFAA F 97 s) | F · 120,6 s · 83 % | **F · 129,2 s · 72 %** |
+| CC Paos | C · 22,0 s | C · 21,4 s | F · 171,6 s · 75 % | F · 203,0 s · 63 % |
+| Perrokero | F · 102,8 s | **F · 189,4 s** (Av. Río sale 562 de 619, F 248 s, cola prom. 14 / máx. 339 m; FFAA norte F 159 s, cola prom. 126 / máx. 315 m) | F · 165,8 s · 80 % | **F · 306,6 s · 61 %** |
+| Bissau / Puerto Guaica | 4,0 / 11,2 s | 13,6 / 23,4 s | 70,7 / 58,8 s | 68,7 / 58,3 s |
+| Red | 29,1 km/h · 96 s | **21,2 km/h · 182 s** | 11,0 km/h | **8,0 km/h** |
+
+6. **Pendiente:** correr `SIMULACION.bat` y luego `SIMULACION_2041.bat` para refrescar los Excel de la base; aplicar el mismo cambio en `propuestaSavignani` (`demanda_propuesta.py`) y `propuestaPerozo`, y rehacer sus réplicas; regenerar los dos Word del capítulo IV (el de la base menciona "Av. Río 180 y Residencias 80"); commit en main. La sección 5 queda reemplazada por esta tabla.
+7. **Revisión de los Excel (20/11, tras correr los `.bat` el usuario):** `resumen_replicas.csv` de los Excel = réplicas de `capitulo4` (idénticos). 0 choques y 0 teletransportes (GUI 2026 y 2041). FHMD 2026 = 0,91; en 2041 = 0,87 con el primer cuarto como el mayor: es efecto de la saturación (la red se llena y entran menos vehículos después), no un error. **Corregido:** la hoja "Analisis Por Vehiculo" mostraba `liviano_ag` y `pesado_ag` aparte → paso `TipoBase` en la consulta `reporte_viajes` de los 8 Excel (quita "_ag"; respaldo en `_RESPALDOS\antes_tipos_ag_2026-11-20`). Colores: `liviano_ag` azul y `pesado_ag` rojo, como sus tipos base. Efecto observado: la cola de FFAA hacia Perrokero (máx. 315 m, tramo de 300 m) llega a Camino Real en algunas semillas y se propaga a la Costanera (Bissau sentido Camino Real 4 → 23 s, Puerto Guaica 11 → 37 s, con mucha variación entre semillas).
+8. **Ajuste final de los conductores que fuerzan el paso (20/11, decisión del usuario):** en campo la cola de FFAA solo llega a Camino Real con colapso extremo, y con jmIgnoreFoeProb 0,5 / jmIgnoreFoeSpeed 8 m/s se propagaba a la Costanera. Se probaron 3 ajustes (5 réplicas cada uno) y se eligió el **C: jmIgnoreFoeProb 0,3 y jmIgnoreFoeSpeed 5 m/s (~18 km/h)** en `liviano_ag`/`pesado_ag`. **Resultados finales de la base (reemplazan la tabla del punto 5; 0 choques, 0 teletransportes):**
+
+| | 2026 | 2041 |
+|---|---|---|
+| Camino Real | **E · 55,9 s** (99 %) | F · 124,7 s · 80 % |
+| CC Paos | **C · 21,8 s** | F · 181,1 s · 73 % |
+| Perrokero | **F · 185,1 s** (Av. Río sale 464 de 619, F 389 s, cola prom. 38 m; FFAA norte F 105 s, cola prom. 89 / máx. 302 m; Residencias C; FFAA sur A) | F · 259,9 s · 71 % |
+| Bissau / Puerto Guaica | 4,3 s / 14,2 s (sentido Camino Real 4,5 y 17,0 s) | 72,5 / 59,6 s |
+| Red | **24,0 km/h · 145 s de demora · 4.818 viajes** | 10,7 km/h · 493 s · 5.865 viajes |
+
+   El usuario debe volver a correr `SIMULACION.bat` y `SIMULACION_2041.bat` para refrescar los Excel.
+10. **Perozo con la Av. Río nueva (20/11, rama `propuestaPerozo`; main fusionado sin commit):** mismo ajuste en su `demanda_propuesta.py`; demanda regenerada (puente hacia el sur 753 y hacia Camino Real 649 veh/h en 2026); 0 choques; réplicas anteriores en `capitulo4/_antes_avrio_2026-11-20/replicas_perozo`. Con semáforo en Perrokero la Av. Río tiene su propia fase, así que "forzar el paso" casi no influye.
+
+| Perozo | 2026 antes | **2026 nuevo** | 2041 antes | **2041 nuevo** |
+|---|---|---|---|---|
+| Perrokero (E3 / a nivel) | C · 33,3 s | **D · 36,6 s** / a nivel E 55,8 s (Av. Río sale 613 de 619, E 58 s; norte E 60 s; puentes A 5,4 y 2,4 s) | E · 69,7 s | F · 152,7 s · 80 % (Av. Río F 318 s) |
+| Camino Real | D · 39,9 s | E · 59,6 s | F · 112,1 s | F · 115,6 s · 82 % |
+| CC Paos | C · 23,0 s | C · 21,8 s | F · 151,6 s | F · 151,2 s |
+| Red | 32,9 km/h | **30,1 km/h** | 12,5 km/h | **12,0 km/h** |
+
+   **Comparación de las tres (2026 / 2041):** red base 24,0 / 10,7 km/h; Savignani 21,4 / 13,2; **Perozo 30,1 / 12,0**. Perrokero: base F 185 s; Savignani F 84 s; **Perozo D 37 s**. En 2026 Perozo es claramente la mejor; en 2041 Savignani mueve algo mejor la red (Av. En Proyección), pero Perozo atiende más viajes (6.398 frente a 5.487). **Cambia una recomendación anterior:** el semáforo de Perozo (verdes N 33 / S 25 / E 30 / O 20 s) estaba pensado para una Av. Río cargada; ahora que la Av. Río tiene ~620 veh/h atiende el 99 % con demora E, así que ya no hace falta "reprogramarlo" por sobredimensionado (sí revisar el acceso norte, E 60 s). Falta: el usuario corre los `.bat` de Perozo y hace el commit; luego llevar las réplicas de Savignani y Perozo a main y regenerar los dos Word.
+11. **Revisión de los Excel de Perozo (20/11):** iguales a `capitulo4/replicas_perozo`, 0 choques y 0 teletransportes, sin errores ni `_ag`. FHMD 0,88 (2026, el más cercano a 0,90 porque hay menos congestión) y 0,91 (2041). Coherente: al resolver Perrokero, Perozo deja pasar más tránsito hacia Camino Real, cuyo acceso Sur (FFAA) queda en F (110 s, cola 241 m) y en 2041 frena al puente hacia Camino Real (E 77 s). **Las tres simulaciones quedan revisadas y sin incongruencias** (base en main, Savignani y Perozo en sus ramas, todas con la Av. Río nueva).
+
+### Hallazgos para la propuesta final (resumen al 20/11)
+- **Base 2026:** Perrokero F 185 s (Av. Río F 389 s; FFAA norte F 105 s); Camino Real E 56 s (Sur FFAA F 97 s, Norte Costanera E); red 24,0 km/h. 2041: todo en F, red 10,7 km/h.
+- **Savignani:** los puentes funcionan, pero FFAA a nivel (1 carril, 20 s de verde) queda en F 559 s, la salida de El Ejército a la Costanera tiene 1 carril (S26) y los pesados (sin puente) sufren 411 s de demora; la cola de FFAA a nivel llega a Perrokero. Su Av. En Proyección (30 %, criterio del tutor) es lo que mejor ayuda en 2041.
+- **Perozo:** resuelve Perrokero (D 37 s, Av. Río 99 % atendida con su propia fase) y da la mejor red 2026 (30,1 km/h); su semáforo está bien dimensionado para la Av. Río actual. Traslada el cuello a Camino Real (Sur FFAA F 110 s). En 2041 todo vuelve a F (12,0 km/h).
+- **Idea de propuesta final (por decidir con el usuario):** Perozo en Perrokero + resolver Camino Real (desde optimizar el semáforo hasta un distribuidor de Savignani corregido: 2 carriles a nivel en FFAA, salida de El Ejército de 2 carriles, paso de pesados) + evaluar la Av. En Proyección para 2041. Se trabaja en la rama `propuestaFinal` (Excel en `PROPUESTA_FINAL\2026|2041`).

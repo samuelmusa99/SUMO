@@ -5,10 +5,12 @@ Camino Real;Oeste (El Ejercito);principal;semaforo_caminoreal_elejercito;semafor
 CC Paos;Sur (Costanera);principal;costanera_haciamadrevieja;costanera_haciamadrevieja 172344969#11;300
 CC Paos;Este (Lecheria);principal;lecheria_haciacaminoreal;lecheria_haciacaminoreal cruce_cc_paos lecheria_salida;300
 CC Paos;Norte (Madre Vieja);principal;madre_vieja_salida;madre_vieja_salida;300
-Perrokero;Sur (FFAA);principal;FA_1;FA_1 bifurcacion_FA_perrokero fuerzas_armadas_salida 172680884;157
-Perrokero;Norte (desde Camino Real);principal;FA_3;FA_3 371794626#12 371794626#11 371794626#10 371794626#9 371794626#8 371794626#6;300
+Perrokero;Sur (FFAA);principal;FA_1;FA_1 bifurcacion_FA_perrokero fuerzas_armadas_salida 172680884;160
+Perrokero;Norte (desde Camino Real);principal;FA_3;FA_3 FA_3_antes 371794626#12 371794626#11 371794626#10 371794626#9 371794626#8 371794626#6;300
 Perrokero;Este (Av. Rio);secundario;avrio_1;avrio_1 172682268#2 172682268#1 av_rio_salida;300
 Perrokero;Oeste (Residencias);secundario;res_salida;res_salida -830761843#0 -830761843#1 -830761843#2 -830761843#3;300
+Perrokero;Puente hacia el sur (FFAA);puente;puente_bajada_hacia_sur;puente_bajada_hacia_sur puente_hacia_sur puente_subida_hacia_sur FA_3_antes 371794626#12 371794626#11 371794626#10;300
+Perrokero;Puente hacia Camino Real;puente;puente_bajada_hacia_norte;puente_bajada_hacia_norte puente_hacia_norte puente_subida_hacia_norte fuerzas_armadas_salida 172680884;257
 Bissau;Costanera sentido Camino Real;principal;costanera_bissau_haciacaminoreal;costanera_bissau_haciacaminoreal;300
 Bissau;Costanera sentido Lecheria;principal;costanera_bissau_hacialecheria;costanera_bissau_hacialecheria 172344969#6 172344969#5 172344969#4;300
 Bissau;Salida Bissau (residencias/CC);secundario;salida_bissau_1;salida_bissau_1 -495730009#2 -1225795048;112

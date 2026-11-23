@@ -54,7 +54,10 @@ ANTERIOR_FORZADO = {'costanera_hacia_distribuidor': '592256719#7_b',
 # Accesos por puente (distribuidores): se reportan como accesos tipo "puente" de la interseccion que cruzan, para
 # comparar la interseccion completa (a nivel + puente) con el escenario base. (interseccion, acceso, tramo de bajada)
 PUENTES = [('semaforo_caminoreal', 'Puente hacia FFAA', 'puente_bajada_hacia_ffaa'),
-           ('semaforo_caminoreal', 'Puente hacia Costanera', 'puente_bajada_hacia_costanera')]
+           ('semaforo_caminoreal', 'Puente hacia Costanera', 'puente_bajada_hacia_costanera'),
+           # Propuesta Perozo: puente sobre FFAA en Perrokero (sus vehiculos salen del E3 por las salidas normales de FFAA)
+           ('interseccion_avrio_FA', 'Puente hacia el sur (FFAA)', 'puente_bajada_hacia_sur'),
+           ('interseccion_avrio_FA', 'Puente hacia Camino Real', 'puente_bajada_hacia_norte')]
 SECUNDARIOS = {'avrio_1', 'res_salida', 'salida_bissau_1', 'salida_bissau_2', 'salida:puerto_guaica', '-335982664#1'}
 AGUAS_ARRIBA, AGUAS_ABAJO, PERIODO = 300.0, 60.0, 900
 

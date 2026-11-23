@@ -416,8 +416,11 @@ cr, cp_, pk = I26['Camino Real'], I26['CC Paos'], I26['Perrokero']
 nota(f"Hallazgos 2026: Camino Real funciona en nivel {cr['LOS_HCM']} ({n(cr['demora_promedio_s'], 1)} s, V/C {n(cr['VC'], 2)}); "
      f"su acceso más cargado es la Costanera ({d(rep26, 'Camino Real', 'Norte (Costanera)')}). CC Paos opera en "
      f"{cp_['LOS_HCM']} ({n(cp_['demora_promedio_s'], 1)} s). Perrokero es el punto crítico: nivel {pk['LOS_HCM']} "
-     f"({n(pk['demora_promedio_s'], 1)} s), con la Av. Río saturada ({d(rep26, 'Perrokero', 'Este (Av. Rio)')}; atiende el "
-     f"{fila(rep26, 'Perrokero', 'Este (Av. Rio)')['demanda_atendida_pct']} % de su demanda). En Puerto Guaica, sentido "
+     f"({n(pk['demora_promedio_s'], 1)} s): la Av. Río, que debe cruzar la FFAA sin semáforo, espera "
+     f"{d(rep26, 'Perrokero', 'Este (Av. Rio)')} y descarga {n(fila(rep26, 'Perrokero', 'Este (Av. Rio)')['volumen_promedio_veh_h'])} "
+     f"de {n(fila(rep26, 'Perrokero', 'Este (Av. Rio)')['demanda_veh_h'])} veh/h (conteo de campo: 180 veh/h), y la FFAA desde "
+     f"Camino Real tiene {d(rep26, 'Perrokero', 'Norte (desde Camino Real)')} con cola máxima de "
+     f"{n(fila(rep26, 'Perrokero', 'Norte (desde Camino Real)')['cola_maxima_m'])} m. En Puerto Guaica, sentido "
      f"Camino Real, la parada de bus ocupa el carril derecho cerca del 23 % de la hora pico: redactarlo así, porque la "
      f"longitud de cola de ese acceso es un efecto de cómo mide SUMO.")
 
@@ -427,12 +430,14 @@ p('Para el horizonte 2041 se multiplicó toda la demanda 2026 por 1,448 y se man
   'llenan todo el tramo medido se indican con "≥".')
 bloque_resultados(rep41, '4.11', '4.12', '2041')
 at41 = [int(r['demanda_atendida_pct']) for r in I41.values()]
-nota(f"Hallazgos 2041: todas las intersecciones pasan a nivel F y atienden solo entre el {min(at41)} % y el {max(at41)} % "
-     f"de la demanda. El colapso empieza en Perrokero: el acceso FFAA norte atiende el "
-     f"{fila(rep41, 'Perrokero', 'Norte (desde Camino Real)')['demanda_atendida_pct']} % de su demanda. La cola se propaga "
-     f"hacia Camino Real, luego a Puerto Guaica y Bissau, y llega hasta CC Paos. Por eso conviene evaluar las propuestas "
-     f"en conjunto. Las demoras de miles de segundos en los accesos secundarios se dejan tal cual (decisión del autor): "
-     f"indican vehículos que prácticamente no logran salir.")
+niveles41 = '; '.join(f"{k} {v['LOS_HCM']}" for k, v in I41.items())
+nota(f"Hallazgos 2041: por intersección, {niveles41}. Las intersecciones atienden solo entre el {min(at41)} % y el "
+     f"{max(at41)} % de la demanda. En Perrokero, el acceso FFAA norte atiende el "
+     f"{fila(rep41, 'Perrokero', 'Norte (desde Camino Real)')['demanda_atendida_pct']} % de su demanda y su cola se "
+     f"propaga hacia Camino Real; en CC Paos, la salida de Madre Vieja espera "
+     f"{d(rep41, 'CC Paos', 'Norte (Madre Vieja)')}. Por eso conviene evaluar las propuestas en conjunto. Las demoras de "
+     f"cientos de segundos en los accesos secundarios se dejan tal cual (decisión del autor): indican vehículos que "
+     f"prácticamente no logran salir.")
 
 doc.add_heading('4.2.6 Indicadores de la red completa', level=2)
 p('Los cuadros anteriores evalúan cada intersección por separado. El Cuadro 4.13 evalúa el viaje completo de cada '

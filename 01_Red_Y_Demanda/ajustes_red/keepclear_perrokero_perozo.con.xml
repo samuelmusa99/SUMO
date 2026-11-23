@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Propuesta Perozo (06/11/2026): keepClear=1 en las 13 conexiones del cruce bajo el puente (antes keepClear=0;
+     ver keepclear_perrokero.con.xml). Aplicado a la red ya construida con netconvert -s ... -x; el script propuesta_perozo.py ya no lo pone. -->
+<connections>
+    <connection from="FA_1" to="FA_2" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="FA_1" to="res_entrada" fromLane="0" toLane="1" keepClear="1"/>
+    <connection from="FA_3" to="res_entrada" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="FA_3" to="fuerzas_armadas_entrada_nivel" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="FA_3" to="avrio_2" fromLane="0" toLane="1" keepClear="1"/>
+    <connection from="avrio_1" to="FA_2" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="avrio_1" to="res_entrada" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="avrio_1" to="res_entrada" fromLane="1" toLane="1" keepClear="1"/>
+    <connection from="avrio_1" to="fuerzas_armadas_entrada_nivel" fromLane="1" toLane="0" keepClear="1"/>
+    <connection from="res_salida" to="fuerzas_armadas_entrada_nivel" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="res_salida" to="avrio_2" fromLane="0" toLane="0" keepClear="1"/>
+    <connection from="res_salida" to="avrio_2" fromLane="1" toLane="1" keepClear="1"/>
+    <connection from="res_salida" to="FA_2" fromLane="1" toLane="0" keepClear="1"/>
+</connections>

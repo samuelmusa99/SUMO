@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-11-04 12:48:50.328786 by Eclipse SUMO netdiff.py v1_26_0+0000-fa7df22d7f1
+<configuration>
+    <source value="main.net.xml"/>
+    <dest value="paso1.net.xml"/>
+    <outprefix value="diff"/>
+</configuration>
+-->
+
+<connections version="1.20" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/connections_file.xsd">
+    <!-- Deleted Elements -->
+    <delete from="371794626#12" fromLane="0" to="FA_3" toLane="0"/>
+    <delete from="371794626#12" fromLane="1" to="FA_3" toLane="1"/>
+    <delete from="830761838" fromLane="0" to="FA_3" toLane="0"/>
+    <delete from="FA_1" fromLane="1" to="FA_2" toLane="1"/>
+    <delete from="FA_1" fromLane="1" to="res_entrada" toLane="1"/>
+    <delete from="FA_2" fromLane="0" to="-371794626#12" toLane="0"/>
+    <delete from="FA_2" fromLane="1" to="-371794626#12" toLane="1"/>
+    <delete from="FA_2" fromLane="1" to="-830761838" toLane="0"/>
+    <delete from="FA_3" fromLane="0" to="fuerzas_armadas_entrada" toLane="0"/>
+    <delete from="FA_3" fromLane="1" to="fuerzas_armadas_entrada" toLane="1"/>
+    <delete from="FA_3" fromLane="1" to="avrio_2" toLane="1"/>
+    <delete from="avrio_1" fromLane="1" to="fuerzas_armadas_entrada" toLane="1"/>
+    <delete from="bifurcacion_FA_perrokero" fromLane="1" to="FA_1" toLane="1"/>
+    <delete from="fuerzas_armadas_salida" fromLane="1" to="bifurcacion_FA_perrokero" toLane="1"/>
+    <delete from="res_salida" fromLane="0" to="fuerzas_armadas_entrada" toLane="0"/>
+    <delete from="res_salida" fromLane="1" to="FA_2" toLane="1"/>
+    <!-- Created Elements -->
+    <connection from="371794626#12" fromLane="0" to="FA_3_antes" toLane="0" />
+    <connection from="371794626#12" fromLane="1" to="FA_3_antes" toLane="1" />
+    <connection from="830761838" fromLane="0" to="FA_3_antes" toLane="0" />
+    <connection from="FA_1" fromLane="0" to="res_entrada" toLane="1" keepClear="0"/>
+    <connection from="FA_2" fromLane="0" to="FA_2_despues" toLane="0" />
+    <connection from="FA_2_despues" fromLane="0" to="-371794626#12" toLane="0" />
+    <connection from="FA_2_despues" fromLane="1" to="-371794626#12" toLane="1" />
+    <connection from="FA_2_despues" fromLane="1" to="-830761838" toLane="0" />
+    <connection from="FA_3" fromLane="0" to="fuerzas_armadas_entrada_nivel" toLane="0" keepClear="0"/>
+    <connection from="FA_3" fromLane="0" to="avrio_2" toLane="1" keepClear="0"/>
+    <connection from="FA_3_antes" fromLane="0" to="FA_3" toLane="0" />
+    <connection from="FA_3_antes" fromLane="1" to="puente_subida_hacia_sur" toLane="0" />
+    <connection from="avrio_1" fromLane="1" to="fuerzas_armadas_entrada_nivel" toLane="0" keepClear="0"/>
+    <connection from="fuerzas_armadas_entrada_nivel" fromLane="0" to="fuerzas_armadas_entrada" toLane="0" />
+    <connection from="fuerzas_armadas_salida" fromLane="1" to="puente_subida_hacia_norte" toLane="0" />
+    <connection from="puente_bajada_hacia_norte" fromLane="0" to="FA_2_despues" toLane="1" />
+    <connection from="puente_bajada_hacia_sur" fromLane="0" to="fuerzas_armadas_entrada" toLane="1" />
+    <connection from="puente_hacia_norte" fromLane="0" to="puente_bajada_hacia_norte" toLane="0" />
+    <connection from="puente_hacia_sur" fromLane="0" to="puente_bajada_hacia_sur" toLane="0" />
+    <connection from="puente_subida_hacia_norte" fromLane="0" to="puente_hacia_norte" toLane="0" />
+    <connection from="puente_subida_hacia_sur" fromLane="0" to="puente_hacia_sur" toLane="0" />
+    <connection from="res_salida" fromLane="0" to="fuerzas_armadas_entrada_nivel" toLane="0" keepClear="0"/>
+    <connection from="res_salida" fromLane="1" to="FA_2" toLane="0" keepClear="0"/>
+    <!-- Changed Elements -->
+</connections>
