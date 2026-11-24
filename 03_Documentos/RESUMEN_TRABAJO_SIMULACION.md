@@ -414,3 +414,25 @@ Lo aplicado en la red con `ajustes_red/propuesta_perozo.py` (se corre sobre la r
 - **Savignani:** los puentes funcionan, pero FFAA a nivel (1 carril, 20 s de verde) queda en F 559 s, la salida de El Ejército a la Costanera tiene 1 carril (S26) y los pesados (sin puente) sufren 411 s de demora; la cola de FFAA a nivel llega a Perrokero. Su Av. En Proyección (30 %, criterio del tutor) es lo que mejor ayuda en 2041.
 - **Perozo:** resuelve Perrokero (D 37 s, Av. Río 99 % atendida con su propia fase) y da la mejor red 2026 (30,1 km/h); su semáforo está bien dimensionado para la Av. Río actual. Traslada el cuello a Camino Real (Sur FFAA F 110 s). En 2041 todo vuelve a F (12,0 km/h).
 - **Idea de propuesta final (por decidir con el usuario):** Perozo en Perrokero + resolver Camino Real (desde optimizar el semáforo hasta un distribuidor de Savignani corregido: 2 carriles a nivel en FFAA, salida de El Ejército de 2 carriles, paso de pesados) + evaluar la Av. En Proyección para 2041. Se trabaja en la rama `propuestaFinal` (Excel en `PROPUESTA_FINAL\2026|2041`).
+
+## 15. Cierre del 24/11/2026
+
+Samuel envió los capítulos I–III al tutor para revisión. Se aclaró que la experimentación se realiza en SUMO y que el trabajo de campo es observacional. Se ajustó la descripción del aforo y se retiraron las entrevistas del alcance. Incorporar las observaciones del tutor cuando lleguen.
+
+La rama `propuestaFinal` quedó limpia en el commit `bc9d3a6` («seguimos propuesta final»), coincidente con la referencia local `origin/propuestaFinal` al verificar. Los dos archivos de arranque cargan la red de `01_Red_Y_Demanda/propuesta_final`. El paquete integrado combina el distribuidor y semáforo a nivel de Perozo en Perrokero, el ciclo de 82 s de Camino Real con verdes de 28/20/22 s (FFAA, El Ejército y Costanera), los carriles auxiliares de Bissau hacia Lechería y la bahía de Puerto Guaica. CC Paos conserva 66 s. La geometría del puente se conserva según el modelo ensayado.
+
+Se corrigieron las rutas de salida de los detectores al moverlos a la subcarpeta de la propuesta final. Samuel ejecutó 2026 y luego 2041. Ambas corridas de GUI llegaron a 5.400 s con cero colisiones y teletransportes. Las redes copiadas a Excel coinciden con la red integrada y los resúmenes verificados de cinco réplicas están en `EXCEL RESULTADOS/PROPUESTA_FINAL/2026|2041`.
+
+| Indicador | Base 2026 | Final 2026 | Base 2041 | Final 2041 |
+|---|---:|---:|---:|---:|
+| Velocidad media de red (km/h) | 24,0 | 32,3 | 10,7 | 12,4 |
+| Demora media de red (s) | 145,4 | 67,6 | 493,0 | 400,5 |
+| Camino Real (s) | 55,9 | 42,3 | 124,7 | 148,4 |
+| Perrokero (s) | 185,1 | 36,0 | 259,9 | 130,3 |
+| CC Paos (s) | 21,8 | 21,7 | 181,1 | 140,7 |
+| Bissau (s) | 4,3 | 4,2 | 72,5 | 65,5 |
+| Puerto Guaica / Fernández Padilla (s) | 14,2 | 8,0 | 59,6 | 50,4 |
+
+El resumen integrado usa la ubicación nueva de la parada para descontar su detención de la demora por acceso. Para Bissau hacia Lechería, usar 5,5 s en 2026 y 6,6 s en 2041. El ciclo coordinado de 120 s y la Av. En Proyección quedan documentados en `03_Documentos/capitulo4/pruebas_propuesta_final`. La avenida se ensayó como cuarto brazo a nivel. En la variante que redistribuye el 30 % de la demanda de Camino Real (1.230 veh/h en ambos sentidos), la red pasó de 12,4 km/h sin avenida a 7,9 con el primer programa de 104 s y 8,1 con el reparto 22/24/28/14 s. La conclusión aplica a esos diseños y programas ensayados.
+
+**Para retomar.** Consolidar en el capítulo IV la base, Savignani, Perozo y el paquete final por horizonte. Usar los CSV vigentes de Savignani en su carpeta de Excel o en su rama. En el capítulo V, sustentar las medidas de 2026 y separar las verificaciones de anteproyecto del puente y las alternativas de Camino Real para 2041. Queda pendiente la estimación de costos con cómputos métricos y precios unitarios.
