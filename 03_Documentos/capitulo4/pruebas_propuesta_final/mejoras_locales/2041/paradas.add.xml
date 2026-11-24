@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+    
+    <busStop id="bs_0" name="Parada Puerto Guaica" lane="172344969#4_bahia_0" startPos="16" endPos="46" />
+    <busStop id="bs_1" lane="ejercito4_0" startPos="4.17" endPos="24.17" />
+</additional>

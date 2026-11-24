@@ -1,0 +1,32 @@
+﻿interseccion;nivel;acceso;replicas;volumen_promedio_veh_h;demora_promedio_s;demora_min_s;demora_max_s;desviacion_estandar_s;LOS_promedio;LOS_HCM;demanda_veh_h;capacidad_veh_h;fuente_capacidad;VC;demanda_atendida_pct;tesis_LOS;tesis_demora_s;cola_promedio_m;cola_maxima_m;cola_llena_el_tramo;velocidad_media_kmh;tiempo_viaje_s;tiempo_en_paradas_s
+Camino Real;INTERSECCION;(todos);5;2940;250.5;237.1;271.1;12.9;F;F;4101;;V/C del acceso critico;2.30;72;F;129.3;;;;;;
+Camino Real;ACCESO;Sur (FFAA);5;715;301.6;269.8;322.1;19.6;F;F;881;715;medida (acceso saturado);1.23;81;;;69;308;si;3.4;;
+Camino Real;ACCESO;Norte (Costanera);5;508;193.4;188.2;198.9;4.1;F;F;1168;508;medida (acceso saturado);2.30;44;;;84;169;si;3.5;;
+Camino Real;ACCESO;Oeste (El Ejercito);5;1221;260.2;225.5;277.8;21.3;F;F;1497;1221;medida (acceso saturado);1.23;82;;;118;295;si;3.8;;
+Camino Real;ACCESO;Este (Av. En Proyeccion);5;496;358.8;308.0;419.2;45.2;F;F;556;496;medida (acceso saturado);1.12;89;;;294;427;si;3.7;;
+CC Paos;INTERSECCION;(todos);5;1402;311.5;298.3;330.2;12.4;F;F;2582;;V/C del acceso critico;2.24;54;C;22.6;;;;;;
+CC Paos;ACCESO;Sur (Costanera);5;293;22.8;21.3;25.8;1.9;C;C;380;293;medida (acceso saturado);1.30;77;;;5;37;no;36.2;;
+CC Paos;ACCESO;Este (Lecheria);5;659;389.8;344.4;470.9;52.0;F;F;1480;659;medida (acceso saturado);2.24;45;;;67;90;no;3.6;;
+CC Paos;ACCESO;Norte (Madre Vieja);5;450;623.5;395.1;722.7;131.0;F;F;722;450;medida (acceso saturado);1.61;62;;;555;911;si;3.4;;
+Perrokero;INTERSECCION;(todos);5;2054;163.2;144.0;176.4;13.2;F;F;2685;;V/C del acceso critico;1.84;76;E;65.6 (base sin semaforo: 2883.7);;;;;;
+Perrokero;INTERSECCION_A_NIVEL;(sin puente);5;1350;175.9;153.7;193.3;16.6;F;F;1744;;V/C del acceso critico a nivel;1.84;77;;;;;;;;
+Perrokero;ACCESO;Sur (FFAA);5;114;48.4;45.4;50.7;2.2;D;D;121;114;medida (acceso saturado);1.06;94;;;10;64;no;24.0;;
+Perrokero;ACCESO;Norte (desde Camino Real);5;299;43.0;38.0;47.0;3.6;D;D;551;299;medida (acceso saturado);1.84;54;;;19;100;no;23.1;;
+Perrokero;ACCESO;Este (Av. Rio);5;755;279.6;239.4;311.9;30.5;F;F;896;755;medida (acceso saturado);1.19;84;;;152;342;si;4.0;;
+Perrokero;ACCESO;Oeste (Residencias);5;182;44.1;41.0;47.4;2.7;D;D;175;568;HCM 2000;0.31;100;;;10;46;no;6.7;;
+Perrokero;ACCESO;Puente hacia el sur (FFAA);5;275;3.5;3.3;3.8;0.2;A;A;488;275;medida (acceso saturado);1.77;56;;;0;0;no;33.5;;
+Perrokero;ACCESO;Puente hacia Camino Real;5;429;14.3;4.1;45.4;17.5;B;B;454;429;medida (acceso saturado);1.06;95;;;8;112;no;29.1;;
+Bissau;INTERSECCION;(todos);5;2419;111.9;101.8;118.7;6.3;F;F;3856;;V/C del acceso critico;2.27;63;F;1074 a 1228 (HCM recalculado: ~28 s, D);;;;;;
+Bissau;ACCESO;Costanera sentido Camino Real;5;839;312.7;296.1;331.6;17.3;F;F;1905;839;medida (acceso saturado);2.27;44;;;323;376;si;3.9;;
+Bissau;ACCESO;Costanera sentido Lecheria;5;1543;10.6;7.7;17.1;4.1;B;B;1913;1543;medida (acceso saturado);1.24;81;;;3;107;no;34.2;;
+Bissau;ACCESO;Salida Bissau (residencias/CC);5;37;328.6;268.3;389.6;55.1;F;F;38;43;HCM 2000;0.88;97;;;7;47;no;0.5;;
+Bissau;ACCESO;Salida Bissau (galpones);5;0;0.0;0.0;0.0;0.0;A;A;0;1900;HCM 2000;0.00;100;;;0;0;no;;;
+Puerto Guaica;INTERSECCION;(todos);5;2410;88.0;83.8;92.2;3.0;F;D;3835;;V/C del acceso critico;2.24;63;F;1074 a 1228;;;;;;
+Puerto Guaica;ACCESO;Salida Fernandez Padilla;5;11;22.5;13.7;36.1;8.3;C;C;13;40;HCM 2000;0.34;85;;;0;5;no;13.7;;
+Puerto Guaica;ACCESO;Costanera sentido Camino Real;5;841;250.8;241.8;261.1;7.0;F;F;1884;841;medida (acceso saturado);2.24;45;;;283;332;si;4.3;;
+Puerto Guaica;ACCESO;Costanera sentido Lecheria;5;1551;4.2;3.6;4.9;0.5;A;A;1932;1551;medida (acceso saturado);1.25;80;;;1;78;no;36.1;;
+Puerto Guaica;ACCESO;Salida Puerto Guaica;5;7;29.6;13.7;42.3;11.8;D;D;5;41;HCM 2000;0.13;100;;;0;8;no;5.8;;
+Red completa;RED;carrito;5;51;704.6;659.9;768.3;42.5;;;;;;;;;;;;;10.5;925.4;14.7
+Red completa;RED;liviano;5;5332;595.0;561.5;628.9;25.1;;;;;;;;;;;;;8.2;716.2;0.0
+Red completa;RED;pesado;5;258;666.2;654.5;693.4;16.0;;;;;;;;;;;;;7.2;836.8;5.4
+Red completa;RED;TOTAL;5;5641;599.3;568.9;631.5;23.4;;;;;;;;;;;;;8.1;723.7;0.4

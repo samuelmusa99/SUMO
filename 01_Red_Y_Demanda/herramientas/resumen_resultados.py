@@ -16,10 +16,11 @@ from collections import defaultdict
 
 INICIO, FIN = 900.0, 4500.0
 AQUI = os.path.dirname(os.path.abspath(__file__))
-MAPA = os.path.join(AQUI, '..', 'accesos_intersecciones.csv')
-RED = os.path.join(AQUI, '..', 'costanera.net.xml')
-TIPOS = os.path.join(AQUI, '..', 'costanera.rou.xml')
-PARADAS = os.path.join(AQUI, '..', 'paradas.add.xml')
+MODELO = os.environ.get('SUMO_RESULTADOS_MODELO', os.path.join(AQUI, '..'))
+MAPA = os.path.join(MODELO, 'accesos_intersecciones.csv')
+RED = os.path.join(MODELO, 'costanera.net.xml')
+TIPOS = os.path.join(MODELO, 'costanera.rou.xml')
+PARADAS = os.path.join(MODELO, 'paradas.add.xml')
 
 # Valores de referencia (capitulo 4 de las tesis y trabajo de campo 2026 sin motos).
 # Volumenes solo de los movimientos que pasan por el semaforo, igual que la medicion:

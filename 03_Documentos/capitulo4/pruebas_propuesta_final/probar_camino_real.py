@@ -21,8 +21,8 @@ ACCESOS = ("semaforo_caminoreal_FA", "semaforo_caminoreal_elejercito",
            "semaforo_caminoreal_costanera")
 
 
-def ejecutar(plan, anio):
-    salida = CARPETA / plan / anio
+def ejecutar(plan, anio, *, verdes=None, ciclo=82, desfase=0, carpeta=CARPETA):
+    salida = carpeta / plan / anio
     salida.mkdir(parents=True, exist_ok=True)
     nombre = {"2026": "tesis_base.sumocfg", "2041": "escenario_2041.sumocfg"}[anio]
     configuracion = ET.parse(MODELO / nombre)
@@ -33,15 +33,17 @@ def ejecutar(plan, anio):
     controlador, = ids
     logica, = red.getroot().findall(f"tlLogic[@id='{controlador}']")
     fases = logica.findall("phase")
-    for indice, acceso, verde in zip((0, 3, 6), ACCESOS, PLANES[plan]):
+    tiempos_verde = PLANES[plan] if verdes is None else verdes
+    for indice, acceso, verde in zip((0, 3, 6), ACCESOS, tiempos_verde, strict=True):
         fase = fases[indice]
         activos = {c.get("from") for c in conexiones if c.get("tl") == controlador
                    and fase.get("state")[int(c.get("linkIndex"))] in "Gg"}
         if activos != {acceso}:
             raise ValueError(f"Fase inesperada en {acceso}: {activos}")
         fase.set("duration", str(verde))
-    if sum(int(fase.get("duration")) for fase in fases) != 82:
-        raise ValueError("El ciclo debe conservar 82 segundos")
+    if sum(int(fase.get("duration")) for fase in fases) != ciclo:
+        raise ValueError(f"El ciclo debe sumar {ciclo} segundos")
+    logica.set("offset", str(desfase))
 
     ruta_red = salida / "costanera.net.xml"
     red.write(ruta_red, encoding="utf-8", xml_declaration=True)

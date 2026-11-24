@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="costanera.net.xml" />
+        <route-files value="C:/Users/samue_yffy/Desktop/SUMO/03_Documentos/capitulo4/pruebas_propuesta_final/mejoras_locales/2041/costanera.rou.xml,demanda_perozo_2041.rou.xml" />
+        <additional-files value="C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/mapa_fondo.poly.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/medidores_2041.add.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/vista.xml,C:/Users/samue_yffy/Desktop/SUMO/03_Documentos/capitulo4/pruebas_propuesta_final/mejoras_locales/2041/paradas.add.xml,detectores_intersecciones_2041.add.xml,C:/Users/samue_yffy/Desktop/SUMO/01_Red_Y_Demanda/distribuidor.add.xml" />
+    </input>
+
+    <output>
+        <tripinfo-output value="reporte_viajes.xml" />
+        <queue-output value="reporte_colas.xml" />
+        <statistic-output value="estadisticas.xml" />
+        
+        <vehroute-output value="reporte_rutas.xml" />
+        <vehroute-output.exit-times value="true" />
+        
+        <tripinfo-output.write-unfinished value="true" />
+    </output>
+
+    <processing>
+        
+        <time-to-teleport value="-1" />
+    </processing>
+
+    <time>
+        <begin value="0" />
+        <end value="5400" />
+    </time>
+</sumoConfiguration>

@@ -91,7 +91,7 @@ def adicionales_aislados(config, tmp):
         if '../02_Resultados_' in texto:
             copia = os.path.join(tmp, os.path.basename(ruta))
             with open(copia, 'w', encoding='utf-8') as f:
-                f.write(re.sub(r'\.\./02_Resultados_[^/"]+/', tmp.replace('\\', '/') + '/', texto))
+                f.write(re.sub(r'(?:\.\./)+02_Resultados_[^/"]+/', tmp.replace('\\', '/') + '/', texto))
             salida.append(copia)
         else:
             salida.append(ruta)

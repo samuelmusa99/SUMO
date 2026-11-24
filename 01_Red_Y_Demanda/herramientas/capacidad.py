@@ -26,7 +26,8 @@ sys.path.insert(0, os.path.join(SUMO_HOME, 'tools'))
 import sumolib  # noqa: E402
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
-MAPA = os.path.join(AQUI, '..', 'accesos_intersecciones.csv')
+MODELO = os.environ.get('SUMO_RESULTADOS_MODELO', os.path.join(AQUI, '..'))
+MAPA = os.path.join(MODELO, 'accesos_intersecciones.csv')
 INICIO, FIN = 900.0, 4500.0
 PERDIDO_POR_FASE = 4.0
 TC_TF = {'l': (7.1, 3.5), 'L': (7.1, 3.5), 't': (7.1, 3.5), 's': (6.5, 4.0), 'r': (6.2, 3.3), 'R': (6.2, 3.3)}

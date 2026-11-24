@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Propuesta final 2026: Perrokero con distribuidor y semaforo a nivel, Camino Real 82 s, carriles auxiliares de Bissau y bahia de Puerto Guaica. -->
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="propuesta_final/costanera.net.xml"/>
+        <route-files value="propuesta_final/costanera.rou.xml,propuesta_final/demanda_perozo_2026.rou.xml"/>
+        <additional-files value="mapa_fondo.poly.xml,medidores.add.xml,vista.xml,propuesta_final/paradas.add.xml,propuesta_final/detectores_intersecciones.add.xml,distribuidor.add.xml"/>
+    </input>
+
+    <gui_only>
+        <gui-settings-file value="vista.xml"/>
+    </gui_only>
+
+    <output>
+        <tripinfo-output value="../02_Resultados_Base/reporte_viajes.xml"/>
+        <queue-output value="../02_Resultados_Base/reporte_colas.xml"/>
+        <statistic-output value="../02_Resultados_Base/estadisticas.xml"/>
+        <!-- rutas con la hora de salida de cada tramo: demora por acceso vehiculo por vehiculo (11/11/2026) -->
+        <vehroute-output value="../02_Resultados_Base/reporte_rutas.xml"/>
+        <vehroute-output.exit-times value="true"/>
+        <!-- tambien se registran los vehiculos que siguen en la red al final (atrapados), no solo los que llegaron -->
+        <tripinfo-output.write-unfinished value="true"/>
+    </output>
+
+    <processing>
+        <!-- sin teletransportes: un vehiculo que espera mucho sigue esperando (como en la realidad), no se saca de la red -->
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <time>
+        <begin value="0"/>
+        <end value="5400"/>
+    </time>
+</sumoConfiguration>

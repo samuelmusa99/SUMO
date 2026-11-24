@@ -1,0 +1,31 @@
+﻿interseccion;nivel;acceso;replicas;volumen_promedio_veh_h;demora_promedio_s;demora_min_s;demora_max_s;desviacion_estandar_s;LOS_promedio;LOS_HCM;demanda_veh_h;capacidad_veh_h;fuente_capacidad;VC;demanda_atendida_pct;tesis_LOS;tesis_demora_s;cola_promedio_m;cola_maxima_m;cola_llena_el_tramo;velocidad_media_kmh;tiempo_viaje_s;tiempo_en_paradas_s
+Camino Real;INTERSECCION;(todos);5;3372;148.4;137.3;162.8;9.4;F;F;4101;;V/C del acceso critico;1.24;82;F;129.3;;;;;;
+Camino Real;ACCESO;Sur (FFAA);5;1192;172.5;165.7;177.8;5.4;F;F;1437;1191;capacidad de la situacion actual 2026;1.21;83;;;48;306;si;5.8;;
+Camino Real;ACCESO;Norte (Costanera);5;875;78.2;76.1;79.6;1.8;E;E;1168;941;capacidad de la situacion actual 2026;1.24;75;;;44;162;si;8.1;;
+Camino Real;ACCESO;Oeste (El Ejercito);5;1305;215.3;176.7;251.1;28.7;F;F;1497;1260;capacidad de la situacion actual 2026;1.19;87;;;94;295;si;4.6;;
+CC Paos;INTERSECCION;(todos);5;2130;140.7;131.5;167.3;15.0;F;F;2582;;V/C del acceso critico;1.55;82;C;22.6;;;;;;
+CC Paos;ACCESO;Sur (Costanera);5;335;22.9;20.3;24.9;1.7;C;C;380;245;capacidad de la situacion actual 2026;1.55;88;;;6;38;no;37.2;;
+CC Paos;ACCESO;Este (Lecheria);5;1243;138.5;121.9;156.3;13.6;F;F;1480;1439;capacidad de la situacion actual 2026;1.03;84;;;47;296;no;9.8;;
+CC Paos;ACCESO;Norte (Madre Vieja);5;552;356.0;295.7;566.1;117.6;F;F;722;1721;capacidad de la situacion actual 2026;0.42;76;;;365;809;no;6.3;;
+Perrokero;INTERSECCION;(todos);5;3233;130.3;119.8;136.3;6.7;F;F;3915;;V/C del acceso critico;1.30;83;E;65.6 (base sin semaforo: 2883.7);;;;;;
+Perrokero;INTERSECCION_A_NIVEL;(sin puente);5;1507;187.9;172.9;196.7;9.8;F;F;1774;;V/C del acceso critico a nivel;1.30;85;;;;;;;;
+Perrokero;ACCESO;Sur (FFAA);5;120;51.7;43.9;59.6;6.2;D;D;122;277;capacidad de la situacion actual 2026;0.44;98;;;12;101;no;12.9;;
+Perrokero;ACCESO;Norte (desde Camino Real);5;430;88.6;68.1;129.5;24.7;F;F;581;447;capacidad de la situacion actual 2026;1.30;74;;;53;228;no;19.0;;
+Perrokero;ACCESO;Este (Av. Rio);5;762;301.9;286.5;315.7;12.8;F;F;896;869;capacidad de la situacion actual 2026;1.03;85;;;151;343;si;3.7;;
+Perrokero;ACCESO;Oeste (Residencias);5;196;44.9;42.7;47.6;1.8;D;D;175;568;capacidad de la situacion actual 2026;0.31;100;;;11;51;no;6.6;;
+Perrokero;ACCESO;Puente hacia el sur (FFAA);5;861;7.1;5.3;10.5;2.2;A;A;1132;1900;capacidad de la situacion actual 2026;0.60;76;;;0;0;no;23.8;;
+Perrokero;ACCESO;Puente hacia Camino Real;5;864;52.0;41.0;60.3;7.6;D;D;1009;1900;capacidad de la situacion actual 2026;0.53;86;;;24;205;no;12.8;;
+Bissau;INTERSECCION;(todos);5;3199;65.5;59.0;74.2;7.5;F;F;3856;;V/C del acceso critico;1.41;83;F;1074 a 1228 (HCM recalculado: ~28 s, D);;;;;;
+Bissau;ACCESO;Costanera sentido Camino Real;5;1485;133.5;117.9;155.5;18.4;F;F;1905;3618;capacidad de la situacion actual 2026;0.53;78;;;166;377;si;8.2;;
+Bissau;ACCESO;Costanera sentido Lecheria;5;1683;7.3;7.1;7.5;0.1;A;A;1913;5457;capacidad de la situacion actual 2026;0.35;88;;;0;46;no;36.7;;
+Bissau;ACCESO;Salida Bissau (residencias/CC);5;31;312.4;128.0;538.7;183.4;F;F;38;27;capacidad de la situacion actual 2026;1.41;81;;;5;39;no;0.8;;
+Bissau;ACCESO;Salida Bissau (galpones);5;0;0.0;0.0;0.0;0.0;A;A;0;1900;capacidad de la situacion actual 2026;0.00;100;;;0;0;no;;;
+Puerto Guaica;INTERSECCION;(todos);5;3151;50.4;48.3;52.8;1.9;F;F;3835;;V/C del acceso critico;0.54;82;F;1074 a 1228;;;;;;
+Puerto Guaica;ACCESO;Salida Fernandez Padilla;5;12;20.0;15.4;30.8;6.3;C;C;13;25;capacidad de la situacion actual 2026;0.54;86;;;0;10;no;14.6;;
+Puerto Guaica;ACCESO;Costanera sentido Camino Real;5;1437;110.1;104.3;114.9;3.9;F;F;1884;3616;capacidad de la situacion actual 2026;0.52;76;;;230;331;si;8.7;;
+Puerto Guaica;ACCESO;Costanera sentido Lecheria;5;1697;4.5;3.4;7.3;1.6;A;A;1932;3636;capacidad de la situacion actual 2026;0.53;88;;;2;84;no;35.8;;
+Puerto Guaica;ACCESO;Salida Puerto Guaica;5;5;63.0;15.0;146.7;51.2;F;F;5;26;capacidad de la situacion actual 2026;0.21;93;;;0;6;no;4.2;;
+Red completa;RED;carrito;5;63;434.4;390.9;490.5;38.9;;;;;;;;;;;;;14.4;647.1;15.0
+Red completa;RED;liviano;5;6109;399.4;373.4;435.9;26.9;;;;;;;;;;;;;12.4;539.7;0.0
+Red completa;RED;pesado;5;282;418.6;361.2;459.3;46.5;;;;;;;;;;;;;11.1;609.2;7.3
+Red completa;RED;TOTAL;5;6454;400.5;376.6;437.1;27.1;;;;;;;;;;;;;12.4;543.8;0.5

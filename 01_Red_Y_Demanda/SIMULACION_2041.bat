@@ -1,13 +1,27 @@
 @echo off
+setlocal
 chcp 65001 > nul
 
 set "SUMO_HOME=C:\SUMO"
 set "XML2CSV=C:\SUMO\tools\xml\xml2csv.py"
 set "RED_DIR=C:\Users\samue_yffy\Desktop\SUMO\01_Red_Y_Demanda"
+set "SUMO_RESULTADOS_MODELO=%RED_DIR%\propuesta_final"
 set "XML_DIR=C:\Users\samue_yffy\Desktop\SUMO\02_Resultados_2041"
 set "CSV_DIR=C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_FINAL\2041"
 :: resumen de la propuesta en 2026: de ahi se toma la capacidad de cada acceso (la via y los semaforos son los mismos)
 set "BASE_2026=C:\Users\samue_yffy\Desktop\EXCEL RESULTADOS\PROPUESTA_FINAL\2026\resumen_replicas.csv"
+
+fc /b "%SUMO_RESULTADOS_MODELO%\costanera.net.xml" "%CSV_DIR%\..\2026\costanera.net.xml" > nul 2>&1
+if errorlevel 1 (
+    echo Corre SIMULACION.bat primero para actualizar la referencia de 2026.
+    pause
+    exit /b 1
+)
+if not exist "%BASE_2026%" (
+    echo Falta el resumen de replicas. Corre SIMULACION.bat primero.
+    pause
+    exit /b 1
+)
 
 echo ==========================================
 echo   Simulación de la Costanera
@@ -16,7 +30,12 @@ echo ==========================================
 
 :: Abre SUMO y ESPERA a que lo cierres (los XML se terminan de escribir al cerrar SUMO)
 :: --random: cada corrida usa una semilla distinta (resultados un poco diferentes cada vez)
-start "" /wait "C:\SUMO\bin\sumo-gui.exe" -c "%RED_DIR%\escenario_2041.sumocfg" --random
+start "" /wait "C:\SUMO\bin\sumo-gui.exe" -c "%RED_DIR%\propuesta_final_2041.sumocfg" --random
+if errorlevel 1 (
+    echo ERROR al ejecutar SUMO.
+    pause
+    exit /b 1
+)
 
 echo.
 echo Convirtiendo resultados a CSV...
@@ -33,7 +52,7 @@ for %%N in (reporte_viajes reporte_colas reporte_densidad) do (
 
 echo Copiando la red de esta propuesta a la carpeta del Excel...
 :: El Excel lee la red (hoja Tramos y densidades) desde su carpeta, no desde la rama de git activa.
-copy /Y "%RED_DIR%\costanera.net.xml" "%CSV_DIR%\costanera.net.xml" > nul
+copy /Y "%SUMO_RESULTADOS_MODELO%\costanera.net.xml" "%CSV_DIR%\costanera.net.xml" > nul
 
 echo Calculando niveles de servicio por intersección...
 python "%RED_DIR%\herramientas\resumen_resultados.py" final2041 "%XML_DIR%" "%CSV_DIR%"
@@ -45,7 +64,7 @@ if errorlevel 1 (
 
 echo.
 echo Corriendo 5 réplicas sin ventana para promediar resultados (unos 10 minutos)...
-python "%RED_DIR%\herramientas\replicas.py" 5 "%RED_DIR%\escenario_2041.sumocfg" "%XML_DIR%" "%CSV_DIR%" resumen_replicas.csv "%BASE_2026%"
+python "%RED_DIR%\herramientas\replicas.py" 5 "%RED_DIR%\propuesta_final_2041.sumocfg" "%XML_DIR%" "%CSV_DIR%" resumen_replicas.csv "%BASE_2026%"
 if errorlevel 1 (
     echo ERROR al correr las réplicas
     pause
