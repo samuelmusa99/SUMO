@@ -1,0 +1,31 @@
+﻿interseccion;nivel;acceso;replicas;volumen_promedio_veh_h;demora_promedio_s;demora_min_s;demora_max_s;desviacion_estandar_s;LOS_promedio;LOS_HCM;demanda_veh_h;capacidad_veh_h;fuente_capacidad;VC;demanda_atendida_pct;tesis_LOS;tesis_demora_s;cola_promedio_m;cola_maxima_m;cola_llena_el_tramo;velocidad_media_kmh;tiempo_viaje_s;tiempo_en_paradas_s
+Camino Real;INTERSECCION;(todos);5;2998;47.7;44.1;58.2;5.9;D;D;2972;;V/C del acceso critico;0.90;100;F;129.3;;;;;;
+Camino Real;ACCESO;Sur (FFAA);5;1106;54.2;46.0;61.4;7.1;D;D;1077;1194;HCM 2000;0.90;100;;;22;176;no;14.5;;
+Camino Real;ACCESO;Norte (Costanera);5;838;55.2;46.8;59.6;5.9;E;E;847;943;HCM 2000;0.90;99;;;34;153;si;11.0;;
+Camino Real;ACCESO;Oeste (El Ejercito);5;1054;47.5;37.0;83.0;19.9;D;D;1048;1261;HCM 2000;0.83;100;;;33;138;no;17.9;;
+CC Paos;INTERSECCION;(todos);5;1917;23.1;20.2;29.1;3.7;C;C;1915;;V/C del acceso critico;0.74;100;C;22.6;;;;;;
+CC Paos;ACCESO;Sur (Costanera);5;300;19.6;17.9;20.3;1.0;B;B;308;1033;HCM 2000;0.30;97;;;5;34;no;40.1;;
+CC Paos;ACCESO;Este (Lecheria);5;1079;18.5;17.9;19.4;0.6;B;B;1072;1440;HCM 2000;0.74;100;;;15;84;no;37.6;;
+CC Paos;ACCESO;Norte (Madre Vieja);5;537;37.4;25.1;62.2;15.1;D;D;535;1729;HCM 2000;0.31;100;;;24;273;no;29.0;;
+Perrokero;INTERSECCION;(todos);5;2834;39.7;34.6;50.8;6.5;D;D;2829;;V/C del acceso critico;1.09;100;E;65.6 (base sin semaforo: 2883.7);;;;;;
+Perrokero;INTERSECCION_A_NIVEL;(sin puente);5;1239;60.0;53.0;75.1;8.8;E;E;1262;;V/C del acceso critico a nivel;1.09;98;;;;;;;;
+Perrokero;ACCESO;Sur (FFAA);5;87;41.7;40.2;43.9;1.6;D;D;94;87;medida (acceso saturado);1.09;92;;;8;42;no;34.4;;
+Perrokero;ACCESO;Norte (desde Camino Real);5;408;73.5;57.1;99.0;15.5;E;E;421;450;HCM 2000;0.94;97;;;41;162;no;21.0;;
+Perrokero;ACCESO;Este (Av. Rio);5;618;57.3;44.0;71.4;9.7;E;E;619;869;HCM 2000;0.71;100;;;28;145;no;15.0;;
+Perrokero;ACCESO;Oeste (Residencias);5;126;42.3;38.9;44.2;2.2;D;D;128;570;HCM 2000;0.22;99;;;7;38;no;6.9;;
+Perrokero;ACCESO;Puente hacia el sur (FFAA);5;803;5.5;5.2;5.8;0.2;A;A;802;1900;HCM 2000;0.42;100;;;0;0;no;26.9;;
+Perrokero;ACCESO;Puente hacia Camino Real;5;792;2.6;2.4;2.8;0.1;A;A;764;1900;HCM 2000;0.40;100;;;0;0;no;44.1;;
+Bissau;INTERSECCION;(todos);5;2894;4.7;4.5;4.8;0.2;A;E;2880;;V/C del acceso critico;1.07;100;F;1074 a 1228 (HCM recalculado: ~28 s, D);;;;;;
+Bissau;ACCESO;Costanera sentido Camino Real;5;1405;4.8;4.3;5.1;0.3;A;A;1402;3626;HCM 2000;0.39;100;;;1;41;no;37.1;;
+Bissau;ACCESO;Costanera sentido Lecheria;5;1405;5.6;5.3;5.8;0.2;A;A;1389;5465;HCM 2000;0.25;100;;;0;2;no;37.3;;
+Bissau;ACCESO;Salida Bissau (residencias/CC);5;84;48.4;41.2;57.7;7.1;E;E;90;84;medida (acceso saturado);1.07;94;;;0;31;no;3.2;;
+Bissau;ACCESO;Salida Bissau (galpones);5;0;0.0;0.0;0.0;0.0;A;A;0;1900;HCM 2000;0.00;100;;;0;0;no;;;
+Puerto Guaica;INTERSECCION;(todos);5;2939;13.3;6.8;18.9;5.8;B;F;2924;;V/C del acceso critico;0.94;100;F;1074 a 1228;;;;;;
+Puerto Guaica;ACCESO;Salida Fernandez Padilla;5;8;22.3;14.9;30.8;6.5;C;C;9;20;HCM 2000;0.48;84;;;0;8;no;13.7;;
+Puerto Guaica;ACCESO;Costanera sentido Camino Real;5;1389;21.6;9.2;32.3;11.3;C;C;1391;3624;HCM 2000;0.38;100;;;30;240;no;25.2;;
+Puerto Guaica;ACCESO;Costanera sentido Lecheria;5;1446;3.9;3.3;4.4;0.4;A;A;1433;3645;HCM 2000;0.39;100;;;1;58;no;36.7;;
+Puerto Guaica;ACCESO;Salida Puerto Guaica;5;96;62.6;35.2;113.4;31.3;F;F;90;96;medida (acceso saturado);0.94;100;;;9;48;no;3.3;;
+Red completa;RED;carrito;5;73;65.3;60.6;70.5;3.9;;;;;;;;;;;;;35.1;275.2;15.0
+Red completa;RED;liviano;5;4926;77.2;69.1;82.3;4.9;;;;;;;;;;;;;31.0;219.2;0.0
+Red completa;RED;pesado;5;238;89.8;74.8;110.0;12.7;;;;;;;;;;;;;25.0;292.7;9.2
+Red completa;RED;TOTAL;5;5237;77.6;69.3;83.2;5.1;;;;;;;;;;;;;30.7;223.3;0.6
