@@ -1,0 +1,56 @@
+replica;movimiento;vehiculos_atendidos
+replica1;entrada:bissau:1;156
+replica1;salida_bissau_1;59
+replica1;entrada_puerto_guaica;54
+replica1;salida:puerto_guaica;49
+replica1;fernandez_padilla;107
+replica1;-335982664#1;7
+replica1;salida_bissau_2;47
+replica1;Bissau recto hacia Barcelona;1263
+replica1;Bissau recto hacia Lecheria;1299
+replica1;Puerto Guaica recto hacia Barcelona;1248
+replica1;Puerto Guaica recto hacia Lecheria;1341
+replica2;entrada:bissau:1;162
+replica2;salida_bissau_1;54
+replica2;entrada_puerto_guaica;67
+replica2;salida:puerto_guaica;41
+replica2;fernandez_padilla;76
+replica2;-335982664#1;12
+replica2;salida_bissau_2;50
+replica2;Bissau recto hacia Barcelona;1206
+replica2;Bissau recto hacia Lecheria;1303
+replica2;Puerto Guaica recto hacia Barcelona;1213
+replica2;Puerto Guaica recto hacia Lecheria;1337
+replica3;entrada:bissau:1;176
+replica3;salida_bissau_1;68
+replica3;entrada_puerto_guaica;63
+replica3;salida:puerto_guaica;30
+replica3;fernandez_padilla;80
+replica3;-335982664#1;7
+replica3;salida_bissau_2;51
+replica3;Bissau recto hacia Barcelona;1371
+replica3;Bissau recto hacia Lecheria;1303
+replica3;Puerto Guaica recto hacia Barcelona;1372
+replica3;Puerto Guaica recto hacia Lecheria;1360
+replica4;entrada:bissau:1;169
+replica4;salida_bissau_1;94
+replica4;entrada_puerto_guaica;62
+replica4;salida:puerto_guaica;36
+replica4;fernandez_padilla;73
+replica4;-335982664#1;10
+replica4;salida_bissau_2;39
+replica4;Bissau recto hacia Barcelona;1347
+replica4;Bissau recto hacia Lecheria;1309
+replica4;Puerto Guaica recto hacia Barcelona;1321
+replica4;Puerto Guaica recto hacia Lecheria;1362
+replica5;entrada:bissau:1;167
+replica5;salida_bissau_1;97
+replica5;entrada_puerto_guaica;68
+replica5;salida:puerto_guaica;37
+replica5;fernandez_padilla;91
+replica5;-335982664#1;19
+replica5;salida_bissau_2;49
+replica5;Bissau recto hacia Barcelona;1384
+replica5;Bissau recto hacia Lecheria;1266
+replica5;Puerto Guaica recto hacia Barcelona;1409
+replica5;Puerto Guaica recto hacia Lecheria;1319

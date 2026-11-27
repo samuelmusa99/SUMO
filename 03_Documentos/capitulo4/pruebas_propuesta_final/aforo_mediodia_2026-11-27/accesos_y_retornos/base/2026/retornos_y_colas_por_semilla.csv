@@ -1,0 +1,11 @@
+replica;acceso;retornos_atendidos;cola_media_izquierda_m;cola_maxima_izquierda_m
+replica1;costanera_puerto_guaica_hacialecheria;31;21.2;79.09
+replica1;costanera_puerto_guaica_haciacaminoreal;39;103.04;321.58
+replica2;costanera_puerto_guaica_hacialecheria;37;21.57;79.1
+replica2;costanera_puerto_guaica_haciacaminoreal;31;46.7;258.52
+replica3;costanera_puerto_guaica_hacialecheria;37;17.58;74.61
+replica3;costanera_puerto_guaica_haciacaminoreal;43;111.56;324.05
+replica4;costanera_puerto_guaica_hacialecheria;47;30.81;79.16
+replica4;costanera_puerto_guaica_haciacaminoreal;33;132.96;333.7
+replica5;costanera_puerto_guaica_hacialecheria;35;23.73;79.58
+replica5;costanera_puerto_guaica_haciacaminoreal;24;125.59;326.39

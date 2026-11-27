@@ -1,0 +1,56 @@
+replica;movimiento;vehiculos_atendidos
+replica1;entrada:bissau:1;177
+replica1;salida_bissau_1;86
+replica1;entrada_puerto_guaica;76
+replica1;salida:puerto_guaica;35
+replica1;fernandez_padilla;68
+replica1;-335982664#1;15
+replica1;salida_bissau_2;46
+replica1;Bissau recto hacia Barcelona;1299
+replica1;Bissau recto hacia Lecheria;1310
+replica1;Puerto Guaica recto hacia Barcelona;1260
+replica1;Puerto Guaica recto hacia Lecheria;1324
+replica2;entrada:bissau:1;194
+replica2;salida_bissau_1;96
+replica2;entrada_puerto_guaica;72
+replica2;salida:puerto_guaica;36
+replica2;fernandez_padilla;81
+replica2;-335982664#1;10
+replica2;salida_bissau_2;43
+replica2;Bissau recto hacia Barcelona;1346
+replica2;Bissau recto hacia Lecheria;1261
+replica2;Puerto Guaica recto hacia Barcelona;1322
+replica2;Puerto Guaica recto hacia Lecheria;1299
+replica3;entrada:bissau:1;185
+replica3;salida_bissau_1;76
+replica3;entrada_puerto_guaica;74
+replica3;salida:puerto_guaica;41
+replica3;fernandez_padilla;83
+replica3;-335982664#1;15
+replica3;salida_bissau_2;44
+replica3;Bissau recto hacia Barcelona;1359
+replica3;Bissau recto hacia Lecheria;1307
+replica3;Puerto Guaica recto hacia Barcelona;1295
+replica3;Puerto Guaica recto hacia Lecheria;1315
+replica4;entrada:bissau:1;147
+replica4;salida_bissau_1;58
+replica4;entrada_puerto_guaica;65
+replica4;salida:puerto_guaica;50
+replica4;fernandez_padilla;82
+replica4;-335982664#1;12
+replica4;salida_bissau_2;50
+replica4;Bissau recto hacia Barcelona;1285
+replica4;Bissau recto hacia Lecheria;1250
+replica4;Puerto Guaica recto hacia Barcelona;1224
+replica4;Puerto Guaica recto hacia Lecheria;1249
+replica5;entrada:bissau:1;179
+replica5;salida_bissau_1;72
+replica5;entrada_puerto_guaica;83
+replica5;salida:puerto_guaica;40
+replica5;fernandez_padilla;86
+replica5;-335982664#1;10
+replica5;salida_bissau_2;57
+replica5;Bissau recto hacia Barcelona;1214
+replica5;Bissau recto hacia Lecheria;1255
+replica5;Puerto Guaica recto hacia Barcelona;1179
+replica5;Puerto Guaica recto hacia Lecheria;1283

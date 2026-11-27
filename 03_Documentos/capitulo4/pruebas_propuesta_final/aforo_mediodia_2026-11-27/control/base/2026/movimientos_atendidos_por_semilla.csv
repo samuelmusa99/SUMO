@@ -1,0 +1,56 @@
+replica;movimiento;vehiculos_atendidos
+replica1;entrada:bissau:1;44
+replica1;salida_bissau_1;31
+replica1;entrada_puerto_guaica;34
+replica1;salida:puerto_guaica;1
+replica1;fernandez_padilla;5
+replica1;-335982664#1;9
+replica1;salida_bissau_2;0
+replica1;Bissau recto hacia Barcelona;1333
+replica1;Bissau recto hacia Lecheria;1269
+replica1;Puerto Guaica recto hacia Barcelona;1307
+replica1;Puerto Guaica recto hacia Lecheria;1289
+replica2;entrada:bissau:1;41
+replica2;salida_bissau_1;27
+replica2;entrada_puerto_guaica;15
+replica2;salida:puerto_guaica;4
+replica2;fernandez_padilla;5
+replica2;-335982664#1;6
+replica2;salida_bissau_2;0
+replica2;Bissau recto hacia Barcelona;1313
+replica2;Bissau recto hacia Lecheria;1287
+replica2;Puerto Guaica recto hacia Barcelona;1320
+replica2;Puerto Guaica recto hacia Lecheria;1310
+replica3;entrada:bissau:1;42
+replica3;salida_bissau_1;24
+replica3;entrada_puerto_guaica;19
+replica3;salida:puerto_guaica;3
+replica3;fernandez_padilla;5
+replica3;-335982664#1;6
+replica3;salida_bissau_2;0
+replica3;Bissau recto hacia Barcelona;1356
+replica3;Bissau recto hacia Lecheria;1314
+replica3;Puerto Guaica recto hacia Barcelona;1342
+replica3;Puerto Guaica recto hacia Lecheria;1341
+replica4;entrada:bissau:1;46
+replica4;salida_bissau_1;25
+replica4;entrada_puerto_guaica;16
+replica4;salida:puerto_guaica;4
+replica4;fernandez_padilla;3
+replica4;-335982664#1;6
+replica4;salida_bissau_2;0
+replica4;Bissau recto hacia Barcelona;1270
+replica4;Bissau recto hacia Lecheria;1283
+replica4;Puerto Guaica recto hacia Barcelona;1278
+replica4;Puerto Guaica recto hacia Lecheria;1309
+replica5;entrada:bissau:1;43
+replica5;salida_bissau_1;33
+replica5;entrada_puerto_guaica;23
+replica5;salida:puerto_guaica;3
+replica5;fernandez_padilla;5
+replica5;-335982664#1;10
+replica5;salida_bissau_2;0
+replica5;Bissau recto hacia Barcelona;1344
+replica5;Bissau recto hacia Lecheria;1318
+replica5;Puerto Guaica recto hacia Barcelona;1351
+replica5;Puerto Guaica recto hacia Lecheria;1333
